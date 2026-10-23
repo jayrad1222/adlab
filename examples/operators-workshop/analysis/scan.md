@@ -5,10 +5,10 @@ Written 2026-10-23 by `tools/scan.py` from `bank/entries.jsonl` (32 entries, 13 
 | Category | Distinct lines | In ready entries |
 |---|---:|---:|
 | number | 89 | 44 |
-| guarantee | 14 | 9 |
+| guarantee | 12 | 8 |
 | income or results | 25 | 1 |
 | counts and ratings | 32 | 15 |
-| scarcity or urgency | 25 | 13 |
+| scarcity or urgency | 24 | 12 |
 | free or discount | 58 | 29 |
 | testimonial | 25 | 13 |
 
@@ -60,7 +60,6 @@ Written 2026-10-23 by `tools/scan.py` from `bank/entries.jsonl` (32 entries, 13 
 | free or discount | free | Two of Operators Workshop's founders, Jared and Julianna, sell on Etsy, Amazon, Shopify and TikTok. The return. The restock. Last night's customer message. All of it before the first new listing. AI for running the shop, | c04-e01 primary_text_long, c04-e02 primary_text_long |
 | free or discount | free | Why $97 and not free: a new post from the founders each time they build with AI in their own businesses. [real-reason] (held: the founders confirming builds are posted as they happen today) | c08-e01 hooks[3], c08-e02 hooks[3], c08-e04 hooks[3] |
 | free or discount | free | Your supplier quote in drafts, or a pitch deck for a shop you do not own: two places to put AI. Selling AI to other businesses: a pitch deck for a shop you do not own. A cold message to a stranger's inbox. A build that r | c07-e01 primary_text_long, c07-e02 primary_text_long |
-| guarantee | guarantee | A guarantee badge, or the founders' own builds with the mistakes left in. [comparison] (held: the founders confirming builds are posted as they happen today) | c11-e01 hooks[5], c11-e02 hooks[5] |
 | guarantee | guarantee | An AI community with no guarantee badge. The founders do not build it for you, review your build or time replies. | c11-e01 primary_text_short, c11-e02 primary_text_short, c11-e03 primary_text_short |
 | guarantee | guarantees | An AI community, and what its founders do not do: no done-for-you work, no guarantees, no build reviews, no reply-time promises. What they do post, in the About page's words: "Our builds as they happen: the prompts, syst | c11-e01 primary_text_medium, c11-e02 primary_text_medium, c11-e03 primary_text_medium |
 | guarantee | guarantees | An AI community. Not from its founders: done-for-you, guarantees, build reviews, reply-time promises. | c11-e01 image body |
@@ -115,7 +114,6 @@ Written 2026-10-23 by `tools/scan.py` from `bank/entries.jsonl` (32 entries, 13 
 | number | $97 | Why $97 and not free: a new post from the founders each time they build with AI in their own businesses. [real-reason] (held: the founders confirming builds are posted as they happen today) | c08-e01 hooks[3], c08-e02 hooks[3], c08-e04 hooks[3] |
 | number | $97, 7 | Your supplier quote in drafts, or a pitch deck for a shop you do not own: two places to put AI. Selling AI to other businesses: a pitch deck for a shop you do not own. A cold message to a stranger's inbox. A build that r | c07-e01 primary_text_long, c07-e02 primary_text_long |
 | scarcity or urgency | today | A crossed-out price, or $97 a month next to a feed of the founders' own AI builds. [comparison] (held: the founders confirming builds are posted as they happen today) | c08-e01 hooks[2], c08-e02 hooks[2], c08-e04 hooks[2] |
-| scarcity or urgency | today | A guarantee badge, or the founders' own builds with the mistakes left in. [comparison] (held: the founders confirming builds are posted as they happen today) | c11-e01 hooks[5], c11-e02 hooks[5] |
 | scarcity or urgency | today | A sticky note on the monitor: $97 a month for the founders' AI builds. Cancel anytime. [pattern-interrupt] (held: the founders confirming builds are posted as they happen today) | c08-e01 hooks[5], c08-e02 hooks[5], c08-e04 hooks[5] |
 | scarcity or urgency | only | AI for running the shop, not only for making videos. Operators Workshop is an AI community; two of its founders sell on Etsy, Amazon, Shopify and TikTok. 7 days free, then $97 a month. | c04-e02 image body |
 | scarcity or urgency | in stock | Before the chat tab: open your sent folder. 1. Find the email you keep rewriting by hand. That is the first AI build, not a new tool. Example (made up): the reply to "Is this in stock?" 2. Write its steps on paper, in or | c09-e01 primary_text_long, c09-e02 primary_text_long, c09-e03 primary_text_long |
@@ -191,7 +189,6 @@ Written 2026-10-23 by `tools/scan.py` from `bank/entries.jsonl` (32 entries, 13 
 | free or discount | free | Two places to put AI. Selling AI to other businesses: a pitch deck for a shop you do not own. A cold message to a stranger's inbox. A build that runs in their business. AI on your own business: your supplier quote in dra | c07-e03 primary_text_long |
 | free or discount | free | Why $97 and not free: a new post from the founders each time they build with AI in their own businesses. [real-reason] | c08-e03 hooks[3] |
 | free or discount | free | Your first week with AI, from founders who run businesses: three steps for the 7 free days, on one card. | c10-e01 primary_text_short, c10-e02 primary_text_short, c10-e03 primary_text_short |
-| guarantee | guarantee | A guarantee badge, or the founders' own builds with the mistakes left in. [comparison] | c11-e03 hooks[5] |
 | guarantee | guarantee | No day counter to a first client. No price-going-up card. No deadline. A typed note from Jared instead. Operators Workshop is an AI community run by three people who run businesses: Jared, Julianna and Daniel. What gets  | c05-e01 primary_text_long, c05-e03 primary_text_long |
 | guarantee | guarantee | No day counter to a first client. No price-going-up card. No deadline. Plain text from the founders instead. Operators Workshop is an AI community run by three people who run businesses: Jared, Julianna and Daniel. What  | c05-e02 primary_text_long |
 | guarantee | guarantee | Operators Workshop is an AI community run by three people who run businesses. No client guarantee, no deadline. Shared inside: 'the prompts, systems, wins and mistakes behind the work.' | c05-e02 image body |

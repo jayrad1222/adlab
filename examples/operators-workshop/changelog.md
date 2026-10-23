@@ -29,3 +29,5 @@ One line per event, newest last.
 - 2026-10-23T09:00:49+00:00: readout -> skipped (no ads have run, so there is no Ads Manager export to read; the test plan says what to do after week one)
 - 2026-10-23T09:00:49+00:00: refresh -> skipped (a refresh re-pulls the roster after the first weeks of testing; not run for the example)
 - 2026-10-23T17:18:33+00:00: review -> done (release critic pass, run by hand before /adlab:review existed: analysis/critic-report.md ends in pass; 24 open holds (assets, consent, founder decisions, landing))
+- 2026-10-23T18:10:11+00:00: review -> running
+- 2026-10-23T18:14:52+00:00: review -> done (re-review pass; 0 new blocks; 24 open holds carried (assets, consent, founder decisions, landing); 6 bookkeeping/advisory items open)

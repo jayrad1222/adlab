@@ -58,7 +58,7 @@ Batch one is **ready once these gates clear**. Nothing runs before them. Every e
 
 All 13 entries are static or carousel. None is a video. Six concepts, 13 entries. Within a concept the entries are format arms of the same copy: the designed card and the text-only version, with identical hooks, so format is the only difference. **Lead entry** = the one cut first. The text-only entries run as a second wave, or earlier if the founders raise the budget.
 
-Each lead entry's **on-image hook** (the hook already laid out on its card, from the entry's `hook` field) is the ad batch one cuts (added after the release critic, 2026-10-23). The lead entries' on-image hooks are: c01-e01 hook 1; c04-e01 hook 4; c07-e01 hook 1; c09-e01 "Before the chat tab: open your sent folder." [demonstration], which is not in c09's `hooks` list and is added here (added after the release critic, 2026-10-23); c11-e02 "Will the founders check my AI build before I use it?" [question], also not in the c11 hook list and added here (added after the release critic, 2026-10-23); c08-e04 hook 1.
+Each lead entry's **on-image hook** (the hook already laid out on its card, from the entry's `hook` field) is the ad batch one cuts (added after the release critic, 2026-10-23). The lead entries' on-image hooks are: c01-e01 hook 1; c04-e01 hook 4; c07-e01 hook 1; c08-e04 hook 1; c09-e01 hook 3 (carousel card 1); c11-e02 hook 5 (the FAQ card's question). The c09 and c11 lines were first written into this section; they now sit in their concepts' hook lists (concept briefs v3), where the critic reviews them with the rest of the concept (moved 2026-10-23 after the `/adlab:review` run).
 
 Every other hook listed below is a **candidate**, not a batch-one ad. Before a candidate is cut as its own static ad it needs its own layout, its own render and its own stranger test (added after the release critic, 2026-10-23). The lists are the candidates to build next, in the order a readout makes room for them.
 
@@ -83,12 +83,11 @@ Every other hook listed below is a **candidate**, not a batch-one ad. Before a c
 
 **c09, bring the task you keep redoing** (c09-e01 carousel-tutorial-steps, ready; c09-e02 static-text-only-ugly, ready; lead c09-e01). Waits on the About-page edits only (status_hint names no further gate).
 - Hook 1: "The same customer reply, typed by hand again, with the chat tab open beside it." [problem-naming]
-- Hook 3: "Which email in your sent folder has been written the same way more than twice?" [question]
 - Hook 4: "Not a new tool: the first build is the email you keep rewriting, written out as steps." [contrarian]
 - Hook 5: "POV: the chat tab is closed and a notepad holds the steps of the email you rewrite." [pov]
 
 **c11, the list of what we do not do** (c11-e01 static-text-only-ugly, ready; c11-e02 static-faq-card, ready; lead c11-e02). Waits on the About-page edits (both the support lines and the rest), on the founders confirming the four items hold in practice, and on them confirming builds are posted as they happen today. Hook 6 stays out of every run field until the founders confirm it is theirs. Hooks are listed by number and family, not quoted, because their text states what the community does not do; read them in the entry.
-- Hook 1 [pattern-interrupt], hook 2 [warning], hook 4 [callout], hook 5 [comparison].
+- Hook 1 [pattern-interrupt], hook 2 [warning], hook 4 [callout]. Hook 5 is the lead ad's on-image hook, so it is not a candidate.
 - Hook 3 [confession] stays out of batch one: it states a timing position the About page's support line currently contradicts, and it is safer to add after the page edit is confirmed.
 
 **c08, ninety-seven dollars, and the reason.** Split in two, and the split matters.

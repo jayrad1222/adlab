@@ -5,12 +5,12 @@ persona: p6
 awareness: problem
 angle_family: mechanism
 status: ready
-version: 2
+version: 3
 cpa_to_beat: 81.28
 ---
 # c09: bring the task you keep redoing
 
-Status: ready (its bank entries passed the critic; it runs only after the About-page edits in business/interrogation.md ship and the founders confirm the lines its status_hints name). Version 2, 2026-10-23.
+Status: ready (its bank entries passed the critic; it runs only after the About-page edits in business/interrogation.md ship and the founders confirm the lines its status_hints name). Version 3, 2026-10-23.
 
 ## Persona
 
@@ -86,7 +86,7 @@ The five carousel cards (template `carousel-card.html`; offer_line on card 5 onl
 
 1. (`problem-naming`) "The same customer reply, typed by hand again, with the chat tab open beside it."
 2. (`demonstration`) "Here is one repeated email turned into a list of steps, card by card." (the carousel carries the made-up example)
-3. (`question`) "Which email in your sent folder has been written the same way more than twice?" (fails falsify only, because it is a question; kept)
+3. (`demonstration`) "Before the chat tab: open your sent folder." (carousel card 1 and c09-e01's on-image hook, the lead ad in batch one; moved into this list 2026-10-23)
 4. (`contrarian-or-myth`) "Not a new tool: the first build is the email you keep rewriting, written out as steps."
 5. (`pov`) "POV: the chat tab is closed and a notepad holds the steps of the email you rewrite."
 6. (`curiosity-gap`) "Step one does not happen in the chat tab. It happens in the sent folder."
@@ -161,3 +161,4 @@ draft, version 2: the critic reviewed version 1 (revise) and version 2 awaits re
 - Landing. V1: "Card 5's quoted line, "Share your progress and build alongside other members.", appears word for word under "BUILD WITH US" ... The founders decide those edits." Reason: 6(d), 7.
 - Status. V1: "draft: the critic has not run. Ready-capable from the page and the standing brief; no asset is needed." Reason: 7.
 - 2026-10-23, builder: status ready after the release critic; its bank entries passed; still gated as stated.
+- 2026-10-23, builder (v3): hook 3 is now "Before the chat tab: open your sent folder." [demonstration], card 1's hook and the lead entry's on-image hook, which `plan/test-plan.md` section 4 had introduced outside this list. V2 hook 3: "Which email in your sent folder has been written the same way more than twice?" [question], kept in v2 although it failed falsify (author's reply 4). The schema holds six hooks, so the one hook that failed a test made room. Reason: the `/adlab:review` run of 2026-10-23 (`analysis/critic-report.md`).

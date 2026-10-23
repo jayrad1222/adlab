@@ -7,6 +7,7 @@
 - `progress.py` has a `review` step between plan and readout.
 - A new workspace's changelog records the folder name at init, not its full path.
 - Both examples carry `analysis/scan.md` and a `review` row in PROGRESS.md (their reports came from the hand-run release pass).
+- Operators Workshop example: the first `/adlab:review` run found that test-plan section 4 introduced two lead on-image hooks outside their concepts' hook lists. They now sit in the lists (c09 hook 3 and c11 hook 5, concept briefs v3, six bank entries updated), and the example's report carries a dated re-review from `/adlab:review` that ends in pass.
 
 ## 0.1.0 (2026-10-23)
 

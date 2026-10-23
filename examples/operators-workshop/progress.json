@@ -92,8 +92,8 @@
   },
   "review": {
    "status": "done",
-   "updated": "2026-10-23T17:18:33+00:00",
-   "note": "release critic pass, run by hand before /adlab:review existed: analysis/critic-report.md ends in pass; 24 open holds (assets, consent, founder decisions, landing)"
+   "updated": "2026-10-23T18:14:52+00:00",
+   "note": "re-review pass; 0 new blocks; 24 open holds carried (assets, consent, founder decisions, landing); 6 bookkeeping/advisory items open"
   }
  }
 }

@@ -5,12 +5,12 @@ persona: p4
 awareness: product
 angle_family: offer
 status: ready
-version: 2
+version: 3
 cpa_to_beat: 81.28
 ---
 # c11: the list of what we do not do
 
-Status: ready (its bank entries passed the critic; it runs only after the About-page edits in business/interrogation.md ship and the founders confirm the lines its status_hints name). Version 2, 2026-10-23.
+Status: ready (its bank entries passed the critic; it runs only after the About-page edits in business/interrogation.md ship and the founders confirm the lines its status_hints name). Version 3, 2026-10-23.
 
 ## Persona
 
@@ -77,7 +77,7 @@ Never in this concept: an income line, a result, a member count, the combined-sa
 2. (`negative-or-warning`) "Before the 7-day trial: the founders will not open your build and fix it."
 3. (`confession-or-pratfall`) "No reply timer here. At 2pm on a Tuesday the founders are inside their own businesses." (founders to confirm)
 4. (`callout`) "If the plan is for someone else to build it by Friday, this is the wrong tab."
-5. (`comparison`) "A guarantee badge, or the founders' own builds with the mistakes left in." (founders to confirm builds are posted today)
+5. (`question`) "Will the founders check my AI build before I use it?" (the FAQ card's question and c11-e02's on-image hook, the lead ad in batch one; moved into this list 2026-10-23)
 6. (`the-real-reason`) "The real reason there is no guarantee here: the build happens at your kitchen table, not ours." (hypothetical reason; founders to confirm it is theirs)
 
 ## The CTA
@@ -96,7 +96,7 @@ Checked against `library/platform/meta-policy-pitfalls.md`, `library/platform/ft
 - Scope of each "no": every item is scoped to the founders, because the policy is theirs and the page has members building alongside each other. Each must hold in practice; a founder's fast reply is fine, a promise of one is not (R5 risk). The founders confirm the four items before the ad runs.
 - Hook 3 is inferred from "We run real businesses": `other:founders-to-confirm-the-2pm-tuesday-line`.
 - Hook 6 gives a reason the standing brief does not give: `other:founders-to-confirm-the-no-guarantee-reason`.
-- Builds shared today: hook 5, the primary text's "Here" line and the FAQ's second sentence are gated: `other:builds-shared-today-founders-to-confirm`.
+- Builds shared today: the primary text's "Here" line and the FAQ's second sentence are gated (v2's hook 5 carried the same line; it left the list in v3): `other:builds-shared-today-founders-to-confirm`.
 - Guarantees and refunds: "Cancel anytime" is an offer term and is not framed as a guarantee or as risk-free (truth rules).
 - Comparison: "guarantee badge" describes a common element; no advertiser is named or quoted, and no competitor's badge is shown.
 - Income or results: none in the ad. The landing tagline "earn more": `landing-mismatch`. The support line on the page: `landing-mismatch`, and `broken` if it stays.
@@ -151,3 +151,4 @@ draft, version 2: the critic reviewed version 1 (revise) and version 2 awaits re
 - Landing. V1: "the founders decide the support line (R5)" and "Editing those three lines makes continuity strong." Reason: 7.
 - Status. V1: "draft: the critic has not run. Ready-capable from the standing brief and the page once the founders confirm the four items and the hook 3 line; the page's support line is their decision (R5)." Reason: 7.
 - 2026-10-23, builder: status ready after the release critic; its bank entries passed; still gated as stated.
+- 2026-10-23, builder (v3): hook 5 is now "Will the founders check my AI build before I use it?" [question], the FAQ card's question and the lead entry's on-image hook, which `plan/test-plan.md` section 4 had introduced outside this list. V2 hook 5: "A guarantee badge, or the founders' own builds with the mistakes left in." [comparison], held on the founders confirming builds are posted today and a second guarantee-badge frame beside hook 1. The schema holds six hooks, so it made room. Reason: the `/adlab:review` run of 2026-10-23 (`analysis/critic-report.md`).
