@@ -276,6 +276,7 @@ details[open] > summary { margin-bottom: 0.5rem; }
 .checks-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; }
 .checks-list li { display: flex; flex-direction: column; gap: 0.15rem; }
 .warn { color: var(--you); font-size: 0.85rem; }
+.confirm { display: flex; flex-direction: column; gap: 0.35rem; border-top: 1px solid var(--rule); padding-top: 0.6rem; }
 
 /* Numbers */
 .big-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
@@ -401,6 +402,7 @@ function defaults() {
     photos: [],
     brand: { primary: "#1F3A5F", accent: "#FFC857", font: "sans" },
     ads: null,
+    facts: [], notTrue: [],
     money: { model: "", price: "", trial: "", ttp: "50", months: "4", aov: "", margin: "", refund: "2", payback: "3", keep: "30", budget: "1500", judge: "20", touched: {} },
     thresholds: { impression_floor: "2000", min_hook_rate: "25", min_hold_rate: "25", min_ctr: "0.8", max_frequency: "3", kill_cpa_multiple: "1.5" },
     launched: {},
@@ -642,6 +644,8 @@ function bizBlock() {
     var a = str(b.answers[q[0]]).trim();
     lines.push("- " + q[1] + " " + (a ? a : (q[2] ? "[default accepted] " + q[2] : "[no answer]")));
   });
+  if (arr(S.facts).length) { lines.push("", "OWNER-CONFIRMED FACTS (the owner answered yes when asked; treat these as owner-provided):"); S.facts.forEach(function (f) { lines.push("- " + f); }); }
+  if (arr(S.notTrue).length) { lines.push("", "THE OWNER SAID THESE ARE NOT TRUE YET (never claim them):"); S.notTrue.forEach(function (f) { lines.push("- " + f); }); }
   return lines.join("\n");
 }
 function pageBlock(max) {
@@ -706,7 +710,7 @@ function runSuggest() {
   var have = S.competitors.map(function (c) { return c.name; });
   var p = [
     "TASK: suggest_competitors",
-    "Suggest up to 8 businesses or creators that compete for this buyer and are likely to run Facebook or Instagram ads, in three rings: direct (sells nearly the same thing), indirect (solves the same problem another way), attention (sells something else to the same buyer).",
+    "Suggest up to 8 businesses or creators this buyer would actually compare with this offer and that are likely to run Facebook or Instagram ads. Start with sellers of a similar price, size and format (for this kind of offer: other paid communities, courses, coaches or small brands selling to the same buyer), then a few that solve the same problem another way. Three rings: direct (sells nearly the same thing), indirect (solves the same problem another way), attention (sells something else to the same buyer). At most two big household-name companies, and only if this buyer would really weigh them against this offer.",
     "Only name real businesses you are confident exist. Mark confidence low when unsure. Never invent a business; return fewer instead. The owner will check each one in the Meta Ad Library.",
     have.length ? "Already on the list, do not repeat: " + have.join(", ") : "",
     "", bizBlock(), "", briefBlock(),
@@ -737,7 +741,7 @@ function runMarket(fresh) {
       if (c.decoded && c.decoded.sig === sig(c)) return;
       var li = jobLine("Reading " + c.name + "’s ads");
       return decodeCompetitor(c, S.competitors.indexOf(c) + 1).then(function (ads) {
-        c.decoded = { sig: sig(c), ads: ads };
+        c.decoded = { sig: sig(c), n: S.competitors.indexOf(c) + 1, ads: ads };
         save();
         jobOk(li, "Read " + ads.length + " ad" + (ads.length === 1 ? "" : "s") + " from " + c.name);
       });
@@ -859,6 +863,8 @@ function runWriteAds(fresh) {
     "Formats: note (plain text on white), problem (names the buyer's situation), offer (the price or trial exactly as the page states it), faq (answers the buyer's real objection), photo (uses one of the owner's photos; only if a listed photo fits and has no consent problem).",
     "Every hook and headline passes Harry Dry's three tests: you can picture it, it could be proven false, and nobody else could say it. A stranger who sees the image for two seconds should know who it is for and what it is about.",
     "Use the 'nobody says' gaps and the buyers' words. Answer the market, do not copy it.",
+    "What runs (the image text, primary text, headline, description, button) may only claim what the page states, the owner's answers say, or the owner has confirmed. If an idea leans on a fact the owner has not confirmed, keep that fact out of what runs and list it in needs.",
+    "In an offer card the big text says why it is worth it; it never repeats the offer_line.",
     rules(),
     "", bizBlock(), "", briefBlock(), "", "MARKET MAP:", JSON.stringify(S.market || {}), "", "BUYERS (kept by the owner):", JSON.stringify(keptBuyers()),
     decided.length ? "\nCHANGES THE OWNER DECIDED TO MAKE:\n- " + decided.join("\n- ") : "",
@@ -889,23 +895,37 @@ function normWritten(a, i) {
     needs: arr(a.needs), critic: null, version: 1, ratio: "1:1"
   };
 }
+function normText(t) { return str(t).toLowerCase().replace(/\[[^\]]*\]/g, " ").replace(/[^a-z0-9$%]+/g, " ").trim(); }
+function sameHook(a, b) {
+  a = normText(a); b = normText(b);
+  if (!a || !b) return false;
+  if (a === b || a.indexOf(b) >= 0 || b.indexOf(a) >= 0) return true;
+  var bw = b.split(" "), aw = {}; a.split(" ").forEach(function (w) { aw[w] = 1; });
+  return bw.filter(function (w) { return aw[w]; }).length / bw.length >= 0.8;
+}
 function critic(ads) {
-  var payload = ads.map(function (a) { return { id: a.id, buyer: a.buyer, idea: a.idea, format: a.format, photo: a.photoId ? (S.photos.find(function (p) { return p.id === a.photoId; }) || {}) : null, image: a.image, hooks: a.hooks, primary_short: a.primary_short, primary_long: a.primary_long, headline: a.headline, description: a.description, cta: a.cta, evidence: a.evidence, needs: a.needs }; });
+  var payload = ads.map(function (a) { return { id: a.id, buyer: a.buyer, idea: a.idea, format: a.format, photo: a.photoId ? (S.photos.find(function (p) { return p.id === a.photoId; }) || {}) : null, runs: { image: a.image, primary_short: a.primary_short, primary_long: a.primary_long, headline: a.headline, description: a.description, cta: a.cta }, alternate_hooks: a.hooks, evidence: a.evidence, needs: a.needs }; });
   var p = [
     "TASK: critic",
-    "You are the critic: the last reader before these ads can run. You never rewrite; you judge. Check each ad in this order:",
-    "1 truth: every claim traces to the page, the owner's answers or the owner's photos; any invented result, testimonial, count, rating, scarcity or urgency is a block.",
+    "You are the critic: the last reader before these ads run. You never rewrite; you judge.",
+    "WHAT RUNS is each ad's 'runs' block: the image text, primary_short, primary_long, headline, description and cta. Your verdict is about what runs and nothing else.",
+    "ALTERNATE HOOKS are spare first lines for later tests. Check each one and say keep or drop. A weak alternate never fails the ad.",
+    "Check what runs in this order:",
+    "1 truth: every claim traces to the page, the owner's answers, the owner-confirmed facts or the owner's photos. An invented result, testimonial, count, rating, scarcity or urgency is a block.",
     "2 policy: personal attributes in the second person, income or results claims (even implied), before-and-after, sensational or shaming lines, a demo presented as a deployment. Block if the idea depends on it, revise otherwise.",
-    "3 generic: a line any competitor could run unchanged, hype words, or a line copied from a competitor ad. Revise; block if the hook itself is generic.",
-    "4 three tests on the hook and the headline: can you picture it, could it be proven false, could nobody else say it. A line failing two or more is a revise.",
-    "5 stranger: someone sees the image for two seconds. Who do they think it is for, and what is it about? Fail if that misses the buyer or the idea.",
-    "6 evidence: a photo with other people and no consent, or a claim that needs a page change first, means the ad waits on the owner (list it in held_for).",
-    "7 fit: the button suits how ready the buyer is; image text is short enough (hook at most 12 words).",
+    "3 generic: a line any competitor could run unchanged, hype words, or a line copied from a competitor ad. Revise.",
+    "4 three tests on the image's big text and the headline: can you picture it, could it be proven false, could nobody else say it. Failing two or more is a revise.",
+    "5 stranger: someone sees the image for two seconds. Who do they think it is for, and what is it about? Revise if that misses the buyer or the idea.",
+    "6 fit: the button suits how ready the buyer is; the big text is at most 12 words.",
+    "Sort these out of the verdict; they are not revises:",
+    "- confirm: a claim that fits the owner's answers but only the owner can say is true today (for example whether a failed first try is posted where trial members can see it). Ask it as one short plain yes/no question to the owner, and quote the claim from what runs. Skip anything already in the owner-confirmed facts, and never ask about something the owner said is not true (that is a truth problem).",
+    "- held_for: something the owner must supply before the ad runs: a photo, a person's consent, a change to the page.",
+    "verdict is pass when what runs has no revise or block problem. Questions and held_for items do not count against it.",
     rules(),
     "", bizBlock(), "", pageBlock(10000), "", "THE OWNER'S PHOTOS:", JSON.stringify(photoList()),
     "", "ADS:", JSON.stringify(payload),
     "",
-    'Reply with only a JSON array, one item per ad: {"id":"a1","verdict":"pass|revise|block","stranger":"who it seems to be for and what it is about, in a stranger\'s words","checks":[{"check":"truth|policy|generic|three tests|stranger|evidence|fit","result":"pass|revise|block","quote":"the exact line, if one is at fault","note":"what is wrong and what a passing version needs"}],"held_for":["only things the owner must provide"]}',
+    'Reply with only a JSON array, one item per ad: {"id":"a1","verdict":"pass|revise|block","stranger":"who it seems to be for and what it is about, in a stranger\'s words","checks":[{"check":"truth|policy|generic|three tests|stranger|fit","result":"pass|revise|block","quote":"the exact line from what runs, if one is at fault","note":"what is wrong and what a passing version needs"}],"confirm":[{"question":"a yes/no question for the owner","claim":"the line from what runs that depends on it"}],"held_for":["only things the owner must supply"],"alt_hooks":[{"text":"the alternate hook, word for word","keep":true,"reason":"why it was dropped, if it was"}]}',
     "Never soften a block because the rest is good. A fine line with no proof is a block."
   ].join("\n");
   return ai(p, { tier: "complex", fresh: true }).then(function (r) {
@@ -914,17 +934,47 @@ function critic(ads) {
     ads.forEach(function (a) {
       var x = byId[a.id];
       if (!x) return;
-      a.critic = { verdict: ["pass", "revise", "block"].indexOf(x.verdict) >= 0 ? x.verdict : "revise", stranger: str(x.stranger), checks: arr(x.checks), held_for: arr(x.held_for).map(str), at: new Date().toISOString() };
+      var checks = arr(x.checks).filter(function (c) { return c && c.check; });
+      var confirm = arr(x.confirm).filter(function (q) { return q && q.question; }).map(function (q) { return { question: str(q.question), claim: str(q.claim) }; });
+      var held = arr(x.held_for).map(str).filter(function (t) { return t.trim(); });
+      var bad = checks.filter(function (c) { return c.result === "revise" || c.result === "block"; });
+      var said = ["pass", "revise", "block"].indexOf(x.verdict) >= 0 ? x.verdict : "revise";
+      var drops = arr(x.alt_hooks).filter(function (h) { return h && h.keep === false && h.text; });
+      /* A failing check on what runs decides it. With none, a "revise" that came from weak alternates, questions or holds is a pass. */
+      var verdict = bad.length ? (bad.some(function (c) { return c.result === "block"; }) ? "block" : "revise") : (said !== "pass" && !confirm.length && !held.length && !drops.length ? said : "pass");
+      if (drops.length) {
+        var kept = [], dropped = arr(a.droppedHooks).slice();
+        a.hooks.forEach(function (h) {
+          var d = drops.find(function (q) { return sameHook(h, q.text); });
+          if (d) dropped.push({ text: h, reason: str(d.reason) }); else kept.push(h);
+        });
+        a.hooks = kept; a.droppedHooks = dropped;
+      }
+      a.critic = { verdict: verdict, stranger: str(x.stranger), checks: checks, confirm: confirm, held_for: held, at: new Date().toISOString() };
     });
     save();
   });
 }
 function adStatus(a) {
   if (!a || !a.critic) return "unchecked";
-  if (a.critic.verdict === "pass") return (a.format === "photo" && !a.photoId) ? "held" : "ready";
-  var truthBlock = a.critic.checks.some(function (c) { return c && c.result === "block" && (c.check === "truth" || c.check === "policy"); });
-  if (a.critic.verdict === "block" && a.critic.held_for.length && !truthBlock) return "held";
-  return "fix";
+  var c = a.critic, ans = a.answers || {};
+  if (c.verdict !== "pass") return "fix";
+  if (arr(c.confirm).some(function (q) { return ans[q.question] === "no"; })) return "fix";
+  if (a.format === "photo" && !a.photoId) return "held";
+  if (arr(c.confirm).some(function (q) { return ans[q.question] !== "yes"; })) return "held";
+  if (arr(c.held_for).length) return "held";
+  return "ready";
+}
+function answerQuestion(a, qi, v) {
+  var q = a && a.critic && arr(a.critic.confirm)[qi];
+  if (!q) return;
+  a.answers = a.answers || {};
+  a.answers[q.question] = v;
+  var fact = "Asked: \u201c" + q.question + "\u201d The owner said yes.";
+  var claim = q.claim || q.question;
+  S.facts = arr(S.facts).filter(function (f) { return f !== fact; });
+  S.notTrue = arr(S.notTrue).filter(function (f) { return f !== claim; });
+  if (v === "yes") S.facts.push(fact); else S.notTrue.push(claim);
 }
 function runFix(id) {
   var a = (S.ads || []).find(function (x) { return x.id === id; });
@@ -933,15 +983,17 @@ function runFix(id) {
   var li = jobLine("Rewriting what the check flagged");
   var p = [
     "TASK: fix_ad",
-    "Rewrite this ad so it passes the critic's checks. Keep what passed. Fix what failed. If a fix needs something only the owner can provide, do not fake it: keep it in needs.",
+    "Rewrite this ad so what runs passes the critic's checks. Keep what passed. Fix what failed. Take out every claim the owner said is not true yet. If a fix needs something only the owner can provide, do not fake it: keep it in needs.",
+    "Keep the alternate hooks that passed, and add new ones so there are three, each passing the three tests.",
     rules(), "", bizBlock(), "", briefBlock(), "", "THE OWNER'S PHOTOS:", JSON.stringify(photoList()),
     "", "THE AD:", JSON.stringify({ id: a.id, buyer: a.buyer, idea: a.idea, angle: a.angle, why: a.why, evidence: a.evidence, format: a.format, photo_id: a.photoId, image: a.image, hooks: a.hooks, primary_short: a.primary_short, primary_long: a.primary_long, headline: a.headline, description: a.description, cta: a.cta, needs: a.needs }),
     "", "THE CRITIC'S CHECKS:", JSON.stringify(a.critic),
+    "", "THE OWNER'S ANSWERS TO THE CRITIC'S QUESTIONS:", JSON.stringify(arr(a.critic && a.critic.confirm).map(function (q) { var v = (a.answers || {})[q.question]; return { question: q.question, claim: q.claim, owner: v === "yes" ? "yes, true" : v === "no" ? "no, not true yet: take it out" : "not answered: keep it out of what runs" }; })),
     "", "Reply with only the revised ad as one JSON object in this shape: " + AD_SHAPE
   ].join("\n");
   ai(p, { tier: "complex", fresh: true }).then(function (r) {
     var n = normWritten(r || {}, 0);
-    n.id = a.id; n.version = (a.version || 1) + 1; n.ratio = a.ratio;
+    n.id = a.id; n.version = (a.version || 1) + 1; n.ratio = a.ratio; n.droppedHooks = arr(a.droppedHooks);
     if (!n.photoId && a.photoId && n.format === "photo") n.photoId = a.photoId;
     var idx = S.ads.indexOf(a); S.ads[idx] = n;
     jobOk(li, "Rewrote ad " + id.replace(/^a/, ""));
@@ -1065,7 +1117,8 @@ function renderAd(ad, ratio) {
       var hd = function (s) { return adFont(fk, "head", s); }, bd = function (s) { return adFont(fk, "body", s); }, lb = function (s) { return adFont(fk, "label", s); };
       var kick = fit(ctx, (im.kicker || "").toUpperCase(), lb, bw, 50, 32, 26);
       var ctaB = fit(ctx, im.cta_text || ad.cta || "Learn more", lb, bw - 120, 60, 40, 30);
-      var off = chk(fit(ctx, im.offer_line, bd, bw - 80, 200, 54, MIN, 1.25), "The offer line");
+      var offerText = im.offer_line && !sameHook(im.hook, im.offer_line) ? im.offer_line : "";
+      var off = chk(fit(ctx, offerText, bd, bw - 80, 200, 54, MIN, 1.25), "The offer line");
       var hk = chk(fit(ctx, im.hook, hd, bw, bh - kick.h - off.h - ctaB.h - 260, 96, MIN + 6), "The hook");
       var yy = drawBlock(ctx, kick, P.l, P.t, prim);
       yy = drawBlock(ctx, hk, P.l, yy + (kick.h ? 28 : 0), "#111111");
@@ -1296,6 +1349,7 @@ function mdAds() {
       o.push("", "Check: " + a.critic.verdict + ". A stranger reads it as: " + a.critic.stranger);
       a.critic.checks.forEach(function (c) { if (c.result !== "pass") o.push("- " + c.check + ": " + c.result + ". " + (c.quote ? "\"" + c.quote + "\" " : "") + str(c.note)); });
       if (a.critic.held_for.length) o.push("- Waiting on: " + a.critic.held_for.join("; "));
+      arr(a.critic.confirm).forEach(function (q) { var v = (a.answers || {})[q.question]; o.push("- Question for you: " + q.question + (v ? " You said " + v + "." : " Not answered yet.")); });
     }
     o.push("");
   });
@@ -1361,10 +1415,10 @@ function exportZip() {
   if (!window.JSZip) { toast("The zip tool didn't load. Download the backup instead."); return; }
   var zip = new window.JSZip(), name = slug(S.biz.name);
   zip.file("README.txt", "Ad Lab export for " + (S.biz.name || "your business") + ", " + new Date().toISOString().slice(0, 10) + ".\nEvery line is a test until your first results come back.\n\nads.csv and ads.md: your ads and their checks.\nimages/: the ready ads at 1:1, 4:5 and 9:16.\nmarket-map.md, buyers.md, hard-questions.md, test-plan.md: the thinking behind them.\nad-lab-backup.json: load this in Ad Lab to pick up where you left off.\n");
-  zip.file("ads.csv", csvAds()); zip.file("ads.md", mdAds());
-  if (S.market) zip.file("market-map.md", mdMarket());
-  if (S.buyers) zip.file("buyers.md", mdBuyers());
-  if (S.questions) zip.file("hard-questions.md", mdQuestions());
+  zip.file("ads.csv", plainRefs(csvAds())); zip.file("ads.md", plainRefs(mdAds()));
+  if (S.market) zip.file("market-map.md", plainRefs(mdMarket()));
+  if (S.buyers) zip.file("buyers.md", plainRefs(mdBuyers()));
+  if (S.questions) zip.file("hard-questions.md", plainRefs(mdQuestions()));
   zip.file("test-plan.md", mdPlan());
   toast("Building your download");
   var ready = arr(S.ads).filter(function (a) { return adStatus(a) === "ready"; });
@@ -1464,7 +1518,7 @@ function view2() {
     h += '<section class="card"><h2>Who else sells to your buyer?</h2><p class="sub">Ad Lab suggests competitors in three groups: the same thing, the same problem solved another way, and the same buyer. You decide who stays.</p>' +
       errHTML(2) + (JOB && JOB.step === 2 ? jobHTML() : "") + '<div class="btn-row">' + aiButton("suggest", "Suggest competitors", 2, "Usually a minute or two") + "</div></section>";
   } else {
-    h += '<div class="note"><strong>How to grab their ads (about two minutes each)</strong><ol><li>Click <strong>Find their ads</strong>. The Ad Library opens in a new tab.</li><li>Pick their page from the suggestions under the search box.</li><li>Screenshot 3 to 5 ads. Include the “Started running on” date if you can.</li><li>Drop the screenshots under that competitor. No ads showing? Untick them.</li></ol>' +
+    h += '<div class="note"><strong>How to grab their ads (about two minutes each)</strong><ol><li>Click <strong>Find their ads</strong>. The Ad Library opens in a new tab.</li><li>Click in the search box at the top and pick their page from the list that drops down. The first results are a keyword search and can include other advertisers.</li><li>Screenshot 3 to 5 ads. Include the “Started running on” date if you can.</li><li>Drop or paste the screenshots under that competitor. No ads showing? Untick them.</li></ol><p class="small">Suggestions come from Claude\u2019s general knowledge, not a live search. Check each one, untick any that don\u2019t fit, and add the competitors you actually lose sales to.</p>' +
       '<div class="row">' + field("Ad Library country", sel("country", COUNTRIES, 'data-rerender="1" style="max-width:14rem"')) + "</div></div>" +
       errHTML(2) + (JOB && JOB.step === 2 ? jobHTML() : "");
     h += S.competitors.map(function (c) {
@@ -1492,7 +1546,7 @@ function view3() {
   var stale = comps.some(function (c) { return !c.decoded || c.decoded.sig !== sig(c); });
   h += errHTML(3) + (JOB && JOB.step === 3 ? jobHTML() : "");
   if (!(S.market && S.buyers && S.questions)) {
-    h += '<section class="card"><h2>' + (S.market ? "Finish reading the market" : "Read the market") + '</h2><p class="sub">' + (comps.length ? "Ready to read " + (shots ? shots + " screenshot" + (shots === 1 ? "" : "s") + " from " : "ads from ") + comps.length + " competitor" + (comps.length === 1 ? "" : "s") + ". Fewer than three competitors gives a thin read; you can add more later." : "Go back to step 2 and add screenshots or ad text for at least one competitor.") + "</p>" +
+    h += '<section class="card"><h2>' + (S.market ? "Finish reading the market" : "Read the market") + '</h2><p class="sub">' + (comps.length ? "Ready to read " + (shots ? shots + " screenshot" + (shots === 1 ? "" : "s") + " from " : "ads from ") + comps.length + " competitor" + (comps.length === 1 ? "" : "s") + "." + (comps.length < 3 ? " Fewer than three competitors gives a thin read; you can add more later." : "") : "Go back to step 2 and add screenshots or ad text for at least one competitor.") + "</p>" +
       '<div class="btn-row">' + aiButton("market", S.market ? "Continue" : "Read the market", 3, "A few minutes, one competitor at a time") + "</div></section>";
   } else if (stale && !JOB) {
     h += '<div class="note you"><strong>Your competitor list or ads changed since this read.</strong><p>Reading again redoes the map, your buyers and the hard questions.</p><div><button class="btn secondary" type="button" data-act="market-fresh"' + (!aiReady() ? " disabled" : "") + ">Read the market again</button></div></div>";
@@ -1503,24 +1557,37 @@ function view3() {
   h += navRow(2, 4, "Next: write my ads", !(S.market && S.buyers && S.questions)) + "</div>";
   return h;
 }
-function refs(r) { r = arr(r); return r.length ? ' <span class="refs">' + esc(r.join(", ")) + "</span>" : ""; }
+function compName(n) {
+  n = Number(n);
+  var c = S.competitors.find(function (x) { return x.decoded && x.decoded.n === n; }) || S.competitors[n - 1];
+  return c ? c.name : "Competitor " + n;
+}
+function refName(c, k) { return compName(c) + " ad " + k; }
+function plainRefs(t) { return str(t).replace(/\bC(\d+)-A(\d+)\b/g, function (m, c, k) { return refName(c, k); }); }
+function prose(t) { return esc(str(t)).replace(/\bC(\d+)-A(\d+)\b/g, function (m, c, k) { return esc(refName(c, k)); }); }
+function refs(r) {
+  r = arr(r); if (!r.length) return "";
+  var by = {}, order = [];
+  r.forEach(function (x) { var m = /^C(\d+)-A(\d+)$/.exec(str(x).trim()); var key = m ? m[1] : str(x); if (!by[key]) { by[key] = []; order.push(key); } if (m) by[key].push(m[2]); });
+  return ' <span class="refs">' + esc(order.map(function (k) { var nums = by[k]; var nm = /^\d+$/.test(k) ? compName(k) : k; return nums.length ? nm + (nums.length > 1 ? " ads " : " ad ") + nums.join(", ") : nm; }).join("; ")) + "</span>";
+}
 function viewMarket() {
   var m = S.market;
   function sec(title, list, fn) { return list.length ? '<div class="stack"><h3>' + title + '</h3><ul class="list">' + list.map(fn).join("") + "</ul></div>" : ""; }
   var adsRead = S.competitors.reduce(function (n, c) { return n + (c.keep && c.decoded ? arr(c.decoded.ads).length : 0); }, 0);
   return '<section class="card"><div class="card-head"><h2>What the market says</h2><span class="sub small">' + adsRead + " ads from " + decodedCount() + " competitors</span></div>" +
-    '<p class="mm-headline">' + esc(m.headline) + "</p>" +
-    '<div class="grid2">' + sec("What everyone says", m.everyone_says, function (x) { return "<li><span>" + esc(x.claim) + '</span><span class="sub small">' + esc(x.advertisers) + " advertiser" + (Number(x.advertisers) === 1 ? "" : "s") + refs(x.refs) + "</span></li>"; }) +
-    sec("What nobody says yet", m.nobody_says, function (x) { return "<li><strong>" + esc(x.claim) + '</strong><span class="sub small">' + esc(x.why) + "</span></li>"; }) +
-    sec("Who they talk to", m.they_talk_to, function (x) { return "<li><span>" + esc(x.who) + refs(x.refs) + "</span></li>"; }) +
-    sec("Who they miss", m.they_miss, function (x) { return "<li><strong>" + esc(x.who) + '</strong><span class="sub small">' + esc(x.why) + "</span></li>"; }) + "</div>" +
+    '<p class="mm-headline">' + prose(m.headline) + "</p>" +
+    '<div class="grid2">' + sec("What everyone says", m.everyone_says, function (x) { return "<li><span>" + prose(x.claim) + '</span><span class="sub small">' + esc(x.advertisers) + " advertiser" + (Number(x.advertisers) === 1 ? "" : "s") + refs(x.refs) + "</span></li>"; }) +
+    sec("What nobody says yet", m.nobody_says, function (x) { return "<li><strong>" + prose(x.claim) + '</strong><span class="sub small">' + prose(x.why) + "</span></li>"; }) +
+    sec("Who they talk to", m.they_talk_to, function (x) { return "<li><span>" + prose(x.who) + refs(x.refs) + "</span></li>"; }) +
+    sec("Who they miss", m.they_miss, function (x) { return "<li><strong>" + prose(x.who) + '</strong><span class="sub small">' + prose(x.why) + "</span></li>"; }) + "</div>" +
     '<details><summary>Proof, offers, formats and the longest-running ads</summary><div class="stack">' +
-    (m.proof ? "<p><strong>How they prove it.</strong> " + esc(m.proof) + "</p>" : "") +
-    (m.offers ? "<p><strong>Offers.</strong> " + esc(m.offers) + "</p>" : "") +
-    (m.formats.used || m.formats.missing ? "<p><strong>Formats they use.</strong> " + esc(m.formats.used) + "</p><p><strong>Formats nobody uses.</strong> " + esc(m.formats.missing) + "</p>" : "") +
-    (m.longest.length ? '<div class="stack"><h3>Longest-running ads</h3><p class="sub small">An ad that keeps running is a hint, not proof, that it works for them.</p><ul class="list">' + m.longest.map(function (x) { return '<li><span><span class="refs">' + esc(x.ref) + "</span> started " + esc(x.started) + ". " + esc(x.note) + "</span></li>"; }).join("") + "</ul></div>" : "") +
+    (m.proof ? "<p><strong>How they prove it.</strong> " + prose(m.proof) + "</p>" : "") +
+    (m.offers ? "<p><strong>Offers.</strong> " + prose(m.offers) + "</p>" : "") +
+    (m.formats.used || m.formats.missing ? "<p><strong>Formats they use.</strong> " + prose(m.formats.used) + "</p><p><strong>Formats nobody uses.</strong> " + prose(m.formats.missing) + "</p>" : "") +
+    (m.longest.length ? '<div class="stack"><h3>Longest-running ads</h3><p class="sub small">An ad that keeps running is a hint, not proof, that it works for them.</p><ul class="list">' + m.longest.map(function (x) { return "<li><span>" + refs([x.ref]).trim() + " started " + esc(x.started) + ". " + prose(x.note) + "</span></li>"; }).join("") + "</ul></div>" : "") +
     "</div></details>" +
-    (m.limits.length ? '<p class="sub small"><strong>Limits of this read:</strong> ' + esc(m.limits.join(" ")) + "</p>" : "") + "</section>";
+    (m.limits.length ? '<p class="sub small"><strong>Limits of this read:</strong> ' + prose(m.limits.join(" ")) + "</p>" : "") + "</section>";
 }
 function viewBuyers() {
   var any = arr(S.buyers).some(function (b) { return b.verdict === "wrong" || b.verdict === "not" || str(b.note).trim(); }) || str(S.missingBuyer).trim();
@@ -1529,7 +1596,7 @@ function viewBuyers() {
     arr(S.buyers).map(function (b, i) {
       var vb = function (v, l) { return '<button type="button" data-act="buyer" data-i="' + i + '" data-v="' + v + '" aria-pressed="' + (b.verdict === v) + '">' + l + "</button>"; };
       return '<article class="buyer ' + esc(b.verdict) + '"><div class="card-head"><h3>' + esc(b.name) + '</h3><div class="seg" role="group" aria-label="Your verdict">' + vb("keep", "Spot on") + vb("wrong", "Not quite") + vb("not", "Not my buyer") + "</div></div>" +
-        '<dl class="kv"><dt>Situation</dt><dd>' + esc(b.situation) + "</dd><dt>What just happened</dt><dd>" + esc(b.trigger) + "</dd><dt>Does instead</dt><dd>" + esc(b.tried) + "</dd><dt>Fears</dt><dd>" + esc(b.fear) + "</dd><dt>Needs to see</dt><dd>" + esc(b.needs_to_see) + "</dd></dl>" +
+        '<dl class="kv"><dt>Situation</dt><dd>' + prose(b.situation) + "</dd><dt>What just happened</dt><dd>" + prose(b.trigger) + "</dd><dt>Does instead</dt><dd>" + prose(b.tried) + "</dd><dt>Fears</dt><dd>" + prose(b.fear) + "</dd><dt>Needs to see</dt><dd>" + prose(b.needs_to_see) + "</dd></dl>" +
         (arr(b.words).length ? '<p class="sub small">Their words: ' + arr(b.words).map(function (w) { return "“" + esc(w.text) + "”" + labelTag(w.label); }).join(" ") + "</p>" : "") +
         (b.verdict === "wrong" || b.verdict === "not" ? field("What’s off?", inp("buyers." + i + ".note", 'placeholder="For example: they never buy courses, they hire someone"')) : "") + "</article>";
     }).join("") + "</div>" +
@@ -1539,14 +1606,14 @@ function viewBuyers() {
 function viewQuestions() {
   var q = S.questions;
   return '<section class="card"><div class="card-head"><h2>The hard questions</h2><span class="chip you dot">Your call</span></div>' +
-    '<div class="note"><strong>Diagnosis: a ' + esc(q.diagnosis.problem || "") + " problem</strong><p>" + esc(q.diagnosis.why || "") + "</p></div><div>" +
+    '<div class="note"><strong>Diagnosis: a ' + esc(q.diagnosis.problem || "") + " problem</strong><p>" + prose(q.diagnosis.why || "") + "</p></div><div>" +
     q.recommendations.map(function (r, i) {
       var vb = function (v, l) { return '<button type="button" data-act="rec" data-i="' + i + '" data-v="' + v + '" aria-pressed="' + (r.decision === v) + '">' + l + "</button>"; };
-      return '<div class="rec"><div class="card-head"><h3>' + (i + 1) + ". " + esc(r.title) + '</h3><div class="seg" role="group" aria-label="Your decision">' + vb("yes", "I’ll do this") + vb("later", "Not now") + "</div></div>" +
-        "<p>" + esc(r.do) + '</p><p class="sub small">' + esc(r.why) + '</p><p class="small"><strong>Cheapest test:</strong> ' + esc(r.cheapest_test) + ' <strong>Wrong if:</strong> ' + esc(r.wrong_if) + "</p></div>";
+      return '<div class="rec"><div class="card-head"><h3>' + (i + 1) + ". " + prose(r.title) + '</h3><div class="seg" role="group" aria-label="Your decision">' + vb("yes", "I’ll do this") + vb("later", "Not now") + "</div></div>" +
+        "<p>" + prose(r.do) + '</p><p class="sub small">' + prose(r.why) + '</p><p class="small"><strong>Cheapest test:</strong> ' + prose(r.cheapest_test) + ' <strong>Wrong if:</strong> ' + prose(r.wrong_if) + "</p></div>";
     }).join("") + "</div>" +
-    (q.page_fixes.length ? '<details><summary>Lines on your page to fix (' + q.page_fixes.length + ")</summary><ul class=\"list\">" + q.page_fixes.map(function (p) { return "<li><strong>“" + esc(p.line) + "”</strong><span>" + esc(p.problem) + '</span><span class="sub small">Try: ' + esc(p.suggestion) + "</span></li>"; }).join("") + "</ul></details>" : "") +
-    (q.moonshots.length ? '<details><summary>Two moonshots</summary><ul class="list">' + q.moonshots.map(function (m) { return "<li><strong>" + esc(m.idea) + '</strong><span class="sub small">' + esc(m.why) + "</span></li>"; }).join("") + "</ul></details>" : "") +
+    (q.page_fixes.length ? '<details><summary>Lines on your page to fix (' + q.page_fixes.length + ")</summary><ul class=\"list\">" + q.page_fixes.map(function (p) { return "<li><strong>“" + esc(p.line) + "”</strong><span>" + prose(p.problem) + '</span><span class="sub small">Try: ' + prose(p.suggestion) + "</span></li>"; }).join("") + "</ul></details>" : "") +
+    (q.moonshots.length ? '<details><summary>Two moonshots</summary><ul class="list">' + q.moonshots.map(function (m) { return "<li><strong>" + prose(m.idea) + '</strong><span class="sub small">' + prose(m.why) + "</span></li>"; }).join("") + "</ul></details>" : "") +
     '<p class="sub small">Ads in the next step use the changes you mark “I’ll do this”.</p></section>';
 }
 
@@ -1556,7 +1623,7 @@ function view4() {
     '<label class="field"><span>Main colour</span><input type="color" data-bind="brand.primary" data-rerender="1" value="' + esc(S.brand.primary) + '"></label>' +
     '<label class="field"><span>Highlight</span><input type="color" data-bind="brand.accent" data-rerender="1" value="' + esc(S.brand.accent) + '"></label>' +
     '<div style="flex:1;min-width:10rem">' + field("Lettering", sel("brand.font", [["sans", "Bold and modern"], ["serif", "Classic serif"], ["plain", "Plain"]], 'data-rerender="1"')) + "</div></div></section>" +
-    '<section class="card"><div class="card-head"><h2>Your photos</h2><span class="chip">Optional</span></div><p class="sub small">Real photos of you, your work or your product make the strongest ads. Only use photos you own.</p>' +
+    '<section class="card"><div class="card-head"><h2>Your photos</h2><span class="chip">Optional</span></div><p class="sub small">Real photos of you, your work, your place or your product make the strongest ads. Only use photos you own. Graphics with sales figures or income lines can\u2019t go in ads.</p>' +
     drop("photo", "PNG or JPG", "Choose photos") +
     (S.photos.length ? '<div class="stack">' + S.photos.map(function (p, i) {
       return '<div class="row" style="align-items:flex-start"><div class="thumb"><img data-img="' + p.id + '" alt="Your photo ' + (i + 1) + '"><button type="button" data-act="rm-img" data-target="photo" data-id="' + p.id + '" aria-label="Remove photo ' + (i + 1) + '">✕</button></div><div class="stack" style="flex:1;min-width:12rem">' +
@@ -1589,20 +1656,41 @@ function viewAd(a, i) {
     if (!str(text).trim()) return "";
     return '<div class="copyblk"><div class="lbl"><span>' + label + '</span><button class="btn ghost tiny" type="button" data-act="copy" data-id="' + a.id + '" data-k="' + key + '">Copy</button></div><div class="txt" id="t-' + a.id + "-" + key + '">' + esc(text) + "</div></div>";
   };
-  var notes = a.critic ? a.critic.checks.filter(function (c) { return c && c.result && c.result !== "pass"; }) : [];
+  var c = a.critic || { checks: [], confirm: [], held_for: [] };
+  var notes = arr(c.checks).filter(function (x) { return x && x.result && x.result !== "pass"; });
+  var ans = a.answers || {};
+  var nos = arr(c.confirm).filter(function (q) { return ans[q.question] === "no"; });
+  var open = arr(c.confirm).filter(function (q) { return ans[q.question] !== "yes" && ans[q.question] !== "no"; });
+  var needPhoto = a.format === "photo" && !a.photoId;
+  var busy = JOB || !aiReady() ? " disabled" : "";
+  var fixBox = st === "fix" ? '<div class="note bad"><strong>What the check found</strong><ul>' +
+    notes.map(function (x) { return "<li>" + (x.quote ? "\u201c" + prose(x.quote) + "\u201d: " : "") + prose(x.note) + "</li>"; }).join("") +
+    nos.map(function (q) { return "<li>You said this isn\u2019t true yet: \u201c" + prose(q.claim || q.question) + "\u201d. Fix it takes it out.</li>"; }).join("") +
+    (notes.length || nos.length ? "" : "<li>The check didn\u2019t pass what runs. Fix it rewrites it.</li>") +
+    '</ul><div><button class="btn" type="button" data-act="fix" data-id="' + a.id + '"' + busy + ">Fix it</button></div></div>" : "";
+  var heldBox = st === "held" ? '<div class="note you"><strong>Waiting on you</strong>' +
+    (open.length ? '<p class="small">Only you know these. Each answer is saved and used for every ad from now on.</p>' + open.map(function (q) {
+      var qi = c.confirm.indexOf(q);
+      return '<div class="confirm"><p>' + prose(q.question) + "</p>" + (q.claim ? '<p class="sub small">The ad says: \u201c' + prose(q.claim) + "\u201d</p>" : "") +
+        '<div class="btn-row"><button class="btn secondary tiny" type="button" data-act="answer" data-id="' + a.id + '" data-q="' + qi + '" data-v="yes">Yes, that\u2019s true</button><button class="btn ghost tiny" type="button" data-act="answer" data-id="' + a.id + '" data-q="' + qi + '" data-v="no">No, not yet</button></div></div>';
+    }).join("") : "") +
+    (needPhoto || c.held_for.length ? "<ul>" + (needPhoto ? "<li>Choose or add a photo for this ad.</li>" : "") + c.held_for.map(function (x) { return "<li>" + prose(x) + "</li>"; }).join("") +
+      '</ul><p class="small">Added the photo or got the OK? Check this ad again.</p><div><button class="btn secondary" type="button" data-act="recheck-one" data-id="' + a.id + '"' + busy + ">Check this ad again</button></div>" : "") + "</div>" : "";
+  var answered = arr(c.confirm).filter(function (q) { return ans[q.question]; });
   var photoSel = a.format === "photo" ? field("Photo", '<select data-act-change="photo" data-id="' + a.id + '"><option value="">Choose one of your photos</option>' + S.photos.map(function (p, k) { return '<option value="' + p.id + '"' + (a.photoId === p.id ? " selected" : "") + ">" + esc(p.caption || "Photo " + (k + 1)) + "</option>"; }).join("") + "</select>") : "";
   return '<article class="ad"><div class="ad-top"><strong>Ad ' + (i + 1) + '</strong><span class="chip ' + chipCls + ' dot">' + STATUS_TXT[st] + '</span></div>' +
     '<div class="ad-visual"><img data-ad="' + a.id + '" data-ratio="' + ratio + '" alt="Ad ' + (i + 1) + " image, " + esc(FORMATS[a.format]) + '"><div class="row"><div class="seg" role="group" aria-label="Image size">' + rb("1:1") + rb("4:5") + rb("9:16") + "</div>" +
     (downloads ? '<button class="btn secondary tiny" type="button" data-act="dl-img" data-id="' + a.id + '">Download image</button>' : "") + '</div><p class="warn" id="warn-' + a.id + '" hidden></p></div>' +
     '<div class="ad-body"><div><p class="ad-idea">' + esc(a.idea) + '</p><p class="sub small">' + esc(FORMATS[a.format]) + " · for " + esc(a.buyer) + "</p></div>" + photoSel +
-    (st === "fix" ? '<div class="note bad"><strong>What the check found</strong><ul>' + notes.map(function (c) { return "<li>" + (c.quote ? "“" + esc(c.quote) + "”: " : "") + esc(c.note) + "</li>"; }).join("") + '</ul><div><button class="btn" type="button" data-act="fix" data-id="' + a.id + '"' + (JOB || !aiReady() ? " disabled" : "") + ">Fix it</button></div></div>" : "") +
-    (st === "held" ? '<div class="note you"><strong>Waiting on you</strong><ul>' + (a.format === "photo" && !a.photoId ? "<li>Choose or add a photo for this ad.</li>" : "") + (a.critic ? a.critic.held_for.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") : "") + '</ul><p class="small">Added the photo or got the OK? Check this ad again.</p><div><button class="btn secondary" type="button" data-act="recheck-one" data-id="' + a.id + '"' + (JOB || !aiReady() ? " disabled" : "") + ">Check this ad again</button></div></div>" : "") +
+    fixBox + heldBox +
     cb("Primary text", a.primary_short, "primary_short") + cb("Headline", a.headline, "headline") + cb("Description", a.description, "description") +
     '<p class="small"><strong>Button:</strong> ' + esc(a.cta) + "</p>" +
     '<details><summary>Longer primary text</summary>' + cb("Primary text (long)", a.primary_long, "primary_long") + "</details>" +
     (a.hooks.length ? '<details><summary>Other hooks to try</summary><ul class="list">' + a.hooks.map(function (hk) { return "<li>" + esc(hk) + "</li>"; }).join("") + "</ul></details>" : "") +
-    '<details><summary>Why this should work</summary><div class="stack"><p class="small">' + esc(a.why) + '</p><ul class="list small">' + arr(a.evidence).map(function (e) { return "<li><span>" + esc(e.claim) + labelTag(e.label) + '</span><span class="sub">' + esc(e.source) + "</span></li>"; }).join("") + "</ul></div></details>" +
-    (a.critic ? '<details><summary>The check</summary><div class="stack"><p class="small"><strong>A stranger reads it as:</strong> ' + esc(a.critic.stranger) + '</p><ul class="checks-list">' + a.critic.checks.map(function (c) { var cls = c.result === "pass" ? "good" : c.result === "block" ? "bad" : "you"; return '<li><span><span class="chip ' + cls + '">' + esc(c.check) + ": " + esc(c.result) + "</span></span>" + (c.result !== "pass" ? '<span class="small">' + (c.quote ? "“" + esc(c.quote) + "” " : "") + esc(c.note) + "</span>" : "") + "</li>"; }).join("") + "</ul></div></details>" : "") +
+    (arr(a.droppedHooks).length ? '<details><summary>Hooks the check dropped (' + a.droppedHooks.length + ')</summary><ul class="list small">' + a.droppedHooks.map(function (d) { return "<li><span>" + esc(d.text) + '</span><span class="sub">' + prose(d.reason) + "</span></li>"; }).join("") + "</ul></details>" : "") +
+    '<details><summary>Why this should work</summary><div class="stack"><p class="small">' + prose(a.why) + '</p><ul class="list small">' + arr(a.evidence).map(function (e) { return "<li><span>" + prose(e.claim) + labelTag(e.label) + '</span><span class="sub">' + prose(e.source) + "</span></li>"; }).join("") + "</ul></div></details>" +
+    (a.critic ? '<details><summary>The check</summary><div class="stack"><p class="small"><strong>A stranger reads it as:</strong> ' + prose(c.stranger) + '</p><ul class="checks-list">' + arr(c.checks).map(function (x) { var cls = x.result === "pass" ? "good" : x.result === "block" ? "bad" : "you"; return '<li><span><span class="chip ' + cls + '">' + esc(x.check) + ": " + esc(x.result) + "</span></span>" + (x.result !== "pass" ? '<span class="small">' + (x.quote ? "\u201c" + prose(x.quote) + "\u201d " : "") + prose(x.note) + "</span>" : "") + "</li>"; }).join("") +
+      answered.map(function (q) { return '<li><span><span class="chip ' + (ans[q.question] === "yes" ? "good" : "bad") + '">you said ' + (ans[q.question] === "yes" ? "yes" : "no") + '</span></span><span class="small">' + prose(q.question) + "</span></li>"; }).join("") + "</ul></div></details>" : "") +
     "</div></article>";
 }
 
@@ -1713,6 +1801,13 @@ document.addEventListener("click", function (e) {
     case "write-fresh-yes": UI.confirmFresh = false; runWriteAds(true); break;
     case "recheck": runRecheck(); break;
     case "recheck-one": runRecheckOne(id); break;
+    case "answer": {
+      var qa = (S.ads || []).find(function (x) { return x.id === id; }), qv = b.getAttribute("data-v");
+      answerQuestion(qa, Number(b.getAttribute("data-q")), qv);
+      save(true); render();
+      toast(qv === "yes" ? "Saved. Ad Lab will treat that as true from now on." : "Saved. Fix it will take that line out.");
+      break;
+    }
     case "fix": runFix(id); break;
     case "stop": if (JOB) JOB.ctl.abort(); break;
     case "add-comp": {
