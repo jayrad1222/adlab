@@ -27,3 +27,4 @@ One line per event, newest last.
 - 2026-10-23T09:00:50+00:00: setup -> skipped (tooling is installed once per machine; the example used the builder's venv (Full mode))
 - 2026-10-23T09:00:50+00:00: readout -> skipped (no ads have run, so there is no Ads Manager export to read; the test plan says what to do after week one)
 - 2026-10-23T09:00:50+00:00: refresh -> skipped (a refresh re-pulls the roster after the first weeks of testing; not run for the example)
+- 2026-10-23T17:18:33+00:00: review -> done (release critic pass, run by hand before /adlab:review existed: analysis/critic-report.md ends in pass after two re-reviews)

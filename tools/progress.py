@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import adlab_common as C  # noqa: E402
 
 STEPS = ["setup", "intake", "competitors", "pull", "process", "analyze", "personas", "interrogate",
-         "angles", "bank", "assets", "render", "plan", "readout", "refresh"]
+         "angles", "bank", "assets", "render", "plan", "review", "readout", "refresh"]
 
 
 def load(ws: Path) -> dict:
@@ -77,7 +77,7 @@ def main(argv=None):
         C.ensure_workspace(ws)
         data = load(ws)
         save(ws, data)
-        note(ws, "workspace initialized at " + str(ws))
+        note(ws, "workspace initialized: " + ws.name)
         print("workspace ready:", ws)
         return 0
     if not ws.exists():

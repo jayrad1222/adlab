@@ -1,6 +1,6 @@
 # Progress
 
-Updated 2026-10-23T09:00:50+00:00. Resume from the first step that is not done.
+Updated 2026-10-23T17:18:33+00:00. Resume from the first step that is not done.
 
 | Step | Status | Updated | Count | Note |
 |---|---|---|---:|---|
@@ -17,6 +17,7 @@ Updated 2026-10-23T09:00:50+00:00. Resume from the first step that is not done.
 | assets | done | 2026-10-23T07:53:33+00:00 | 0 | no files supplied (stand-in member); empty catalog; five planned shoots listed as not yet usable |
 | render | done | 2026-10-23T08:58:26+00:00 | 3 | static: c06-e01, c03-e01, c05-e02 at 1:1, 4:5, 9:16; legibility and 9:16 overlay checks clean; no storyboards (every video is held); no Higgsfield |
 | plan | done | 2026-10-23T09:00:26+00:00 |  | target CPA 47.38 per purchase (placeholder inputs); 5 concepts judgeable per month at the 6000 placeholder budget; batch one: 5 ready concepts with run conditions; CPA provisional until returns are read at day 99 |
+| review | done | 2026-10-23T17:18:33+00:00 |  | release critic pass, run by hand before /adlab:review existed: analysis/critic-report.md ends in pass after two re-reviews |
 | readout | skipped | 2026-10-23T09:00:50+00:00 |  | no ads have run, so there is no Ads Manager export to read; the test plan says what to do after week one |
 | refresh | skipped | 2026-10-23T09:00:50+00:00 |  | a refresh re-pulls the roster after the first weeks of testing; not run for the example |
 

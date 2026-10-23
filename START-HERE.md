@@ -17,7 +17,7 @@ Ad Lab is a Claude Code plugin that decodes your market from the public ad libra
 4. `/adlab:competitors`: proposes three rings of competitors with reasons. Cross out, add, say go.
 5. `/adlab:pull`: runs in the background for 20 to 60 minutes. Make coffee.
 
-From there: `/adlab:process`, `/adlab:analyze` (the long one), `/adlab:personas` (your review), `/adlab:interrogate`, `/adlab:angles`, `/adlab:bank`, `/adlab:assets` (drop your photos, videos and screenshots into `adlab-workspace/assets/`), `/adlab:render`, `/adlab:plan`. After your first week of ads, export the report and run `/adlab:readout`. Later, `/adlab:refresh`.
+From there: `/adlab:process`, `/adlab:analyze` (the long one), `/adlab:personas` (your review), `/adlab:interrogate`, `/adlab:angles`, `/adlab:bank`, `/adlab:assets` (drop your photos, videos and screenshots into `adlab-workspace/assets/`), `/adlab:render`, `/adlab:plan`, then `/adlab:review` (the critic checks every line before anything runs; read `analysis/critic-report.md`). After your first week of ads, export the report and run `/adlab:readout`. Later, `/adlab:refresh`.
 
 `/adlab:doctor` explains anything that breaks. `PROGRESS.md` in the workspace shows where you are, so you can stop and resume any time.
 

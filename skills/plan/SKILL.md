@@ -21,4 +21,4 @@ allowed-tools: Bash(python3 -I ${CLAUDE_PLUGIN_ROOT}/tools/*), Bash(python3 -I "
 
 ## Report
 
-finished / doing now / next with the target CPA in one line and the number of concepts the budget can judge. Say what to do after the first week: export the Ads Manager report and run `/adlab:readout`.
+finished / doing now / next with the target CPA in one line and the number of concepts the budget can judge. Suggest `/adlab:review` before any ad goes live. Say what to do after the first week: export the Ads Manager report and run `/adlab:readout`.

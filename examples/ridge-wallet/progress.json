@@ -89,6 +89,11 @@
    "updated": "2026-10-23T09:00:50+00:00",
    "note": "a refresh re-pulls the roster after the first weeks of testing; not run for the example",
    "count": null
+  },
+  "review": {
+   "status": "done",
+   "updated": "2026-10-23T17:18:33+00:00",
+   "note": "release critic pass, run by hand before /adlab:review existed: analysis/critic-report.md ends in pass after two re-reviews"
   }
  }
 }

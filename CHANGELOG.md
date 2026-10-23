@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 (2026-10-23)
+
+- `/adlab:review`: the critic's whole-run review of any workspace (`--workspace <path>`, `--client <name>`, or the active one). It re-checks the interrogation, every concept, every bank entry and its renders, the test plan and a scan of every ad line against the captured pages and business files, and writes `analysis/critic-report.md` in the same shape as the two examples. Run again after fixes, it appends a dated re-review. It changes nothing else in the run.
+- `tools/scan.py`: lists every distinct line of ad copy and on-image text that carries a number, a price, a guarantee, an income or results word, a count or rating, scarcity or urgency, a superlative, "free" or a discount, a quote, or a competitor's name from the roster, with every entry that carries it, ready entries first. Writes `analysis/scan.md`. A hit is a line to check, not a finding.
+- `progress.py` has a `review` step between plan and readout.
+- A new workspace's changelog records the folder name at init, not its full path.
+- Both examples carry `analysis/scan.md` and a `review` row in PROGRESS.md (their reports came from the hand-run release pass).
+
 ## 0.1.0 (2026-10-23)
 
 First release.
