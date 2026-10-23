@@ -1,0 +1,1839 @@
+<title>Ad Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:wght@600;700;800&family=Source+Serif+4:wght@400;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+/* Layout: a sticky bar with the five-step rail; one working column per step (forms narrow, the ad board wide); results sit under the button that made them */
+:root {
+  --paper: #F3F5F6;
+  --surface: #FFFFFF;
+  --ink: #14202A;
+  --muted: #56646F;
+  --rule: #D5DDE3;
+  --field: #FFFFFF;
+  --tint: #E8EEF1;
+  --accent: #0D6670;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #DCEEEF;
+  --you: #8A500A;
+  --you-soft: #FAEBD3;
+  --good: #1D6E43;
+  --good-soft: #DDF1E5;
+  --bad: #A13A2B;
+  --bad-soft: #F7E0DB;
+  --shadow: 0 1px 2px rgba(20, 32, 42, 0.06);
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0D1317;
+    --surface: #151D23;
+    --ink: #E3E9EE;
+    --muted: #9BA9B5;
+    --rule: #28343D;
+    --field: #10181D;
+    --tint: #1B252C;
+    --accent: #5BC0C6;
+    --accent-ink: #062226;
+    --accent-soft: #12302F;
+    --you: #F0B562;
+    --you-soft: #36280F;
+    --good: #6BCF97;
+    --good-soft: #13301F;
+    --bad: #F08B79;
+    --bad-soft: #3A1A15;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0D1317;
+  --surface: #151D23;
+  --ink: #E3E9EE;
+  --muted: #9BA9B5;
+  --rule: #28343D;
+  --field: #10181D;
+  --tint: #1B252C;
+  --accent: #5BC0C6;
+  --accent-ink: #062226;
+  --accent-soft: #12302F;
+  --you: #F0B562;
+  --you-soft: #36280F;
+  --good: #6BCF97;
+  --good-soft: #13301F;
+  --bad: #F08B79;
+  --bad-soft: #3A1A15;
+  --shadow: none;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Bar */
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.bar-in { max-width: 68rem; margin: 0 auto; display: flex; align-items: center; gap: 1rem; padding-block: 0.6rem; flex-wrap: wrap; }
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.01em; display: flex; align-items: center; gap: 0.5rem; }
+.brand-mark { width: 1.6rem; height: 1.6rem; border-radius: 6px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 0.85rem; }
+.rail { display: flex; gap: 0.25rem; flex: 1; flex-wrap: wrap; }
+.rail button {
+  display: flex; align-items: center; gap: 0.45rem;
+  border: 0; background: transparent; padding: 0.4rem 0.6rem; border-radius: 8px; cursor: pointer;
+  color: var(--muted); font-size: 0.9rem; font-weight: 500;
+}
+.rail button:hover { background: var(--tint); color: var(--ink); }
+.rail button[aria-current="step"] { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+.rail .num {
+  width: 1.4rem; height: 1.4rem; border-radius: 50%; border: 1.5px solid currentColor;
+  display: grid; place-items: center; font-size: 0.75rem; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.rail .done .num { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.bar-tools { position: relative; }
+.menu {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 25;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  padding: 0.4rem; min-width: 15rem; display: flex; flex-direction: column; gap: 0.15rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.menu button { text-align: left; border: 0; background: transparent; padding: 0.5rem 0.65rem; border-radius: 6px; cursor: pointer; }
+.menu button:hover { background: var(--tint); }
+.menu .danger { color: var(--bad); }
+
+/* Page */
+.page {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 2rem 5rem;
+}
+.col { max-width: 46rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+.col.wide { max-width: 68rem; }
+.step-head { display: flex; flex-direction: column; gap: 0.4rem; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.step-head h1 { font-size: clamp(1.7rem, 4.5vw, 2.3rem); font-weight: 800; letter-spacing: -0.02em; }
+.step-head p { color: var(--muted); max-width: 40rem; }
+
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: var(--shadow); }
+.card h2 { font-size: 1.2rem; font-weight: 700; }
+.card h3 { font-size: 1rem; font-weight: 700; font-family: var(--font-body); }
+.card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.sub { color: var(--muted); font-size: 0.92rem; }
+.small { font-size: 0.85rem; }
+.mono { font-family: var(--font-mono); font-size: 0.85em; }
+.stack { display: flex; flex-direction: column; gap: 0.75rem; }
+.row { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+
+/* Fields */
+.field { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.field > span { font-weight: 600; font-size: 0.92rem; }
+.field > em { font-style: normal; color: var(--muted); font-size: 0.85rem; }
+input[type="text"], input[type="url"], input[type="number"], select, textarea {
+  width: 100%; box-sizing: border-box; background: var(--field); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 0.55rem 0.7rem; min-height: 2.6rem;
+}
+textarea { min-height: 5.5rem; resize: vertical; line-height: 1.45; }
+textarea.tall { min-height: 11rem; }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.75; }
+input[type="color"] { width: 3rem; height: 2.4rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--field); padding: 2px; }
+.check { display: flex; gap: 0.55rem; align-items: flex-start; cursor: pointer; }
+.check input { margin-top: 0.3rem; width: 1rem; height: 1rem; accent-color: var(--accent); }
+.checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 1rem; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+  border: 1px solid transparent; border-radius: 8px; padding: 0.6rem 1.05rem; cursor: pointer;
+  font-weight: 600; background: var(--accent); color: var(--accent-ink); min-height: 2.6rem;
+}
+.btn:hover { filter: brightness(1.06); }
+.btn.big { padding: 0.8rem 1.4rem; font-size: 1.05rem; }
+.btn.secondary { background: var(--surface); color: var(--ink); border-color: var(--rule); }
+.btn.secondary:hover { background: var(--tint); filter: none; }
+.btn.ghost { background: transparent; color: var(--accent); border-color: transparent; padding-inline: 0.5rem; }
+.btn.ghost:hover { background: var(--accent-soft); filter: none; }
+.btn.tiny { padding: 0.2rem 0.55rem; min-height: 0; font-size: 0.8rem; font-weight: 500; }
+.btn[disabled] { opacity: 0.5; cursor: not-allowed; filter: none; }
+.btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+.btn-row .hint { color: var(--muted); font-size: 0.88rem; }
+.nav { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+
+/* Chips */
+.chip { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; font-weight: 600; padding: 0.15rem 0.55rem; border-radius: 999px; white-space: nowrap; background: var(--tint); color: var(--muted); }
+.chip.dot::before { content: ""; width: 0.42rem; height: 0.42rem; border-radius: 50%; background: currentColor; }
+.chip.good { background: var(--good-soft); color: var(--good); }
+.chip.you { background: var(--you-soft); color: var(--you); }
+.chip.bad { background: var(--bad-soft); color: var(--bad); }
+.chip.accent { background: var(--accent-soft); color: var(--accent); }
+.label-tag { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); border: 1px solid var(--rule); border-radius: 4px; padding: 0 0.3rem; margin-left: 0.3rem; white-space: nowrap; }
+
+/* Notes and banners */
+.note { background: var(--tint); border-radius: var(--radius); padding: 0.9rem 1rem; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.93rem; }
+.note.you { background: var(--you-soft); }
+.note.bad { background: var(--bad-soft); }
+.note ol, .note ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.welcome { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem; }
+.welcome ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+
+/* Job box */
+.job { border: 1px solid var(--accent); background: var(--accent-soft); border-radius: var(--radius); padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.job-lines { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+.job-lines li { display: flex; gap: 0.5rem; align-items: center; font-size: 0.93rem; }
+.job-lines .st { width: 1.1rem; text-align: center; font-weight: 700; }
+.job-lines .run .st { color: var(--accent); }
+.job-lines .run .st::before { content: ""; display: inline-block; width: 0.7rem; height: 0.7rem; border: 2px solid var(--accent); border-right-color: transparent; border-radius: 50%; animation: spin 0.9s linear infinite; vertical-align: -1px; }
+.job-lines .ok .st { color: var(--good); }
+.job-lines .ok .st::before { content: "✓"; }
+.job-lines .err .st { color: var(--bad); }
+.job-lines .err .st::before { content: "!"; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .job-lines .run .st::before { animation: none; } }
+
+/* Drop zones and thumbs */
+.drop {
+  border: 1.5px dashed var(--rule); border-radius: var(--radius); padding: 0.9rem; text-align: center; cursor: pointer;
+  color: var(--muted); font-size: 0.92rem; display: flex; flex-direction: column; gap: 0.2rem; align-items: center; background: var(--field);
+}
+.drop:hover, .drop.over { border-color: var(--accent); color: var(--ink); background: var(--accent-soft); }
+.drop strong { color: var(--accent); }
+.drop input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.thumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.thumb { position: relative; width: 5.5rem; height: 5.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--rule); background: var(--tint); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb button { position: absolute; top: 3px; right: 3px; width: 1.4rem; height: 1.4rem; border-radius: 50%; border: 0; background: rgba(0,0,0,0.65); color: #fff; cursor: pointer; font-size: 0.8rem; line-height: 1; }
+.thumb .n { position: absolute; left: 3px; bottom: 3px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.7rem; padding: 0 0.3rem; border-radius: 4px; font-family: var(--font-mono); }
+
+/* Competitors */
+.comp { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.8rem; align-items: start; }
+.comp.off > :not(.comp-toggle) { opacity: 0.5; }
+.comp-toggle { padding-top: 0.2rem; }
+.comp-toggle input { width: 1.15rem; height: 1.15rem; accent-color: var(--accent); }
+.comp-body { display: flex; flex-direction: column; gap: 0.6rem; min-width: 0; }
+.comp-title { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.comp-title strong { font-size: 1.05rem; }
+details > summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; font-weight: 500; }
+details[open] > summary { margin-bottom: 0.5rem; }
+
+/* Market */
+.mm-headline { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; line-height: 1.3; }
+.list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.list li { display: flex; flex-direction: column; gap: 0.15rem; }
+.refs { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); }
+.buyer { border: 1px solid var(--rule); border-radius: var(--radius); padding: 1rem; display: flex; flex-direction: column; gap: 0.55rem; background: var(--surface); }
+.buyer.keep { border-color: var(--good); }
+.buyer.wrong, .buyer.not { border-color: var(--bad); }
+.buyer h3 { font-family: var(--font-display); font-size: 1.1rem; }
+.kv { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.3rem 0.8rem; font-size: 0.93rem; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; background: var(--surface); padding: 0.35rem 0.7rem; cursor: pointer; font-size: 0.85rem; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.rec { border-top: 1px solid var(--rule); padding-top: 0.9rem; display: flex; flex-direction: column; gap: 0.45rem; }
+.rec:first-child { border-top: 0; padding-top: 0; }
+
+/* Ads */
+.summary-bar { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; }
+.ads { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 1.25rem; align-items: start; }
+.ad { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow); }
+.ad-top { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+.ad-visual { background: var(--tint); display: flex; flex-direction: column; gap: 0.5rem; padding: 0.75rem; align-items: center; }
+.ad-visual img { max-width: 100%; max-height: 26rem; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); background: #fff; }
+.ad-visual .ph { width: 100%; aspect-ratio: 1; display: grid; place-items: center; color: var(--muted); font-size: 0.9rem; }
+.ad-body { padding: 1rem; display: flex; flex-direction: column; gap: 0.8rem; }
+.ad-idea { font-weight: 600; }
+.copyblk { display: flex; flex-direction: column; gap: 0.25rem; }
+.copyblk .lbl { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--muted); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.04em; }
+.copyblk .txt { white-space: pre-wrap; font-size: 0.95rem; background: var(--tint); border-radius: 6px; padding: 0.5rem 0.65rem; overflow-wrap: anywhere; }
+.checks-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; }
+.checks-list li { display: flex; flex-direction: column; gap: 0.15rem; }
+.warn { color: var(--you); font-size: 0.85rem; }
+
+/* Numbers */
+.big-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+.big-nums > div { padding: 1rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.big-nums > div + div { border-left: 1px solid var(--rule); }
+.big-nums strong { font-family: var(--font-display); font-size: 1.7rem; font-variant-numeric: tabular-nums; }
+.big-nums span { color: var(--muted); font-size: 0.88rem; }
+.ph-flag { color: var(--you); font-size: 0.78rem; font-weight: 600; }
+.steps-list { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 0.55rem; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); font-weight: 600; background: var(--tint); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.move { min-width: 13rem; }
+td .chip { white-space: normal; }
+
+.toast {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px)); z-index: 40;
+  background: var(--ink); color: var(--paper); padding: 0.6rem 1rem; border-radius: 8px; font-size: 0.92rem; max-width: calc(100% - 32px);
+}
+
+@media (max-width: 760px) {
+  .grid2, .grid3, .checks, .welcome { grid-template-columns: 1fr; }
+  .rail { order: 3; flex-basis: 100%; }
+  .rail .lbl { display: none; }
+  .rail button[aria-current="step"] .lbl { display: inline; }
+  .big-nums { grid-template-columns: 1fr; }
+  .big-nums > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+  .kv { grid-template-columns: 1fr; }
+  .kv dt { margin-top: 0.3rem; }
+}
+</style>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">AL</span>Ad Lab</div>
+    <nav class="rail" id="rail" aria-label="Steps"></nav>
+    <div class="bar-tools">
+      <button class="btn secondary tiny" type="button" id="menuBtn" aria-expanded="false" aria-controls="menu">Save or restore</button>
+      <div class="menu" id="menu" hidden>
+        <button type="button" data-act="backup-save">Download a backup file</button>
+        <button type="button" data-act="backup-load">Load a backup file</button>
+        <button type="button" class="danger" data-act="start-over">Start over</button>
+      </div>
+    </div>
+  </div>
+</header>
+<input type="file" id="backupInput" accept=".json,application/json" hidden>
+<main class="page" id="main"></main>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function () {
+"use strict";
+
+/* ---------- constants ---------- */
+var KEY = "adlab.v1";
+var STEPS = [
+  { n: 1, name: "Your business" },
+  { n: 2, name: "Competitors" },
+  { n: 3, name: "Your market" },
+  { n: 4, name: "Your ads" },
+  { n: 5, name: "Launch and learn" }
+];
+var NEVER = [
+  ["income", "Income or earnings promises"],
+  ["guarantee", "Guarantees"],
+  ["dfy", "“Done for you”"],
+  ["urgency", "Countdowns, deadlines or “spots left”"],
+  ["counts", "Customer counts, ratings or reviews"],
+  ["beforeafter", "Before-and-after results"]
+];
+var QUESTIONS = [
+  ["instead", "What do customers do instead of buying from you, and what does that cost them?", "They muddle through on their own, and it costs them time and a bit of embarrassment."],
+  ["fear", "What do buyers fear will go wrong if they buy?", "That they pay and nothing changes."],
+  ["trigger", "When someone decides to buy, what just happened in their life?", "Something broke, they got a bill, or they saw someone else doing it."],
+  ["wrong", "Who is wrong for you?", "People who want it done for them, or want a guarantee."],
+  ["only", "What is true about you that competitors can't say?", "We care more and we are more hands-on."],
+  ["proof", "What proof do you have that feels too small to use?", "A few nice messages and some screenshots we never used."],
+  ["customers", "Describe one to three real customers or situations. No names needed.", ""]
+];
+var KINDS = [
+  ["community", "Online community or membership"],
+  ["course", "Course or coaching"],
+  ["software", "Software or app"],
+  ["service", "Service"],
+  ["product", "Physical product"],
+  ["local", "Local business"]
+];
+var FORMATS = {
+  note: "Plain text note",
+  problem: "Problem card",
+  offer: "Offer card",
+  faq: "Question card",
+  photo: "Photo with text"
+};
+var RATIOS = { "1:1": [1080, 1080], "4:5": [1080, 1350], "9:16": [1080, 1920] };
+var COUNTRIES = [["US", "United States"], ["CA", "Canada"], ["GB", "United Kingdom"], ["AU", "Australia"], ["NZ", "New Zealand"], ["IE", "Ireland"], ["ALL", "All countries"]];
+var MOVES = {
+  "too early": ["Too early", "Keep it running."],
+  "kill or new hook": ["Stop it, or try a new hook", ""],
+  "iterate body": ["Keep the hook, change the middle", ""],
+  "iterate offer or CTA": ["Change the offer or the button", ""],
+  "upstream only": ["Too few results to judge cost yet", ""],
+  "hold": ["Keep running", ""],
+  "scale": ["Raise the budget in steps", ""],
+  "kill": ["Stop it", ""],
+  "iterate landing or offer": ["Fix the page or the offer", ""],
+  "refresh": ["Rotate in a new idea", ""]
+};
+
+function defaults() {
+  return {
+    v: 1, step: 1, welcomed: false,
+    biz: { name: "", url: "", kind: "community", price: "", billing: "monthly", trial: "none", buyer: "", pageText: "", pageShots: [], answers: {}, never: { income: true, guarantee: true, dfy: false, urgency: true, counts: true, beforeafter: true }, neverExtra: "" },
+    brief: null,
+    country: "US",
+    competitors: [],
+    market: null, buyers: null, missingBuyer: "", questions: null,
+    photos: [],
+    brand: { primary: "#1F3A5F", accent: "#FFC857", font: "sans" },
+    ads: null,
+    money: { model: "", price: "", trial: "", ttp: "50", months: "4", aov: "", margin: "", refund: "2", payback: "3", keep: "30", budget: "1500", judge: "20", touched: {} },
+    thresholds: { impression_floor: "2000", min_hook_rate: "25", min_hold_rate: "25", min_ctr: "0.8", max_frequency: "3", kill_cpa_multiple: "1.5" },
+    launched: {},
+    readout: null
+  };
+}
+
+/* ---------- state ---------- */
+var S = load();
+function load() {
+  var d = defaults();
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (raw) { var s = JSON.parse(raw); return merge(d, s); }
+  } catch (e) {}
+  return d;
+}
+function merge(base, over) {
+  if (!over || typeof over !== "object" || Array.isArray(over)) return over === undefined ? base : over;
+  var out = Array.isArray(base) ? [] : {};
+  Object.keys(base || {}).forEach(function (k) { out[k] = base[k]; });
+  Object.keys(over).forEach(function (k) {
+    out[k] = (base && base[k] && typeof base[k] === "object" && !Array.isArray(base[k])) ? merge(base[k], over[k]) : over[k];
+  });
+  return out;
+}
+var saveTimer = null;
+function writeNow() { clearTimeout(saveTimer); saveTimer = null; try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+function save(now) {
+  if (now) { writeNow(); return; }
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(writeNow, 250);
+}
+window.addEventListener("pagehide", function () { if (saveTimer) writeNow(); });
+document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden" && saveTimer) writeNow(); });
+function getPath(obj, path) { return path.split(".").reduce(function (o, k) { return o == null ? undefined : o[k]; }, obj); }
+function setPath(obj, path, val) {
+  var ks = path.split("."), o = obj;
+  for (var i = 0; i < ks.length - 1; i++) { if (o[ks[i]] == null) o[ks[i]] = {}; o = o[ks[i]]; }
+  o[ks[ks.length - 1]] = val;
+}
+
+/* ---------- images (IndexedDB) ---------- */
+var IDB = null;
+function idb() {
+  if (IDB) return IDB;
+  IDB = new Promise(function (res) {
+    try {
+      var r = indexedDB.open("adlab", 1);
+      r.onupgradeneeded = function () { r.result.createObjectStore("img"); };
+      r.onsuccess = function () { res(r.result); };
+      r.onerror = function () { res(null); };
+    } catch (e) { res(null); }
+  });
+  return IDB;
+}
+var MEM = {};
+function imgPut(id, blob) {
+  MEM[id] = blob;
+  return idb().then(function (db) {
+    if (!db) return;
+    return new Promise(function (res) {
+      try { var t = db.transaction("img", "readwrite"); t.objectStore("img").put(blob, id); t.oncomplete = res; t.onerror = res; } catch (e) { res(); }
+    });
+  });
+}
+function imgGet(id) {
+  if (MEM[id]) return Promise.resolve(MEM[id]);
+  return idb().then(function (db) {
+    if (!db) return null;
+    return new Promise(function (res) {
+      try { var q = db.transaction("img").objectStore("img").get(id); q.onsuccess = function () { if (q.result) MEM[id] = q.result; res(q.result || null); }; q.onerror = function () { res(null); }; } catch (e) { res(null); }
+    });
+  });
+}
+function imgDel(id) {
+  delete MEM[id];
+  if (URLS[id]) { URL.revokeObjectURL(URLS[id]); delete URLS[id]; }
+  return idb().then(function (db) {
+    if (!db) return;
+    try { db.transaction("img", "readwrite").objectStore("img").delete(id); } catch (e) {}
+  });
+}
+function imgClear() {
+  MEM = {};
+  return idb().then(function (db) { if (!db) return; try { db.transaction("img", "readwrite").objectStore("img").clear(); } catch (e) {} });
+}
+var URLS = {};
+function hydrateImages() {
+  document.querySelectorAll("img[data-img]").forEach(function (el) {
+    var id = el.getAttribute("data-img");
+    if (URLS[id]) { el.src = URLS[id]; return; }
+    imgGet(id).then(function (b) { if (b) { URLS[id] = URL.createObjectURL(b); el.src = URLS[id]; } });
+  });
+}
+
+/* ---------- capabilities ---------- */
+var sample = null, downloads = null, limits = null, capsReady = false;
+(function initCaps() {
+  var c = window.claude;
+  if (!c || typeof c.use !== "function") { capsReady = true; return; }
+  Promise.all([
+    c.use("sample").catch(function () { return null; }),
+    c.use("downloads").catch(function () { return null; })
+  ]).then(function (r) {
+    sample = r[0]; downloads = r[1];
+    if (sample && sample.limits) return sample.limits().then(function (l) { limits = l; }).catch(function () {});
+  }).then(function () { capsReady = true; render(); });
+})();
+function maxImages() { return (limits && limits.images && limits.images.maxCount) || 0; }
+
+/* ---------- helpers ---------- */
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+function uid(p) { return p + Math.random().toString(36).slice(2, 8); }
+function num(x, d) { var n = parseFloat(String(x == null ? "" : x).replace(/[$,%\s]/g, "")); return isFinite(n) ? n : d; }
+function money(x) { if (x == null || !isFinite(x)) return "n/a"; return "$" + (Math.round(x * 100) / 100).toLocaleString(undefined, { minimumFractionDigits: x < 100 ? 2 : 0, maximumFractionDigits: 2 }); }
+function pct(x) { return x == null || !isFinite(x) ? "" : (x * 100).toFixed(1) + "%"; }
+function arr(x) { return Array.isArray(x) ? x : []; }
+function str(x) { return x == null ? "" : String(x); }
+var toastTimer = null;
+function toast(msg) {
+  var t = document.getElementById("toast");
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.hidden = true; }, 2600);
+}
+function copyText(text, el) {
+  var done = function (ok) { toast(ok ? "Copied" : "Select the text and copy it"); };
+  try {
+    navigator.clipboard.writeText(text).then(function () { done(true); }, function () { selectIn(el); done(false); });
+  } catch (e) { selectIn(el); done(false); }
+}
+function selectIn(el) {
+  if (!el) return;
+  try { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+}
+
+/* ---------- step status ---------- */
+function decodedCount() { return S.competitors.filter(function (c) { return c.keep && c.decoded; }).length; }
+function hasMaterial(c) { return (c.shots && c.shots.length) || str(c.adText).trim().length > 20; }
+function stepDone(n) {
+  if (n === 1) return !!S.brief;
+  if (n === 2) return S.competitors.some(function (c) { return c.keep && hasMaterial(c); });
+  if (n === 3) return !!(S.market && S.buyers && S.questions);
+  if (n === 4) return !!(S.ads && S.ads.some(function (a) { return adStatus(a) === "ready"; }));
+  if (n === 5) return !!S.readout;
+  return false;
+}
+
+/* ---------- AI ---------- */
+var JOB = null, LASTERR = null, UI = { confirmFresh: false };
+var ERRCOPY = {
+  no_sample: "The writing steps need Claude. Open this page in Claude while signed in.",
+  not_granted: "Ad Lab needs your OK to use Claude. Reload the page and allow it when Claude asks.",
+  sampling_disabled: "Claude isn't available on this account.",
+  capability_disabled: "Claude isn't available in this view.",
+  rate_limited: "You've reached a usage limit for now. Try again in a little while.",
+  session_expired: "Sign in to Claude again, then try again.",
+  prompt_too_large: "That's too much at once. Shorten the page text or use fewer screenshots, then try again.",
+  images_unavailable: "Screenshots can't be sent from this view. Paste the ad text instead.",
+  image_rejected: "One of the screenshots couldn't be read. Try a PNG or JPG under 20 MB.",
+  refused: "Claude declined that one. Change the input and try again.",
+  invalid_json: "The answer didn't come back in a usable shape. Try again.",
+  empty_completion: "Claude returned nothing. Try again.",
+  upstream_error: "The connection dropped. Try again."
+};
+function errMsg(e) { var code = (e && e.code) || "upstream_error"; return ERRCOPY[code] || ERRCOPY.upstream_error; }
+
+function startJob(step, title) {
+  JOB = { step: step, title: title, ctl: new AbortController(), lines: [] };
+  LASTERR = null;
+  render();
+  return JOB;
+}
+function jobLine(text) { if (!JOB) return -1; JOB.lines.push({ text: text, st: "run" }); paintJob(); return JOB.lines.length - 1; }
+function jobOk(i, text) { if (!JOB || !JOB.lines[i]) return; JOB.lines[i].st = "ok"; if (text) JOB.lines[i].text = text; paintJob(); }
+function endJob(err, retry) {
+  var step = JOB ? JOB.step : S.step;
+  JOB = null;
+  if (err && err.code !== "cancelled") LASTERR = { step: step, msg: errMsg(err), retry: retry || null };
+  save(true); render();
+}
+function paintJob() {
+  var box = document.getElementById("jobbox");
+  if (box && JOB) box.outerHTML = jobHTML();
+}
+function jobHTML() {
+  if (!JOB) return "";
+  return '<div class="job" id="jobbox" role="status" aria-live="polite"><div class="row" style="justify-content:space-between"><strong>' + esc(JOB.title) + '</strong><button class="btn secondary tiny" type="button" data-act="stop">Stop</button></div>' +
+    '<ul class="job-lines">' + JOB.lines.map(function (l) { return '<li class="' + l.st + '"><span class="st" aria-hidden="true"></span><span>' + esc(l.text) + "</span></li>"; }).join("") + "</ul>" +
+    '<p class="sub small">Claude thinks before it writes, so each part takes a minute or two. You can keep this tab open and come back.</p></div>';
+}
+function errHTML(step) {
+  if (!LASTERR || LASTERR.step !== step) return "";
+  return '<div class="note bad" role="alert"><strong>That didn’t finish.</strong><p>' + esc(LASTERR.msg) + "</p>" + (LASTERR.retry ? '<div><button class="btn secondary" type="button" data-act="' + LASTERR.retry + '">Try again</button></div>' : "") + "</div>";
+}
+function ai(prompt, opts) {
+  opts = opts || {};
+  if (!sample) return Promise.reject({ code: "no_sample" });
+  var o = { modelTier: opts.tier || "default" };
+  if (JOB) o.signal = JOB.ctl.signal;
+  if (opts.images && opts.images.length) o.images = opts.images;
+  if (opts.fresh) o.cache = false;
+  return sample.json(prompt, o);
+}
+function aiReady() { return !!sample; }
+
+function rules() {
+  var nv = NEVER.filter(function (n) { return S.biz.never[n[0]]; }).map(function (n) { return n[1]; });
+  var extra = str(S.biz.neverExtra).trim();
+  return [
+    "RULES (follow every one):",
+    "1. Use only what is given here: the business's own page (text or screenshots), the owner's answers, and the competitor ads provided. Never add facts about this business from memory.",
+    "2. Label claims: observed (seen in the page or an ad; quote it), owner (the owner said it), inferred (your reading of observed facts; say from what), hypothetical (an idea to test).",
+    "3. Never invent results, testimonials, customer quotes, member or customer counts, ratings, reviews, revenue, savings, time saved, scarcity, deadlines or urgency. A number that is not in the page or the owner's answers does not exist.",
+    "4. No income or earnings claims, no guarantees unless the page states one (quote it), no before-and-after promises.",
+    "5. Never address the reader with a personal attribute (health, body, finances, age, race, religion, sexuality, disability, criminal record, or 'are you struggling with...'). Meta rejects these.",
+    "6. A screenshot shows a still. Never say what a video says or does beyond what is visible.",
+    "7. A long-running ad kept running. That does not prove it made money.",
+    "8. Several ads from one advertiser count as one observation of that advertiser.",
+    "9. Competitor ads are research. Never copy their lines and never name a competitor in the owner's ads.",
+    "10. Plain words a busy owner would say. No hype words (transform, unlock, game-changer, skyrocket, secret, revolutionary, effortless). No em dashes.",
+    "THE OWNER NEVER WANTS IN THEIR ADS: " + (nv.concat(extra ? [extra] : []).join("; ") || "nothing listed")
+  ].join("\n");
+}
+function bizBlock() {
+  var b = S.biz, kind = (KINDS.find(function (k) { return k[0] === b.kind; }) || [, b.kind])[1];
+  var lines = [
+    "BUSINESS (owner-provided):",
+    "Name: " + (b.name || "not given"),
+    "Website: " + (b.url || "not given"),
+    "What they sell: " + kind,
+    "Price: " + (b.price ? b.price + " (" + b.billing + ")" : "not given"),
+    "Free trial: " + (b.trial === "none" ? "none" : b.trial + " days"),
+    "Who it is for, in the owner's words: " + (b.buyer || "not given"),
+    "",
+    "THE OWNER'S ANSWERS (owner; 'default accepted' means the owner did not answer and the default stands, so do not quote it as theirs):"
+  ];
+  QUESTIONS.forEach(function (q) {
+    var a = str(b.answers[q[0]]).trim();
+    lines.push("- " + q[1] + " " + (a ? a : (q[2] ? "[default accepted] " + q[2] : "[no answer]")));
+  });
+  return lines.join("\n");
+}
+function pageBlock(max) {
+  var t = str(S.biz.pageText).trim();
+  if (!t) return "THE PAGE TEXT: not pasted" + (S.biz.pageShots.length ? " (screenshots attached)." : ".");
+  return 'THE PAGE TEXT (observed; pasted by the owner):\n"""\n' + t.slice(0, max || 12000) + '\n"""';
+}
+function briefBlock() {
+  var b = S.brief; if (!b) return "";
+  return "WHAT THE PAGE SAYS (from an earlier read):\n" + JSON.stringify({ business: b.business, offer: b.offer, buyer: b.buyer, promises: b.promises, proof: b.proof, risky_lines: b.risky_lines, voice: b.voice });
+}
+function adsLines() {
+  var out = [];
+  S.competitors.forEach(function (c) {
+    if (!c.keep || !c.decoded) return;
+    arr(c.decoded.ads).forEach(function (a) {
+      out.push([a.ref, c.name, "started " + (a.started || "unknown"), a.format, "hook: " + a.hook, "promise: " + a.promise, "angle: " + a.angle, "buyer: " + a.buyer, "proof: " + a.proof, "offer: " + a.offer, "cta: " + a.cta, "lever: " + a.lever].join(" | "));
+    });
+  });
+  return out;
+}
+function keptBuyers() { return arr(S.buyers).filter(function (b) { return b.verdict !== "not" && b.verdict !== "wrong"; }); }
+function photoList() {
+  return S.photos.map(function (p) { return { id: p.id, shows: p.caption || "no caption", people: p.people === "none" ? "no other people" : p.people === "ok" ? "other people, consent given" : "other people, no consent yet" }; });
+}
+
+/* ---------- AI tasks ---------- */
+function blobsFor(ids) { return Promise.all(ids.map(imgGet)).then(function (bs) { return bs.filter(Boolean); }); }
+
+function runReadBusiness() {
+  if (!aiReady()) { LASTERR = { step: 1, msg: errMsg({ code: "no_sample" }) }; render(); return; }
+  startJob(1, "Reading your business");
+  var i = jobLine("Reading your page and answers");
+  var shots = S.biz.pageShots.slice(0, Math.max(0, maxImages()));
+  blobsFor(shots).then(function (imgs) {
+    var p = [
+      "TASK: read_business",
+      "You are briefing an ad writer about a small business, using only its own page and the owner's answers.",
+      rules(), "", bizBlock(), "", pageBlock(),
+      imgs.length ? "The attached images are screenshots of the same page (observed)." : "",
+      "",
+      'Reply with only JSON in this shape: {"business":"one sentence: what they sell and to whom","offer":"price, billing and trial exactly as stated","buyer":"who it is for, plain words","promises":[{"text":"exact quote from the page","label":"observed"}],"proof":[{"text":"exact quote or owner fact","label":"observed|owner","usable":true,"why":"why it can or cannot go in an ad"}],"risky_lines":[{"text":"exact quote from the page","why":"income claim, urgency, guarantee, vague promise..."}],"missing":["something a buyer needs that the page does not say"],"voice":"how they talk, one sentence"}',
+      "At most 6 items in each list. Every quote must appear word for word in the page. If the page is missing, work from the owner's answers and say so."
+    ].join("\n");
+    return ai(p, { images: imgs, tier: "default" });
+  }).then(function (r) {
+    S.brief = normBrief(r);
+    if (!S.money.model) S.money.model = /community|course|software/.test(S.biz.kind) || S.biz.billing !== "one-time" ? "membership" : "product";
+    jobOk(i, "Read your page and answers");
+    endJob();
+  }).catch(function (e) { endJob(e, "read-business"); });
+}
+function normBrief(r) {
+  r = r || {};
+  return { business: str(r.business), offer: str(r.offer), buyer: str(r.buyer), promises: arr(r.promises), proof: arr(r.proof), risky_lines: arr(r.risky_lines), missing: arr(r.missing), voice: str(r.voice) };
+}
+
+function runSuggest() {
+  if (!aiReady()) { LASTERR = { step: 2, msg: errMsg({ code: "no_sample" }) }; render(); return; }
+  startJob(2, "Finding competitors");
+  var i = jobLine("Thinking about who else sells to your buyer");
+  var have = S.competitors.map(function (c) { return c.name; });
+  var p = [
+    "TASK: suggest_competitors",
+    "Suggest up to 8 businesses or creators that compete for this buyer and are likely to run Facebook or Instagram ads, in three rings: direct (sells nearly the same thing), indirect (solves the same problem another way), attention (sells something else to the same buyer).",
+    "Only name real businesses you are confident exist. Mark confidence low when unsure. Never invent a business; return fewer instead. The owner will check each one in the Meta Ad Library.",
+    have.length ? "Already on the list, do not repeat: " + have.join(", ") : "",
+    "", bizBlock(), "", briefBlock(),
+    "",
+    'Reply with only a JSON array: [{"name":"","ring":"direct|indirect|attention","why":"one sentence","confidence":"high|medium|low"}]'
+  ].join("\n");
+  ai(p, { tier: "default" }).then(function (r) {
+    arr(r).forEach(function (c) {
+      if (!c || !c.name) return;
+      if (S.competitors.some(function (x) { return x.name.toLowerCase() === String(c.name).toLowerCase(); })) return;
+      S.competitors.push({ id: uid("c"), name: String(c.name), ring: str(c.ring) || "direct", why: str(c.why), confidence: str(c.confidence) || "medium", keep: true, source: "suggested", adText: "", shots: [], decoded: null });
+    });
+    jobOk(i, "Found " + S.competitors.length + " to check");
+    endJob();
+  }).catch(function (e) { endJob(e, "suggest"); });
+}
+
+function sig(c) { return (c.shots || []).join(",") + "|" + str(c.adText).trim().length; }
+function runMarket(fresh) {
+  if (!aiReady()) { LASTERR = { step: 3, msg: errMsg({ code: "no_sample" }) }; render(); return; }
+  var comps = S.competitors.filter(function (c) { return c.keep && hasMaterial(c); });
+  if (!comps.length) { LASTERR = { step: 3, msg: "Add screenshots or ad text for at least one competitor first." }; render(); return; }
+  if (fresh) { S.market = null; S.buyers = null; S.questions = null; }
+  startJob(3, "Reading the market");
+  var chain = Promise.resolve();
+  comps.forEach(function (c) {
+    chain = chain.then(function () {
+      if (c.decoded && c.decoded.sig === sig(c)) return;
+      var li = jobLine("Reading " + c.name + "’s ads");
+      return decodeCompetitor(c, S.competitors.indexOf(c) + 1).then(function (ads) {
+        c.decoded = { sig: sig(c), ads: ads };
+        save();
+        jobOk(li, "Read " + ads.length + " ad" + (ads.length === 1 ? "" : "s") + " from " + c.name);
+      });
+    });
+  });
+  chain.then(function () {
+    if (S.market) return;
+    var li = jobLine("Mapping what the market says");
+    var lines = adsLines();
+    var p = [
+      "TASK: market_map",
+      "Below are " + lines.length + " competitor ads from " + decodedCount() + " advertisers, read from screenshots the owner chose. Write the market map for the owner's business.",
+      rules(),
+      "Count advertisers, not ads. The sample is active ads the owner picked: say so in limits, and give no hit rates, survival rates or 'most ads' claims.",
+      "", "ADS (ref | advertiser | started | format | ...):", lines.join("\n"), "", bizBlock(), "", briefBlock(),
+      "",
+      'Reply with only JSON: {"headline":"the one thing to know about this market, one plain sentence","everyone_says":[{"claim":"","advertisers":2,"refs":["C1-A2"]}],"nobody_says":[{"claim":"what this business could say that no captured ad says","why":"which owner answer or page line makes it true"}],"they_talk_to":[{"who":"a buying situation","refs":[]}],"they_miss":[{"who":"","why":""}],"proof":"how they prove things, with refs","offers":"prices, trials, discounts seen, with refs","formats":{"used":"","missing":""},"longest":[{"ref":"","started":"","note":""}],"limits":[""]}',
+      "Up to 5 items per list. Every ref must be one from the list above."
+    ].join("\n");
+    return ai(p, { tier: "complex" }).then(function (r) { S.market = normMarket(r); save(); jobOk(li, "Mapped the market"); });
+  }).then(function () {
+    if (S.buyers) return;
+    var li = jobLine("Finding your buyers");
+    return buyersCall().then(function (bs) { S.buyers = bs; save(); jobOk(li, "Found " + bs.length + " buyers"); });
+  }).then(function () {
+    if (S.questions) return;
+    var li = jobLine("Asking the hard questions");
+    return questionsCall().then(function (q) { S.questions = q; save(); jobOk(li, "Asked the hard questions"); });
+  }).then(function () { endJob(); }).catch(function (e) { endJob(e, "market"); });
+}
+function decodeCompetitor(c, n) {
+  var max = maxImages();
+  var shots = (c.shots || []).slice();
+  var batches = [];
+  if (max > 0) { for (var i = 0; i < shots.length; i += max) batches.push(shots.slice(i, i + max)); }
+  if (!batches.length) batches.push([]);
+  var all = [], chain = Promise.resolve();
+  batches.forEach(function (batch, bi) {
+    chain = chain.then(function () {
+      return blobsFor(batch).then(function (imgs) {
+        var text = bi === 0 ? str(c.adText).trim() : "";
+        if (!imgs.length && !text) return;
+        var start = all.length + 1;
+        var p = [
+          "TASK: decode_ads",
+          "Competitor: " + c.name + ". Give each ad a ref C" + n + "-A<number>, starting at A" + start + ".",
+          imgs.length ? "The " + imgs.length + " attached images are screenshots from the Meta Ad Library, numbered 1 to " + imgs.length + " in order. A screenshot may hold one ad or several. Read every ad you can see." : "",
+          text ? 'Ad text the owner pasted (copy-only, no image seen):\n"""\n' + text.slice(0, 8000) + '\n"""' : "",
+          rules(),
+          'For each ad: {"ref":"C' + n + '-A' + start + '","shot":1,"started":"YYYY-MM-DD from \'Started running on\', or unknown","format":"image|video|carousel|text|unknown","hook":"the first line or the biggest text, word for word","promise":"what it promises, your words","angle":"problem|outcome|mechanism|identity|social proof|offer|contrarian|story|comparison|education|founder","buyer":"who it talks to, as a situation","proof":"demo|testimonial|data|authority|social proof|press|none","offer":"price, trial, discount or guarantee shown, or none","cta":"button text or unknown","lever":"relief|fear of loss|status|belonging|curiosity|pride|hope|safety|amusement","works":"what is specifically effective, tied to something visible","weak":"what is weak or risky","coverage":"still-reviewed|copy-only"}',
+          'Reply with only JSON: {"ads":[...]}. For a video, describe only the still you can see.'
+        ].join("\n");
+        return ai(p, { images: imgs, tier: "default" }).then(function (r) {
+          arr(r && r.ads).forEach(function (a) { if (a && (a.hook || a.promise)) all.push(normAd(a, n, all.length + 1)); });
+        });
+      });
+    });
+  });
+  return chain.then(function () { return all; });
+}
+function normAd(a, n, k) {
+  return { ref: str(a.ref) || ("C" + n + "-A" + k), shot: a.shot, started: str(a.started) || "unknown", format: str(a.format), hook: str(a.hook), promise: str(a.promise), angle: str(a.angle), buyer: str(a.buyer), proof: str(a.proof), offer: str(a.offer), cta: str(a.cta), lever: str(a.lever), works: str(a.works), weak: str(a.weak), coverage: str(a.coverage) };
+}
+function normMarket(r) {
+  r = r || {};
+  return { headline: str(r.headline), everyone_says: arr(r.everyone_says), nobody_says: arr(r.nobody_says), they_talk_to: arr(r.they_talk_to), they_miss: arr(r.they_miss), proof: str(r.proof), offers: str(r.offers), formats: r.formats || {}, longest: arr(r.longest), limits: arr(r.limits) };
+}
+function buyersCall(feedback) {
+  var p = [
+    "TASK: buyers",
+    "Write 3 to 5 buyer profiles for this business. Build each around a buying situation, not demographics. Use the owner's answers (owner), the page (observed) and what the competitor ads target (inferred, cite refs).",
+    rules(),
+    feedback || "",
+    "", bizBlock(), "", briefBlock(), "", "MARKET MAP:", JSON.stringify(S.market || {}),
+    "",
+    'Reply with only a JSON array: [{"id":"b1","name":"a short name for the situation, like \'the quote still in drafts at 10pm\'","situation":"","trigger":"what just happened","tried":"what they do instead today","fear":"what they fear","needs_to_see":"the proof that would move them","words":[{"text":"","label":"observed|owner|inferred","source":"page, an owner answer, or an ad ref"}],"wrong_if":"what would make this profile wrong"}]',
+    "Words must be real phrases from the page, the owner's answers or the ads, labeled. Never invent a customer quote."
+  ].join("\n");
+  return ai(p, { tier: "complex", fresh: !!feedback }).then(function (r) {
+    return arr(r).filter(function (b) { return b && b.name; }).map(function (b, i) {
+      return { id: str(b.id) || "b" + (i + 1), name: str(b.name), situation: str(b.situation), trigger: str(b.trigger), tried: str(b.tried), fear: str(b.fear), needs_to_see: str(b.needs_to_see), words: arr(b.words), wrong_if: str(b.wrong_if), verdict: "", note: "" };
+    });
+  });
+}
+function questionsCall() {
+  var p = [
+    "TASK: hard_questions",
+    "Interrogate this business like a behavioural-science strategist in the style of Rory Sutherland. Most businesses have a perception, trust, category, status, context, price-signal, social-proof, ritual or legibility problem rather than a marketing problem. Treat the buyer as status-aware, story-driven and ambiguity-averse.",
+    "Ruthless is fine; invented is not. Every challenge cites its evidence (an ad ref, a page quote, an owner answer, a buyer profile) with its label.",
+    rules(),
+    "", bizBlock(), "", pageBlock(6000), "", "MARKET MAP:", JSON.stringify(S.market || {}), "", "BUYERS:", JSON.stringify(keptBuyers()),
+    "",
+    'Reply with only JSON: {"diagnosis":{"problem":"perception|trust|category|status|context|price signal|social proof|ritual|legibility","why":"two sentences with evidence"},"recommendations":[{"title":"","do":"what to change, concretely","why":"the mechanism and the evidence, labeled","cheapest_test":"","wrong_if":"what result would prove it wrong"}],"moonshots":[{"idea":"","why":""}],"page_fixes":[{"line":"exact quote from the page","problem":"","suggestion":""}]}',
+    "Exactly 5 recommendations, 2 moonshots, up to 4 page fixes (only quotes that appear in the page)."
+  ].join("\n");
+  return ai(p, { tier: "complex" }).then(function (r) {
+    r = r || {};
+    return { diagnosis: r.diagnosis || {}, recommendations: arr(r.recommendations).map(function (x) { x = x || {}; x.decision = ""; return x; }), moonshots: arr(r.moonshots), page_fixes: arr(r.page_fixes) };
+  });
+}
+function runUpdateBuyers() {
+  if (!aiReady()) return;
+  startJob(3, "Updating your buyers");
+  var li = jobLine("Rewriting with your notes");
+  var fb = "The owner reviewed the last version. Keep what they kept, fix what they flagged, drop what is not their buyer, and add who they said is missing.\nLAST VERSION WITH THE OWNER'S VERDICTS:\n" + JSON.stringify(arr(S.buyers).map(function (b) { return { name: b.name, situation: b.situation, verdict: b.verdict || "no verdict", note: b.note }; })) + (str(S.missingBuyer).trim() ? "\nMISSING, IN THE OWNER'S WORDS: " + S.missingBuyer : "");
+  buyersCall(fb).then(function (bs) { S.buyers = bs; S.missingBuyer = ""; jobOk(li, "Updated your buyers"); endJob(); }).catch(function (e) { endJob(e, "update-buyers"); });
+}
+
+var AD_SHAPE = '{"id":"a1","buyer":"name of the buyer profile","idea":"the one idea, one sentence","angle":"short label","why":"why it should work: the mechanism in two sentences, citing ad refs or the buyer","evidence":[{"claim":"","source":"page quote, owner answer or ad ref","label":"observed|owner|inferred|hypothetical"}],"format":"note|problem|offer|faq|photo","photo_id":"only for photo format: an id from the owner\'s photos, else empty","image":{"kicker":"2 to 4 words","hook":"the biggest text, at most 12 words","body":"at most 20 words","footer":"at most 10 words","question":"faq only","answer":"faq only, at most 25 words","offer_line":"price or trial exactly as the page states it","cta_text":"2 to 3 words"},"hooks":["three other first lines for the same idea"],"primary_short":"under 125 characters","primary_long":"three short paragraphs","headline":"under 40 characters","description":"under 30 characters","cta":"Learn More|Sign Up|Shop Now|Get Offer|Book Now|Subscribe","needs":[{"what":"something only the owner can provide: a photo, someone\'s consent, a page change","why":""}]}';
+
+function runWriteAds(fresh) {
+  if (!aiReady()) { LASTERR = { step: 4, msg: errMsg({ code: "no_sample" }) }; render(); return; }
+  startJob(4, "Writing your ads");
+  var li = jobLine("Writing six ad ideas");
+  var decided = arr(S.questions && S.questions.recommendations).filter(function (r) { return r.decision === "yes"; }).map(function (r) { return r.title + ": " + r.do; });
+  var p = [
+    "TASK: write_ads",
+    "Write 6 Facebook and Instagram ads for this business. Each ad is a distinct idea, not a variant: a different angle, buyer or proof. Cover at least 3 buyers and at least 3 formats, including at least one 'note' (a plain text note that looks native, not designed).",
+    "Formats: note (plain text on white), problem (names the buyer's situation), offer (the price or trial exactly as the page states it), faq (answers the buyer's real objection), photo (uses one of the owner's photos; only if a listed photo fits and has no consent problem).",
+    "Every hook and headline passes Harry Dry's three tests: you can picture it, it could be proven false, and nobody else could say it. A stranger who sees the image for two seconds should know who it is for and what it is about.",
+    "Use the 'nobody says' gaps and the buyers' words. Answer the market, do not copy it.",
+    rules(),
+    "", bizBlock(), "", briefBlock(), "", "MARKET MAP:", JSON.stringify(S.market || {}), "", "BUYERS (kept by the owner):", JSON.stringify(keptBuyers()),
+    decided.length ? "\nCHANGES THE OWNER DECIDED TO MAKE:\n- " + decided.join("\n- ") : "",
+    "\nTHE OWNER'S PHOTOS:", JSON.stringify(photoList()),
+    "",
+    "Reply with only a JSON array of 6 ads, each in this shape: " + AD_SHAPE,
+    "If an ad needs proof the owner has not given (a photo, a number, a customer's words), do not fake it: list it in needs."
+  ].join("\n");
+  ai(p, { tier: "complex", fresh: !!fresh }).then(function (r) {
+    var ads = arr(r).filter(function (a) { return a && a.image; }).map(function (a, i) { return normWritten(a, i); });
+    if (!ads.length) throw { code: "invalid_json" };
+    S.ads = ads;
+    save();
+    jobOk(li, "Wrote " + ads.length + " ads");
+    var ci = jobLine("Checking every line against your page and the rules");
+    return critic(ads).then(function () { jobOk(ci, "Checked every ad"); });
+  }).then(function () { endJob(); }).catch(function (e) { endJob(e, "write-ads"); });
+}
+function normWritten(a, i) {
+  var im = a.image || {};
+  var fmt = FORMATS[a.format] ? a.format : "problem";
+  var photo = fmt === "photo" && S.photos.some(function (p) { return p.id === a.photo_id; }) ? a.photo_id : "";
+  return {
+    id: str(a.id) || "a" + (i + 1), buyer: str(a.buyer), idea: str(a.idea), angle: str(a.angle), why: str(a.why), evidence: arr(a.evidence),
+    format: fmt, photoId: photo,
+    image: { kicker: str(im.kicker), hook: str(im.hook), body: str(im.body), footer: str(im.footer), question: str(im.question), answer: str(im.answer), offer_line: str(im.offer_line), cta_text: str(im.cta_text) },
+    hooks: arr(a.hooks).map(str), primary_short: str(a.primary_short), primary_long: str(a.primary_long), headline: str(a.headline), description: str(a.description), cta: str(a.cta) || "Learn More",
+    needs: arr(a.needs), critic: null, version: 1, ratio: "1:1"
+  };
+}
+function critic(ads) {
+  var payload = ads.map(function (a) { return { id: a.id, buyer: a.buyer, idea: a.idea, format: a.format, photo: a.photoId ? (S.photos.find(function (p) { return p.id === a.photoId; }) || {}) : null, image: a.image, hooks: a.hooks, primary_short: a.primary_short, primary_long: a.primary_long, headline: a.headline, description: a.description, cta: a.cta, evidence: a.evidence, needs: a.needs }; });
+  var p = [
+    "TASK: critic",
+    "You are the critic: the last reader before these ads can run. You never rewrite; you judge. Check each ad in this order:",
+    "1 truth: every claim traces to the page, the owner's answers or the owner's photos; any invented result, testimonial, count, rating, scarcity or urgency is a block.",
+    "2 policy: personal attributes in the second person, income or results claims (even implied), before-and-after, sensational or shaming lines, a demo presented as a deployment. Block if the idea depends on it, revise otherwise.",
+    "3 generic: a line any competitor could run unchanged, hype words, or a line copied from a competitor ad. Revise; block if the hook itself is generic.",
+    "4 three tests on the hook and the headline: can you picture it, could it be proven false, could nobody else say it. A line failing two or more is a revise.",
+    "5 stranger: someone sees the image for two seconds. Who do they think it is for, and what is it about? Fail if that misses the buyer or the idea.",
+    "6 evidence: a photo with other people and no consent, or a claim that needs a page change first, means the ad waits on the owner (list it in held_for).",
+    "7 fit: the button suits how ready the buyer is; image text is short enough (hook at most 12 words).",
+    rules(),
+    "", bizBlock(), "", pageBlock(10000), "", "THE OWNER'S PHOTOS:", JSON.stringify(photoList()),
+    "", "ADS:", JSON.stringify(payload),
+    "",
+    'Reply with only a JSON array, one item per ad: {"id":"a1","verdict":"pass|revise|block","stranger":"who it seems to be for and what it is about, in a stranger\'s words","checks":[{"check":"truth|policy|generic|three tests|stranger|evidence|fit","result":"pass|revise|block","quote":"the exact line, if one is at fault","note":"what is wrong and what a passing version needs"}],"held_for":["only things the owner must provide"]}',
+    "Never soften a block because the rest is good. A fine line with no proof is a block."
+  ].join("\n");
+  return ai(p, { tier: "complex", fresh: true }).then(function (r) {
+    var byId = {};
+    arr(r).forEach(function (x) { if (x && x.id) byId[x.id] = x; });
+    ads.forEach(function (a) {
+      var x = byId[a.id];
+      if (!x) return;
+      a.critic = { verdict: ["pass", "revise", "block"].indexOf(x.verdict) >= 0 ? x.verdict : "revise", stranger: str(x.stranger), checks: arr(x.checks), held_for: arr(x.held_for).map(str), at: new Date().toISOString() };
+    });
+    save();
+  });
+}
+function adStatus(a) {
+  if (!a || !a.critic) return "unchecked";
+  if (a.critic.verdict === "pass") return (a.format === "photo" && !a.photoId) ? "held" : "ready";
+  var truthBlock = a.critic.checks.some(function (c) { return c && c.result === "block" && (c.check === "truth" || c.check === "policy"); });
+  if (a.critic.verdict === "block" && a.critic.held_for.length && !truthBlock) return "held";
+  return "fix";
+}
+function runFix(id) {
+  var a = (S.ads || []).find(function (x) { return x.id === id; });
+  if (!a || !aiReady()) return;
+  startJob(4, "Fixing ad " + id.replace(/^a/, ""));
+  var li = jobLine("Rewriting what the check flagged");
+  var p = [
+    "TASK: fix_ad",
+    "Rewrite this ad so it passes the critic's checks. Keep what passed. Fix what failed. If a fix needs something only the owner can provide, do not fake it: keep it in needs.",
+    rules(), "", bizBlock(), "", briefBlock(), "", "THE OWNER'S PHOTOS:", JSON.stringify(photoList()),
+    "", "THE AD:", JSON.stringify({ id: a.id, buyer: a.buyer, idea: a.idea, angle: a.angle, why: a.why, evidence: a.evidence, format: a.format, photo_id: a.photoId, image: a.image, hooks: a.hooks, primary_short: a.primary_short, primary_long: a.primary_long, headline: a.headline, description: a.description, cta: a.cta, needs: a.needs }),
+    "", "THE CRITIC'S CHECKS:", JSON.stringify(a.critic),
+    "", "Reply with only the revised ad as one JSON object in this shape: " + AD_SHAPE
+  ].join("\n");
+  ai(p, { tier: "complex", fresh: true }).then(function (r) {
+    var n = normWritten(r || {}, 0);
+    n.id = a.id; n.version = (a.version || 1) + 1; n.ratio = a.ratio;
+    if (!n.photoId && a.photoId && n.format === "photo") n.photoId = a.photoId;
+    var idx = S.ads.indexOf(a); S.ads[idx] = n;
+    jobOk(li, "Rewrote ad " + id.replace(/^a/, ""));
+    var ci = jobLine("Checking it again");
+    return critic([n]).then(function () { jobOk(ci, "Checked it again"); });
+  }).then(function () { endJob(); }).catch(function (e) { endJob(e, "fix:" + id); });
+}
+function runRecheckOne(id) {
+  var a = (S.ads || []).find(function (x) { return x.id === id; });
+  if (!a || !aiReady()) return;
+  startJob(4, "Checking ad " + id.replace(/^a/, "") + " again");
+  var ci = jobLine("Checking it against your page, your photos and the rules");
+  critic([a]).then(function () { jobOk(ci, "Checked it again"); endJob(); }).catch(function (e) { endJob(e, "recheck1:" + id); });
+}
+function runRecheck() {
+  if (!S.ads || !aiReady()) return;
+  startJob(4, "Checking your ads again");
+  var ci = jobLine("Checking every line against your page and the rules");
+  critic(S.ads).then(function () { jobOk(ci, "Checked every ad"); endJob(); }).catch(function (e) { endJob(e, "recheck"); });
+}
+
+/* ---------- ad images (canvas) ---------- */
+var FONTS_READY = null;
+function adFonts() {
+  if (FONTS_READY) return FONTS_READY;
+  var specs = ["800 80px Archivo", "600 40px Archivo", "500 40px Archivo", "700 80px 'Source Serif 4'", "400 40px 'Source Serif 4'"];
+  FONTS_READY = Promise.all(specs.map(function (s) { try { return document.fonts.load(s); } catch (e) { return null; } })).catch(function () {}).then(function () {});
+  return FONTS_READY;
+}
+function adFont(kind, role, s) {
+  if (kind === "serif") return (role === "head" ? "700 " : "400 ") + s + "px 'Source Serif 4', Georgia, serif";
+  if (kind === "plain") return (role === "head" ? "700 " : "400 ") + s + "px 'Helvetica Neue', Helvetica, Arial, sans-serif";
+  return (role === "head" ? "800 " : role === "label" ? "600 " : "500 ") + s + "px Archivo, 'Helvetica Neue', Arial, sans-serif";
+}
+function hexRgb(h) { h = String(h || "#000").replace("#", ""); if (h.length === 3) h = h.split("").map(function (c) { return c + c; }).join(""); var n = parseInt(h, 16) || 0; return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+function lum(h) { return hexRgb(h).map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }).reduce(function (s, v, i) { return s + v * [0.2126, 0.7152, 0.0722][i]; }, 0); }
+function onColor(h) { return lum(h) > 0.4 ? "#111111" : "#FFFFFF"; }
+function mix(a, b, t) { var x = hexRgb(a), y = hexRgb(b); return "rgb(" + x.map(function (v, i) { return Math.round(v + (y[i] - v) * t); }).join(",") + ")"; }
+function wrapLines(ctx, text, maxW) {
+  var out = [];
+  String(text || "").split(/\n/).forEach(function (para) {
+    var words = para.split(/\s+/).filter(Boolean), line = "";
+    words.forEach(function (w) {
+      var t = line ? line + " " + w : w;
+      if (ctx.measureText(t).width <= maxW) { line = t; return; }
+      if (line) out.push(line);
+      if (ctx.measureText(w).width > maxW) {
+        var chunk = "";
+        Array.from(w).forEach(function (ch) { if (ctx.measureText(chunk + ch).width > maxW) { out.push(chunk); chunk = ch; } else chunk += ch; });
+        line = chunk;
+      } else line = w;
+    });
+    if (line) out.push(line);
+  });
+  return out;
+}
+function fit(ctx, text, fontFn, maxW, maxH, maxS, minS, lh) {
+  lh = lh || 1.12;
+  if (!str(text).trim()) return { s: minS, lines: [], h: 0, ok: true, font: fontFn(minS), lh: lh };
+  for (var s = maxS; s >= minS; s -= 2) {
+    ctx.font = fontFn(s);
+    var lines = wrapLines(ctx, text, maxW), h = lines.length * s * lh;
+    if (h <= maxH) return { s: s, lines: lines, h: h, ok: true, font: fontFn(s), lh: lh };
+  }
+  ctx.font = fontFn(minS);
+  var l2 = wrapLines(ctx, text, maxW);
+  var keep = Math.max(1, Math.floor(maxH / (minS * lh)));
+  return { s: minS, lines: l2.slice(0, keep), h: Math.min(l2.length, keep) * minS * lh, ok: false, font: fontFn(minS), lh: lh };
+}
+function drawBlock(ctx, b, x, y, color, align, w) {
+  ctx.font = b.font; ctx.fillStyle = color; ctx.textBaseline = "top"; ctx.textAlign = align || "left";
+  var ax = align === "center" ? x + w / 2 : x;
+  b.lines.forEach(function (l, i) { ctx.fillText(l, ax, y + i * b.s * b.lh); });
+  return y + b.h;
+}
+function roundRect(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+
+function renderAd(ad, ratio) {
+  var dims = RATIOS[ratio] || RATIOS["1:1"], W = dims[0], H = dims[1];
+  var P = ratio === "9:16" ? { t: 270, r: 140, b: 650, l: 72 } : ratio === "4:5" ? { t: 110, r: 90, b: 110, l: 90 } : { t: 90, r: 90, b: 90, l: 90 };
+  var bw = W - P.l - P.r, bh = H - P.t - P.b;
+  var brand = S.brand, fk = brand.font || "sans", im = ad.image || {}, warn = [];
+  var MIN = 34;
+  var photoP = ad.format === "photo" && ad.photoId ? imgGet(ad.photoId).then(function (b) { return b ? createImageBitmap(b).catch(function () { return null; }) : null; }) : Promise.resolve(null);
+  return Promise.all([adFonts(), photoP]).then(function (r) {
+    var photo = r[1];
+    var c = document.createElement("canvas"); c.width = W; c.height = H;
+    var ctx = c.getContext("2d");
+    var prim = brand.primary || "#1F3A5F", acc = brand.accent || "#FFC857";
+    var paper = mix(prim, "#FFFFFF", 0.93);
+    var name = S.biz.name || "";
+    function chk(b, label) { if (!b.ok) warn.push(label + " is too long for " + ratio + "; shorten it or pick another size."); return b; }
+    var f = ad.format;
+    var mainText = f === "faq" ? (im.question || im.hook) : im.hook;
+    var words = str(mainText).trim().split(/\s+/).filter(Boolean).length;
+    if (words > 14) warn.push("The big text has " + words + " words. Under 12 reads in two seconds; shorten it before you run this.");
+    if (f === "note") {
+      ctx.fillStyle = "#FFFFFF"; ctx.fillRect(0, 0, W, H);
+      var hf = function (s) { return adFont("plain", "head", s); }, bf = function (s) { return adFont("plain", "body", s); };
+      var foot = fit(ctx, name, bf, bw, 60, 30, 26);
+      var hook = chk(fit(ctx, im.hook, hf, bw, bh * 0.55, 92, MIN + 6, 1.18), "The hook");
+      var body = chk(fit(ctx, im.body, bf, bw, bh - hook.h - foot.h - 80, 50, MIN, 1.3), "The body");
+      var y = drawBlock(ctx, hook, P.l, P.t, "#111111");
+      drawBlock(ctx, body, P.l, y + 40, "#333333");
+      drawBlock(ctx, foot, P.l, H - P.b - foot.h, "#8A8A8A");
+    } else if (f === "faq") {
+      ctx.fillStyle = paper; ctx.fillRect(0, 0, W, H);
+      var lab = function (s) { return adFont(fk, "label", s); };
+      var qb = function (s) { return adFont(fk, "head", s); }, ab = function (s) { return adFont(fk, "body", s); };
+      var q = chk(fit(ctx, im.question || im.hook, qb, bw, bh * 0.45, 86, MIN + 6), "The question");
+      var footF = fit(ctx, im.footer || name, ab, bw, 60, 30, 26);
+      var a = chk(fit(ctx, im.answer || im.body, ab, bw, bh - q.h - footF.h - 200, 48, MIN, 1.3), "The answer");
+      ctx.font = lab(34); ctx.fillStyle = prim; ctx.textBaseline = "top"; ctx.textAlign = "left"; ctx.fillText("Q.", P.l, P.t);
+      var y2 = drawBlock(ctx, q, P.l, P.t + 56, "#111111");
+      ctx.fillStyle = mix(prim, "#FFFFFF", 0.6); ctx.fillRect(P.l, y2 + 36, bw, 4);
+      ctx.font = lab(34); ctx.fillStyle = prim; ctx.fillText("A.", P.l, y2 + 72);
+      drawBlock(ctx, a, P.l, y2 + 128, "#222222");
+      drawBlock(ctx, footF, P.l, H - P.b - footF.h, mix(prim, "#FFFFFF", 0.25));
+    } else if (f === "offer") {
+      ctx.fillStyle = paper; ctx.fillRect(0, 0, W, H);
+      var hd = function (s) { return adFont(fk, "head", s); }, bd = function (s) { return adFont(fk, "body", s); }, lb = function (s) { return adFont(fk, "label", s); };
+      var kick = fit(ctx, (im.kicker || "").toUpperCase(), lb, bw, 50, 32, 26);
+      var ctaB = fit(ctx, im.cta_text || ad.cta || "Learn more", lb, bw - 120, 60, 40, 30);
+      var off = chk(fit(ctx, im.offer_line, bd, bw - 80, 200, 54, MIN, 1.25), "The offer line");
+      var hk = chk(fit(ctx, im.hook, hd, bw, bh - kick.h - off.h - ctaB.h - 260, 96, MIN + 6), "The hook");
+      var yy = drawBlock(ctx, kick, P.l, P.t, prim);
+      yy = drawBlock(ctx, hk, P.l, yy + (kick.h ? 28 : 0), "#111111");
+      var boxH = off.h + 64;
+      if (off.lines.length) {
+        roundRect(ctx, P.l, yy + 44, bw, boxH, 18); ctx.fillStyle = acc; ctx.fill();
+        drawBlock(ctx, off, P.l + 40, yy + 44 + 32, onColor(acc));
+      }
+      ctx.font = ctaB.font;
+      var pillW = Math.min(bw, ctx.measureText(ctaB.lines[0] || "").width + 120), pillH = ctaB.h + 44;
+      roundRect(ctx, P.l, H - P.b - pillH, pillW, pillH, pillH / 2); ctx.fillStyle = prim; ctx.fill();
+      drawBlock(ctx, ctaB, P.l + 60, H - P.b - pillH + 22, onColor(prim));
+    } else if (f === "photo") {
+      if (photo) {
+        var sc = Math.max(W / photo.width, H / photo.height), pw = photo.width * sc, ph = photo.height * sc;
+        ctx.drawImage(photo, (W - pw) / 2, (H - ph) / 2, pw, ph);
+      } else {
+        ctx.fillStyle = mix(prim, "#000000", 0.2); ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.font = adFont(fk, "label", 34); ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("Your photo goes here", W / 2, H * 0.35);
+      }
+      var g = ctx.createLinearGradient(0, H * 0.35, 0, H);
+      g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(0,0,0,0.78)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+      var ph1 = function (s) { return adFont(fk, "head", s); }, pb1 = function (s) { return adFont(fk, "body", s); };
+      var bodyP = chk(fit(ctx, im.body, pb1, bw, bh * 0.2, 44, MIN, 1.3), "The body");
+      var hookP = chk(fit(ctx, im.hook, ph1, bw, bh * 0.42, 96, MIN + 6), "The hook");
+      var top = H - P.b - bodyP.h - (bodyP.h ? 30 : 0) - hookP.h;
+      var y3 = drawBlock(ctx, hookP, P.l, top, "#FFFFFF");
+      drawBlock(ctx, bodyP, P.l, y3 + (bodyP.h ? 30 : 0), "rgba(255,255,255,0.88)");
+    } else {
+      ctx.fillStyle = prim; ctx.fillRect(0, 0, W, H);
+      var ink = onColor(prim);
+      var h1 = function (s) { return adFont(fk, "head", s); }, b1 = function (s) { return adFont(fk, "body", s); }, l1 = function (s) { return adFont(fk, "label", s); };
+      var k1 = fit(ctx, (im.kicker || "").toUpperCase(), l1, bw, 50, 32, 26);
+      var f1 = fit(ctx, im.offer_line || im.footer, b1, bw, 120, 38, 30, 1.25);
+      var bd1 = chk(fit(ctx, im.body, b1, bw, bh * 0.26, 48, MIN, 1.3), "The body");
+      var hk1 = chk(fit(ctx, im.hook, h1, bw, bh - k1.h - bd1.h - f1.h - 160, 104, MIN + 6), "The hook");
+      var y4 = drawBlock(ctx, k1, P.l, P.t, acc);
+      y4 = drawBlock(ctx, hk1, P.l, y4 + (k1.h ? 30 : 0), ink);
+      drawBlock(ctx, bd1, P.l, y4 + 40, ink === "#FFFFFF" ? "rgba(255,255,255,0.85)" : "#333333");
+      ctx.fillStyle = acc; ctx.fillRect(P.l, H - P.b - f1.h - 34, 90, 8);
+      drawBlock(ctx, f1, P.l, H - P.b - f1.h, ink);
+    }
+    return new Promise(function (res) {
+      c.toBlob(function (blob) { res({ blob: blob, warn: warn }); }, "image/png");
+    });
+  });
+}
+var RENDERS = {};
+function renderKey(ad, ratio) { return JSON.stringify([ad.id, ad.version, ad.format, ad.photoId, ad.image, ratio, S.brand, S.biz.name]); }
+function getRender(ad, ratio) {
+  var k = renderKey(ad, ratio);
+  if (RENDERS[k]) return RENDERS[k];
+  RENDERS[k] = renderAd(ad, ratio).then(function (r) { r.url = URL.createObjectURL(r.blob); return r; });
+  return RENDERS[k];
+}
+function hydrateAds() {
+  document.querySelectorAll("img[data-ad]").forEach(function (el) {
+    var ad = (S.ads || []).find(function (a) { return a.id === el.getAttribute("data-ad"); });
+    if (!ad) return;
+    var ratio = el.getAttribute("data-ratio");
+    getRender(ad, ratio).then(function (r) {
+      el.src = r.url;
+      var w = document.getElementById("warn-" + ad.id);
+      if (w) { w.textContent = r.warn.join(" "); w.hidden = !r.warn.length; }
+    });
+  });
+}
+
+/* ---------- finance (same formulas as the plugin's finance.py) ---------- */
+function econ() {
+  var m = S.money, lines = [];
+  var model = m.model || "membership";
+  var price = num(m.price, num(S.biz.price, 0));
+  var gm = num(m.margin, model === "membership" ? 90 : 50) / 100;
+  var refund = num(m.refund, 0) / 100;
+  var payback = num(m.payback, model === "membership" ? 3 : 1);
+  var keep = num(m.keep, 30) / 100;
+  var judge = Math.max(1, Math.round(num(m.judge, 20)));
+  var budget = num(m.budget, 0);
+  var r = { model: model, judge: judge, budget: budget };
+  if (model === "membership") {
+    var trial = m.trial === "" ? S.biz.trial !== "none" : m.trial === "yes";
+    var ttp = trial ? num(m.ttp, 50) / 100 : 1;
+    var months = num(m.months, 1) || 1;
+    var win = Math.min(months, payback);
+    var contrib = price * gm * win * (1 - refund);
+    lines.push("Contribution per paying member over the payback window = price x margin x min(months stayed, payback months) x (1 - refunds) = " + money(price) + " x " + gm.toFixed(2) + " x " + win + " x " + (1 - refund).toFixed(2) + " = " + money(contrib));
+    var ltv = price * gm * months * (1 - refund);
+    lines.push("Simple lifetime value (a ceiling, not a target) = " + money(ltv));
+    var bePaid = contrib, beTrial = contrib * ttp;
+    r.event = trial && ttp < 1 ? "trial start" : "paying member";
+    r.breakeven = r.event === "trial start" ? beTrial : bePaid;
+    r.target = r.breakeven * (1 - keep);
+    if (r.event === "trial start") lines.push("Breakeven per trial start = breakeven per paying member x trial-to-paid = " + money(bePaid) + " x " + ttp.toFixed(2) + " = " + money(beTrial));
+    lines.push("Target = breakeven x (1 - profit you keep) = " + money(r.breakeven) + " x " + (1 - keep).toFixed(2) + " = " + money(r.target));
+  } else {
+    var aov = num(m.aov, price) || price;
+    var c2 = aov * gm * (1 - refund);
+    lines.push("Contribution per order = average order x margin x (1 - refunds) = " + money(aov) + " x " + gm.toFixed(2) + " x " + (1 - refund).toFixed(2) + " = " + money(c2));
+    r.event = "purchase"; r.breakeven = c2; r.target = c2 * (1 - keep);
+    lines.push("Target = breakeven x (1 - profit you keep) = " + money(c2) + " x " + (1 - keep).toFixed(2) + " = " + money(r.target));
+  }
+  r.perConcept = r.target * judge;
+  lines.push("Budget to judge one ad idea = target x results needed to judge = " + money(r.target) + " x " + judge + " = " + money(r.perConcept));
+  r.concepts = budget && r.perConcept > 0 ? Math.floor(budget / r.perConcept) : null;
+  if (budget) lines.push("Ideas your monthly budget can judge = floor(" + money(budget) + " / " + money(r.perConcept) + ") = " + r.concepts);
+  r.lines = lines;
+  r.placeholders = ["price", "margin", "ttp", "months", "aov", "budget"].filter(function (k) { return !m.touched[k] && !(k === "price" && S.biz.price); });
+  return r;
+}
+
+/* ---------- readout (same rules as the plugin's readout.py) ---------- */
+var COLS = {
+  name: ["ad name", "ad_name", "ad"],
+  spend: ["amount spent", "spend", "cost"],
+  impressions: ["impressions"],
+  clicks: ["link clicks", "outbound clicks", "clicks (all)", "clicks"],
+  plays3: ["3-second video plays", "3 second video plays", "video plays at 3 seconds", "3-second"],
+  thruplays: ["thruplays", "thru plays", "video plays at 15", "15-second"],
+  results: ["results", "purchases", "leads", "trial", "website purchases", "conversions"],
+  frequency: ["frequency"]
+};
+var COLNAMES = { name: "ad name", spend: "amount spent", impressions: "impressions", clicks: "link clicks", plays3: "3-second plays", thruplays: "ThruPlays", results: "results", frequency: "frequency" };
+function parseCSV(text) {
+  text = String(text).replace(/^﻿/, "");
+  var rows = [], row = [], f = "", q = false;
+  for (var i = 0; i < text.length; i++) {
+    var ch = text[i];
+    if (q) {
+      if (ch === '"') { if (text[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += ch;
+    } else if (ch === '"') q = true;
+    else if (ch === ",") { row.push(f); f = ""; }
+    else if (ch === "\n" || ch === "\r") { if (ch === "\r" && text[i + 1] === "\n") i++; row.push(f); rows.push(row); row = []; f = ""; }
+    else f += ch;
+  }
+  if (f !== "" || row.length) { row.push(f); rows.push(row); }
+  return rows.filter(function (r) { return r.some(function (c) { return String(c).trim() !== ""; }); });
+}
+function pickCol(headers, keys) {
+  var low = headers.map(function (h) { return String(h).toLowerCase(); });
+  for (var k = 0; k < keys.length; k++) for (var i = 0; i < low.length; i++) if (low[i].indexOf(keys[k]) >= 0) return i;
+  return -1;
+}
+function cnum(v) { if (v == null || String(v).trim() === "") return null; var n = parseFloat(String(v).replace(/[,$%\s]/g, "")); return isFinite(n) ? n : null; }
+function thresholds() {
+  var t = S.thresholds, e = econ();
+  return { impression_floor: cnum(t.impression_floor), min_hook_rate: cnum(t.min_hook_rate) == null ? null : cnum(t.min_hook_rate) / 100, min_hold_rate: cnum(t.min_hold_rate) == null ? null : cnum(t.min_hold_rate) / 100, min_ctr: cnum(t.min_ctr) == null ? null : cnum(t.min_ctr) / 100, max_frequency: cnum(t.max_frequency), kill_cpa_multiple: cnum(t.kill_cpa_multiple), judge_after_conversions: e.judge, target_cpa: e.target > 0 ? e.target : null };
+}
+function judgeRow(row, t) {
+  var imp = row.impressions || 0, spend = row.spend || 0, clicks = row.clicks, p3 = row.plays3, thru = row.thruplays, res = row.results, freq = row.frequency;
+  var hook = p3 != null && imp ? p3 / imp : null, hold = thru != null && p3 ? thru / p3 : null, ctr = clicks != null && imp ? clicks / imp : null, cpa = res ? spend / res : null;
+  var m = { hook: hook, hold: hold, ctr: ctr, cpa: cpa };
+  function below(v, th) { return v != null && th != null && v < th; }
+  if (t.impression_floor != null && imp < t.impression_floor) return ["too early", "Under " + t.impression_floor.toLocaleString() + " impressions (" + imp.toLocaleString() + "). Keep it running.", m];
+  if (below(hook, t.min_hook_rate)) return ["kill or new hook", "Hook rate " + pct(hook) + " is under " + (t.min_hook_rate * 100).toFixed(0) + "%: the first three seconds didn't stop the right people.", m];
+  if (below(hold, t.min_hold_rate)) return ["iterate body", "People stopped, but hold rate " + pct(hold) + " is under " + (t.min_hold_rate * 100).toFixed(0) + "%: the middle loses them. Keep the hook.", m];
+  if (below(ctr, t.min_ctr)) return ["iterate offer or CTA", "People watched, but click rate " + pct(ctr) + " is under " + (t.min_ctr * 100).toFixed(2) + "%: the promise or the button isn't pulling.", m];
+  var jn = t.judge_after_conversions || 20;
+  if (res == null || res < jn) return ["upstream only", "Only " + Math.round(res || 0) + " results. Judge hook, hold and clicks, not cost, until " + jn + ".", m];
+  var tgt = t.target_cpa;
+  if (tgt) {
+    if (cpa != null && cpa <= tgt && t.max_frequency == null) return ["hold", "Cost " + money(cpa) + " is within your target " + money(tgt) + ", but no frequency limit is set. Set one before scaling.", m];
+    if (cpa != null && cpa <= tgt && (freq == null || freq <= t.max_frequency)) return ["scale", "Cost " + money(cpa) + " is within your target " + money(tgt) + " and frequency is " + (freq == null ? "unknown" : freq) + ". Raise the budget in steps.", m];
+    if (cpa != null && t.kill_cpa_multiple && cpa > tgt * t.kill_cpa_multiple) return ["kill", "Cost " + money(cpa) + " is over " + t.kill_cpa_multiple + "x your target " + money(tgt) + ".", m];
+    if (cpa != null) return ["iterate landing or offer", "Cost " + money(cpa) + " is above your target " + money(tgt) + " but not by much. Fix the page or the offer.", m];
+  }
+  if (freq != null && t.max_frequency != null && freq > t.max_frequency) return ["refresh", "Frequency " + freq.toFixed(1) + " is over " + t.max_frequency + ": people are tiring of it.", m];
+  return ["hold", "No rule fired. Keep running and check again.", m];
+}
+function readCSV(text, filename) {
+  var rows = parseCSV(text);
+  if (rows.length < 2) { toast("That file has no rows to read."); return; }
+  var head = rows[0], idx = {};
+  Object.keys(COLS).forEach(function (k) { idx[k] = pickCol(head, COLS[k]); });
+  var out = rows.slice(1).map(function (r) {
+    var row = { name: idx.name >= 0 ? r[idx.name] : r[0] };
+    ["spend", "impressions", "clicks", "plays3", "thruplays", "results", "frequency"].forEach(function (k) { row[k] = idx[k] >= 0 ? cnum(r[idx[k]]) : null; });
+    return row;
+  }).filter(function (r) { return r.name && !/^total/i.test(String(r.name).trim()); });
+  S.readout = { at: new Date().toISOString(), file: filename || "export.csv", matched: Object.keys(idx).filter(function (k) { return idx[k] >= 0; }), rows: out };
+  save(); render();
+}
+
+/* ---------- exports ---------- */
+function mdMarket() {
+  var m = S.market; if (!m) return "";
+  var o = ["# Market map", "", m.headline, "", "## What everyone says"];
+  m.everyone_says.forEach(function (x) { o.push("- " + str(x.claim) + " (" + str(x.advertisers) + " advertisers; " + arr(x.refs).join(", ") + ")"); });
+  o.push("", "## What nobody says yet"); m.nobody_says.forEach(function (x) { o.push("- " + str(x.claim) + ". Why it's true for you: " + str(x.why)); });
+  o.push("", "## Who they talk to"); m.they_talk_to.forEach(function (x) { o.push("- " + str(x.who) + " (" + arr(x.refs).join(", ") + ")"); });
+  o.push("", "## Who they miss"); m.they_miss.forEach(function (x) { o.push("- " + str(x.who) + ": " + str(x.why)); });
+  o.push("", "## Proof", m.proof, "", "## Offers", m.offers, "", "## Formats", "Used: " + str(m.formats.used), "Missing: " + str(m.formats.missing));
+  o.push("", "## Longest-running ads (kept running; not proof they made money)"); m.longest.forEach(function (x) { o.push("- " + str(x.ref) + ", started " + str(x.started) + ". " + str(x.note)); });
+  o.push("", "## Limits of this read"); m.limits.forEach(function (x) { o.push("- " + str(x)); });
+  o.push("", "## Ads read");
+  S.competitors.forEach(function (c) { if (c.keep && c.decoded) arr(c.decoded.ads).forEach(function (a) { o.push("- " + a.ref + " " + c.name + " (started " + a.started + ", " + a.coverage + "): " + a.hook); }); });
+  return o.join("\n") + "\n";
+}
+function mdBuyers() {
+  var o = ["# Your buyers", ""];
+  arr(S.buyers).forEach(function (b) {
+    o.push("## " + b.name + (b.verdict ? " (" + b.verdict + ")" : ""), "", "- Situation: " + b.situation, "- What just happened: " + b.trigger, "- What they do instead: " + b.tried, "- What they fear: " + b.fear, "- What would move them: " + b.needs_to_see, "- Wrong if: " + b.wrong_if);
+    arr(b.words).forEach(function (w) { o.push("- Their words: \"" + str(w.text) + "\" (" + str(w.label) + ", " + str(w.source) + ")"); });
+    if (b.note) o.push("- Your note: " + b.note);
+    o.push("");
+  });
+  return o.join("\n");
+}
+function mdQuestions() {
+  var q = S.questions; if (!q) return "";
+  var o = ["# The hard questions", "", "Diagnosis: " + str(q.diagnosis.problem) + ". " + str(q.diagnosis.why), "", "## Recommendations"];
+  q.recommendations.forEach(function (r, i) { o.push("", (i + 1) + ". " + str(r.title) + (r.decision ? " [" + (r.decision === "yes" ? "doing it" : "not now") + "]" : ""), "   Do: " + str(r.do), "   Why: " + str(r.why), "   Cheapest test: " + str(r.cheapest_test), "   Wrong if: " + str(r.wrong_if)); });
+  o.push("", "## Moonshots"); q.moonshots.forEach(function (m) { o.push("- " + str(m.idea) + ": " + str(m.why)); });
+  o.push("", "## Lines on your page to fix"); q.page_fixes.forEach(function (p) { o.push("- \"" + str(p.line) + "\": " + str(p.problem) + " Try: " + str(p.suggestion)); });
+  return o.join("\n") + "\n";
+}
+var STATUS_TXT = { ready: "Ready to run", fix: "Needs a fix", held: "Waiting on you", unchecked: "Not checked" };
+function mdAds() {
+  var o = ["# Your ads", "", "Every line is a test until your first results come back.", ""];
+  arr(S.ads).forEach(function (a, i) {
+    o.push("## Ad " + (i + 1) + ": " + a.idea, "", "Status: " + STATUS_TXT[adStatus(a)] + ". Format: " + FORMATS[a.format] + ". Buyer: " + a.buyer + ".", "", "Primary text (short): " + a.primary_short, "", "Primary text (long):", a.primary_long, "", "Headline: " + a.headline, "Description: " + a.description, "Button: " + a.cta, "", "Other hooks:");
+    a.hooks.forEach(function (h) { o.push("- " + h); });
+    o.push("", "Why it should work: " + a.why);
+    arr(a.evidence).forEach(function (e) { o.push("- " + str(e.claim) + " (" + str(e.label) + ": " + str(e.source) + ")"); });
+    if (a.critic) {
+      o.push("", "Check: " + a.critic.verdict + ". A stranger reads it as: " + a.critic.stranger);
+      a.critic.checks.forEach(function (c) { if (c.result !== "pass") o.push("- " + c.check + ": " + c.result + ". " + (c.quote ? "\"" + c.quote + "\" " : "") + str(c.note)); });
+      if (a.critic.held_for.length) o.push("- Waiting on: " + a.critic.held_for.join("; "));
+    }
+    o.push("");
+  });
+  return o.join("\n");
+}
+function csvCell(v) { v = str(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+function csvAds() {
+  var h = ["ad", "status", "format", "buyer", "idea", "image_hook", "primary_text_short", "primary_text_long", "headline", "description", "cta", "other_hooks", "why", "check", "waiting_on"];
+  var rows = [h.join(",")];
+  arr(S.ads).forEach(function (a, i) {
+    rows.push([i + 1, STATUS_TXT[adStatus(a)], FORMATS[a.format], a.buyer, a.idea, a.image.hook || a.image.question, a.primary_short, a.primary_long, a.headline, a.description, a.cta, a.hooks.join(" | "), a.why, a.critic ? a.critic.verdict : "", a.critic ? a.critic.held_for.join("; ") : ""].map(csvCell).join(","));
+  });
+  return rows.join("\n") + "\n";
+}
+function mdPlan() {
+  var e = econ(), ready = arr(S.ads).filter(function (a) { return adStatus(a) === "ready"; });
+  var o = ["# Your test plan", "", "Numbers marked as placeholders are guesses until you replace them.", "", "- Most you can pay per " + e.event + " and break even: " + money(e.breakeven), "- Your target per " + e.event + ": " + money(e.target), "- Budget to judge one ad idea: " + money(e.perConcept), "- Ideas your monthly budget can judge: " + (e.concepts == null ? "n/a" : e.concepts), "", "## The math"];
+  e.lines.forEach(function (l) { o.push("- " + l); });
+  o.push("", "## Launch"); planSteps(e, ready).forEach(function (s, i) { o.push((i + 1) + ". " + s.replace(/<[^>]+>/g, "")); });
+  return o.join("\n") + "\n";
+}
+function planSteps(e, ready) {
+  var daily = e.budget ? money(e.budget / 30) : "your daily budget";
+  return [
+    "In Ads Manager, create one campaign that optimizes for <strong>" + esc(e.event) + "</strong> on your site.",
+    "Make one ad set with broad targeting: your country and adults 18 and over. No interest stacking. Let Meta choose placements.",
+    "Add your " + ready.length + " ready ad" + (ready.length === 1 ? "" : "s") + ". Use the 4:5 image for feeds and the 9:16 image for Stories and Reels.",
+    "Set about <strong>" + daily + "</strong> a day (your monthly test budget divided by 30).",
+    "Leave it alone for 7 days. Don't edit the ads; edits reset what Meta has learned.",
+    "After 7 days, export the results (below) and bring them back here."
+  ];
+}
+function blobToDataURL(b) { return new Promise(function (res) { var r = new FileReader(); r.onload = function () { res(r.result); }; r.onerror = function () { res(null); }; r.readAsDataURL(b); }); }
+function dataURLToBlob(d) {
+  var m = /^data:([^;]+);base64,(.*)$/.exec(d || ""); if (!m) return null;
+  var bin = atob(m[2]), u = new Uint8Array(bin.length);
+  for (var i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+  return new Blob([u], { type: m[1] });
+}
+function allImageIds() {
+  var ids = S.biz.pageShots.slice();
+  S.competitors.forEach(function (c) { ids = ids.concat(c.shots || []); });
+  S.photos.forEach(function (p) { ids.push(p.id); });
+  return ids;
+}
+function backupJSON() {
+  var ids = allImageIds();
+  return Promise.all(ids.map(function (id) { return imgGet(id).then(function (b) { return b ? blobToDataURL(b).then(function (d) { return [id, d]; }) : null; }); })).then(function (pairs) {
+    var images = {}; pairs.forEach(function (p) { if (p && p[1]) images[p[0]] = p[1]; });
+    return JSON.stringify({ app: "adlab", v: 1, saved: new Date().toISOString(), state: S, images: images });
+  });
+}
+function saveFile(filename, data) {
+  if (!downloads) { toast("Saving files isn't available in this view."); return Promise.resolve(false); }
+  return downloads.save({ filename: filename, data: data }).then(function () { toast("Saved " + filename); return true; }, function (e) {
+    if (e && e.code === "declined") return false;
+    toast(e && e.code === "rate_limited" ? "One save at a time. Try again in a moment." : "That file couldn't be saved here.");
+    return false;
+  });
+}
+function slug(s) { return (str(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "my-business").slice(0, 40); }
+function exportZip() {
+  if (!window.JSZip) { toast("The zip tool didn't load. Download the backup instead."); return; }
+  var zip = new window.JSZip(), name = slug(S.biz.name);
+  zip.file("README.txt", "Ad Lab export for " + (S.biz.name || "your business") + ", " + new Date().toISOString().slice(0, 10) + ".\nEvery line is a test until your first results come back.\n\nads.csv and ads.md: your ads and their checks.\nimages/: the ready ads at 1:1, 4:5 and 9:16.\nmarket-map.md, buyers.md, hard-questions.md, test-plan.md: the thinking behind them.\nad-lab-backup.json: load this in Ad Lab to pick up where you left off.\n");
+  zip.file("ads.csv", csvAds()); zip.file("ads.md", mdAds());
+  if (S.market) zip.file("market-map.md", mdMarket());
+  if (S.buyers) zip.file("buyers.md", mdBuyers());
+  if (S.questions) zip.file("hard-questions.md", mdQuestions());
+  zip.file("test-plan.md", mdPlan());
+  toast("Building your download");
+  var ready = arr(S.ads).filter(function (a) { return adStatus(a) === "ready"; });
+  var jobs = [];
+  ready.forEach(function (a) {
+    var n = S.ads.indexOf(a) + 1;
+    Object.keys(RATIOS).forEach(function (r) {
+      jobs.push(getRender(a, r).then(function (x) { zip.file("images/ad-" + n + "-" + r.replace(":", "x") + ".png", x.blob); }));
+    });
+  });
+  jobs.push(backupJSON().then(function (j) { zip.file("ad-lab-backup.json", j); }));
+  Promise.all(jobs).then(function () { return zip.generateAsync({ type: "blob" }); }).then(function (blob) { return saveFile("ad-lab-" + name + ".zip", blob); }).catch(function () { toast("The download couldn't be built."); });
+}
+
+/* ---------- views ---------- */
+function field(label, inner, hint) { return '<label class="field"><span>' + label + "</span>" + (hint ? "<em>" + hint + "</em>" : "") + inner + "</label>"; }
+function inp(path, attrs) { return '<input type="text" data-bind="' + path + '" value="' + esc(getPath(S, path)) + '" ' + (attrs || "") + ">"; }
+function area(path, attrs) { return '<textarea data-bind="' + path + '" ' + (attrs || "") + ">" + esc(getPath(S, path)) + "</textarea>"; }
+function sel(path, opts, attrs) { var v = getPath(S, path); return '<select data-bind="' + path + '" ' + (attrs || "") + ">" + opts.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (String(v) === String(o[0]) ? " selected" : "") + ">" + esc(o[1]) + "</option>"; }).join("") + "</select>"; }
+function drop(target, text, verb) { return '<label class="drop" data-drop="' + target + '"><input type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple data-files="' + target + '"><span><strong>' + (verb || "Choose screenshots") + '</strong> or drop them here</span><span class="small">' + (text || "PNG or JPG") + "</span></label>"; }
+function thumbs(ids, target) {
+  if (!ids || !ids.length) return "";
+  return '<div class="thumbs">' + ids.map(function (id, i) { return '<div class="thumb"><img data-img="' + id + '" alt="Screenshot ' + (i + 1) + '"><span class="n">' + (i + 1) + '</span><button type="button" data-act="rm-img" data-target="' + target + '" data-id="' + id + '" aria-label="Remove screenshot ' + (i + 1) + '">✕</button></div>'; }).join("") + "</div>";
+}
+function aiButton(act, label, step, extra) {
+  var busy = JOB != null;
+  var off = busy || !aiReady();
+  return '<button class="btn big" type="button" data-act="' + act + '"' + (off ? " disabled" : "") + ">" + label + "</button>" + (extra ? '<span class="hint">' + extra + "</span>" : "");
+}
+function aiNotice() {
+  if (!capsReady || aiReady()) return "";
+  return '<div class="note you"><strong>The writing steps need Claude.</strong><p>Open this page in Claude while you’re signed in. Your answers still save here, and the budget maths and results reader work without it.</p></div>';
+}
+function navRow(prev, next, nextLabel, nextOff) {
+  return '<div class="nav">' + (prev ? '<button class="btn secondary" type="button" data-go="' + prev + '">← Back</button>' : "<span></span>") + (next ? '<button class="btn" type="button" data-go="' + next + '"' + (nextOff ? " disabled" : "") + ">" + nextLabel + " →</button>" : "") + "</div>";
+}
+function labelTag(l) { return l ? '<span class="label-tag">' + esc(l) + "</span>" : ""; }
+
+function viewWelcome() {
+  return '<section class="card"><div class="welcome"><div class="stack"><h2>Ads that come from your market, not from a template</h2>' +
+    "<p>Ad Lab reads your competitors’ ads, finds what nobody in your market is saying, and writes your ads with the reasoning shown for every line. Then it checks each one before you spend a dollar.</p>" +
+    '<p class="sub">Five steps. The writing runs on your own Claude account, and Claude asks once before the first step. Your work saves in this browser; use “Save or restore” to move it to another device.</p>' +
+    '<div><button class="btn" type="button" data-act="welcome">Start</button></div></div>' +
+    '<div class="note"><strong>What Ad Lab never does</strong><ul><li>Touch your ad account. You run the ads.</li><li>Copy a competitor’s ads. They’re research only.</li><li>Make up proof: no invented results, reviews, counts or deadlines.</li><li>Promise results. Every ad is a test until your numbers say otherwise.</li></ul></div></div></section>';
+}
+
+function view1() {
+  var b = S.biz;
+  var h = '<div class="col">' + (S.welcomed ? "" : viewWelcome()) +
+    '<div class="step-head"><span class="eyebrow">Step 1 of 5</span><h1>Your business</h1><p>Tell Ad Lab what you sell and paste your sales page. Everything else is optional.</p></div>' + aiNotice() +
+    '<section class="card"><h2>The basics</h2><div class="grid2">' +
+    field("Business name", inp("biz.name", 'placeholder="Your business name" autocomplete="organization"')) +
+    field("Website", inp("biz.url", 'placeholder="yoursite.com"')) +
+    field("What you sell", sel("biz.kind", KINDS)) +
+    field("Who it’s for", inp("biz.buyer", 'placeholder="Shop owners who run everything themselves"')) +
+    field("Price", inp("biz.price", 'placeholder="97" inputmode="decimal"')) +
+    field("Billing", sel("biz.billing", [["monthly", "Monthly"], ["yearly", "Yearly"], ["one-time", "One-time"]])) +
+    field("Free trial", sel("biz.trial", [["none", "No trial"], ["7", "7 days"], ["14", "14 days"], ["30", "30 days"]])) +
+    "</div></section>" +
+    '<section class="card"><div class="card-head"><h2>Your sales page</h2><span class="chip you dot">Most important</span></div>' +
+    '<p class="sub">Open your sales or about page, select everything (Cmd or Ctrl + A), copy, and paste it here. Or drop screenshots of the page.</p>' +
+    area("biz.pageText", 'class="tall" placeholder="Paste your page here"') +
+    (maxImages() ? drop("page", "Screenshots of your own page") + thumbs(b.pageShots, "page") : "") + "</section>" +
+    '<section class="card"><div class="card-head"><h2>Six quick questions</h2><span class="chip">Optional</span></div><p class="sub">A sentence each is plenty. Skip any: Ad Lab uses the grey example and knows you didn’t say it.</p><div class="stack">' +
+    QUESTIONS.map(function (q) { return field(esc(q[1]), area("biz.answers." + q[0], 'placeholder="' + esc(q[2] || "For example: a shop owner who found us after a bad month") + '"')); }).join("") + "</div></section>" +
+    '<section class="card"><h2>Never put these in my ads</h2><div class="checks">' +
+    NEVER.map(function (n) { return '<label class="check"><input type="checkbox" data-bind="biz.never.' + n[0] + '"' + (b.never[n[0]] ? " checked" : "") + "><span>" + esc(n[1]) + "</span></label>"; }).join("") + "</div>" +
+    field("Anything else?", inp("biz.neverExtra", 'placeholder="For example: never mention our old brand name"')) + "</section>" +
+    errHTML(1) + (JOB && JOB.step === 1 ? jobHTML() : "") +
+    '<div class="btn-row">' + aiButton("read-business", S.brief ? "Read my business again" : "Read my business", 1, "Usually a minute or two") + "</div>";
+  if (S.brief) h += viewBrief();
+  h += navRow(null, 2, "Next: competitors", !S.brief) + "</div>";
+  return h;
+}
+function viewBrief() {
+  var r = S.brief;
+  function items(list, fn) { return list.length ? '<ul class="list">' + list.map(fn).join("") + "</ul>" : '<p class="sub">None found.</p>'; }
+  return '<section class="card"><div class="card-head"><h2>What Ad Lab read</h2><span class="chip good dot">Done</span></div>' +
+    '<dl class="kv"><dt>Business</dt><dd>' + esc(r.business) + "</dd><dt>Offer</dt><dd>" + esc(r.offer) + "</dd><dt>For</dt><dd>" + esc(r.buyer) + "</dd><dt>Voice</dt><dd>" + esc(r.voice) + "</dd></dl>" +
+    '<div class="grid2"><div class="stack"><h3>What your page promises</h3>' + items(r.promises, function (p) { return "<li><span>“" + esc(p.text) + "”" + labelTag(p.label) + "</span></li>"; }) + "</div>" +
+    '<div class="stack"><h3>Proof you have</h3>' + items(r.proof, function (p) { return "<li><span>" + esc(p.text) + labelTag(p.label) + (p.usable === false ? ' <span class="chip bad">Not for ads yet</span>' : "") + '</span><span class="sub small">' + esc(p.why) + "</span></li>"; }) + "</div></div>" +
+    (r.risky_lines.length ? '<div class="note you"><strong>Lines on your page that could get your ads rejected or doubted</strong><ul>' + r.risky_lines.map(function (x) { return "<li>“" + esc(x.text) + "”: " + esc(x.why) + "</li>"; }).join("") + "</ul></div>" : "") +
+    (r.missing.length ? '<div class="stack"><h3>What a buyer would want to know that your page doesn’t say</h3><ul class="list">' + r.missing.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") + "</ul></div>" : "") +
+    "</section>";
+}
+
+function adLibraryURL(name) {
+  return "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=" + encodeURIComponent(S.country || "US") + "&q=" + encodeURIComponent(name) + "&search_type=keyword_unordered&media_type=all";
+}
+function view2() {
+  var h = '<div class="col"><div class="step-head"><span class="eyebrow">Step 2 of 5</span><h1>Your competitors</h1><p>Pick who to learn from, then grab a few of their ads from Meta’s free Ad Library.</p></div>' + aiNotice();
+  if (!S.competitors.length) {
+    h += '<section class="card"><h2>Who else sells to your buyer?</h2><p class="sub">Ad Lab suggests competitors in three groups: the same thing, the same problem solved another way, and the same buyer. You decide who stays.</p>' +
+      errHTML(2) + (JOB && JOB.step === 2 ? jobHTML() : "") + '<div class="btn-row">' + aiButton("suggest", "Suggest competitors", 2, "Usually a minute or two") + "</div></section>";
+  } else {
+    h += '<div class="note"><strong>How to grab their ads (about two minutes each)</strong><ol><li>Click <strong>Find their ads</strong>. The Ad Library opens in a new tab.</li><li>Pick their page from the suggestions under the search box.</li><li>Screenshot 3 to 5 ads. Include the “Started running on” date if you can.</li><li>Drop the screenshots under that competitor. No ads showing? Untick them.</li></ol>' +
+      '<div class="row">' + field("Ad Library country", sel("country", COUNTRIES, 'data-rerender="1" style="max-width:14rem"')) + "</div></div>" +
+      errHTML(2) + (JOB && JOB.step === 2 ? jobHTML() : "");
+    h += S.competitors.map(function (c) {
+      var ring = { direct: "Same thing", indirect: "Same problem", attention: "Same buyer" }[c.ring] || c.ring;
+      var conf = c.source === "added" ? '<span class="chip accent">You added</span>' : c.confidence === "low" ? '<span class="chip you">Not sure they exist: check</span>' : "";
+      return '<section class="card comp' + (c.keep ? "" : " off") + '"><label class="comp-toggle"><input type="checkbox" data-act="keep" data-id="' + c.id + '"' + (c.keep ? " checked" : "") + ' aria-label="Use ' + esc(c.name) + '"></label>' +
+        '<div class="comp-body"><div class="comp-title"><strong>' + esc(c.name) + '</strong><span class="chip">' + esc(ring) + "</span>" + conf + (hasMaterial(c) ? '<span class="chip good dot">' + ((c.shots || []).length ? c.shots.length + " screenshot" + (c.shots.length === 1 ? "" : "s") : "Ad text added") + "</span>" : "") + "</div>" +
+        (c.why ? '<p class="sub">' + esc(c.why) + "</p>" : "") +
+        (c.keep ? '<div class="row"><a class="btn secondary" href="' + esc(adLibraryURL(c.name)) + '" target="_blank" rel="noopener">Find their ads ↗</a><button class="btn ghost" type="button" data-act="copy-link" data-url="' + esc(adLibraryURL(c.name)) + '">Copy link</button>' + (c.source === "added" ? '<button class="btn ghost" type="button" data-act="rm-comp" data-id="' + c.id + '">Remove</button>' : "") + "</div>" +
+          (maxImages() ? drop("comp:" + c.id, "3 to 5 of their ads") + thumbs(c.shots, "comp:" + c.id) : "") +
+          "<details" + (str(c.adText).trim() ? " open" : "") + "><summary>" + (maxImages() ? "No screenshots? Paste their ad text instead" : "Paste their ad text") + "</summary>" + area("competitors." + S.competitors.indexOf(c) + ".adText", 'placeholder="Copy the text of a few of their ads from the Ad Library and paste it here"') + "</details>" : "") +
+        "</div></section>";
+    }).join("");
+    h += '<section class="card"><h2>Add a competitor</h2><div class="row"><input type="text" id="addComp" placeholder="Their business or page name" style="flex:1;min-width:12rem"><button class="btn secondary" type="button" data-act="add-comp">Add</button>' +
+      (aiReady() ? '<button class="btn ghost" type="button" data-act="suggest"' + (JOB ? " disabled" : "") + ">Suggest more</button>" : "") + "</div></section>";
+  }
+  h += navRow(1, 3, "Next: read the market", false) + "</div>";
+  return h;
+}
+
+function view3() {
+  var comps = S.competitors.filter(function (c) { return c.keep && hasMaterial(c); });
+  var shots = comps.reduce(function (n, c) { return n + (c.shots || []).length; }, 0);
+  var h = '<div class="col"><div class="step-head"><span class="eyebrow">Step 3 of 5</span><h1>Your market</h1><p>What your competitors all say, what nobody says yet, who you’re really selling to, and the hard questions about your business.</p></div>' + aiNotice();
+  var stale = comps.some(function (c) { return !c.decoded || c.decoded.sig !== sig(c); });
+  h += errHTML(3) + (JOB && JOB.step === 3 ? jobHTML() : "");
+  if (!(S.market && S.buyers && S.questions)) {
+    h += '<section class="card"><h2>' + (S.market ? "Finish reading the market" : "Read the market") + '</h2><p class="sub">' + (comps.length ? "Ready to read " + (shots ? shots + " screenshot" + (shots === 1 ? "" : "s") + " from " : "ads from ") + comps.length + " competitor" + (comps.length === 1 ? "" : "s") + ". Fewer than three competitors gives a thin read; you can add more later." : "Go back to step 2 and add screenshots or ad text for at least one competitor.") + "</p>" +
+      '<div class="btn-row">' + aiButton("market", S.market ? "Continue" : "Read the market", 3, "A few minutes, one competitor at a time") + "</div></section>";
+  } else if (stale && !JOB) {
+    h += '<div class="note you"><strong>Your competitor list or ads changed since this read.</strong><p>Reading again redoes the map, your buyers and the hard questions.</p><div><button class="btn secondary" type="button" data-act="market-fresh"' + (!aiReady() ? " disabled" : "") + ">Read the market again</button></div></div>";
+  }
+  if (S.market) h += viewMarket();
+  if (S.buyers) h += viewBuyers();
+  if (S.questions) h += viewQuestions();
+  h += navRow(2, 4, "Next: write my ads", !(S.market && S.buyers && S.questions)) + "</div>";
+  return h;
+}
+function refs(r) { r = arr(r); return r.length ? ' <span class="refs">' + esc(r.join(", ")) + "</span>" : ""; }
+function viewMarket() {
+  var m = S.market;
+  function sec(title, list, fn) { return list.length ? '<div class="stack"><h3>' + title + '</h3><ul class="list">' + list.map(fn).join("") + "</ul></div>" : ""; }
+  var adsRead = S.competitors.reduce(function (n, c) { return n + (c.keep && c.decoded ? arr(c.decoded.ads).length : 0); }, 0);
+  return '<section class="card"><div class="card-head"><h2>What the market says</h2><span class="sub small">' + adsRead + " ads from " + decodedCount() + " competitors</span></div>" +
+    '<p class="mm-headline">' + esc(m.headline) + "</p>" +
+    '<div class="grid2">' + sec("What everyone says", m.everyone_says, function (x) { return "<li><span>" + esc(x.claim) + '</span><span class="sub small">' + esc(x.advertisers) + " advertiser" + (Number(x.advertisers) === 1 ? "" : "s") + refs(x.refs) + "</span></li>"; }) +
+    sec("What nobody says yet", m.nobody_says, function (x) { return "<li><strong>" + esc(x.claim) + '</strong><span class="sub small">' + esc(x.why) + "</span></li>"; }) +
+    sec("Who they talk to", m.they_talk_to, function (x) { return "<li><span>" + esc(x.who) + refs(x.refs) + "</span></li>"; }) +
+    sec("Who they miss", m.they_miss, function (x) { return "<li><strong>" + esc(x.who) + '</strong><span class="sub small">' + esc(x.why) + "</span></li>"; }) + "</div>" +
+    '<details><summary>Proof, offers, formats and the longest-running ads</summary><div class="stack">' +
+    (m.proof ? "<p><strong>How they prove it.</strong> " + esc(m.proof) + "</p>" : "") +
+    (m.offers ? "<p><strong>Offers.</strong> " + esc(m.offers) + "</p>" : "") +
+    (m.formats.used || m.formats.missing ? "<p><strong>Formats they use.</strong> " + esc(m.formats.used) + "</p><p><strong>Formats nobody uses.</strong> " + esc(m.formats.missing) + "</p>" : "") +
+    (m.longest.length ? '<div class="stack"><h3>Longest-running ads</h3><p class="sub small">An ad that keeps running is a hint, not proof, that it works for them.</p><ul class="list">' + m.longest.map(function (x) { return '<li><span><span class="refs">' + esc(x.ref) + "</span> started " + esc(x.started) + ". " + esc(x.note) + "</span></li>"; }).join("") + "</ul></div>" : "") +
+    "</div></details>" +
+    (m.limits.length ? '<p class="sub small"><strong>Limits of this read:</strong> ' + esc(m.limits.join(" ")) + "</p>" : "") + "</section>";
+}
+function viewBuyers() {
+  var any = arr(S.buyers).some(function (b) { return b.verdict === "wrong" || b.verdict === "not" || str(b.note).trim(); }) || str(S.missingBuyer).trim();
+  return '<section class="card"><div class="card-head"><h2>Your buyers</h2><span class="chip you dot">Your call</span></div>' +
+    '<p class="sub">Each one is a moment someone goes looking for something like yours. Mark any that are wrong or not someone you’d sell to.</p><div class="stack">' +
+    arr(S.buyers).map(function (b, i) {
+      var vb = function (v, l) { return '<button type="button" data-act="buyer" data-i="' + i + '" data-v="' + v + '" aria-pressed="' + (b.verdict === v) + '">' + l + "</button>"; };
+      return '<article class="buyer ' + esc(b.verdict) + '"><div class="card-head"><h3>' + esc(b.name) + '</h3><div class="seg" role="group" aria-label="Your verdict">' + vb("keep", "Spot on") + vb("wrong", "Not quite") + vb("not", "Not my buyer") + "</div></div>" +
+        '<dl class="kv"><dt>Situation</dt><dd>' + esc(b.situation) + "</dd><dt>What just happened</dt><dd>" + esc(b.trigger) + "</dd><dt>Does instead</dt><dd>" + esc(b.tried) + "</dd><dt>Fears</dt><dd>" + esc(b.fear) + "</dd><dt>Needs to see</dt><dd>" + esc(b.needs_to_see) + "</dd></dl>" +
+        (arr(b.words).length ? '<p class="sub small">Their words: ' + arr(b.words).map(function (w) { return "“" + esc(w.text) + "”" + labelTag(w.label); }).join(" ") + "</p>" : "") +
+        (b.verdict === "wrong" || b.verdict === "not" ? field("What’s off?", inp("buyers." + i + ".note", 'placeholder="For example: they never buy courses, they hire someone"')) : "") + "</article>";
+    }).join("") + "</div>" +
+    field("Missing someone?", inp("missingBuyer", 'placeholder="For example: the spouse who handles the books"')) +
+    '<div class="btn-row"><button class="btn secondary" type="button" data-act="update-buyers"' + (JOB || !aiReady() || !any ? " disabled" : "") + ">Update buyers with my notes</button></div></section>";
+}
+function viewQuestions() {
+  var q = S.questions;
+  return '<section class="card"><div class="card-head"><h2>The hard questions</h2><span class="chip you dot">Your call</span></div>' +
+    '<div class="note"><strong>Diagnosis: a ' + esc(q.diagnosis.problem || "") + " problem</strong><p>" + esc(q.diagnosis.why || "") + "</p></div><div>" +
+    q.recommendations.map(function (r, i) {
+      var vb = function (v, l) { return '<button type="button" data-act="rec" data-i="' + i + '" data-v="' + v + '" aria-pressed="' + (r.decision === v) + '">' + l + "</button>"; };
+      return '<div class="rec"><div class="card-head"><h3>' + (i + 1) + ". " + esc(r.title) + '</h3><div class="seg" role="group" aria-label="Your decision">' + vb("yes", "I’ll do this") + vb("later", "Not now") + "</div></div>" +
+        "<p>" + esc(r.do) + '</p><p class="sub small">' + esc(r.why) + '</p><p class="small"><strong>Cheapest test:</strong> ' + esc(r.cheapest_test) + ' <strong>Wrong if:</strong> ' + esc(r.wrong_if) + "</p></div>";
+    }).join("") + "</div>" +
+    (q.page_fixes.length ? '<details><summary>Lines on your page to fix (' + q.page_fixes.length + ")</summary><ul class=\"list\">" + q.page_fixes.map(function (p) { return "<li><strong>“" + esc(p.line) + "”</strong><span>" + esc(p.problem) + '</span><span class="sub small">Try: ' + esc(p.suggestion) + "</span></li>"; }).join("") + "</ul></details>" : "") +
+    (q.moonshots.length ? '<details><summary>Two moonshots</summary><ul class="list">' + q.moonshots.map(function (m) { return "<li><strong>" + esc(m.idea) + '</strong><span class="sub small">' + esc(m.why) + "</span></li>"; }).join("") + "</ul></details>" : "") +
+    '<p class="sub small">Ads in the next step use the changes you mark “I’ll do this”.</p></section>';
+}
+
+function view4() {
+  var h = '<div class="col wide"><div class="step-head"><span class="eyebrow">Step 4 of 5</span><h1>Your ads</h1><p>Six ad ideas, each built on a gap in your market, each checked against your page and the ad rules before you see it.</p></div>' + aiNotice();
+  h += '<div class="grid2" style="align-items:start"><section class="card"><h2>Your look</h2><div class="row">' +
+    '<label class="field"><span>Main colour</span><input type="color" data-bind="brand.primary" data-rerender="1" value="' + esc(S.brand.primary) + '"></label>' +
+    '<label class="field"><span>Highlight</span><input type="color" data-bind="brand.accent" data-rerender="1" value="' + esc(S.brand.accent) + '"></label>' +
+    '<div style="flex:1;min-width:10rem">' + field("Lettering", sel("brand.font", [["sans", "Bold and modern"], ["serif", "Classic serif"], ["plain", "Plain"]], 'data-rerender="1"')) + "</div></div></section>" +
+    '<section class="card"><div class="card-head"><h2>Your photos</h2><span class="chip">Optional</span></div><p class="sub small">Real photos of you, your work or your product make the strongest ads. Only use photos you own.</p>' +
+    drop("photo", "PNG or JPG", "Choose photos") +
+    (S.photos.length ? '<div class="stack">' + S.photos.map(function (p, i) {
+      return '<div class="row" style="align-items:flex-start"><div class="thumb"><img data-img="' + p.id + '" alt="Your photo ' + (i + 1) + '"><button type="button" data-act="rm-img" data-target="photo" data-id="' + p.id + '" aria-label="Remove photo ' + (i + 1) + '">✕</button></div><div class="stack" style="flex:1;min-width:12rem">' +
+        inp("photos." + i + ".caption", 'placeholder="What does it show?"') +
+        sel("photos." + i + ".people", [["none", "Only me, or nobody"], ["ok", "Other people, and they said yes"], ["no", "Other people, not asked yet"]]) + "</div></div>";
+    }).join("") + "</div>" : "") + "</section></div>";
+  h += errHTML(4) + (JOB && JOB.step === 4 ? jobHTML() : "");
+  if (!S.ads) {
+    h += '<section class="card"><h2>Write my ads</h2><p class="sub">Ad Lab writes six ideas, then a separate check reads every line against your page, your answers and Meta’s rules. Anything that fails is fixed or marked before you see it.</p><div class="btn-row">' + aiButton("write-ads", "Write my ads", 4, "A few minutes: writing, then checking") + "</div></section>";
+  } else {
+    var counts = { ready: 0, fix: 0, held: 0, unchecked: 0 };
+    S.ads.forEach(function (a) { counts[adStatus(a)]++; });
+    h += '<div class="summary-bar"><strong>' + S.ads.length + " ads</strong>" +
+      (counts.ready ? '<span class="chip good dot">' + counts.ready + " ready to run</span>" : "") +
+      (counts.fix ? '<span class="chip bad dot">' + counts.fix + " need a fix</span>" : "") +
+      (counts.held ? '<span class="chip you dot">' + counts.held + " waiting on you</span>" : "") +
+      (counts.unchecked ? '<span class="chip dot">' + counts.unchecked + " not checked</span>" : "") +
+      '<span style="flex:1"></span><button class="btn secondary tiny" type="button" data-act="recheck"' + (JOB || !aiReady() ? " disabled" : "") + '>Check all again</button><button class="btn ghost tiny" type="button" data-act="write-fresh"' + (JOB || !aiReady() ? " disabled" : "") + ">Write a new set</button></div>";
+    if (UI.confirmFresh) h += '<div class="note you"><strong>Replace all six ads with a new set?</strong><p>The current ads and their checks will be gone. Download them first if you want to keep them.</p><div class="btn-row"><button class="btn" type="button" data-act="write-fresh-yes">Write a new set</button><button class="btn secondary" type="button" data-act="write-fresh-no">Keep these</button></div></div>';
+    h += '<div class="ads">' + S.ads.map(viewAd).join("") + "</div>";
+  }
+  h += navRow(3, 5, "Next: launch and learn", false) + "</div>";
+  return h;
+}
+function viewAd(a, i) {
+  var st = adStatus(a), chipCls = { ready: "good", fix: "bad", held: "you", unchecked: "" }[st];
+  var ratio = a.ratio || "1:1";
+  var rb = function (r) { return '<button type="button" data-act="ratio" data-id="' + a.id + '" data-v="' + r + '" aria-pressed="' + (ratio === r) + '">' + r + "</button>"; };
+  var cb = function (label, text, key) {
+    if (!str(text).trim()) return "";
+    return '<div class="copyblk"><div class="lbl"><span>' + label + '</span><button class="btn ghost tiny" type="button" data-act="copy" data-id="' + a.id + '" data-k="' + key + '">Copy</button></div><div class="txt" id="t-' + a.id + "-" + key + '">' + esc(text) + "</div></div>";
+  };
+  var notes = a.critic ? a.critic.checks.filter(function (c) { return c && c.result && c.result !== "pass"; }) : [];
+  var photoSel = a.format === "photo" ? field("Photo", '<select data-act-change="photo" data-id="' + a.id + '"><option value="">Choose one of your photos</option>' + S.photos.map(function (p, k) { return '<option value="' + p.id + '"' + (a.photoId === p.id ? " selected" : "") + ">" + esc(p.caption || "Photo " + (k + 1)) + "</option>"; }).join("") + "</select>") : "";
+  return '<article class="ad"><div class="ad-top"><strong>Ad ' + (i + 1) + '</strong><span class="chip ' + chipCls + ' dot">' + STATUS_TXT[st] + '</span></div>' +
+    '<div class="ad-visual"><img data-ad="' + a.id + '" data-ratio="' + ratio + '" alt="Ad ' + (i + 1) + " image, " + esc(FORMATS[a.format]) + '"><div class="row"><div class="seg" role="group" aria-label="Image size">' + rb("1:1") + rb("4:5") + rb("9:16") + "</div>" +
+    (downloads ? '<button class="btn secondary tiny" type="button" data-act="dl-img" data-id="' + a.id + '">Download image</button>' : "") + '</div><p class="warn" id="warn-' + a.id + '" hidden></p></div>' +
+    '<div class="ad-body"><div><p class="ad-idea">' + esc(a.idea) + '</p><p class="sub small">' + esc(FORMATS[a.format]) + " · for " + esc(a.buyer) + "</p></div>" + photoSel +
+    (st === "fix" ? '<div class="note bad"><strong>What the check found</strong><ul>' + notes.map(function (c) { return "<li>" + (c.quote ? "“" + esc(c.quote) + "”: " : "") + esc(c.note) + "</li>"; }).join("") + '</ul><div><button class="btn" type="button" data-act="fix" data-id="' + a.id + '"' + (JOB || !aiReady() ? " disabled" : "") + ">Fix it</button></div></div>" : "") +
+    (st === "held" ? '<div class="note you"><strong>Waiting on you</strong><ul>' + (a.format === "photo" && !a.photoId ? "<li>Choose or add a photo for this ad.</li>" : "") + (a.critic ? a.critic.held_for.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") : "") + '</ul><p class="small">Added the photo or got the OK? Check this ad again.</p><div><button class="btn secondary" type="button" data-act="recheck-one" data-id="' + a.id + '"' + (JOB || !aiReady() ? " disabled" : "") + ">Check this ad again</button></div></div>" : "") +
+    cb("Primary text", a.primary_short, "primary_short") + cb("Headline", a.headline, "headline") + cb("Description", a.description, "description") +
+    '<p class="small"><strong>Button:</strong> ' + esc(a.cta) + "</p>" +
+    '<details><summary>Longer primary text</summary>' + cb("Primary text (long)", a.primary_long, "primary_long") + "</details>" +
+    (a.hooks.length ? '<details><summary>Other hooks to try</summary><ul class="list">' + a.hooks.map(function (hk) { return "<li>" + esc(hk) + "</li>"; }).join("") + "</ul></details>" : "") +
+    '<details><summary>Why this should work</summary><div class="stack"><p class="small">' + esc(a.why) + '</p><ul class="list small">' + arr(a.evidence).map(function (e) { return "<li><span>" + esc(e.claim) + labelTag(e.label) + '</span><span class="sub">' + esc(e.source) + "</span></li>"; }).join("") + "</ul></div></details>" +
+    (a.critic ? '<details><summary>The check</summary><div class="stack"><p class="small"><strong>A stranger reads it as:</strong> ' + esc(a.critic.stranger) + '</p><ul class="checks-list">' + a.critic.checks.map(function (c) { var cls = c.result === "pass" ? "good" : c.result === "block" ? "bad" : "you"; return '<li><span><span class="chip ' + cls + '">' + esc(c.check) + ": " + esc(c.result) + "</span></span>" + (c.result !== "pass" ? '<span class="small">' + (c.quote ? "“" + esc(c.quote) + "” " : "") + esc(c.note) + "</span>" : "") + "</li>"; }).join("") + "</ul></div></details>" : "") +
+    "</div></article>";
+}
+
+function moneyField(key, label, hint, pre) {
+  var v = S.money[key];
+  if (key === "price" && !v && S.biz.price) v = S.biz.price;
+  var ph = !S.money.touched[key] && !(key === "price" && S.biz.price);
+  return '<label class="field"><span>' + label + (ph ? ' <span class="ph-flag">placeholder</span>' : "") + "</span>" + (hint ? "<em>" + hint + "</em>" : "") +
+    '<input type="text" inputmode="decimal" data-money="' + key + '" value="' + esc(v) + '"' + (pre ? ' placeholder="' + pre + '"' : "") + "></label>";
+}
+function view5() {
+  var e = econ(), ready = arr(S.ads).filter(function (a) { return adStatus(a) === "ready"; });
+  var m = S.money, model = m.model || "membership";
+  var trialOn = m.trial === "" ? S.biz.trial !== "none" : m.trial === "yes";
+  if (m.margin === "") m.margin = model === "membership" ? "90" : "50";
+  var h = '<div class="col"><div class="step-head"><span class="eyebrow">Step 5 of 5</span><h1>Launch and learn</h1><p>What you can afford to pay for a customer, how to set up the test, and what to change after the first week.</p></div>';
+  h += '<section class="card"><h2>Your numbers</h2><p class="sub small">Anything marked placeholder is a guess. Replace it with your real number when you have one.</p><div class="grid2">' +
+    field("How people pay", '<select data-money-model><option value="membership"' + (model === "membership" ? " selected" : "") + '>Subscription</option><option value="product"' + (model === "product" ? " selected" : "") + ">One-time purchase</option></select>") +
+    moneyField("price", model === "membership" ? "Price per month ($)" : "Price ($)") +
+    (model === "membership" ? field("Free trial", '<select data-money-trial><option value="yes"' + (trialOn ? " selected" : "") + '>Yes</option><option value="no"' + (!trialOn ? " selected" : "") + ">No</option></select>") +
+      (trialOn ? moneyField("ttp", "Trials that become paying (%)") : "") + moneyField("months", "Months a member stays") :
+      moneyField("aov", "Average order ($)", "Leave blank to use the price")) +
+    moneyField("margin", "Gross margin (%)", "What’s left of each sale after the cost of delivering it") +
+    moneyField("budget", "Monthly test budget ($)") +
+    "</div><details><summary>More settings</summary><div class=\"grid2\">" +
+    moneyField("refund", "Refunds (%)") + (model === "membership" ? moneyField("payback", "Months of revenue to pay back an ad") : "") +
+    moneyField("keep", "Profit you keep (%)", "Your target leaves this much of each sale as profit") + moneyField("judge", "Results needed to judge an ad", "Below this, judge on clicks and views, not cost") +
+    "</div></details></section>";
+  h += '<div class="big-nums" id="nums">' + numsHTML(e) + "</div>";
+  h += '<details class="card"><summary>Show the math</summary><ul class="list small" id="mathlines">' + e.lines.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul></details>";
+  h += '<section class="card"><div class="card-head"><h2>Your launch plan</h2><span class="chip you dot">You do this in Ads Manager</span></div>';
+  if (!ready.length) h += '<div class="note you"><strong>No ads are ready yet.</strong><p>Go back to step 4 and fix or finish at least one ad first.</p></div>';
+  h += '<ol class="steps-list" id="plansteps">' + planSteps(e, ready).map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ol>";
+  if (ready.length) h += '<div class="stack"><h3>Ready ads</h3>' + ready.map(function (a) { var n = S.ads.indexOf(a) + 1; return '<label class="check"><input type="checkbox" data-act="launched" data-id="' + a.id + '"' + (S.launched[a.id] ? " checked" : "") + "><span>Ad " + n + ": " + esc(a.headline || a.idea) + ' <span class="sub small">(' + esc(FORMATS[a.format]) + ")</span></span></label>"; }).join("") + "</div>";
+  var held = arr(S.ads).filter(function (a) { var s = adStatus(a); return s === "held" || s === "fix"; });
+  if (held.length) h += '<p class="sub small">Not in this launch: ' + held.map(function (a) { return "ad " + (S.ads.indexOf(a) + 1) + " (" + STATUS_TXT[adStatus(a)].toLowerCase() + ")"; }).join(", ") + ".</p>";
+  h += '<div class="btn-row"><button class="btn" type="button" data-act="zip"' + (downloads ? "" : " disabled") + '>Download everything</button><span class="hint">Your ads, images, market map and plan in one zip' + (downloads ? "" : " (saving files isn’t available in this view)") + "</span></div></section>";
+  h += '<section class="card"><div class="card-head"><h2>After 7 days: your results</h2><span class="chip you dot">Your export</span></div>' +
+    '<div class="note"><strong>How to export from Ads Manager</strong><ol><li>Open Ads Manager, then Reports, and choose the ad level.</li><li>Include these columns if you can: ad name, amount spent, impressions, link clicks, 3-second video plays, ThruPlays, results, cost per result, frequency.</li><li>Export as CSV and drop the file below.</li></ol></div>' +
+    '<label class="drop" data-drop="csv"><input type="file" accept=".csv,text/csv" data-files="csv"><span><strong>Choose your export</strong> or drop it here</span><span class="small">CSV from Ads Manager</span></label>';
+  h += '<div id="readout">' + (S.readout ? readoutHTML() : "") + "</div>";
+  h += '<details><summary>Rules Ad Lab uses to judge each ad</summary><p class="sub small">Starting points, not benchmarks. Change them once you have a few weeks of your own numbers.</p><div class="grid3">' +
+    thField("impression_floor", "Impressions before judging") + thField("min_hook_rate", "Lowest hook rate (%)") + thField("min_hold_rate", "Lowest hold rate (%)") + thField("min_ctr", "Lowest click rate (%)") + thField("max_frequency", "Highest frequency") + thField("kill_cpa_multiple", "Stop if cost is over target by (x)") +
+    "</div></details></section>";
+  h += navRow(4, null) + "</div>";
+  return h;
+}
+function paintReadout() { var el = document.getElementById("readout"); if (el && S.readout) el.innerHTML = readoutHTML(); }
+function thField(k, label) { return field(label, '<input type="text" inputmode="decimal" data-th="' + k + '" value="' + esc(S.thresholds[k]) + '">'); }
+function numsHTML(e) {
+  var cv = e.concepts == null ? "n/a" : String(e.concepts);
+  return '<div><strong>' + money(e.breakeven) + "</strong><span>Most you can pay per " + esc(e.event) + " and break even</span></div>" +
+    "<div><strong>" + money(e.target) + "</strong><span>Your target per " + esc(e.event) + "</span></div>" +
+    "<div><strong>" + cv + "</strong><span>" + (e.concepts === 0 ? "Ad ideas your budget can judge on cost. Judge on hook and click rates first, or raise the budget." : "Ad ideas your monthly budget can judge, at " + money(e.perConcept) + " each") + "</span></div>";
+}
+function readoutHTML() {
+  var t = thresholds(), r = S.readout;
+  var rows = r.rows.map(function (row) {
+    var j = judgeRow(row, t), mv = MOVES[j[0]] || [j[0], ""];
+    var cls = /scale|hold/.test(j[0]) ? "good" : /kill|refresh/.test(j[0]) ? "bad" : /too early|upstream/.test(j[0]) ? "" : "you";
+    return "<tr><td>" + esc(row.name) + '</td><td class="move"><span class="chip ' + cls + '">' + esc(mv[0]) + '</span><div class="small sub">' + esc(j[1]) + '</div></td><td class="num">' + (row.spend != null ? money(row.spend) : "") + '</td><td class="num">' + pct(j[2].hook) + '</td><td class="num">' + pct(j[2].hold) + '</td><td class="num">' + pct(j[2].ctr) + '</td><td class="num">' + (row.results != null ? Math.round(row.results) : "") + '</td><td class="num">' + (j[2].cpa != null ? money(j[2].cpa) : "") + "</td></tr>";
+  }).join("");
+  return '<div class="stack"><p class="sub small">Read ' + r.rows.length + " ads from " + esc(r.file) + ". Columns found: " + esc(r.matched.map(function (k) { return COLNAMES[k] || k; }).join(", ")) + ".</p>" +
+    '<div class="table-wrap"><table><thead><tr><th>Ad</th><th>Next move</th><th class="num">Spend</th><th class="num">Hook</th><th class="num">Hold</th><th class="num">Clicks</th><th class="num">Results</th><th class="num">Cost</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
+    '<p class="sub small">Read them in order: hook rate first, then hold, then clicks, then cost once there are enough results. A failed hook is a cheap lesson about the angle, not a failure of the copy.</p></div>';
+}
+
+/* ---------- render ---------- */
+var VIEWS = { 1: view1, 2: view2, 3: view3, 4: view4, 5: view5 };
+function renderRail() {
+  document.getElementById("rail").innerHTML = STEPS.map(function (s) {
+    return '<button type="button" data-go="' + s.n + '"' + (S.step === s.n ? ' aria-current="step"' : "") + ' class="' + (stepDone(s.n) ? "done" : "") + '"><span class="num">' + s.n + '</span><span class="lbl">' + s.name + "</span></button>";
+  }).join("");
+}
+function render() {
+  renderRail();
+  var main = document.getElementById("main");
+  main.innerHTML = VIEWS[S.step]();
+  hydrateImages();
+  hydrateAds();
+}
+function go(n) { S.step = n; LASTERR = null; save(); render(); window.scrollTo(0, 0); }
+
+/* ---------- events ---------- */
+document.addEventListener("click", function (e) {
+  var menuBtn = e.target.closest("#menuBtn"), menu = document.getElementById("menu");
+  if (menuBtn) { menu.hidden = !menu.hidden; menuBtn.setAttribute("aria-expanded", String(!menu.hidden)); return; }
+  if (!e.target.closest("#menu")) { menu.hidden = true; document.getElementById("menuBtn").setAttribute("aria-expanded", "false"); }
+  var g = e.target.closest("[data-go]");
+  if (g) { go(Number(g.getAttribute("data-go"))); return; }
+  var b = e.target.closest("[data-act]");
+  if (!b) return;
+  var act = b.getAttribute("data-act"), id = b.getAttribute("data-id");
+  if (act === "keep") return;
+  if (act === "launched") return;
+  if (act.indexOf("fix:") === 0) { runFix(act.slice(4)); return; }
+  if (act.indexOf("recheck1:") === 0) { runRecheckOne(act.slice(9)); return; }
+  switch (act) {
+    case "welcome": S.welcomed = true; save(); render(); break;
+    case "read-business": runReadBusiness(); break;
+    case "suggest": runSuggest(); break;
+    case "market": runMarket(false); break;
+    case "market-fresh": runMarket(true); break;
+    case "update-buyers": runUpdateBuyers(); break;
+    case "write-ads": runWriteAds(false); break;
+    case "write-fresh": UI.confirmFresh = true; render(); break;
+    case "write-fresh-no": UI.confirmFresh = false; render(); break;
+    case "write-fresh-yes": UI.confirmFresh = false; runWriteAds(true); break;
+    case "recheck": runRecheck(); break;
+    case "recheck-one": runRecheckOne(id); break;
+    case "fix": runFix(id); break;
+    case "stop": if (JOB) JOB.ctl.abort(); break;
+    case "add-comp": {
+      var box = document.getElementById("addComp"), nm = box && box.value.trim();
+      if (!nm) { if (box) box.focus(); break; }
+      S.competitors.push({ id: uid("c"), name: nm, ring: "direct", why: "", confidence: "high", keep: true, source: "added", adText: "", shots: [], decoded: null });
+      save(); render(); break;
+    }
+    case "rm-comp": S.competitors = S.competitors.filter(function (c) { return c.id !== id; }); save(); render(); break;
+    case "rm-img": removeImage(b.getAttribute("data-target"), id); break;
+    case "buyer": { var bi = Number(b.getAttribute("data-i")), v = b.getAttribute("data-v"); S.buyers[bi].verdict = S.buyers[bi].verdict === v ? "" : v; save(); render(); break; }
+    case "rec": { var ri = Number(b.getAttribute("data-i")), rv = b.getAttribute("data-v"); var rec = S.questions.recommendations[ri]; rec.decision = rec.decision === rv ? "" : rv; save(); render(); break; }
+    case "ratio": { var ad = S.ads.find(function (a) { return a.id === id; }); ad.ratio = b.getAttribute("data-v"); save(); render(); break; }
+    case "copy": { var el = document.getElementById("t-" + id + "-" + b.getAttribute("data-k")); copyText(el ? el.textContent : "", el); break; }
+    case "dl-img": { var ad2 = S.ads.find(function (a) { return a.id === id; }); var n = S.ads.indexOf(ad2) + 1; getRender(ad2, ad2.ratio || "1:1").then(function (r) { saveFile("ad-" + n + "-" + (ad2.ratio || "1:1").replace(":", "x") + ".png", r.blob); }); break; }
+    case "zip": exportZip(); break;
+    case "backup-save": menu.hidden = true; backupJSON().then(function (j) { saveFile("ad-lab-backup-" + slug(S.biz.name) + ".json", j); }); break;
+    case "backup-load": menu.hidden = true; document.getElementById("backupInput").click(); break;
+    case "start-over": menu.hidden = true; showReset(); break;
+    case "reset-yes": resetAll(); break;
+    case "reset-no": render(); break;
+    case "copy-link": copyText(b.getAttribute("data-url"), null); break;
+  }
+});
+function showReset() {
+  render();
+  var main = document.getElementById("main");
+  var d = document.createElement("div");
+  d.className = "col";
+  d.innerHTML = '<div class="note bad" role="alertdialog" aria-label="Start over"><strong>Start over?</strong><p>This clears everything in this browser: your answers, competitors, screenshots and ads. Download a backup first if you might want them.</p><div class="btn-row"><button class="btn" type="button" data-act="reset-yes">Clear everything</button><button class="btn secondary" type="button" data-act="reset-no">Keep my work</button></div></div>';
+  main.prepend(d);
+  window.scrollTo(0, 0);
+}
+function resetAll() {
+  imgClear().then(function () {
+    Object.keys(URLS).forEach(function (k) { URL.revokeObjectURL(URLS[k]); }); URLS = {}; RENDERS = {};
+    S = defaults();
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    save(); render(); toast("Cleared");
+  });
+}
+document.addEventListener("change", function (e) {
+  var t = e.target;
+  if (t.matches("[data-act='keep']")) { var c = S.competitors.find(function (x) { return x.id === t.getAttribute("data-id"); }); if (c) { c.keep = t.checked; save(); render(); } return; }
+  if (t.matches("[data-act='launched']")) { S.launched[t.getAttribute("data-id")] = t.checked; save(); return; }
+  if (t.matches("[data-act-change='photo']")) { var ad = S.ads.find(function (a) { return a.id === t.getAttribute("data-id"); }); if (ad) { ad.photoId = t.value; save(); render(); } return; }
+  if (t.matches("[data-files]")) { addFiles(t.getAttribute("data-files"), t.files); t.value = ""; return; }
+  if (t.matches("[data-money-model]")) { S.money.model = t.value; S.money.margin = ""; S.money.touched.margin = false; save(); render(); return; }
+  if (t.matches("[data-money-trial]")) { S.money.trial = t.value; save(); render(); return; }
+  if (t.id === "backupInput") { loadBackup(t.files && t.files[0]); t.value = ""; return; }
+  if (t.matches("[data-bind]")) { bindValue(t); if (t.hasAttribute("data-rerender")) render(); }
+});
+document.addEventListener("input", function (e) {
+  var t = e.target;
+  if (t.matches("[data-bind]") && t.type !== "checkbox" && t.tagName !== "SELECT") bindValue(t);
+  if (t.matches("[data-money]")) {
+    var k = t.getAttribute("data-money"); S.money[k] = t.value; S.money.touched[k] = true; save();
+    var e2 = econ(), nums = document.getElementById("nums"); if (nums) nums.innerHTML = numsHTML(e2);
+    var ml = document.getElementById("mathlines"); if (ml) ml.innerHTML = e2.lines.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("");
+    var ps = document.getElementById("plansteps"); if (ps) ps.innerHTML = planSteps(e2, arr(S.ads).filter(function (a) { return adStatus(a) === "ready"; })).map(function (s) { return "<li>" + s + "</li>"; }).join("");
+    var flag = t.parentElement.querySelector(".ph-flag"); if (flag) flag.remove();
+    paintReadout();
+  }
+  if (t.matches("[data-th]")) { S.thresholds[t.getAttribute("data-th")] = t.value; save(); paintReadout(); }
+});
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && e.target.id === "addComp") { e.preventDefault(); var b = document.querySelector("[data-act='add-comp']"); if (b) b.click(); }
+  if (e.key === "Escape") { var m = document.getElementById("menu"); if (!m.hidden) { m.hidden = true; document.getElementById("menuBtn").focus(); } }
+});
+function bindValue(t) {
+  var path = t.getAttribute("data-bind");
+  var v = t.type === "checkbox" ? t.checked : t.value;
+  setPath(S, path, v);
+  save();
+}
+["dragover", "dragenter"].forEach(function (ev) {
+  document.addEventListener(ev, function (e) { var d = e.target.closest && e.target.closest("[data-drop]"); if (d) { e.preventDefault(); d.classList.add("over"); } });
+});
+document.addEventListener("dragleave", function (e) { var d = e.target.closest && e.target.closest("[data-drop]"); if (d) d.classList.remove("over"); });
+document.addEventListener("drop", function (e) {
+  var d = e.target.closest && e.target.closest("[data-drop]");
+  if (!d) return;
+  e.preventDefault(); d.classList.remove("over");
+  addFiles(d.getAttribute("data-drop"), e.dataTransfer && e.dataTransfer.files);
+});
+function addFiles(target, files) {
+  files = Array.from(files || []);
+  if (!files.length) return;
+  if (target === "csv") {
+    var f = files[0], r = new FileReader();
+    r.onload = function () { readCSV(r.result, f.name); };
+    r.readAsText(f);
+    return;
+  }
+  var imgs = files.filter(function (f) { return /^image\/(png|jpe?g|webp|gif)$/.test(f.type); });
+  if (!imgs.length) { toast("Those weren't images. Use PNG or JPG screenshots."); return; }
+  var ids = [];
+  Promise.all(imgs.map(function (f) { var id = uid("i"); ids.push(id); return imgPut(id, f); })).then(function () {
+    if (target === "page") S.biz.pageShots = S.biz.pageShots.concat(ids);
+    else if (target === "photo") ids.forEach(function (id) { S.photos.push({ id: id, caption: "", people: "none" }); });
+    else if (target.indexOf("comp:") === 0) { var c = S.competitors.find(function (x) { return x.id === target.slice(5); }); if (c) c.shots = (c.shots || []).concat(ids); }
+    save(); render();
+    toast("Added " + ids.length + " image" + (ids.length === 1 ? "" : "s"));
+  });
+}
+function removeImage(target, id) {
+  if (target === "page") S.biz.pageShots = S.biz.pageShots.filter(function (x) { return x !== id; });
+  else if (target === "photo") { S.photos = S.photos.filter(function (p) { return p.id !== id; }); arr(S.ads).forEach(function (a) { if (a.photoId === id) a.photoId = ""; }); }
+  else if (target.indexOf("comp:") === 0) { var c = S.competitors.find(function (x) { return x.id === target.slice(5); }); if (c) c.shots = c.shots.filter(function (x) { return x !== id; }); }
+  imgDel(id); save(); render();
+}
+function loadBackup(file) {
+  if (!file) return;
+  var r = new FileReader();
+  r.onload = function () {
+    var d;
+    try { d = JSON.parse(r.result); } catch (e) { toast("That isn't an Ad Lab backup file."); return; }
+    if (!d || d.app !== "adlab" || !d.state) { toast("That isn't an Ad Lab backup file."); return; }
+    imgClear().then(function () {
+      var puts = Object.keys(d.images || {}).map(function (id) { var b = dataURLToBlob(d.images[id]); return b ? imgPut(id, b) : null; });
+      return Promise.all(puts);
+    }).then(function () {
+      RENDERS = {}; S = merge(defaults(), d.state); save(); render(); toast("Backup loaded");
+    });
+  };
+  r.readAsText(file);
+}
+
+render();
+})();
+</script>
