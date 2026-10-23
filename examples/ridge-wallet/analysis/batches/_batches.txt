@@ -1,0 +1,170 @@
+## batch 1 (15 ads)
+1131011726095206 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1131011726095206 | ad.md,image,frames
+1315996623672010 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1315996623672010 | ad.md,image,frames
+1428488879491057 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1428488879491057 | ad.md,image,frames
+1439199331507895 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1439199331507895 | ad.md,image,frames
+1497445808883066 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1497445808883066 | ad.md,image,frames
+1520735273186403 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1520735273186403 | ad.md,image,frames
+1586458106013811 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1586458106013811 | ad.md,image,frames
+1803652474397216 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1803652474397216 | ad.md,image,frames
+1916199539545345 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1916199539545345 | ad.md,image,frames
+1988858838459438 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/1988858838459438 | ad.md,image,frames
+2162436151816342 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/2162436151816342 | ad.md,image,frames
+2323595761732589 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/2323595761732589 | ad.md,image,frames
+2551744741976028 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/2551744741976028 | ad.md,image,frames
+2635860816867558 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/2635860816867558 | ad.md,image,frames
+3633657103475043 | Andar | advertiser-page | examples/ridge-wallet/ads/andar/3633657103475043 | ad.md,image,frames
+
+## batch 2 (15 ads)
+2631280750656473 | Arthritis Support Community | keyword-neighbor | examples/ridge-wallet/ads/arthritis-support-community/2631280750656473 | ad.md,image
+4459729837672055 | Arthritis Support Community | keyword-neighbor | examples/ridge-wallet/ads/arthritis-support-community/4459729837672055 | ad.md,image
+1741809623402993 | Astrid Leather | keyword-neighbor | examples/ridge-wallet/ads/astrid-leather/1741809623402993 | ad.md,image
+1046004753909784 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/1046004753909784 | ad.md,image
+1194881345055884 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/1194881345055884 | ad.md,image,frames
+1497017115093052 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/1497017115093052 | ad.md,image
+1714986336331015 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/1714986336331015 | ad.md,image
+2165783148149714 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/2165783148149714 | ad.md,image,frames
+412656131438903 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/412656131438903 | ad.md,image,frames
+4131865890367392 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/4131865890367392 | ad.md,image
+4170616893072944 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/4170616893072944 | ad.md,image
+513444261432452 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/513444261432452 | ad.md,image
+663640986473052 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/663640986473052 | ad.md,image
+861547736912965 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/861547736912965 | ad.md,image
+893004099363085 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/893004099363085 | ad.md,image,frames
+
+## batch 3 (15 ads)
+912140034982191 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/912140034982191 | ad.md,image
+950853620698640 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/950853620698640 | ad.md,image
+958845403522598 | Bellroy | advertiser-page | examples/ridge-wallet/ads/bellroy/958845403522598 | ad.md,image
+2133352764223673 | Bellroy - momo購物網  | advertiser-page | examples/ridge-wallet/ads/bellroy-momo/2133352764223673 | ad.md,image
+1687936999471670 | Blessedeal | keyword-neighbor | examples/ridge-wallet/ads/blessedeal/1687936999471670 | ad.md,image,frames
+2623694321383212 | Current Spaces | keyword-neighbor | examples/ridge-wallet/ads/current-spaces/2623694321383212 | ad.md,image,frames
+1084569144031581 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1084569144031581 | ad.md,image,frames
+1102071902279022 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1102071902279022 | ad.md,image
+1396719148591918 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1396719148591918 | ad.md,image
+1411342707530116 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1411342707530116 | ad.md,image
+1457214629482883 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1457214629482883 | ad.md,image,frames
+1736591054090233 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1736591054090233 | ad.md,image,frames
+1771865427052597 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1771865427052597 | ad.md,image,frames
+1822401658948250 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1822401658948250 | ad.md,image,frames
+1985923242114280 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/1985923242114280 | ad.md,image,frames
+
+## batch 4 (15 ads)
+2326375981514940 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/2326375981514940 | ad.md,image,frames
+2415595505883150 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/2415595505883150 | ad.md,image,frames
+28157272277296138 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/28157272277296138 | ad.md,image,frames
+2871861499856793 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/2871861499856793 | ad.md,image,frames
+2937471213255837 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/2937471213255837 | ad.md,image
+919754070632903 | Dango Products | advertiser-page | examples/ridge-wallet/ads/dango-products/919754070632903 | ad.md,image
+1014966731331323 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1014966731331323 | ad.md,image,frames
+1063284939797681 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1063284939797681 | ad.md,image,frames
+1311528334123319 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1311528334123319 | ad.md,image,frames
+1425314896328840 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1425314896328840 | ad.md,image,frames
+1552078092865585 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1552078092865585 | ad.md,image,frames
+1562981438714928 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1562981438714928 | ad.md,image
+1617889383260518 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1617889383260518 | ad.md,image,frames
+1813645310085521 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1813645310085521 | ad.md,image,frames
+1822620345763692 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1822620345763692 | ad.md,image,frames
+
+## batch 5 (15 ads)
+1850535302597312 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/1850535302597312 | ad.md,image,frames
+2117113273022536 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/2117113273022536 | ad.md,image,frames
+2199495037650591 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/2199495037650591 | ad.md,image,frames
+2460029297812083 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/2460029297812083 | ad.md,image,frames
+2594876510944721 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/2594876510944721 | ad.md,image,frames
+819475624524650 | Ekster | advertiser-page | examples/ridge-wallet/ads/ekster/819475624524650 | ad.md,image,frames
+1955265108477113 | Embrosh | keyword-neighbor | examples/ridge-wallet/ads/embrosh/1955265108477113 | ad.md,image,frames
+2386860001845657 | Healthy lifestyle | keyword-neighbor | examples/ridge-wallet/ads/healthy-lifestyle/2386860001845657 | ad.md,image,frames
+1624052195780903 | Kitchen & Home Hub | keyword-neighbor | examples/ridge-wallet/ads/kitchen-home-hub/1624052195780903 | ad.md,image,frames
+1669817068036369 | Kruz Wallets | keyword-neighbor | examples/ridge-wallet/ads/kruz-wallets/1669817068036369 | ad.md,image,frames
+29008724368734831 | Kruz Wallets | keyword-neighbor | examples/ridge-wallet/ads/kruz-wallets/29008724368734831 | ad.md,image,frames
+3645027328978840 | Kruz Wallets | keyword-neighbor | examples/ridge-wallet/ads/kruz-wallets/3645027328978840 | ad.md,image,frames
+921439164088469 | Kruz Wallets | keyword-neighbor | examples/ridge-wallet/ads/kruz-wallets/921439164088469 | ad.md,image,frames
+4169847356647263 | Les astuces de Jérôme | keyword-neighbor | examples/ridge-wallet/ads/les-astuces-de-jerome/4169847356647263 | ad.md,image,frames
+1030406983143162 | Monos | keyword-neighbor | examples/ridge-wallet/ads/monos/1030406983143162 | ad.md,image,frames
+
+## batch 6 (15 ads)
+1589827862670498 | Monos | keyword-neighbor | examples/ridge-wallet/ads/monos/1589827862670498 | ad.md,image
+1604203081062483 | My Estate Kit | keyword-neighbor | examples/ridge-wallet/ads/my-estate-kit/1604203081062483 | ad.md,image
+1773011874117399 | My Estate Kit | keyword-neighbor | examples/ridge-wallet/ads/my-estate-kit/1773011874117399 | ad.md,image
+2190223528442324 | My Estate Kit | keyword-neighbor | examples/ridge-wallet/ads/my-estate-kit/2190223528442324 | ad.md,image
+1417781337206546 | Nomad | keyword-neighbor | examples/ridge-wallet/ads/nomad/1417781337206546 | ad.md,image
+1555225689001452 | Nomad | keyword-neighbor | examples/ridge-wallet/ads/nomad/1555225689001452 | ad.md,image
+1781413329550236 | Nomad | keyword-neighbor | examples/ridge-wallet/ads/nomad/1781413329550236 | ad.md,image
+1938402000163741 | Nomad | keyword-neighbor | examples/ridge-wallet/ads/nomad/1938402000163741 | ad.md,image
+28022125120763124 | Nomad | keyword-neighbor | examples/ridge-wallet/ads/nomad/28022125120763124 | ad.md,image
+4598955600339573 | Nomad | keyword-neighbor | examples/ridge-wallet/ads/nomad/4598955600339573 | ad.md,image
+893141733556087 | Nomad | keyword-neighbor | examples/ridge-wallet/ads/nomad/893141733556087 | ad.md,image
+1616785086769214 | Ridge EU | advertiser-page | examples/ridge-wallet/ads/ridge-eu/1616785086769214 | ad.md,image
+4072538929716078 | Ridge UK | advertiser-page | examples/ridge-wallet/ads/ridge-uk/4072538929716078 | ad.md,image
+1068638472734300 | Ryan Westbrook | keyword-neighbor | examples/ridge-wallet/ads/ryan-westbrook/1068638472734300 | ad.md,image,frames
+1980082592608739 | Shopify1Percent | keyword-neighbor | examples/ridge-wallet/ads/shopify1percent/1980082592608739 | ad.md,image,frames
+
+## batch 7 (15 ads)
+2063475424239905 | Shopify1Percent | keyword-neighbor | examples/ridge-wallet/ads/shopify1percent/2063475424239905 | ad.md,image,frames
+718837344646222 | SlashMode | keyword-neighbor | examples/ridge-wallet/ads/slashmode/718837344646222 | ad.md,image
+1227762296142568 | The Estate Kit | keyword-neighbor | examples/ridge-wallet/ads/the-estate-kit/1227762296142568 | ad.md,image
+888954367205632 | The Estate Kit | keyword-neighbor | examples/ridge-wallet/ads/the-estate-kit/888954367205632 | ad.md,image
+1028460456846299 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/1028460456846299 | ad.md,image
+1081840734441981 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/1081840734441981 | ad.md,image,frames
+1110797578128915 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/1110797578128915 | ad.md,image
+1382045620249355 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/1382045620249355 | ad.md,image
+1402989268694829 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/1402989268694829 | ad.md,image,frames
+1644214914045449 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/1644214914045449 | ad.md,image,frames
+1668472461558360 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/1668472461558360 | ad.md,image
+2211059562779279 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/2211059562779279 | ad.md,image,frames
+3176541469344352 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/3176541469344352 | ad.md,image
+38844454545168783 | The Ridge | advertiser-page | examples/ridge-wallet/ads/the-ridge/38844454545168783 | ad.md,image,frames
+1041665274933050 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1041665274933050 | ad.md,image,frames
+
+## batch 8 (15 ads)
+1084877057196159 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1084877057196159 | ad.md,image
+1265713422174307 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1265713422174307 | ad.md,image,frames
+1285822420071926 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1285822420071926 | ad.md,image
+1337622291779367 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1337622291779367 | ad.md,image
+1341652510768407 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1341652510768407 | ad.md,image,frames
+1548003933342721 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1548003933342721 | ad.md,image,frames
+1556189146047734 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1556189146047734 | ad.md,image,frames
+1597996391820803 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/1597996391820803 | ad.md,image
+2347846226043171 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/2347846226043171 | ad.md,image
+27934972869469011 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/27934972869469011 | ad.md,image
+4422899228026831 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/4422899228026831 | ad.md,image,frames
+4662847377323993 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/4662847377323993 | ad.md,image
+827557017099300 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/827557017099300 | ad.md,image
+921703880290700 | Thread Wallets | advertiser-page | examples/ridge-wallet/ads/thread-wallets/921703880290700 | ad.md,image
+982877924781062 | Urban Traveller & Co. | keyword-neighbor | examples/ridge-wallet/ads/urban-traveller-co/982877924781062 | ad.md,image
+
+## batch 9 (1 ads)
+1510461626654530 | VLAK LINE | keyword-neighbor | examples/ridge-wallet/ads/vlak-line/1510461626654530 | ad.md,image,frames
+
+total ads to analyze: 121
+skipped as noise (keyword neighbors with no term hit): 29
+  34511472868451367 | Tekster Generator  -เครื่องปั่นไฟ เทคสเตอร์
+  1811485232901887 | SlashMode
+  1383563280324260 | Inkster Tattoos
+  1798888447902411 | Inkster Tattoos
+  1088301583928522 | GREGTube
+  1819664425585682 | Mukama
+  2331658824234492 | Amazon.co.uk
+  1924606895612843 | Modern Quests
+  1820703665615574 | Amazon.co.uk
+  29164492059843379 | Amazon.com.au
+  1681276080674808 | Amazon.co.uk
+  2237504867032055 | The Planet Traveller
+  1027108503618695 | CITIES design and lifestyle store
+  308223898840959 | Union 22
+  1081256447046373 | Gentleman Store
+  1422435259922744 | Georgiadis Accessories
+  1623788975566526 | Gentleman Store Bulgaria
+  26768201836185173 | Prosch Bags
+  1063076316305210 | Swiss Store Bolivia
+  2789920291389699 | BEST DEALS 4 U
+  2631852093932705 | Lulu Saudi Hypermarkets- Eastern Province لولو هايبر ماركت المنطقة الشرقية
+  2073910887345895 | Bassem Market - باسم ماركت
+  1085882847433243 | UMAR TANKO Abdullahi Ventures
+  2270597520178384 | E-Shop Japan สินค้านำเข้าจากญี่ปุ่น
+  1166701149093288 | Efz Davao Computer Sales Enterprises
+  1361932632471507 | Hazalis
+  1368320958700574 | Nomad
+  1014375878275449 | Captaincarterofficial 
+  1707900233828356 | Base44

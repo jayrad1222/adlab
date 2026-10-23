@@ -1,0 +1,16 @@
+{
+ "video": "examples/ridge-wallet/ads/dango-products/2871861499856793/media/video.mp4",
+ "duration_s": 6.12,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg"
+ ],
+ "scene_frames": [
+  "s-001.jpg"
+ ],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:57:22+00:00"
+}

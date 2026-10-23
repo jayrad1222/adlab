@@ -1,0 +1,12 @@
+{
+ "template": "templates/three-reasons.html",
+ "fields": {
+  "kicker": "Buying a wallet for someone who says he needs nothing",
+  "hook": "Which Ridge wallet: Royal Black, Alpine Navy or Matte Olive? Guess wrong, and exchange it within 99 days of your order.",
+  "reason_1": "Three finishes: Royal Black, Alpine Navy, Matte Olive.",
+  "reason_2": "Return it in usable condition within 99 days of your order; once the return is approved, the exchange ships free in the U.S.",
+  "reason_3": "Skip the engraving: a personalized wallet cannot be returned.",
+  "offer_line": "Return terms as of 23 October 2026; they can change.",
+  "wordmark": "RIDGE"
+ }
+}

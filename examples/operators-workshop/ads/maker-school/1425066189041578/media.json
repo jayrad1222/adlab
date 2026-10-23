@@ -1,0 +1,24 @@
+{
+ "video": "examples/operators-workshop/ads/maker-school/1425066189041578/media/video.mp4",
+ "duration_s": 20.3,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg",
+  "f-004.jpg",
+  "f-005.jpg",
+  "f-006.jpg",
+  "f-007.jpg",
+  "f-008.jpg",
+  "f-009.jpg",
+  "f-010.jpg"
+ ],
+ "scene_frames": [
+  "s-001.jpg",
+  "s-002.jpg"
+ ],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:51:03+00:00"
+}

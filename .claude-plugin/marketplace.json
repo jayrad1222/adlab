@@ -1,0 +1,24 @@
+{
+  "name": "adlab",
+  "description": "Ad Lab: market decoding and evidence-backed ad banks for Scaling Skool members",
+  "owner": {
+    "name": "Scaling Skool / Operators Workshop"
+  },
+  "plugins": [
+    {
+      "name": "adlab",
+      "source": "./",
+      "description": "Decode your market from the ad libraries and build an evidence-backed ad bank.",
+      "version": "0.1.0",
+      "category": "marketing",
+      "tags": [
+        "ads",
+        "research",
+        "personas",
+        "copywriting"
+      ],
+      "homepage": "https://github.com/jayrad1222/adlab",
+      "repository": "https://github.com/jayrad1222/adlab"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+ "source": "meta",
+ "ad_id": "1589827862670498",
+ "advertiser": "Monos",
+ "advertiser_id": "257842028390221",
+ "advertiser_slug": "monos",
+ "platforms": [
+  "facebook",
+  "instagram",
+  "messenger",
+  "threads"
+ ],
+ "start_date": "2026-08-11",
+ "end_date": "2026-10-22",
+ "is_active": true,
+ "days_active": 72,
+ "variant_count": 1,
+ "collation_id": "4436679899895390",
+ "format": "dco",
+ "body_text": "{{product.brand}}",
+ "title": "{{product.name}}",
+ "link_description": "{{product.description}}",
+ "caption": "ca.monos.com",
+ "cta_text": "Shop now",
+ "cta_type": "SHOP_NOW",
+ "link_url": "https://ca.monos.com/collections/wallets",
+ "image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/771589408_1637156444656638_7031237288319556325_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=P94hr684DwoQ7kNvwGKPndB&_nc_oc=Adrh5gr8P-DaViB5R5cYp_G0yG0l9uM90gm_5ELNsM9SjGCxv8HWMhT6AEHK3alYfkU1abqXUEk5c49A0GWjPUxW&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQOUugX0cdbPF4yUG00JxVomVq1urFJlSBGR_TUro1JCAA&oe=6AE0C749",
+ "video_preview_image_url": null,
+ "video_hd_url": null,
+ "video_sd_url": null,
+ "cards": [
+  {
+   "body": "For lovers of thin wallets like Ridge, Ekster & Bellroy, Monos offers a polished, modern take.",
+   "title": "Smart storage without the bulk.",
+   "link_description": null,
+   "link_url": "https://ca.monos.com/collections/wallets",
+   "cta_text": "Shop Now",
+   "cta_type": "SHOP_NOW",
+   "caption": "",
+   "original_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/771589408_1637156444656638_7031237288319556325_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=P94hr684DwoQ7kNvwGKPndB&_nc_oc=Adrh5gr8P-DaViB5R5cYp_G0yG0l9uM90gm_5ELNsM9SjGCxv8HWMhT6AEHK3alYfkU1abqXUEk5c49A0GWjPUxW&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQOUugX0cdbPF4yUG00JxVomVq1urFJlSBGR_TUro1JCAA&oe=6AE0C749",
+   "resized_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/771940815_1718381315945911_2833817796742793931_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HwrNpzEwBvgQ7kNvwHJknKI&_nc_oc=AdqlfLCd9l75kYuny8t7N2zp05LsAfPfMBGelMS1plwjkk6x81iFiM06F0P-TmQ6sRqVwTxBXjw4nyxKn5JCW2Rk&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPjhsMkwTl5zxP14HxFQGyy7LDK76daaHt-3ZI5gYro0A&oe=6AE0EF50",
+   "video_preview_image_url": null,
+   "video_hd_url": null,
+   "video_sd_url": null
+  },
+  {
+   "body": "For lovers of thin wallets like Ridge, Ekster & Bellroy, Monos offers a polished, modern take.",
+   "title": "Smart storage without the bulk.",
+   "link_description": null,
+   "link_url": "https://ca.monos.com/collections/wallets",
+   "cta_text": "Shop Now",
+   "cta_type": "SHOP_NOW",
+   "caption": "",
+   "original_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/772904924_1556472352339530_8538296664911008582_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=hT7HUHuvsF4Q7kNvwFnHWzN&_nc_oc=AdooHFbJRVGMK1vZcRbJASpmYwnY-J5FHPx9rP1zdJmahUbJO6WEZVhUbvC69utkgyTY0Mk-W2zztFwM5tcEPccf&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQMhuawcHvJfeI_9DDCjYqW29podhq7Uq2_oGVVFxWyFsw&oe=6AE0E880",
+   "resized_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/770831299_1038214498821126_6901941938122359470_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QHc4IyXcitsQ7kNvwF6ayR0&_nc_oc=AdqNdILuJ4SfW_D5PX88tFng7c1panbkC_c59oqY5LZQP-lTCxiOdh4X1P1JwJixLf7tqW3jHXXRJFi9ovyTlvcz&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPjsKnxqcsK8C4QaAaAONuvWb2GY7e_hFC5qes2x0Rnkg&oe=6AE0DD94",
+   "video_preview_image_url": null,
+   "video_hd_url": null,
+   "video_sd_url": null
+  }
+ ],
+ "page_like_count": 50085,
+ "page_profile_uri": "https://www.facebook.com/monostravel/",
+ "page_categories": [
+  "Retail company"
+ ],
+ "byline": null,
+ "term_hits": [
+  "wallet"
+ ],
+ "eu": null,
+ "library_url": "https://www.facebook.com/ads/library/?id=1589827862670498",
+ "raw_snapshot": {
+  "branded_content": null,
+  "page_id": "257842028390221",
+  "page_is_deleted": false,
+  "page_profile_uri": "https://www.facebook.com/monostravel/",
+  "root_reshared_post": null,
+  "byline": null,
+  "disclaimer_label": null,
+  "page_name": "Monos",
+  "page_profile_picture_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/771855601_1110579511628099_4538864239078547183_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=iVOxhqLIKz8Q7kNvwH2-OCO&_nc_oc=AdrCjtaetd4saNZBfbUIxVXsfZ-8FfjwVkKLzPo-K_AjpGjLS0VMLSi1FL8_kmGHfFh_29aS9NEpYyB__6aPgiTp&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQMDKrRg4b0KTkNQeTzRhz2mmubALkpPNf22B0PpVVqcJQ&oe=6AE0D5E4",
+  "event": null,
+  "caption": "ca.monos.com",
+  "cta_text": "Shop now",
+  "cards": [
+   {
+    "body": "For lovers of thin wallets like Ridge, Ekster & Bellroy, Monos offers a polished, modern take.",
+    "cta_type": "SHOP_NOW",
+    "caption": "",
+    "link_description": null,
+    "link_url": "https://ca.monos.com/collections/wallets",
+    "title": "Smart storage without the bulk.",
+    "cta_text": "Shop Now",
+    "video_hd_url": null,
+    "video_preview_image_url": null,
+    "video_sd_url": null,
+    "watermarked_video_hd_url": null,
+    "watermarked_video_sd_url": null,
+    "image_crops": [],
+    "original_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/771589408_1637156444656638_7031237288319556325_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=P94hr684DwoQ7kNvwGKPndB&_nc_oc=Adrh5gr8P-DaViB5R5cYp_G0yG0l9uM90gm_5ELNsM9SjGCxv8HWMhT6AEHK3alYfkU1abqXUEk5c49A0GWjPUxW&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQOUugX0cdbPF4yUG00JxVomVq1urFJlSBGR_TUro1JCAA&oe=6AE0C749",
+    "resized_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/771940815_1718381315945911_2833817796742793931_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HwrNpzEwBvgQ7kNvwHJknKI&_nc_oc=AdqlfLCd9l75kYuny8t7N2zp05LsAfPfMBGelMS1plwjkk6x81iFiM06F0P-TmQ6sRqVwTxBXjw4nyxKn5JCW2Rk&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPjhsMkwTl5zxP14HxFQGyy7LDK76daaHt-3ZI5gYro0A&oe=6AE0EF50",
+    "watermarked_resized_image_url": ""
+   },
+   {
+    "body": "For lovers of thin wallets like Ridge, Ekster & Bellroy, Monos offers a polished, modern take.",
+    "cta_type": "SHOP_NOW",
+    "caption": "",
+    "link_description": null,
+    "link_url": "https://ca.monos.com/collections/wallets",
+    "title": "Smart storage without the bulk.",
+    "cta_text": "Shop Now",
+    "video_hd_url": null,
+    "video_preview_image_url": null,
+    "video_sd_url": null,
+    "watermarked_video_hd_url": null,
+    "watermarked_video_sd_url": null,
+    "image_crops": [],
+    "original_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/772904924_1556472352339530_8538296664911008582_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=hT7HUHuvsF4Q7kNvwFnHWzN&_nc_oc=AdooHFbJRVGMK1vZcRbJASpmYwnY-J5FHPx9rP1zdJmahUbJO6WEZVhUbvC69utkgyTY0Mk-W2zztFwM5tcEPccf&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQMhuawcHvJfeI_9DDCjYqW29podhq7Uq2_oGVVFxWyFsw&oe=6AE0E880",
+    "resized_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/770831299_1038214498821126_6901941938122359470_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QHc4IyXcitsQ7kNvwF6ayR0&_nc_oc=AdqNdILuJ4SfW_D5PX88tFng7c1panbkC_c59oqY5LZQP-lTCxiOdh4X1P1JwJixLf7tqW3jHXXRJFi9ovyTlvcz&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPjsKnxqcsK8C4QaAaAONuvWb2GY7e_hFC5qes2x0Rnkg&oe=6AE0DD94",
+    "watermarked_resized_image_url": ""
+   }
+  ],
+  "body": {
+   "text": "{{product.brand}}"
+  },
+  "cta_type": "SHOP_NOW",
+  "display_format": "DCO",
+  "link_description": "{{product.description}}",
+  "link_url": "https://ca.monos.com/collections/wallets",
+  "images": [],
+  "page_categories": [
+   "Retail company"
+  ],
+  "page_like_count": 50085,
+  "title": "{{product.name}}",
+  "videos": [],
+  "is_reshared": false,
+  "extra_links": [],
+  "extra_texts": [],
+  "extra_images": [],
+  "extra_videos": [],
+  "country_iso_code": null,
+  "brazil_tax_id": null,
+  "additional_info": null,
+  "ec_certificates": []
+ },
+ "link_domain": "ca.monos.com",
+ "link_path": "/collections/wallets",
+ "dest_type": "product-page",
+ "match": "keyword-neighbor",
+ "candidate_for": "Ekster",
+ "found_via": [
+  [
+   "roster",
+   "Ekster"
+  ]
+ ],
+ "first_seen_utc": "2026-10-23T06:47:25+00:00",
+ "files": {
+  "creative": "monos/1589827862670498/media/creative.jpg",
+  "card0": "monos/1589827862670498/media/card-0.jpg",
+  "card1": "monos/1589827862670498/media/card-1.jpg",
+  "card": "monos/1589827862670498/card.png"
+ }
+}

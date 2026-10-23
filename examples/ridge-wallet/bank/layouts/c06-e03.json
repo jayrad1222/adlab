@@ -1,0 +1,42 @@
+{
+ "template": "templates/carousel-card.html",
+ "fields": {
+  "cards": [
+   {
+    "step": "1",
+    "hook": "Three answers from Ridge's wallet warranty: a defective part, free; a lost wallet, $17.95 today; scratches, not covered.",
+    "body": "Before you buy a wallet 'for life'. Aluminum Ridge Wallet, one answer per card.",
+    "offer_line": "Claims are reviewed and can be denied; Ridge may ask for proof of purchase and photos. Terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "2",
+    "hook": "Lost, stolen or accidentally damaged?",
+    "body": "A replacement for $17.95 today, up to two times.",
+    "offer_line": "Claims are reviewed and can be denied; Ridge may ask for proof of purchase and photos. Terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "3",
+    "hook": "Defective part?",
+    "body": "Replaced free.",
+    "offer_line": "Claims are reviewed and can be denied; Ridge may ask for proof of purchase and photos. Terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "4",
+    "hook": "Scratches, dents, discoloration?",
+    "body": "Not covered.",
+    "offer_line": "Claims are reviewed and can be denied; Ridge may ask for proof of purchase and photos. Terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "5",
+    "hook": "The full fees and limits",
+    "body": "The fees and limits are on Ridge's Warranty Policy page, linked from the wallet's product page. Covers Ridge Wallets bought on or after 14 October 2025 from Ridge or its authorized sellers.",
+    "offer_line": "Claims are reviewed and can be denied; Ridge may ask for proof of purchase and photos. Terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   }
+  ]
+ }
+}

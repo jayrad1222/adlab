@@ -1,0 +1,29 @@
+# Miva Open University · 1940708906902849
+
+Source: meta · match: keyword-neighbor · library: https://www.facebook.com/ads/library/?id=1940708906902849
+
+## Facts (observed from the library)
+
+- Start date: 2026-10-15 · active: True · days active at capture: 7
+- Variant count (Meta collation): None · format: video · platforms: facebook, instagram, audience_network, whatsapp, threads
+- CTA: Apply now (APPLY_NOW) · link: https://miva.edu.ng/?utm_source=meta&utm_medium=cpc&utm_campaign=generic&utm_content=sims_convocation_speech_video · destination type: website
+- Page likes: 57455 · categories: ['Education website']
+
+## Copy
+
+**Title:** Join thousands of students earning a recognised degree at Miva
+
+**Primary text:**
+
+The value of a Miva Open University degree goes beyond the qualification. It’s the knowledge, skills, perspective, and confidence to build, lead, and make an impact in the real world.
+
+**Link description:** Our Chancellor, Sim Shagaya, reflects on the journey and what lies ahead at our Maiden Convocation Ceremony. · **Caption:** miva.edu.ng/apply
+
+## Media to look at
+
+- creative: `miva-open-university/1940708906902849/media/creative.jpg`
+- video: present in the library but not downloaded or not yet processed (see files.video)
+
+## Coverage
+
+Best honest coverage for this ad: still-reviewed possible (frames: False, transcript: False). The analyst sets `inspection_coverage` to what they actually read.

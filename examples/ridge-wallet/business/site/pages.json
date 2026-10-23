@@ -1,0 +1,44 @@
+[
+ {
+  "url": "https://ridge.com",
+  "dir": "examples/ridge-wallet/business/site/home",
+  "title": "RIDGE\u00ae Official US Website | Elevate Your Everyday \u2013 Ridge",
+  "words": 432
+ },
+ {
+  "url": "https://ridge.com/shop",
+  "dir": "examples/ridge-wallet/business/site/shop",
+  "title": "RIDGE\u00ae Official US Website | Elevate Your Everyday \u2013 Ridge",
+  "words": 432
+ },
+ {
+  "url": "https://ridge.com/products",
+  "dir": "examples/ridge-wallet/business/site/products",
+  "title": "Collections \u2013 Ridge",
+  "words": 391
+ },
+ {
+  "url": "https://ridge.com/pages/returns-exchanges",
+  "dir": "examples/ridge-wallet/business/site/returns-exchanges",
+  "title": "captured 2026-10-23 for /adlab:angles",
+  "words": 468
+ },
+ {
+  "url": "https://ridge.com/pages/warranty-policy",
+  "dir": "examples/ridge-wallet/business/site/warranty-policy",
+  "title": "captured 2026-10-23 for /adlab:angles",
+  "words": 1132
+ },
+ {
+  "url": "https://ridge.com/products/aluminum-black",
+  "dir": "examples/ridge-wallet/business/site/product-aluminum-black",
+  "title": "captured 2026-10-23 for /adlab:angles",
+  "words": 1301
+ },
+ {
+  "url": "https://ridge.com/collections/wallets",
+  "dir": "examples/ridge-wallet/business/site/collections-wallets",
+  "title": "captured 2026-10-23 for /adlab:angles (landing of the catalogue tiles)",
+  "words": 767
+ }
+]

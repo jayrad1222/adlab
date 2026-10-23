@@ -1,0 +1,103 @@
+{
+ "source": "meta",
+ "ad_id": "1555225689001452",
+ "advertiser": "Nomad",
+ "advertiser_id": "522186261196752",
+ "advertiser_slug": "nomad",
+ "platforms": [
+  "facebook",
+  "instagram",
+  "messenger",
+  "threads"
+ ],
+ "start_date": "2026-08-20",
+ "end_date": "2026-10-22",
+ "is_active": true,
+ "days_active": 63,
+ "variant_count": null,
+ "collation_id": "1589334358705221",
+ "format": "image",
+ "body_text": "Modern & minimalist leather gear – all crafted with premium leather that becomes more uniquely yours over time.",
+ "title": "Tracking Made Easy",
+ "link_description": "NOMAD® Leather Collection offers premium leather accessories meticulously crafted for durability and timeless style. Discover our range of leather goods...",
+ "caption": "nomadgoods.com",
+ "cta_text": "Learn more",
+ "cta_type": "LEARN_MORE",
+ "link_url": "https://nomadgoods.com/collections/leather",
+ "image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/778160023_1759817705053449_3352986637417283030_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=0OcQMVEyHn4Q7kNvwH1Qfv1&_nc_oc=AdpgFJ8MDZEBmC0SDWcr85S2cTsD5SSS1diU6A0KTMcc04oscxZ095JiiwZqzvzNPaAGEseDxO4CogtaASA-PudS&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=oDPiEJjlKlSAMSV6TpJAUg&_nc_ss=7b289&oh=00_AQPSzmbvBipr2dHI30ni9F_PzmQCNpvvqJy4T20x-5cJpg&oe=6AE0DF72",
+ "video_preview_image_url": null,
+ "video_hd_url": null,
+ "video_sd_url": null,
+ "cards": [],
+ "page_like_count": 258555,
+ "page_profile_uri": "https://www.facebook.com/Nomad/",
+ "page_categories": [
+  "Electronics"
+ ],
+ "byline": null,
+ "term_hits": [
+  "minimalist"
+ ],
+ "eu": null,
+ "library_url": "https://www.facebook.com/ads/library/?id=1555225689001452",
+ "raw_snapshot": {
+  "branded_content": null,
+  "page_id": "522186261196752",
+  "page_is_deleted": false,
+  "page_profile_uri": "https://www.facebook.com/Nomad/",
+  "root_reshared_post": null,
+  "byline": null,
+  "disclaimer_label": null,
+  "page_name": "Nomad",
+  "page_profile_picture_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/775347714_1967782860517463_8970629456241173296_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=c18XjJub99EQ7kNvwFoceP9&_nc_oc=AdopS_bKSjLk8gFO8DznmZxRa-gBAtvHOcaYo3zGSgJHMCazpDkkgLKfjlU3_Nvqme4zN-gp7F5pDx5PNj7YnRls&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=oDPiEJjlKlSAMSV6TpJAUg&_nc_ss=7b289&oh=00_AQOqMjvthY6akbO-CD77pBWggyUmlmtTVDLgYQKYURhTEQ&oe=6AE0CB11",
+  "event": null,
+  "caption": "nomadgoods.com",
+  "cta_text": "Learn more",
+  "cards": [],
+  "body": {
+   "text": "Modern & minimalist leather gear – all crafted with premium leather that becomes more uniquely yours over time."
+  },
+  "cta_type": "LEARN_MORE",
+  "display_format": "IMAGE",
+  "link_description": "NOMAD® Leather Collection offers premium leather accessories meticulously crafted for durability and timeless style. Discover our range of leather goods...",
+  "link_url": "https://nomadgoods.com/collections/leather",
+  "images": [
+   {
+    "image_crops": [],
+    "original_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/778160023_1759817705053449_3352986637417283030_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=0OcQMVEyHn4Q7kNvwH1Qfv1&_nc_oc=AdpgFJ8MDZEBmC0SDWcr85S2cTsD5SSS1diU6A0KTMcc04oscxZ095JiiwZqzvzNPaAGEseDxO4CogtaASA-PudS&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=oDPiEJjlKlSAMSV6TpJAUg&_nc_ss=7b289&oh=00_AQPSzmbvBipr2dHI30ni9F_PzmQCNpvvqJy4T20x-5cJpg&oe=6AE0DF72",
+    "resized_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/780160799_1269826608496619_2310570110853711086_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sGYKMUrDmdMQ7kNvwFBuviW&_nc_oc=AdphefUbvx9kfrantcEYZfxy58GaWD6jtRI322mUqENEgTEj_Z9eu8NrTlEaKYpw0owjECMThZNx_pABUt7s5yaG&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=oDPiEJjlKlSAMSV6TpJAUg&_nc_ss=7b289&oh=00_AQPOwtrwOOkQZKpcECfc9PObjh3gl0qYSRw19XUroSqOKg&oe=6AE0F2C6",
+    "watermarked_resized_image_url": ""
+   }
+  ],
+  "page_categories": [
+   "Electronics"
+  ],
+  "page_like_count": 258555,
+  "title": "Tracking Made Easy",
+  "videos": [],
+  "is_reshared": false,
+  "extra_links": [],
+  "extra_texts": [],
+  "extra_images": [],
+  "extra_videos": [],
+  "country_iso_code": null,
+  "brazil_tax_id": null,
+  "additional_info": null,
+  "ec_certificates": []
+ },
+ "link_domain": "nomadgoods.com",
+ "link_path": "/collections/leather",
+ "dest_type": "product-page",
+ "match": "keyword-neighbor",
+ "candidate_for": "Nomad Goods",
+ "found_via": [
+  [
+   "attention",
+   "Nomad Goods"
+  ]
+ ],
+ "first_seen_utc": "2026-10-23T06:54:19+00:00",
+ "files": {
+  "creative": "nomad/1555225689001452/media/creative.jpg"
+ }
+}

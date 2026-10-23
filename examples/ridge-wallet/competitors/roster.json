@@ -1,0 +1,15 @@
+{
+ "confirmed": true,
+ "confirmed_by": "the builder, for the example run (a member would confirm in /adlab:competitors)",
+ "confirmed_at": "2026-10-23",
+ "cobrand_pages": [],
+ "advertisers": [
+  {"name": "Ekster", "ring": "direct", "confidence": "high", "why": "Slim trackable wallets sold direct; the closest like-for-like in product, price band and channel (observed from public pages)", "site": "https://ekster.com", "page_names": []},
+  {"name": "Bellroy", "ring": "direct", "confidence": "high", "why": "Slim leather wallets with a design-led brand; same job, softer material story (observed)", "site": "https://bellroy.com", "page_names": []},
+  {"name": "Secrid", "ring": "direct", "confidence": "high", "why": "Aluminium cardprotector wallets with the mechanical slide; same RFID and slim claims (observed)", "site": "https://secrid.com", "page_names": []},
+  {"name": "Andar", "ring": "direct", "confidence": "medium", "why": "Leather minimalist wallets sold direct to the same buyer (observed)", "site": "https://andar.com", "page_names": []},
+  {"name": "Dango Products", "ring": "direct", "confidence": "medium", "why": "Machined tactical wallets; overlaps Ridge's metal-and-tools identity (observed)", "site": "https://www.dangoproducts.com", "page_names": []},
+  {"name": "Thread Wallets", "ring": "indirect", "confidence": "medium", "why": "Fabric elastic wallets at a lower price for the same slim-pocket job; different material and buyer age (inferred)", "site": "https://threadwallets.com", "page_names": []},
+  {"name": "Nomad Goods", "ring": "attention", "confidence": "low", "why": "Everyday-carry tech accessories sold to the same gear-minded buyer; competes for the feed, not the wallet (inferred)", "site": "https://nomadgoods.com", "page_names": []}
+ ]
+}

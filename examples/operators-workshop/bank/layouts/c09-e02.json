@@ -1,0 +1,8 @@
+{
+ "template": "templates/text-only-ugly.html",
+ "fields": {
+  "hook": "Step one does not happen in the chat tab. It happens in the sent folder.",
+  "body": "Write its steps down. Bring the list.",
+  "wordmark": ""
+ }
+}

@@ -1,0 +1,194 @@
+## batch 1 (15 ads)
+2671836623213205 | 80,000 Hours | keyword-neighbor | examples/operators-workshop/ads/80-000-hours/2671836623213205 | ad.md,image
+1534027074837411 | AI Automation Society | advertiser-page | examples/operators-workshop/ads/ai-automation-society/1534027074837411 | ad.md,image,frames
+1750739099623552 | AI Automation Society | advertiser-page | examples/operators-workshop/ads/ai-automation-society/1750739099623552 | ad.md,image
+4201948366761992 | AI Automation Society | advertiser-page | examples/operators-workshop/ads/ai-automation-society/4201948366761992 | ad.md,image
+1054913050869810 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1054913050869810 | ad.md,image,frames
+1123979320082708 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1123979320082708 | ad.md,image,frames
+1125643543498156 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1125643543498156 | ad.md,image,frames
+1129626886138176 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1129626886138176 | ad.md,image,frames
+1384090043489432 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1384090043489432 | ad.md,image,frames
+1617270070414246 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1617270070414246 | ad.md,image,frames
+1623416949192396 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1623416949192396 | ad.md,image,frames
+1641544464304869 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/1641544464304869 | ad.md,image,frames
+2218947982369421 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/2218947982369421 | ad.md,image,frames
+947774781312414 | AI Operator CLUB | advertiser-page | examples/operators-workshop/ads/ai-operator-club/947774781312414 | ad.md,image,frames
+1013033575121449 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1013033575121449 | ad.md,image,frames
+
+## batch 2 (15 ads)
+1065715359472023 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1065715359472023 | ad.md,image,frames
+1403311474997024 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1403311474997024 | ad.md,image
+1416360690414714 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1416360690414714 | ad.md,image,frames
+1429775445162176 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1429775445162176 | ad.md,image,frames
+1506202640947121 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1506202640947121 | ad.md,image,frames
+1587585239519935 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1587585239519935 | ad.md,image,frames
+1611195850348762 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1611195850348762 | ad.md,image,frames
+1801930964690191 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1801930964690191 | ad.md,image,frames
+1894923588153698 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1894923588153698 | ad.md,image,frames
+1920683551935476 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1920683551935476 | ad.md,image
+1994721787907520 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/1994721787907520 | ad.md,image,frames
+2294005904669622 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/2294005904669622 | ad.md,image,frames
+28188256047504517 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/28188256047504517 | ad.md,image,frames
+3366900353513536 | AI Video Bootcamp | advertiser-page | examples/operators-workshop/ads/ai-video-bootcamp/3366900353513536 | ad.md,image,frames
+2341052899967522 | AI Video-Academy | advertiser-page | examples/operators-workshop/ads/ai-video-academy/2341052899967522 | ad.md,image,frames
+
+## batch 3 (15 ads)
+935595112679546 | Acti-V : Perte de Poids et Microbiome | keyword-neighbor | examples/operators-workshop/ads/acti-v-perte-de-poids-et-microbiome/935595112679546 | ad.md,image,frames
+1417552993798822 | Apex Dental Marketing | keyword-neighbor | examples/operators-workshop/ads/apex-dental-marketing/1417552993798822 | ad.md,image,frames
+1040148231921228 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/1040148231921228 | ad.md,image
+1231104560075127 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/1231104560075127 | ad.md,image,frames
+1523784102863150 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/1523784102863150 | ad.md,image,frames
+1540277927809358 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/1540277927809358 | ad.md,image,frames
+1685025776088110 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/1685025776088110 | ad.md,image,frames
+1734177540920708 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/1734177540920708 | ad.md,image,frames
+2126173977953160 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/2126173977953160 | ad.md,image
+2129005484694134 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/2129005484694134 | ad.md,image,frames
+2265069670962872 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/2265069670962872 | ad.md,image,frames
+2502491940222808 | Arcads AI | keyword-neighbor | examples/operators-workshop/ads/arcads-ai/2502491940222808 | ad.md,image,frames
+2618868331892815 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/2618868331892815 | ad.md,image
+4405193209727676 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/4405193209727676 | ad.md,image,frames
+710487895220380 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/710487895220380 | ad.md,image,frames
+
+## batch 4 (15 ads)
+836000928775594 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/836000928775594 | ad.md,image,frames
+890665233928271 | Arcads AI | advertiser-page | examples/operators-workshop/ads/arcads-ai/890665233928271 | ad.md,image,frames
+1012976541448133 | Arcads AI - Newsletter   | advertiser-page | examples/operators-workshop/ads/arcads-ai-newsletter/1012976541448133 | ad.md,image
+1013196774518024 | Arcads AI - Newsletter   | advertiser-page | examples/operators-workshop/ads/arcads-ai-newsletter/1013196774518024 | ad.md,image
+1290239729197064 | Arcads AI - Newsletter   | advertiser-page | examples/operators-workshop/ads/arcads-ai-newsletter/1290239729197064 | ad.md,image,frames
+1475803497369859 | Arcads AI - Newsletter   | advertiser-page | examples/operators-workshop/ads/arcads-ai-newsletter/1475803497369859 | ad.md,image,frames
+815941064905568 | Arcads AI - Newsletter   | advertiser-page | examples/operators-workshop/ads/arcads-ai-newsletter/815941064905568 | ad.md,image,frames
+999181849530786 | Arcads AI - Newsletter   | advertiser-page | examples/operators-workshop/ads/arcads-ai-newsletter/999181849530786 | ad.md,image
+1799856347755967 | Avora Code | keyword-neighbor | examples/operators-workshop/ads/avora-code/1799856347755967 | ad.md,image,frames
+1019944280932044 | Braydon Carter | keyword-neighbor | examples/operators-workshop/ads/braydon-carter/1019944280932044 | ad.md,image,frames
+1402781731986696 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/1402781731986696 | ad.md,image
+1600873014871110 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/1600873014871110 | ad.md,image
+1646241300194385 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/1646241300194385 | ad.md,image
+1796405758057699 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/1796405758057699 | ad.md,image
+2790059451394520 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/2790059451394520 | ad.md,image
+
+## batch 5 (15 ads)
+28771184185810174 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/28771184185810174 | ad.md,image
+29146458868325004 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/29146458868325004 | ad.md,image
+4895138667380500 | CTtheDisrupter | keyword-neighbor | examples/operators-workshop/ads/ctthedisrupter/4895138667380500 | ad.md,image
+1012466708532658 | Cerirpurtflild Sintkucre | keyword-neighbor | examples/operators-workshop/ads/cerirpurtflild-sintkucre/1012466708532658 | ad.md,image
+965834386589231 | Cerirpurtflild Sintkucre | keyword-neighbor | examples/operators-workshop/ads/cerirpurtflild-sintkucre/965834386589231 | ad.md,image
+1470555241558217 | Chris Martin CEO | keyword-neighbor | examples/operators-workshop/ads/chris-martin-ceo/1470555241558217 | ad.md,image,frames
+2342052149666159 | Chris Martin CEO | keyword-neighbor | examples/operators-workshop/ads/chris-martin-ceo/2342052149666159 | ad.md,image,frames
+2405590020181280 | Chris Martin CEO | keyword-neighbor | examples/operators-workshop/ads/chris-martin-ceo/2405590020181280 | ad.md,image,frames
+1906674503325314 | Clouddevopshub | keyword-neighbor | examples/operators-workshop/ads/clouddevopshub/1906674503325314 | ad.md,image,frames
+940521275692490 | DAT Bootcamp | keyword-neighbor | examples/operators-workshop/ads/dat-bootcamp/940521275692490 | ad.md,image,frames
+2524515458043699 | Essential Health Finds | keyword-neighbor | examples/operators-workshop/ads/essential-health-finds/2524515458043699 | ad.md,image
+1120940773602615 | Grow with Rudy | keyword-neighbor | examples/operators-workshop/ads/grow-with-rudy/1120940773602615 | ad.md,image,frames
+1651358503217361 | Grow with Rudy | keyword-neighbor | examples/operators-workshop/ads/grow-with-rudy/1651358503217361 | ad.md,image,frames
+1107235645044624 | Hartamas Academy | keyword-neighbor | examples/operators-workshop/ads/hartamas-academy/1107235645044624 | ad.md,image
+1089534664056623 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1089534664056623 | ad.md,image,frames
+
+## batch 6 (15 ads)
+1377610441202909 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1377610441202909 | ad.md,image,frames
+1467334001994239 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1467334001994239 | ad.md,image
+1532055512061124 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1532055512061124 | ad.md,image,frames
+1553453959885361 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1553453959885361 | ad.md,image
+1567323282101407 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1567323282101407 | ad.md,image
+1567476751374389 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1567476751374389 | ad.md,image,frames
+1613353846922990 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1613353846922990 | ad.md,image
+1617703866668196 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1617703866668196 | ad.md,image,frames
+1673198080806670 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/1673198080806670 | ad.md,image,frames
+2219084038830459 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/2219084038830459 | ad.md,image,frames
+2224429541749390 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/2224429541749390 | ad.md,image
+2391436374631797 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/2391436374631797 | ad.md,image,frames
+2533465053802504 | Hashtag NoCode | advertiser-page | examples/operators-workshop/ads/hashtag-nocode/2533465053802504 | ad.md,image,frames
+1353490406100848 | Ith_marriage_intl | keyword-neighbor | examples/operators-workshop/ads/ith-marriage-intl/1353490406100848 | ad.md,image
+1106125972107418 | Kurs Claude Code PRO | advertiser-page | examples/operators-workshop/ads/kurs-claude-code-pro/1106125972107418 | ad.md,image,frames
+
+## batch 7 (15 ads)
+1419356802968044 | Kurs Claude Code PRO | advertiser-page | examples/operators-workshop/ads/kurs-claude-code-pro/1419356802968044 | ad.md,image
+1656903502712603 | Kurs Claude Code PRO | advertiser-page | examples/operators-workshop/ads/kurs-claude-code-pro/1656903502712603 | ad.md,image
+1708167586945432 | Kurs Claude Code PRO | advertiser-page | examples/operators-workshop/ads/kurs-claude-code-pro/1708167586945432 | ad.md,image
+1776422753378177 | Kurs Claude Code PRO | advertiser-page | examples/operators-workshop/ads/kurs-claude-code-pro/1776422753378177 | ad.md,image,frames
+3030674797298673 | Kurs Claude Code PRO | advertiser-page | examples/operators-workshop/ads/kurs-claude-code-pro/3030674797298673 | ad.md,image
+3039922876358312 | Kurs Claude Code PRO | advertiser-page | examples/operators-workshop/ads/kurs-claude-code-pro/3039922876358312 | ad.md,image,frames
+1956116145019785 | MCAT Bootcamp | keyword-neighbor | examples/operators-workshop/ads/mcat-bootcamp/1956116145019785 | ad.md,image
+1125426749829306 | Maker School | advertiser-page | examples/operators-workshop/ads/maker-school/1125426749829306 | ad.md,image,frames
+1425066189041578 | Maker School | advertiser-page | examples/operators-workshop/ads/maker-school/1425066189041578 | ad.md,image,frames
+1448220497223234 | Maker School | advertiser-page | examples/operators-workshop/ads/maker-school/1448220497223234 | ad.md,image,frames
+1020236937432064 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1020236937432064 | ad.md,image,frames
+1044000675058893 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1044000675058893 | ad.md,image,frames
+1047854090933474 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1047854090933474 | ad.md,image,frames
+1068533945821856 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1068533945821856 | ad.md,image,frames
+1071018978717933 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1071018978717933 | ad.md,image,frames
+
+## batch 8 (15 ads)
+1085463157290005 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1085463157290005 | ad.md,image,frames
+1384073453905007 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1384073453905007 | ad.md,image,frames
+1633617958211625 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1633617958211625 | ad.md,image,frames
+1660385472178283 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1660385472178283 | ad.md,image,frames
+1761940881625624 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1761940881625624 | ad.md,image,frames
+1836279407805960 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1836279407805960 | ad.md,image,frames
+1836652044438432 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/1836652044438432 | ad.md,image,frames
+2856093574749410 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/2856093574749410 | ad.md,image,frames
+4518007081778935 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/4518007081778935 | ad.md,image,frames
+960956262925605 | Maker School: AI Automation | advertiser-page | examples/operators-workshop/ads/maker-school-ai-automation/960956262925605 | ad.md,image,frames
+1940708906902849 | Miva Open University | keyword-neighbor | examples/operators-workshop/ads/miva-open-university/1940708906902849 | ad.md,image
+2060144201373911 | Miva Open University | keyword-neighbor | examples/operators-workshop/ads/miva-open-university/2060144201373911 | ad.md,image
+4538457029767464 | Miva Open University | keyword-neighbor | examples/operators-workshop/ads/miva-open-university/4538457029767464 | ad.md,image
+1015443054328277 | Mr. Paid Social | keyword-neighbor | examples/operators-workshop/ads/mr-paid-social/1015443054328277 | ad.md,image,frames
+25880119681682478 | Mr. Paid Social | keyword-neighbor | examples/operators-workshop/ads/mr-paid-social/25880119681682478 | ad.md,image,frames
+
+## batch 9 (15 ads)
+834247362492467 | Mr. Paid Social | keyword-neighbor | examples/operators-workshop/ads/mr-paid-social/834247362492467 | ad.md,image,frames
+1067363192787128 | NLM Consumer Goods Trading | keyword-neighbor | examples/operators-workshop/ads/nlm-consumer-goods-trading/1067363192787128 | ad.md,image
+1063611693297007 | Nitin Andey | keyword-neighbor | examples/operators-workshop/ads/nitin-andey/1063611693297007 | ad.md,image
+1980315969322824 | Nitin Andey | keyword-neighbor | examples/operators-workshop/ads/nitin-andey/1980315969322824 | ad.md,image
+2122127781987303 | Nitin Andey | keyword-neighbor | examples/operators-workshop/ads/nitin-andey/2122127781987303 | ad.md,image
+2437466690115961 | Nitin Andey | keyword-neighbor | examples/operators-workshop/ads/nitin-andey/2437466690115961 | ad.md,image
+1439548628041867 | Orangutan.ia | keyword-neighbor | examples/operators-workshop/ads/orangutan-ia/1439548628041867 | ad.md,image,frames
+1449771073866297 | Orangutan.ia | keyword-neighbor | examples/operators-workshop/ads/orangutan-ia/1449771073866297 | ad.md,image
+27682986321375890 | Orangutan.ia | keyword-neighbor | examples/operators-workshop/ads/orangutan-ia/27682986321375890 | ad.md,image
+1068918252179664 | Planet Smart City India | keyword-neighbor | examples/operators-workshop/ads/planet-smart-city-india/1068918252179664 | ad.md,image,frames
+1421746219828247 | Planet Smart City India | keyword-neighbor | examples/operators-workshop/ads/planet-smart-city-india/1421746219828247 | ad.md,image,frames
+1393995022127669 | Prismas Consultoria | keyword-neighbor | examples/operators-workshop/ads/prismas-consultoria/1393995022127669 | ad.md,image,frames
+4206175853006205 | Shelby Sapp | keyword-neighbor | examples/operators-workshop/ads/shelby-sapp/4206175853006205 | ad.md,image,frames
+1086075447748545 | Skool | cobrand | examples/operators-workshop/ads/skool/1086075447748545 | ad.md,image,frames
+1087402847240240 | Skool | cobrand | examples/operators-workshop/ads/skool/1087402847240240 | ad.md,image,frames
+
+## batch 10 (15 ads)
+1094023723542322 | Skool | cobrand | examples/operators-workshop/ads/skool/1094023723542322 | ad.md,image,frames
+1094243879909487 | Skool | cobrand | examples/operators-workshop/ads/skool/1094243879909487 | ad.md,image,frames
+1105898642086436 | Skool | cobrand | examples/operators-workshop/ads/skool/1105898642086436 | ad.md,image,frames
+1446844843531566 | Skool | cobrand | examples/operators-workshop/ads/skool/1446844843531566 | ad.md,image,frames
+1512670714026336 | Skool | cobrand | examples/operators-workshop/ads/skool/1512670714026336 | ad.md,image,frames
+1662440802157193 | Skool | cobrand | examples/operators-workshop/ads/skool/1662440802157193 | ad.md,image,frames
+1769820874579277 | Skool | cobrand | examples/operators-workshop/ads/skool/1769820874579277 | ad.md,image,frames
+1807946097023857 | Skool | cobrand | examples/operators-workshop/ads/skool/1807946097023857 | ad.md,image,frames
+2008806906449610 | Skool | cobrand | examples/operators-workshop/ads/skool/2008806906449610 | ad.md,image,frames
+2032976233999151 | Skool | cobrand | examples/operators-workshop/ads/skool/2032976233999151 | ad.md,image
+28791180740542576 | Skool | cobrand | examples/operators-workshop/ads/skool/28791180740542576 | ad.md,image,frames
+39180737891574736 | Skool | cobrand | examples/operators-workshop/ads/skool/39180737891574736 | ad.md,image,frames
+852511001188204 | Skool | cobrand | examples/operators-workshop/ads/skool/852511001188204 | ad.md,image
+1431508675329812 | Solocreatorhub | keyword-neighbor | examples/operators-workshop/ads/solocreatorhub/1431508675329812 | ad.md,image,frames
+943152218357153 | Solocreatorhub | keyword-neighbor | examples/operators-workshop/ads/solocreatorhub/943152218357153 | ad.md,image,frames
+
+## batch 11 (6 ads)
+989361853587159 | Solocreatorhub | keyword-neighbor | examples/operators-workshop/ads/solocreatorhub/989361853587159 | ad.md,image,frames
+1101916785561103 | The Claude Club | advertiser-page | examples/operators-workshop/ads/the-claude-club/1101916785561103 | ad.md,image
+28452428547771495 | The Claude Club | advertiser-page | examples/operators-workshop/ads/the-claude-club/28452428547771495 | ad.md,image
+3519104148251249 | The Claude Club | advertiser-page | examples/operators-workshop/ads/the-claude-club/3519104148251249 | ad.md,image
+1822693378724104 | Thrive OBM Academy | keyword-neighbor | examples/operators-workshop/ads/thrive-obm-academy/1822693378724104 | ad.md,image
+1099623276106157 | Work Abroad by Schoters Nusa Tenggara | keyword-neighbor | examples/operators-workshop/ads/work-abroad-by-schoters-nusa-tenggara/1099623276106157 | ad.md,image
+
+total ads to analyze: 156
+skipped as noise (keyword neighbors with no term hit): 14
+  2149463648974499 | Amazon India
+  1164410775909257 | Amazon India
+  1127553026370991 | Moj Reel Stories
+  1097803826307414 | SHEIN HOME
+  1408476997606036 | Amazon India
+  1375126117820295 | HOTO
+  2187217305183498 | Hashtag NoCode
+  1595554945923227 | Johnny Robinson
+  1603427721424793 | ShopBack
+  4441912212748080 | Myra
+  1100390445813580 | ShopBack
+  28199509516418274 | Green Cross Philippines
+  1139137622112722 | Bioderm
+  1645709973175123 | Template Studio PH

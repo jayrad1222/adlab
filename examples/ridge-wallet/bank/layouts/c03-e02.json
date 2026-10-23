@@ -1,0 +1,49 @@
+{
+ "template": "templates/carousel-card.html",
+ "fields": {
+  "cards": [
+   {
+    "step": "",
+    "hook": "Day 1: the order, and the old bifold still in the back pocket. Day 99: the last day to start a Ridge return.",
+    "body": "Switching from a bifold to a Ridge wallet, in order.",
+    "offer_line": "Start a return within 99 days of the order. Not for personalized, warranty-claim or certain limited-edition items. Ridge return terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "Day 1",
+    "hook": "The order. The 99 days start here.",
+    "body": "Counted from the order, not from the day the box arrives.",
+    "offer_line": "",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "Arrival",
+    "hook": "Move the cards over to the Ridge wallet.",
+    "body": "Up to 12 cards and IDs go under the elastic.",
+    "offer_line": "",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "After",
+    "hook": "Keep the old wallet.",
+    "body": "It does not go in the bin. It waits until you decide.",
+    "offer_line": "",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "Day 99",
+    "hook": "Keep it, exchange it, or start a return.",
+    "body": "By day 99 from the order. Returns start in Ridge's returns portal; items should be in usable condition.",
+    "offer_line": "",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "Terms",
+    "hook": "What the 99 days do not cover.",
+    "body": "Personalized items, warranty claim orders and certain limited editions. Original shipping fees are not refunded.",
+    "offer_line": "Start a return within 99 days of the order. Not for personalized, warranty-claim or certain limited-edition items. Ridge return terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   }
+  ]
+ }
+}

@@ -1,0 +1,211 @@
+{
+ "source": "meta",
+ "ad_id": "1020236937432064",
+ "advertiser": "Maker School: AI Automation",
+ "advertiser_id": "1250676531452056",
+ "advertiser_slug": "maker-school-ai-automation",
+ "platforms": [
+  "facebook",
+  "instagram",
+  "audience_network",
+  "messenger",
+  "threads"
+ ],
+ "start_date": "2026-07-17",
+ "end_date": "2026-10-22",
+ "is_active": true,
+ "days_active": 97,
+ "variant_count": 1,
+ "collation_id": "1184984373823866",
+ "format": "dco",
+ "body_text": "{{product.brand}}",
+ "title": "{{product.name}}",
+ "link_description": "{{product.description}}",
+ "caption": "https://www.skool.com/makerschool",
+ "cta_text": "Learn more",
+ "cta_type": "LEARN_MORE",
+ "link_url": "https://www.skool.com/makerschool/about",
+ "image_url": null,
+ "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/748360468_1029438420076780_2234997808964738941_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4WKQFH_Vf0IQ7kNvwHaj-1N&_nc_oc=Adoa1mHUcjFAq0Dolyn2d1mKMlkHMPcA4BapFMN3Rk1KkcEP4QpBfZaB2JSQNMGOW5DGvPjz-mCi1Eq8Shel-YJk&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQMYWAwAjEOtAf0zAUfAVg5IqDTFzaYbdW28U9IlK7potg&oe=6AE0BEAC",
+ "video_hd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQMQSYXvWaKIKjDfXRYy3YqUNM2pd_GPLq6CYpKZrFmECs6TTORPGA8cZZIWrAeE4tTL55zMXCyH6gfHrVMc90OHtwGM6P1PpkdHfMrYsHz1lw.mp4?_nc_cat=110&_nc_oc=AdpMWF5Jyq9QDqn9nGeW03TNna5N37H8L0RHjyJCu1hxfIaEOfxjrxkKVCWLTpQyAUTCBtcT0kQBJJn1SpHlnddj&_nc_sid=b66105&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=HwBkYLkc2IwQ7kNvwH7V0HF&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEwMzY1OTg1Mzg3MjUwODUsImFzc2V0X2FnZV9kYXlzIjo5NywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=20a528c82e81f8a5&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9EQTQ2MkIyRUEwQzU3RTMxNjJGQzE1QzRFQkIyQzg5NV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzY3NEMzRjZFMDkxQ0NDMkQ4NzFDMkZGQTVEMTdBRjgwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa6m-f6_LHXAxUCKAJDMywXQDoZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQORqtceeuo43p1sIfJuLzGU7s6RSfxOMFp3cp7UGKvWnw&oe=6AE0BC2A",
+ "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMtYMnZzfI0jQaAakRXS0OQMAPdacrgAYhlJguvkFaup6xi-d9M3cNNqJX-0r-nOjnfpUpjfWklwcl0bstiS5_VATqZo0ZJz4RTdAtHZA.mp4?_nc_cat=101&_nc_oc=AdqPTXYKZCsVXlLxZ6toVdfnmNQThvV3mrRNLfNUC04Sj--Yw8XT7GrrO2mT953OA4iX-mHULMm6lSZ7XFgR8QhM&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=29m-SvOoX_sQ7kNvwG7fATY&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTAzNjU5ODUzODcyNTA4NSwiYXNzZXRfYWdlX2RheXMiOjk3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOtvfRJCykQ_A2zngHYhHGxYcn5cIrpF-mYht33j9mLQw&oe=6AE0E991",
+ "cards": [
+  {
+   "body": "Join Maker School, get your first client for an AI service, and change your life. Results guaranteed or your money back.",
+   "title": "Get your first client in 90d or I give you a full refund!",
+   "link_description": "Maker School is the quickest, easiest, & most risk-free way to get your first client for an AI service. 100% money back guarantee.",
+   "link_url": "https://www.skool.com/makerschool/about",
+   "cta_text": "Learn More",
+   "cta_type": "LEARN_MORE",
+   "caption": "https://www.skool.com/makerschool",
+   "original_image_url": null,
+   "resized_image_url": null,
+   "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/748360468_1029438420076780_2234997808964738941_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4WKQFH_Vf0IQ7kNvwHaj-1N&_nc_oc=Adoa1mHUcjFAq0Dolyn2d1mKMlkHMPcA4BapFMN3Rk1KkcEP4QpBfZaB2JSQNMGOW5DGvPjz-mCi1Eq8Shel-YJk&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQMYWAwAjEOtAf0zAUfAVg5IqDTFzaYbdW28U9IlK7potg&oe=6AE0BEAC",
+   "video_hd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQMQSYXvWaKIKjDfXRYy3YqUNM2pd_GPLq6CYpKZrFmECs6TTORPGA8cZZIWrAeE4tTL55zMXCyH6gfHrVMc90OHtwGM6P1PpkdHfMrYsHz1lw.mp4?_nc_cat=110&_nc_oc=AdpMWF5Jyq9QDqn9nGeW03TNna5N37H8L0RHjyJCu1hxfIaEOfxjrxkKVCWLTpQyAUTCBtcT0kQBJJn1SpHlnddj&_nc_sid=b66105&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=HwBkYLkc2IwQ7kNvwH7V0HF&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEwMzY1OTg1Mzg3MjUwODUsImFzc2V0X2FnZV9kYXlzIjo5NywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=20a528c82e81f8a5&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9EQTQ2MkIyRUEwQzU3RTMxNjJGQzE1QzRFQkIyQzg5NV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzY3NEMzRjZFMDkxQ0NDMkQ4NzFDMkZGQTVEMTdBRjgwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa6m-f6_LHXAxUCKAJDMywXQDoZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQORqtceeuo43p1sIfJuLzGU7s6RSfxOMFp3cp7UGKvWnw&oe=6AE0BC2A",
+   "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMtYMnZzfI0jQaAakRXS0OQMAPdacrgAYhlJguvkFaup6xi-d9M3cNNqJX-0r-nOjnfpUpjfWklwcl0bstiS5_VATqZo0ZJz4RTdAtHZA.mp4?_nc_cat=101&_nc_oc=AdqPTXYKZCsVXlLxZ6toVdfnmNQThvV3mrRNLfNUC04Sj--Yw8XT7GrrO2mT953OA4iX-mHULMm6lSZ7XFgR8QhM&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=29m-SvOoX_sQ7kNvwG7fATY&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTAzNjU5ODUzODcyNTA4NSwiYXNzZXRfYWdlX2RheXMiOjk3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOtvfRJCykQ_A2zngHYhHGxYcn5cIrpF-mYht33j9mLQw&oe=6AE0E991"
+  },
+  {
+   "body": "Join Maker School, get your first client for an AI service, and change your life. Results guaranteed or your money back.",
+   "title": "Get your first client in 90d or I give you a full refund!",
+   "link_description": "Maker School is the quickest, easiest, & most risk-free way to get your first client for an AI service. 100% money back guarantee.",
+   "link_url": "https://www.skool.com/makerschool/about",
+   "cta_text": "Learn More",
+   "cta_type": "LEARN_MORE",
+   "caption": "https://www.skool.com/makerschool",
+   "original_image_url": null,
+   "resized_image_url": null,
+   "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/749270064_1594152972246035_7064342945283381465_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EPBTHe1S6XMQ7kNvwGhhBbN&_nc_oc=AdoYlF74OYT5-E3NDWT3D5NagAoVITSia-iRkoRqdTxs-IP_cllOuzEIMIMpco5q6NCA1meU9Q_JOV2G9TH5WCOI&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQPLkonnTRGTo5waDFeR1MmM1_0MkfVke_UtK6ByGeLjUw&oe=6AE0DF76",
+   "video_hd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQOdxM7fie7NRTTGtsU2PU7_QZPJBzMCLgrDY6pd4vybrpkAeUJ6rEDkGmf0eAchkP5JHUahgToeKyiD4hbxDCMyp_bNKerKSbhpn9pqE-R2zQ.mp4?_nc_cat=111&_nc_oc=AdpY6o6rs5Sx0lgSFsFLEZda6wmI7e82jlzicMK3M7QX8Jm4r77uz39VNiFIdkab5asgtRPs3xICp5xTbR7IF4Fp&_nc_sid=b66105&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=BX-0_Qqu9GMQ7kNvwHu1kh0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMTI4MC5kYXNoX2gyNjQtYmFzaWMtZ2VuMl83MjBwIiwieHB2X2Fzc2V0X2lkIjoxNTU3MDY1NDA5NDQ4NTMwLCJhc3NldF9hZ2VfZGF5cyI6OTcsInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjoyNiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=e681e72cdeab7a7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC83RTQzOEE0RTNCRTJGMjc2QzQ4NTg4RjJBOUM2ODZBQV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzYxNDMwQzEzOTcxN0Y3OTQzRDVGNjI1QTE0QjhBNjhCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakqfqpkYnEBRUCKAJDMywXQDoZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOTDqSvv-vAfmDAHX-ZDM3TC-bVx3dKNY0NkKCVLq-8jA&oe=6AE0E485",
+   "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMsE2Q4XrOQBEUUgQog0hGkBirkpepxGuLzyQO8lJHVJ69LpVN_JHDUC-jiU86lO0EQYWmqQx5i_HwcdEI3MMVz_x4X5SZFX1101f84Mg.mp4?_nc_cat=105&_nc_oc=AdpExeWVU-KkxGeY_GiAXuhMOq6bu9jUVoFWhgLuQyid9VawneMgBXyyGiqLhP3OiCcOKXIWF2fVth5W88O0u-HZ&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=7v8VggZMBH8Q7kNvwEf4BSo&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNjQwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTU1NzA2NTQwOTQ0ODUzMCwiYXNzZXRfYWdlX2RheXMiOjk3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNTqQc3FsJVB5OvY53_WBhN7SCUOtNDo-f0pFHp0W2C4Q&oe=6AE0C019"
+  },
+  {
+   "body": "Join Maker School, get your first client for an AI service, and change your life. Results guaranteed or your money back.",
+   "title": "Get your first client in 90d or I give you a full refund!",
+   "link_description": "Maker School is the quickest, easiest, & most risk-free way to get your first client for an AI service. 100% money back guarantee.",
+   "link_url": "https://www.skool.com/makerschool/about",
+   "cta_text": "Learn More",
+   "cta_type": "LEARN_MORE",
+   "caption": "https://www.skool.com/makerschool",
+   "original_image_url": null,
+   "resized_image_url": null,
+   "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/750582916_1738522063962406_8574978094990903970_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sUI0AvND8vUQ7kNvwHgK5P1&_nc_oc=AdphOFRI2fG6cCgW9ett03fnR2Kyqh6P2JNn5KyIp9YWBvPhzGO2wwMEZvXOmQ89d-wQUEV_sqLKn0dz_6QEvLEi&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQNKipaLQHORHSqZ0wc0zpxBQv_ugJYQso4uDOM_761k8A&oe=6AE0E033",
+   "video_hd_url": "https://video.flas1-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQOjmeWNmVZB4ZnVuCh7cnkMWIkMDB7tqjFvUcMpFTWhBdOBSdyiKJfyjqdQNB3HJjP_1d6pByL5bIza3cevPxYsHdknY43xjxk7BHif2Qnr9g.mp4?_nc_cat=105&_nc_oc=Adpmj_tn91V1vNLyQhHK-47GY0deKy_P-w_dqBmImwMnmoPxYUybcktSbgB6gQzeYDYk1OJu8f5YdN19fLtbVUhV&_nc_sid=b66105&_nc_ht=video.flas1-1.fna.fbcdn.net&_nc_ohc=HDfLPw6-OwMQ7kNvwHCVxPx&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2NzYwOTI0NTM2NTgyMDksImFzc2V0X2FnZV9kYXlzIjo5NywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=823c07eca9fcbd77&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yQzRFQTdDRDYyQzQ0NkE3NUMzMzk2MzFDMzBGMzdCNF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzlENDVFNjVGNTVBMEQ4QTJBRjkxODM4MjFDRDY5M0JBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbC-fz0tZn6BRUCKAJDMywXQDoZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOtcfc1NZg5juKsjLbBhnom7OHjL0QOlE7SI7nGxEuEww&oe=6AE0EE53",
+   "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQPWblpRW6-p596Mm2nF0NCjaCueATSBvDRC5peg3jUAQBCMHyTT6aA2x33fpICG5d8fArwp8ahrqDX5PcJIg-2aOE1VWOSpKFtqs3AFJA.mp4?_nc_cat=100&_nc_oc=Adq4QsHQJw-Z_CQUq0zi9BppefyOH6MZJiQtl0FdMbUuk4aR9VpjqPZIoncwsP_RsSPLHjkJTLs0AED9J4Eboexq&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=i4MpITP-HmwQ7kNvwHVq5Rm&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTY3NjA5MjQ1MzY1ODIwOSwiYXNzZXRfYWdlX2RheXMiOjk3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQO5R4risWmDL7SX9chDFVgKQKv7yL4TcfJS4Qy1Ad-bkw&oe=6AE0E9B2"
+  }
+ ],
+ "page_like_count": 1237,
+ "page_profile_uri": "https://www.facebook.com/61591310621589/",
+ "page_categories": [
+  "Education website"
+ ],
+ "byline": null,
+ "term_hits": [
+  "skool",
+  "ai",
+  "automation"
+ ],
+ "eu": null,
+ "library_url": "https://www.facebook.com/ads/library/?id=1020236937432064",
+ "raw_snapshot": {
+  "branded_content": null,
+  "page_id": "1250676531452056",
+  "page_is_deleted": false,
+  "page_profile_uri": "https://www.facebook.com/61591310621589/",
+  "root_reshared_post": null,
+  "byline": null,
+  "disclaimer_label": null,
+  "page_name": "Maker School: AI Automation",
+  "page_profile_picture_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/748573249_1074161968892997_2557912625148728041_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WYJ1EG1FjqcQ7kNvwESTA5D&_nc_oc=AdoHpd6CDM4VFmZYAIyC6uKnp9zIYEwn7KlfGGIV2D83pkf_ljf2bz8Wq7q4YA3Xs2xu5dfVXMiR_nDSDB2qjwef&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQMkn0mnwpDDwrHZcFlNTodeh61xh4X0aOHZ62mIq5ohJQ&oe=6AE0E142",
+  "event": null,
+  "caption": "https://www.skool.com/makerschool",
+  "cta_text": "Learn more",
+  "cards": [
+   {
+    "body": "Join Maker School, get your first client for an AI service, and change your life. Results guaranteed or your money back.",
+    "cta_type": "LEARN_MORE",
+    "caption": "https://www.skool.com/makerschool",
+    "link_description": "Maker School is the quickest, easiest, & most risk-free way to get your first client for an AI service. 100% money back guarantee.",
+    "link_url": "https://www.skool.com/makerschool/about",
+    "title": "Get your first client in 90d or I give you a full refund!",
+    "cta_text": "Learn More",
+    "video_hd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQMQSYXvWaKIKjDfXRYy3YqUNM2pd_GPLq6CYpKZrFmECs6TTORPGA8cZZIWrAeE4tTL55zMXCyH6gfHrVMc90OHtwGM6P1PpkdHfMrYsHz1lw.mp4?_nc_cat=110&_nc_oc=AdpMWF5Jyq9QDqn9nGeW03TNna5N37H8L0RHjyJCu1hxfIaEOfxjrxkKVCWLTpQyAUTCBtcT0kQBJJn1SpHlnddj&_nc_sid=b66105&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=HwBkYLkc2IwQ7kNvwH7V0HF&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEwMzY1OTg1Mzg3MjUwODUsImFzc2V0X2FnZV9kYXlzIjo5NywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=20a528c82e81f8a5&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9EQTQ2MkIyRUEwQzU3RTMxNjJGQzE1QzRFQkIyQzg5NV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzY3NEMzRjZFMDkxQ0NDMkQ4NzFDMkZGQTVEMTdBRjgwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa6m-f6_LHXAxUCKAJDMywXQDoZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQORqtceeuo43p1sIfJuLzGU7s6RSfxOMFp3cp7UGKvWnw&oe=6AE0BC2A",
+    "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/748360468_1029438420076780_2234997808964738941_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4WKQFH_Vf0IQ7kNvwHaj-1N&_nc_oc=Adoa1mHUcjFAq0Dolyn2d1mKMlkHMPcA4BapFMN3Rk1KkcEP4QpBfZaB2JSQNMGOW5DGvPjz-mCi1Eq8Shel-YJk&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQMYWAwAjEOtAf0zAUfAVg5IqDTFzaYbdW28U9IlK7potg&oe=6AE0BEAC",
+    "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMtYMnZzfI0jQaAakRXS0OQMAPdacrgAYhlJguvkFaup6xi-d9M3cNNqJX-0r-nOjnfpUpjfWklwcl0bstiS5_VATqZo0ZJz4RTdAtHZA.mp4?_nc_cat=101&_nc_oc=AdqPTXYKZCsVXlLxZ6toVdfnmNQThvV3mrRNLfNUC04Sj--Yw8XT7GrrO2mT953OA4iX-mHULMm6lSZ7XFgR8QhM&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=29m-SvOoX_sQ7kNvwG7fATY&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTAzNjU5ODUzODcyNTA4NSwiYXNzZXRfYWdlX2RheXMiOjk3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOtvfRJCykQ_A2zngHYhHGxYcn5cIrpF-mYht33j9mLQw&oe=6AE0E991",
+    "watermarked_video_hd_url": null,
+    "watermarked_video_sd_url": null,
+    "image_crops": [],
+    "original_image_url": null,
+    "resized_image_url": null,
+    "watermarked_resized_image_url": null
+   },
+   {
+    "body": "Join Maker School, get your first client for an AI service, and change your life. Results guaranteed or your money back.",
+    "cta_type": "LEARN_MORE",
+    "caption": "https://www.skool.com/makerschool",
+    "link_description": "Maker School is the quickest, easiest, & most risk-free way to get your first client for an AI service. 100% money back guarantee.",
+    "link_url": "https://www.skool.com/makerschool/about",
+    "title": "Get your first client in 90d or I give you a full refund!",
+    "cta_text": "Learn More",
+    "video_hd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQOdxM7fie7NRTTGtsU2PU7_QZPJBzMCLgrDY6pd4vybrpkAeUJ6rEDkGmf0eAchkP5JHUahgToeKyiD4hbxDCMyp_bNKerKSbhpn9pqE-R2zQ.mp4?_nc_cat=111&_nc_oc=AdpY6o6rs5Sx0lgSFsFLEZda6wmI7e82jlzicMK3M7QX8Jm4r77uz39VNiFIdkab5asgtRPs3xICp5xTbR7IF4Fp&_nc_sid=b66105&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=BX-0_Qqu9GMQ7kNvwHu1kh0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMTI4MC5kYXNoX2gyNjQtYmFzaWMtZ2VuMl83MjBwIiwieHB2X2Fzc2V0X2lkIjoxNTU3MDY1NDA5NDQ4NTMwLCJhc3NldF9hZ2VfZGF5cyI6OTcsInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjoyNiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=e681e72cdeab7a7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC83RTQzOEE0RTNCRTJGMjc2QzQ4NTg4RjJBOUM2ODZBQV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzYxNDMwQzEzOTcxN0Y3OTQzRDVGNjI1QTE0QjhBNjhCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakqfqpkYnEBRUCKAJDMywXQDoZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOTDqSvv-vAfmDAHX-ZDM3TC-bVx3dKNY0NkKCVLq-8jA&oe=6AE0E485",
+    "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/749270064_1594152972246035_7064342945283381465_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EPBTHe1S6XMQ7kNvwGhhBbN&_nc_oc=AdoYlF74OYT5-E3NDWT3D5NagAoVITSia-iRkoRqdTxs-IP_cllOuzEIMIMpco5q6NCA1meU9Q_JOV2G9TH5WCOI&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQPLkonnTRGTo5waDFeR1MmM1_0MkfVke_UtK6ByGeLjUw&oe=6AE0DF76",
+    "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMsE2Q4XrOQBEUUgQog0hGkBirkpepxGuLzyQO8lJHVJ69LpVN_JHDUC-jiU86lO0EQYWmqQx5i_HwcdEI3MMVz_x4X5SZFX1101f84Mg.mp4?_nc_cat=105&_nc_oc=AdpExeWVU-KkxGeY_GiAXuhMOq6bu9jUVoFWhgLuQyid9VawneMgBXyyGiqLhP3OiCcOKXIWF2fVth5W88O0u-HZ&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=7v8VggZMBH8Q7kNvwEf4BSo&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNjQwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTU1NzA2NTQwOTQ0ODUzMCwiYXNzZXRfYWdlX2RheXMiOjk3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNTqQc3FsJVB5OvY53_WBhN7SCUOtNDo-f0pFHp0W2C4Q&oe=6AE0C019",
+    "watermarked_video_hd_url": null,
+    "watermarked_video_sd_url": null,
+    "image_crops": [],
+    "original_image_url": null,
+    "resized_image_url": null,
+    "watermarked_resized_image_url": null
+   },
+   {
+    "body": "Join Maker School, get your first client for an AI service, and change your life. Results guaranteed or your money back.",
+    "cta_type": "LEARN_MORE",
+    "caption": "https://www.skool.com/makerschool",
+    "link_description": "Maker School is the quickest, easiest, & most risk-free way to get your first client for an AI service. 100% money back guarantee.",
+    "link_url": "https://www.skool.com/makerschool/about",
+    "title": "Get your first client in 90d or I give you a full refund!",
+    "cta_text": "Learn More",
+    "video_hd_url": "https://video.flas1-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQOjmeWNmVZB4ZnVuCh7cnkMWIkMDB7tqjFvUcMpFTWhBdOBSdyiKJfyjqdQNB3HJjP_1d6pByL5bIza3cevPxYsHdknY43xjxk7BHif2Qnr9g.mp4?_nc_cat=105&_nc_oc=Adpmj_tn91V1vNLyQhHK-47GY0deKy_P-w_dqBmImwMnmoPxYUybcktSbgB6gQzeYDYk1OJu8f5YdN19fLtbVUhV&_nc_sid=b66105&_nc_ht=video.flas1-1.fna.fbcdn.net&_nc_ohc=HDfLPw6-OwMQ7kNvwHCVxPx&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2NzYwOTI0NTM2NTgyMDksImFzc2V0X2FnZV9kYXlzIjo5NywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=823c07eca9fcbd77&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yQzRFQTdDRDYyQzQ0NkE3NUMzMzk2MzFDMzBGMzdCNF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzlENDVFNjVGNTVBMEQ4QTJBRjkxODM4MjFDRDY5M0JBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbC-fz0tZn6BRUCKAJDMywXQDoZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOtcfc1NZg5juKsjLbBhnom7OHjL0QOlE7SI7nGxEuEww&oe=6AE0EE53",
+    "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/750582916_1738522063962406_8574978094990903970_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sUI0AvND8vUQ7kNvwHgK5P1&_nc_oc=AdphOFRI2fG6cCgW9ett03fnR2Kyqh6P2JNn5KyIp9YWBvPhzGO2wwMEZvXOmQ89d-wQUEV_sqLKn0dz_6QEvLEi&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&oh=00_AQNKipaLQHORHSqZ0wc0zpxBQv_ugJYQso4uDOM_761k8A&oe=6AE0E033",
+    "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQPWblpRW6-p596Mm2nF0NCjaCueATSBvDRC5peg3jUAQBCMHyTT6aA2x33fpICG5d8fArwp8ahrqDX5PcJIg-2aOE1VWOSpKFtqs3AFJA.mp4?_nc_cat=100&_nc_oc=Adq4QsHQJw-Z_CQUq0zi9BppefyOH6MZJiQtl0FdMbUuk4aR9VpjqPZIoncwsP_RsSPLHjkJTLs0AED9J4Eboexq&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=i4MpITP-HmwQ7kNvwHVq5Rm&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTY3NjA5MjQ1MzY1ODIwOSwiYXNzZXRfYWdlX2RheXMiOjk3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=z6K8mOvTXwnAFMFgs9rGvg&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQO5R4risWmDL7SX9chDFVgKQKv7yL4TcfJS4Qy1Ad-bkw&oe=6AE0E9B2",
+    "watermarked_video_hd_url": null,
+    "watermarked_video_sd_url": null,
+    "image_crops": [],
+    "original_image_url": null,
+    "resized_image_url": null,
+    "watermarked_resized_image_url": null
+   }
+  ],
+  "body": {
+   "text": "{{product.brand}}"
+  },
+  "cta_type": "LEARN_MORE",
+  "display_format": "DCO",
+  "link_description": "{{product.description}}",
+  "link_url": "https://www.skool.com/makerschool/about",
+  "images": [],
+  "page_categories": [
+   "Education website"
+  ],
+  "page_like_count": 1237,
+  "title": "{{product.name}}",
+  "videos": [],
+  "is_reshared": false,
+  "extra_links": [],
+  "extra_texts": [],
+  "extra_images": [],
+  "extra_videos": [],
+  "country_iso_code": null,
+  "brazil_tax_id": null,
+  "additional_info": null,
+  "ec_certificates": []
+ },
+ "link_domain": "skool.com",
+ "link_path": "/makerschool/about",
+ "dest_type": "skool",
+ "match": "advertiser-page",
+ "roster_advertiser": "Maker School",
+ "found_via": [
+  [
+   "roster",
+   "Maker School"
+  ],
+  [
+   "roster",
+   "cobrand: Maker School Skool"
+  ],
+  [
+   "EU",
+   "detail 1047854090933474"
+  ],
+  [
+   "EU",
+   "detail 1071018978717933"
+  ]
+ ],
+ "first_seen_utc": "2026-10-23T06:34:46+00:00",
+ "files": {
+  "creative": "maker-school-ai-automation/1020236937432064/media/creative.jpg",
+  "video": "maker-school-ai-automation/1020236937432064/media/video.mp4",
+  "card": "maker-school-ai-automation/1020236937432064/card.png"
+ }
+}

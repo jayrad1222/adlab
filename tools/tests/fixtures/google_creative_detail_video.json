@@ -1,0 +1,32 @@
+{
+ "1": {
+  "1": "AR10942234166510485505",
+  "2": "CR14928184037351620609",
+  "4": {
+   "1": "1792735026",
+   "2": 983957000
+  },
+  "5": [
+   {
+    "1": {
+     "4": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=8672091476&creativeId=828682530653&uiFeatures=12&adGroupId=200762597709&versionId=2&assets=%3DH4sIAAAAAAAAAOPi5uLkaGxu6D_BI8AIAAYOlG0NAAAA&sig=ACiVB_zNaiWERBd_-i0d8gi2YQlU5Pz0LQ&htmlParentId=fletch-render-12333217962061650936&responseCallback=fletchCallback12333217962061650936"
+    }
+   },
+   {
+    "1": {
+     "4": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=8672091476&creativeId=828682530653&uiFeatures=12&adGroupId=200762597709&versionId=2&assets=%3DH4sIAAAAAAAAAOPi5uLkaGxu6D_BI8AIAAYOlG0NAAAA&allowedVariations=43&sig=ACiVB_zNaiWERBd_-i0d8gi2YQlU5Pz0LQ&htmlParentId=fletch-render-7098958025445430830&responseCallback=fletchCallback7098958025445430830"
+    }
+   }
+  ],
+  "8": 3,
+  "17": [
+   {
+    "1": 2764,
+    "5": 20261022
+   }
+  ],
+  "22": {
+   "1": "BlueVision Interactive Limited"
+  }
+ }
+}

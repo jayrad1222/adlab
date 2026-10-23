@@ -1,0 +1,165 @@
+{
+ "source": "meta",
+ "ad_id": "1194881345055884",
+ "advertiser": "Bellroy",
+ "advertiser_id": "113833593676",
+ "advertiser_slug": "bellroy",
+ "platforms": [
+  "facebook",
+  "instagram",
+  "audience_network"
+ ],
+ "start_date": "2024-09-09",
+ "end_date": "2026-10-22",
+ "is_active": true,
+ "days_active": 773,
+ "variant_count": null,
+ "collation_id": null,
+ "format": "dco",
+ "body_text": "{{product.brand}}",
+ "title": "{{product.name}}",
+ "link_description": "{{product.description}}",
+ "caption": "bellroy.com",
+ "cta_text": "Shop now",
+ "cta_type": "SHOP_NOW",
+ "link_url": "https://bellroy.com/collection/for-tech-lovers",
+ "image_url": null,
+ "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/452921602_1643915263063428_2614953741804774935_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UnvOeVO1XmQQ7kNvwEpB_Xy&_nc_oc=AdrXdNx4tpTim1ihFxD7Ph892gTX9eOYnwlWv-mWaA7YTtSQhRMdp4yiXDT9RnXGd9-nuluad2A842JincEGvlcj&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&oh=00_AQP8s6STsI6YE7FCFjbLdOrPk6Ayz9xx43sQL2u8y-itSA&oe=6AE0C5BB",
+ "video_hd_url": "https://video.flas1-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQMSE1Pr0juN7cEfEsC6CL2RzrS-rlg1F8e8sadSa-lqdmXgaMAwXifEmh-jZQrUYO1L0ss5B54ACSABtR3lTO9aa3KWlPKJdJOuD6wG3ZOWIA.mp4?_nc_cat=111&_nc_oc=AdrTnqBIOiYN1imJ4F7Bec6-DVew8sTZJC1tBkKAYOv2GltYzvZwiQ5jvOlHL-gGZ94TlDAo9z7_EhVHc7gyl2rM&_nc_sid=b66105&_nc_ht=video.flas1-1.fna.fbcdn.net&_nc_ohc=zvBhdc2JCJUQ7kNvwGO52Et&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjM1MTc3ODQ4NzIzMzI5OCwiYXNzZXRfYWdlX2RheXMiOjEwOTYsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjozMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=b2086bb80ef23db7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC81MzRENkNDNjM3QTE3MzY2RThBQUIzQUUxNzE5MDhCQV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfZXBoZW1lcmFsL0JDNDExODQ2NzQ4QUVBODZFQkVDNjE1RUI0RDAxOEE2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakrKv8mfyfARUCKAJDMywXQD5SLQ5WBBkYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZbaeAQA&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQM5jkjLsS6pddbFFODwOZFfr3lACfPqZ5Dte7wrG1ss4Q&oe=6AE0E381",
+ "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMN5X1o926To0a60YqWijO1w38dHnBk5t6lwMk2hVk7S0tEpXGoWe9dC4iagEPNtv4aVNStdoaK9Vac4il7k9M.mp4?_nc_cat=110&_nc_oc=Adp5J6hTrxjHZ1i0IfQKc8p-T5zTc1y22vrAlmAx0AVssjJDemKDJtxsj2zNff_Z0xI_oKAeuWAEfS9DXqpRlV_k&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=iY0o8ub5V3wQ7kNvwEybbHN&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzUxNzc4NDg3MjMzMjk4LCJhc3NldF9hZ2VfZGF5cyI6MTA5NiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNAFplll0aWJjZsA3HL17a0DQ9euaWpZgIZzc-_Mpwjng&oe=6AE0DE84",
+ "cards": [
+  {
+   "body": "No matter what you care about or how your life evolves, your tech can go there too.",
+   "title": "Your tech, our way",
+   "link_description": "Designed in Australia, carried all over",
+   "link_url": "https://bellroy.com/collection/for-tech-lovers",
+   "cta_text": "Shop Now",
+   "cta_type": "SHOP_NOW",
+   "caption": "",
+   "original_image_url": null,
+   "resized_image_url": null,
+   "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/452921602_1643915263063428_2614953741804774935_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UnvOeVO1XmQQ7kNvwEpB_Xy&_nc_oc=AdrXdNx4tpTim1ihFxD7Ph892gTX9eOYnwlWv-mWaA7YTtSQhRMdp4yiXDT9RnXGd9-nuluad2A842JincEGvlcj&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&oh=00_AQP8s6STsI6YE7FCFjbLdOrPk6Ayz9xx43sQL2u8y-itSA&oe=6AE0C5BB",
+   "video_hd_url": "https://video.flas1-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQMSE1Pr0juN7cEfEsC6CL2RzrS-rlg1F8e8sadSa-lqdmXgaMAwXifEmh-jZQrUYO1L0ss5B54ACSABtR3lTO9aa3KWlPKJdJOuD6wG3ZOWIA.mp4?_nc_cat=111&_nc_oc=AdrTnqBIOiYN1imJ4F7Bec6-DVew8sTZJC1tBkKAYOv2GltYzvZwiQ5jvOlHL-gGZ94TlDAo9z7_EhVHc7gyl2rM&_nc_sid=b66105&_nc_ht=video.flas1-1.fna.fbcdn.net&_nc_ohc=zvBhdc2JCJUQ7kNvwGO52Et&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjM1MTc3ODQ4NzIzMzI5OCwiYXNzZXRfYWdlX2RheXMiOjEwOTYsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjozMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=b2086bb80ef23db7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC81MzRENkNDNjM3QTE3MzY2RThBQUIzQUUxNzE5MDhCQV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfZXBoZW1lcmFsL0JDNDExODQ2NzQ4QUVBODZFQkVDNjE1RUI0RDAxOEE2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakrKv8mfyfARUCKAJDMywXQD5SLQ5WBBkYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZbaeAQA&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQM5jkjLsS6pddbFFODwOZFfr3lACfPqZ5Dte7wrG1ss4Q&oe=6AE0E381",
+   "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMN5X1o926To0a60YqWijO1w38dHnBk5t6lwMk2hVk7S0tEpXGoWe9dC4iagEPNtv4aVNStdoaK9Vac4il7k9M.mp4?_nc_cat=110&_nc_oc=Adp5J6hTrxjHZ1i0IfQKc8p-T5zTc1y22vrAlmAx0AVssjJDemKDJtxsj2zNff_Z0xI_oKAeuWAEfS9DXqpRlV_k&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=iY0o8ub5V3wQ7kNvwEybbHN&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzUxNzc4NDg3MjMzMjk4LCJhc3NldF9hZ2VfZGF5cyI6MTA5NiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNAFplll0aWJjZsA3HL17a0DQ9euaWpZgIZzc-_Mpwjng&oe=6AE0DE84"
+  },
+  {
+   "body": "No matter what you care about or how your life evolves, your tech can go there too.",
+   "title": "Your tech, our way",
+   "link_description": "Designed in Australia, carried all over",
+   "link_url": "https://bellroy.com/collection/for-tech-lovers",
+   "cta_text": "Shop Now",
+   "cta_type": "SHOP_NOW",
+   "caption": "",
+   "original_image_url": null,
+   "resized_image_url": null,
+   "video_preview_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/453077220_519708067288908_6834006147087065851_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lp6312dhv1sQ7kNvwEyyP60&_nc_oc=AdoYsr6IlEFYr3_fyBBolUA44_dKKIlkzTJBt0Ij-aoOB_6UufFz8kaxeFr8Xha1fnu3MFCZ9lpMpsMv_EFqjn2K&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&oh=00_AQNVoT4tubZBg649n-FNrRz3gWROS_huD6HhjQeNpwc9Ag&oe=6AE0EACC",
+   "video_hd_url": "https://video.flas1-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQMJEUHQtabz2nfz5aoujyN8esAw5xJq9_yvuQFtr7sReTys9gd0Q9DgS9PKIiEKXUwMk1xA7CzpJsfNwamQNkDHcbM7EO60caC47jGqS6bMhA.mp4?_nc_cat=106&_nc_oc=Adpy0OPMylUCxtwI92v7KzrHI_TJ-KfUgOmjKyBujm0ng5v4AmiA0uTaZk4jE0iPV2p0dZ9JX3_J9jtWLWQtG1UD&_nc_sid=b66105&_nc_ht=video.flas1-1.fna.fbcdn.net&_nc_ohc=AUafSJyuEhMQ7kNvwFXujns&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjYyMTk3NjEzOTY2MTQ1OCwiYXNzZXRfYWdlX2RheXMiOjE0NzQsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjozMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=4c2e6367dff9900f&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC80NjQwNkJBOUE0NEFCM0UzQzQ5NDQ2RUY1QUREQzQ4NF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfZXBoZW1lcmFsLzlFNDc2MjMxMTVGREQ1Rjg3NDc2MUY0RUIwMEZERkIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakguit4-uaAhUCKAJDMywXQD5SLQ5WBBkYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZbaeAQA&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOn0TlR5b4ULPq0882_Pt2D0WJdJl4fiCK8l-tnA4hSPw&oe=6AE0F1DA",
+   "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQOWk7q9SOOr3C4DRhyWnnroy5EABIhumYuwHaFyYZzO1k2ErQskdHR-3Db2kWGg6OLXoRuXomM8Yp2cz8E_IqW-.mp4?_nc_cat=110&_nc_oc=AdqsThNcqFQUL4aQX1PUKv37YzXmRk3az7X43oHn2rCR0jOAarvhY7IL0DueUuqhxoYParYHKBpvMqmNbi-IRjWH&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=j3HVXn0loC8Q7kNvwEOVol3&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNDI2LnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NjIxOTc2MTM5NjYxNDU4LCJhc3NldF9hZ2VfZGF5cyI6MTQ3NCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOhHbXyu2a_ykS4IoqnZBRLqMPofXtUJzV6SZ9v3N4sLw&oe=6AE0D303"
+  }
+ ],
+ "page_like_count": 200363,
+ "page_profile_uri": "https://www.facebook.com/bellroy.official/",
+ "page_categories": [
+  "Product/service"
+ ],
+ "byline": null,
+ "term_hits": [],
+ "eu": null,
+ "library_url": "https://www.facebook.com/ads/library/?id=1194881345055884",
+ "raw_snapshot": {
+  "branded_content": null,
+  "page_id": "113833593676",
+  "page_is_deleted": false,
+  "page_profile_uri": "https://www.facebook.com/bellroy.official/",
+  "root_reshared_post": null,
+  "byline": null,
+  "disclaimer_label": null,
+  "page_name": "Bellroy",
+  "page_profile_picture_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/452921434_765658098846184_202174319724192413_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=_cRi4OGuKjgQ7kNvwFcTySf&_nc_oc=AdqB4QJd6YxSXGPpjZqxJ7CKRRd_xKhfOtJiY-xpxT7gCA6tpVVgZxNyG79WBX45mFopWaVaq5xpNX-woQMVY4zA&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&oh=00_AQNgc3xbIn2R-ewBxuLaFuBT-VQLI6mju6xgZOs47AqE2g&oe=6AE0E30F",
+  "event": null,
+  "caption": "bellroy.com",
+  "cta_text": "Shop now",
+  "cards": [
+   {
+    "body": "No matter what you care about or how your life evolves, your tech can go there too.",
+    "cta_type": "SHOP_NOW",
+    "caption": "",
+    "link_description": "Designed in Australia, carried all over",
+    "link_url": "https://bellroy.com/collection/for-tech-lovers",
+    "title": "Your tech, our way",
+    "cta_text": "Shop Now",
+    "video_hd_url": "https://video.flas1-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQMSE1Pr0juN7cEfEsC6CL2RzrS-rlg1F8e8sadSa-lqdmXgaMAwXifEmh-jZQrUYO1L0ss5B54ACSABtR3lTO9aa3KWlPKJdJOuD6wG3ZOWIA.mp4?_nc_cat=111&_nc_oc=AdrTnqBIOiYN1imJ4F7Bec6-DVew8sTZJC1tBkKAYOv2GltYzvZwiQ5jvOlHL-gGZ94TlDAo9z7_EhVHc7gyl2rM&_nc_sid=b66105&_nc_ht=video.flas1-1.fna.fbcdn.net&_nc_ohc=zvBhdc2JCJUQ7kNvwGO52Et&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjM1MTc3ODQ4NzIzMzI5OCwiYXNzZXRfYWdlX2RheXMiOjEwOTYsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjozMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=b2086bb80ef23db7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC81MzRENkNDNjM3QTE3MzY2RThBQUIzQUUxNzE5MDhCQV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfZXBoZW1lcmFsL0JDNDExODQ2NzQ4QUVBODZFQkVDNjE1RUI0RDAxOEE2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakrKv8mfyfARUCKAJDMywXQD5SLQ5WBBkYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZbaeAQA&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQM5jkjLsS6pddbFFODwOZFfr3lACfPqZ5Dte7wrG1ss4Q&oe=6AE0E381",
+    "video_preview_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/452921602_1643915263063428_2614953741804774935_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UnvOeVO1XmQQ7kNvwEpB_Xy&_nc_oc=AdrXdNx4tpTim1ihFxD7Ph892gTX9eOYnwlWv-mWaA7YTtSQhRMdp4yiXDT9RnXGd9-nuluad2A842JincEGvlcj&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&oh=00_AQP8s6STsI6YE7FCFjbLdOrPk6Ayz9xx43sQL2u8y-itSA&oe=6AE0C5BB",
+    "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQMN5X1o926To0a60YqWijO1w38dHnBk5t6lwMk2hVk7S0tEpXGoWe9dC4iagEPNtv4aVNStdoaK9Vac4il7k9M.mp4?_nc_cat=110&_nc_oc=Adp5J6hTrxjHZ1i0IfQKc8p-T5zTc1y22vrAlmAx0AVssjJDemKDJtxsj2zNff_Z0xI_oKAeuWAEfS9DXqpRlV_k&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=iY0o8ub5V3wQ7kNvwEybbHN&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzUxNzc4NDg3MjMzMjk4LCJhc3NldF9hZ2VfZGF5cyI6MTA5NiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNAFplll0aWJjZsA3HL17a0DQ9euaWpZgIZzc-_Mpwjng&oe=6AE0DE84",
+    "watermarked_video_hd_url": "",
+    "watermarked_video_sd_url": "",
+    "image_crops": [],
+    "original_image_url": null,
+    "resized_image_url": null,
+    "watermarked_resized_image_url": null
+   },
+   {
+    "body": "No matter what you care about or how your life evolves, your tech can go there too.",
+    "cta_type": "SHOP_NOW",
+    "caption": "",
+    "link_description": "Designed in Australia, carried all over",
+    "link_url": "https://bellroy.com/collection/for-tech-lovers",
+    "title": "Your tech, our way",
+    "cta_text": "Shop Now",
+    "video_hd_url": "https://video.flas1-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQMJEUHQtabz2nfz5aoujyN8esAw5xJq9_yvuQFtr7sReTys9gd0Q9DgS9PKIiEKXUwMk1xA7CzpJsfNwamQNkDHcbM7EO60caC47jGqS6bMhA.mp4?_nc_cat=106&_nc_oc=Adpy0OPMylUCxtwI92v7KzrHI_TJ-KfUgOmjKyBujm0ng5v4AmiA0uTaZk4jE0iPV2p0dZ9JX3_J9jtWLWQtG1UD&_nc_sid=b66105&_nc_ht=video.flas1-1.fna.fbcdn.net&_nc_ohc=AUafSJyuEhMQ7kNvwFXujns&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjYyMTk3NjEzOTY2MTQ1OCwiYXNzZXRfYWdlX2RheXMiOjE0NzQsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjozMCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=4c2e6367dff9900f&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC80NjQwNkJBOUE0NEFCM0UzQzQ5NDQ2RUY1QUREQzQ4NF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfZXBoZW1lcmFsLzlFNDc2MjMxMTVGREQ1Rjg3NDc2MUY0RUIwMEZERkIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACakguit4-uaAhUCKAJDMywXQD5SLQ5WBBkYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZbaeAQA&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOn0TlR5b4ULPq0882_Pt2D0WJdJl4fiCK8l-tnA4hSPw&oe=6AE0F1DA",
+    "video_preview_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/453077220_519708067288908_6834006147087065851_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lp6312dhv1sQ7kNvwEyyP60&_nc_oc=AdoYsr6IlEFYr3_fyBBolUA44_dKKIlkzTJBt0Ij-aoOB_6UufFz8kaxeFr8Xha1fnu3MFCZ9lpMpsMv_EFqjn2K&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&oh=00_AQNVoT4tubZBg649n-FNrRz3gWROS_huD6HhjQeNpwc9Ag&oe=6AE0EACC",
+    "video_sd_url": "https://video.flas1-2.fna.fbcdn.net/o1/v/t2/f2/m412/AQOWk7q9SOOr3C4DRhyWnnroy5EABIhumYuwHaFyYZzO1k2ErQskdHR-3Db2kWGg6OLXoRuXomM8Yp2cz8E_IqW-.mp4?_nc_cat=110&_nc_oc=AdqsThNcqFQUL4aQX1PUKv37YzXmRk3az7X43oHn2rCR0jOAarvhY7IL0DueUuqhxoYParYHKBpvMqmNbi-IRjWH&_nc_sid=ef5aa3&_nc_ht=video.flas1-2.fna.fbcdn.net&_nc_ohc=j3HVXn0loC8Q7kNvwEOVol3&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNDI2LnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NjIxOTc2MTM5NjYxNDU4LCJhc3NldF9hZ2VfZGF5cyI6MTQ3NCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=4njhqW0QBOm-2YDwI4Kk7Q&_nc_ss=7b289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOhHbXyu2a_ykS4IoqnZBRLqMPofXtUJzV6SZ9v3N4sLw&oe=6AE0D303",
+    "watermarked_video_hd_url": "",
+    "watermarked_video_sd_url": "",
+    "image_crops": [],
+    "original_image_url": null,
+    "resized_image_url": null,
+    "watermarked_resized_image_url": null
+   }
+  ],
+  "body": {
+   "text": "{{product.brand}}"
+  },
+  "cta_type": "SHOP_NOW",
+  "display_format": "DCO",
+  "link_description": "{{product.description}}",
+  "link_url": "https://bellroy.com/collection/for-tech-lovers",
+  "images": [],
+  "page_categories": [
+   "Product/service"
+  ],
+  "page_like_count": 200363,
+  "title": "{{product.name}}",
+  "videos": [],
+  "is_reshared": false,
+  "extra_links": [],
+  "extra_texts": [],
+  "extra_images": [],
+  "extra_videos": [],
+  "country_iso_code": null,
+  "brazil_tax_id": null,
+  "additional_info": null,
+  "ec_certificates": []
+ },
+ "link_domain": "bellroy.com",
+ "link_path": "/collection/for-tech-lovers",
+ "dest_type": "website",
+ "match": "advertiser-page",
+ "roster_advertiser": "Bellroy",
+ "found_via": [
+  [
+   "roster",
+   "Bellroy"
+  ],
+  [
+   "roster",
+   "Bellroy -> page: Bellroy (113833593676)"
+  ]
+ ],
+ "first_seen_utc": "2026-10-23T06:48:12+00:00",
+ "files": {
+  "creative": "bellroy/1194881345055884/media/creative.jpg",
+  "video": "bellroy/1194881345055884/media/video.mp4",
+  "card": "bellroy/1194881345055884/card.png"
+ }
+}

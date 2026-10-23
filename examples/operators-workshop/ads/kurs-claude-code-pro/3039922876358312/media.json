@@ -1,0 +1,17 @@
+{
+ "video": "examples/operators-workshop/ads/kurs-claude-code-pro/3039922876358312/media/video.mp4",
+ "duration_s": 11.11,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg",
+  "f-004.jpg",
+  "f-005.jpg",
+  "f-006.jpg"
+ ],
+ "scene_frames": [],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:52:23+00:00"
+}

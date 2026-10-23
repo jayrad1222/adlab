@@ -1,0 +1,9 @@
+{
+ "template": "templates/problem-card.html",
+ "fields": {
+  "kicker": "AI, from founders who run their own businesses",
+  "hook": "The quote is still in drafts. It is 10pm.",
+  "offer_line": "Operators Workshop. 7-day free trial, then $97 a month. Cancel anytime.",
+  "wordmark": "OW."
+ }
+}

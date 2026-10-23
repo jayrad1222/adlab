@@ -1,0 +1,8 @@
+{
+ "template": "templates/text-only-ugly.html",
+ "fields": {
+  "hook": "Ridge Wallet 2.0 stops at 12 cards. Carry 13 and it is the wrong wallet.",
+  "body": "Up to 12 cards and IDs in all, the ID included.",
+  "wordmark": "RIDGE"
+ }
+}

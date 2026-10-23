@@ -1,0 +1,43 @@
+{
+ "template": "templates/photo-hook.html",
+ "fields": {
+  "cards": [
+   {
+    "step": "1",
+    "template": "photo-hook.html",
+    "kicker": "Demonstration, [date]. For the AI chat tab that never became a system. From the Operators Workshop founders.",
+    "hook": "This result got rejected. Why is on the next screen.",
+    "photo_image": "",
+    "body": "",
+    "offer_line": "",
+    "wordmark": "OW."
+   },
+   {
+    "step": "2",
+    "template": "carousel-card.html",
+    "hook": "Why it was rejected, and what changed",
+    "body": "[Why it was rejected, one line from the catalog row.]\n[What changed, one line from the catalog row.]",
+    "offer_line": "",
+    "wordmark": "OW."
+   },
+   {
+    "step": "3",
+    "template": "photo-hook.html",
+    "kicker": "Demonstration, [date]",
+    "hook": "Rejected result on the left. What changed on the right. Both are demonstrations.",
+    "photo_image": "",
+    "body": "",
+    "offer_line": "",
+    "wordmark": "OW."
+   },
+   {
+    "step": "4",
+    "template": "carousel-card.html",
+    "hook": "The prompts, systems, wins and mistakes behind the work",
+    "body": "Operators Workshop, an AI community run by three people who run businesses.",
+    "offer_line": "7 days free, then $97 a month.",
+    "wordmark": "OW."
+   }
+  ]
+ }
+}

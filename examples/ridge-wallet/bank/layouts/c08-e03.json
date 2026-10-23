@@ -1,0 +1,42 @@
+{
+ "template": "templates/carousel-card.html",
+ "fields": {
+  "cards": [
+   {
+    "step": "1",
+    "hook": "Three things to know before buying him a Ridge wallet: Royal Black, Alpine Navy or Matte Olive; 99 days from your order; no engraving.",
+    "body": "Buying a wallet for someone who says he needs nothing.",
+    "offer_line": "Return terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "2",
+    "hook": "Royal Black, Alpine Navy or Matte Olive",
+    "body": "Start with one of these three Ridge wallets.",
+    "offer_line": "Return terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "3",
+    "hook": "99 days from your order",
+    "body": "Return it in usable condition within 99 days of your order, not of the day he opens it. Once the return is approved, the exchange ships free in the U.S.",
+    "offer_line": "Return terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "4",
+    "hook": "No engraving",
+    "body": "A personalized wallet cannot be returned.",
+    "offer_line": "Return terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   },
+   {
+    "step": "5",
+    "hook": "Pick one of the three",
+    "body": "If he wants another finish, return it in usable condition within 99 days of your order; once the return is approved, the exchange ships free in the U.S.",
+    "offer_line": "Return terms as of 23 October 2026; they can change.",
+    "wordmark": "RIDGE"
+   }
+  ]
+ }
+}

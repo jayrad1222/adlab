@@ -1,0 +1,10 @@
+{
+ "template": "templates/photo-hook.html",
+ "fields": {
+  "kicker": "One jacket, one carry, [date]",
+  "hook": "Same jacket, same ID, cards and cash: the bifold, then the Ridge, photographed from the side.",
+  "photo_image": "",
+  "offer_line": "Ridge Wallet 2.0 with cash strap. One ID, [N] cards, [N] bills.",
+  "wordmark": "RIDGE"
+ }
+}

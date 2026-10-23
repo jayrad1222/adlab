@@ -1,0 +1,8 @@
+{
+ "template": "templates/text-only-ugly.html",
+ "fields": {
+  "hook": "One dollar figure on this card: $97 a month.",
+  "body": "Operators Workshop is an AI community run by three people who run businesses. No client guarantee, no deadline. Shared inside: 'the prompts, systems, wins and mistakes behind the work.'",
+  "wordmark": "OW."
+ }
+}

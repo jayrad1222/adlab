@@ -1,0 +1,29 @@
+[
+ {
+  "min_phone_px": 13.722222222222221,
+  "text_runs": 4,
+  "warnings": [],
+  "ok": true,
+  "size": "1x1",
+  "png": "examples/operators-workshop/bank/renders/c01-e01/c01-e01-1x1.png",
+  "html": "examples/operators-workshop/bank/renders/c01-e01/c01-e01-1x1.html"
+ },
+ {
+  "min_phone_px": 13.722222222222221,
+  "text_runs": 4,
+  "warnings": [],
+  "ok": true,
+  "size": "4x5",
+  "png": "examples/operators-workshop/bank/renders/c01-e01/c01-e01-4x5.png",
+  "html": "examples/operators-workshop/bank/renders/c01-e01/c01-e01-4x5.html"
+ },
+ {
+  "min_phone_px": 13.722222222222221,
+  "text_runs": 4,
+  "warnings": [],
+  "ok": true,
+  "size": "9x16",
+  "png": "examples/operators-workshop/bank/renders/c01-e01/c01-e01-9x16.png",
+  "html": "examples/operators-workshop/bank/renders/c01-e01/c01-e01-9x16.html"
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "min_phone_px": 13.722222222222221,
+  "text_runs": 10,
+  "warnings": [],
+  "ok": true,
+  "size": "1x1",
+  "png": "examples/ridge-wallet/bank/renders/c06-e01/c06-e01-1x1.png",
+  "html": "examples/ridge-wallet/bank/renders/c06-e01/c06-e01-1x1.html"
+ },
+ {
+  "min_phone_px": 13.722222222222221,
+  "text_runs": 10,
+  "warnings": [],
+  "ok": true,
+  "size": "4x5",
+  "png": "examples/ridge-wallet/bank/renders/c06-e01/c06-e01-4x5.png",
+  "html": "examples/ridge-wallet/bank/renders/c06-e01/c06-e01-4x5.html"
+ },
+ {
+  "min_phone_px": 13.722222222222221,
+  "text_runs": 10,
+  "warnings": [],
+  "ok": true,
+  "size": "9x16",
+  "png": "examples/ridge-wallet/bank/renders/c06-e01/c06-e01-9x16.png",
+  "html": "examples/ridge-wallet/bank/renders/c06-e01/c06-e01-9x16.html"
+ }
+]

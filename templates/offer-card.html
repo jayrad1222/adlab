@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>offer card</title><link rel="stylesheet" href="_base.css">
+<style>.art{background:var(--brand-primary);color:#fff}.art .hook,.art .offer,.art .wordmark,.art .kicker{color:#fff}.price{font-family:var(--font-head);font-weight:800;font-size:150px;line-height:1;margin:40px 0 10px}.per{font-size:40px;opacity:.85}.terms{font-size:36px;opacity:.85;margin-top:30px;line-height:1.3}</style>
+</head>
+<body><div class="art">
+  <div>
+    <div class="kicker" data-optional="kicker">{{kicker}}</div>
+    <div class="hook">{{hook}}</div>
+    <div class="price">{{price}}</div>
+    <div class="per" data-optional="per">{{per}}</div>
+    <div class="terms" data-optional="terms">{{terms}}</div>
+  </div>
+  <div class="footer"><div class="offer" data-optional="offer_line">{{offer_line}}</div><div class="wordmark">{{wordmark}}</div></div>
+</div></body>
+</html>

@@ -1,0 +1,32 @@
+{
+ "video": "examples/ridge-wallet/ads/bellroy/893004099363085/media/video.mp4",
+ "duration_s": 19.52,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg",
+  "f-004.jpg",
+  "f-005.jpg",
+  "f-006.jpg",
+  "f-007.jpg",
+  "f-008.jpg",
+  "f-009.jpg",
+  "f-010.jpg"
+ ],
+ "scene_frames": [
+  "s-001.jpg",
+  "s-002.jpg",
+  "s-003.jpg",
+  "s-004.jpg",
+  "s-005.jpg",
+  "s-006.jpg",
+  "s-007.jpg",
+  "s-008.jpg",
+  "s-009.jpg",
+  "s-010.jpg"
+ ],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:58:40+00:00"
+}

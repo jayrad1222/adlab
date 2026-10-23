@@ -1,0 +1,9 @@
+{
+ "template": "templates/problem-card.html",
+ "fields": {
+  "kicker": "Operators Workshop, an AI community. Two of its founders sell on Etsy, Amazon, Shopify and TikTok.",
+  "hook": "Product videos vs the shop's actual morning: messages, returns, restock.",
+  "offer_line": "7 days free, then $97 a month.",
+  "wordmark": "OW."
+ }
+}

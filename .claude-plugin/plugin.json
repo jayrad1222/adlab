@@ -1,0 +1,20 @@
+{
+  "name": "adlab",
+  "version": "0.1.0",
+  "displayName": "Ad Lab",
+  "description": "Decode your market from the ad libraries: competitors, every competitor ad analyzed, buying-situation personas, a Sutherland-style interrogation, an evidence-backed ad bank, optional renders, and a finance-gated test plan.",
+  "author": {
+    "name": "Scaling Skool / Operators Workshop"
+  },
+  "homepage": "https://github.com/jayrad1222/adlab",
+  "repository": "https://github.com/jayrad1222/adlab",
+  "license": "MIT",
+  "keywords": [
+    "ads",
+    "competitor-research",
+    "ad-library",
+    "creative-strategy",
+    "personas",
+    "marketing"
+  ]
+}

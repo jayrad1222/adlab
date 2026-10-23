@@ -1,0 +1,12 @@
+{
+ "template": "templates/three-reasons.html",
+ "fields": {
+  "kicker": "Switching from an old bifold",
+  "hook": "From bifold to Ridge wallet: order it, move the cards over, decide by day 99 from the order.",
+  "reason_1": "Day 1: the order. The 99 days start here.",
+  "reason_2": "When it arrives: move the cards over. Keep the old wallet.",
+  "reason_3": "By day 99 from the order: keep it, exchange it, or start a return.",
+  "offer_line": "Start a return within 99 days of the order. Not for personalized, warranty-claim or certain limited-edition items. Ridge return terms as of 23 October 2026; they can change.",
+  "wordmark": "RIDGE"
+ }
+}

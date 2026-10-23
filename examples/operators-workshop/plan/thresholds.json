@@ -1,0 +1,17 @@
+{
+  "label": "starting points, not benchmarks; change them after the first readout",
+  "primary_event": "trial start",
+  "target_cpa": 81.28,
+  "breakeven_cpa": 135.46,
+  "test_budget_per_concept": 1625.53,
+  "impression_floor": 2000,
+  "min_hook_rate": null,
+  "min_hold_rate": null,
+  "min_ctr": null,
+  "max_frequency": null,
+  "judge_after_conversions": 20,
+  "kill_cpa_multiple": 1.67,
+  "_unset": "min_hook_rate, min_hold_rate, min_ctr and max_frequency are null because library/finance/decision-rules.md leaves them to the member; tools/readout.py skips a rule whose threshold is null and says so",
+  "_kill": "kill_cpa_multiple = breakeven / target = 135.46 / 81.28, so the CPA kill rule fires above breakeven",
+  "source": "plan/economics.md computed 2026-10-23; thresholds from library/finance/decision-rules.md (it supplies no value for min_hook_rate, min_hold_rate, min_ctr or max_frequency, so they are null; impression_floor is its example value; target_cpa and breakeven_cpa are per trial start; kill_cpa_multiple is breakeven over target)"
+}

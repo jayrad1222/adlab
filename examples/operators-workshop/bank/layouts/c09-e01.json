@@ -1,0 +1,42 @@
+{
+ "template": "templates/carousel-card.html",
+ "fields": {
+  "cards": [
+   {
+    "step": "01",
+    "hook": "Before the chat tab: open your sent folder.",
+    "body": "Find the email you keep rewriting by hand. That is the first AI build, not a new tool. Example (made up): the reply to \"Is this in stock?\"",
+    "offer_line": "",
+    "wordmark": "OW."
+   },
+   {
+    "step": "02",
+    "hook": "Write its steps on paper, in order.",
+    "body": "One line each. Example: 1. Check the stock sheet. 2. Check the next delivery date. 3. Write the reply with both.",
+    "offer_line": "",
+    "wordmark": "OW."
+   },
+   {
+    "step": "03",
+    "hook": "Circle the step that never changes.",
+    "body": "Example: step 3, the shape of the reply. That step goes to the chat tab first. The checking stays with you for now.",
+    "offer_line": "",
+    "wordmark": "OW."
+   },
+   {
+    "step": "04",
+    "hook": "Paste the list, not the wish.",
+    "body": "Give the chat tab your steps and one real past reply with the customer's name taken out. Check what comes back against what you would have sent.",
+    "offer_line": "",
+    "wordmark": "OW."
+   },
+   {
+    "step": "05",
+    "hook": "Bring the list.",
+    "body": "You build it. See what is included on the About page.",
+    "offer_line": "7-day free trial, then $97 a month. Cancel anytime.",
+    "wordmark": "OW."
+   }
+  ]
+ }
+}

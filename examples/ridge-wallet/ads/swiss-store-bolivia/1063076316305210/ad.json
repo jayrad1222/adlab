@@ -1,0 +1,103 @@
+{
+ "source": "meta",
+ "ad_id": "1063076316305210",
+ "advertiser": "Swiss Store Bolivia",
+ "advertiser_id": "355291868419601",
+ "advertiser_slug": "swiss-store-bolivia",
+ "platforms": [
+  "facebook",
+  "instagram",
+  "audience_network",
+  "messenger",
+  "whatsapp"
+ ],
+ "start_date": "2026-08-17",
+ "end_date": "2026-10-22",
+ "is_active": true,
+ "days_active": 66,
+ "variant_count": 1,
+ "collation_id": "1056699443524055",
+ "format": "image",
+ "body_text": "Todo lo que necesitás, protegido y al alcance de tu mano. 💳\n\nProtegé tus tarjetas con la calidad de Victorinox. Los tarjeteros Altius Secrid ofrecen seguridad, organización y un diseño compacto que se adapta a cualquier estilo.\n\n#SwissStoreBolivia #VictorinoxBolivia  #ReadyToLive",
+ "title": "api.whatsapp.com",
+ "link_description": null,
+ "caption": "WhatsApp",
+ "cta_text": "Send WhatsApp message",
+ "cta_type": "WHATSAPP_MESSAGE",
+ "link_url": "https://api.whatsapp.com/send",
+ "image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/774667143_1077384181403935_5478786285961982049_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lTqU5b061rgQ7kNvwGqcLjx&_nc_oc=AdocD6KeV73B2V4RMW7ayoNtRw_AHGukG_4BMw7OkZWnOvVNBl9hsg37K4oR935l_OcSfeFy_LuEHpeAWwoHl2S0&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=AZqanpYimS4dP0DH7MXw2Q&_nc_ss=7b289&oh=00_AQNSIXNpG9xBhqGW-KLeXw-6ZIUgzCyAKBhvBxwdoG5wrA&oe=6AE0CBE0",
+ "video_preview_image_url": null,
+ "video_hd_url": null,
+ "video_sd_url": null,
+ "cards": [],
+ "page_like_count": 28623,
+ "page_profile_uri": "https://www.facebook.com/swissstorebolivia/",
+ "page_categories": [
+  "Producto/servicio"
+ ],
+ "byline": null,
+ "term_hits": [],
+ "eu": null,
+ "library_url": "https://www.facebook.com/ads/library/?id=1063076316305210",
+ "raw_snapshot": {
+  "branded_content": null,
+  "page_id": "355291868419601",
+  "page_is_deleted": false,
+  "page_profile_uri": "https://www.facebook.com/swissstorebolivia/",
+  "root_reshared_post": null,
+  "byline": null,
+  "disclaimer_label": null,
+  "page_name": "Swiss Store Bolivia",
+  "page_profile_picture_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/775013647_4325871837666043_9153364419833056761_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=c-WXLZvmXw8Q7kNvwHE6ck2&_nc_oc=AdpR5UDZwtP3ws0qCpMdYXsgAPl3G8dHq0TxtLeoA8NecAhW6dAs8L_QREo-0J0Gl6cSZlaEip0OeVozL87cOE_h&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=AZqanpYimS4dP0DH7MXw2Q&_nc_ss=7b289&oh=00_AQPX7bhNbF3NcwKE4iwnfWzYBJ7F8Jk2Ch5Zpuhy6wfh8A&oe=6AE0EC4D",
+  "event": null,
+  "caption": "WhatsApp",
+  "cta_text": "Send WhatsApp message",
+  "cards": [],
+  "body": {
+   "text": "Todo lo que necesitás, protegido y al alcance de tu mano. 💳\n\nProtegé tus tarjetas con la calidad de Victorinox. Los tarjeteros Altius Secrid ofrecen seguridad, organización y un diseño compacto que se adapta a cualquier estilo.\n\n#SwissStoreBolivia #VictorinoxBolivia  #ReadyToLive"
+  },
+  "cta_type": "WHATSAPP_MESSAGE",
+  "display_format": "IMAGE",
+  "link_description": null,
+  "link_url": "https://api.whatsapp.com/send",
+  "images": [
+   {
+    "image_crops": [],
+    "original_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/774667143_1077384181403935_5478786285961982049_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=lTqU5b061rgQ7kNvwGqcLjx&_nc_oc=AdocD6KeV73B2V4RMW7ayoNtRw_AHGukG_4BMw7OkZWnOvVNBl9hsg37K4oR935l_OcSfeFy_LuEHpeAWwoHl2S0&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=AZqanpYimS4dP0DH7MXw2Q&_nc_ss=7b289&oh=00_AQNSIXNpG9xBhqGW-KLeXw-6ZIUgzCyAKBhvBxwdoG5wrA&oe=6AE0CBE0",
+    "resized_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/774317246_1838423323791750_8645086964920720030_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=SwonSUVSbPUQ7kNvwFEvQSS&_nc_oc=AdpmDkreWeNnPJvOCQEKf6smdR9_YKeFnny3rHGHjFho0iJWJgtO3wkPp6KvERV7xCwjUvQH16YPrl13Ty969WW7&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=AZqanpYimS4dP0DH7MXw2Q&_nc_ss=7b289&oh=00_AQO3IGlQsnq_A__vmJjunYgMuiQMBb_qL_2uejfNLU7R2w&oe=6AE0DF16",
+    "watermarked_resized_image_url": ""
+   }
+  ],
+  "page_categories": [
+   "Producto/servicio"
+  ],
+  "page_like_count": 28623,
+  "title": "api.whatsapp.com",
+  "videos": [],
+  "is_reshared": false,
+  "extra_links": [],
+  "extra_texts": [],
+  "extra_images": [],
+  "extra_videos": [],
+  "country_iso_code": null,
+  "brazil_tax_id": null,
+  "additional_info": null,
+  "ec_certificates": []
+ },
+ "link_domain": "api.whatsapp.com",
+ "link_path": "/send",
+ "dest_type": "website",
+ "match": "keyword-neighbor",
+ "candidate_for": "Secrid",
+ "found_via": [
+  [
+   "roster",
+   "Secrid"
+  ]
+ ],
+ "first_seen_utc": "2026-10-23T06:49:48+00:00",
+ "files": {
+  "creative": "swiss-store-bolivia/1063076316305210/media/creative.jpg",
+  "card": "swiss-store-bolivia/1063076316305210/card.png"
+ }
+}

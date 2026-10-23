@@ -1,0 +1,17 @@
+{
+ "template": "templates/us-vs-them.html",
+ "fields": {
+  "kicker": "",
+  "hook": "Two places to put AI: a stranger's pitch deck, or your own drafts folder.",
+  "them_label": "Selling AI to other businesses",
+  "them_1": "A pitch deck for a shop you do not own",
+  "them_2": "A cold message to a stranger's inbox",
+  "them_3": "The build runs in their business",
+  "us_label": "AI on your own business",
+  "us_1": "Your supplier quote in drafts",
+  "us_2": "Your callback list from today's jobs",
+  "us_3": "Your invoice folder at month end",
+  "offer_line": "Operators Workshop, from founders who run businesses. 7-day free trial, then $97 a month.",
+  "wordmark": "OW."
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "video": "examples/operators-workshop/ads/apex-dental-marketing/1417552993798822/media/video.mp4",
+ "duration_s": 5.0,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg"
+ ],
+ "scene_frames": [],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:52:20+00:00"
+}

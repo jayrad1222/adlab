@@ -1,0 +1,8 @@
+{
+ "template": "templates/text-only-ugly.html",
+ "fields": {
+  "hook": "The first AI build does not need a client. It needs the invoice folder on your desk.",
+  "body": "Operators Workshop. 7 days free, then $97 a month.",
+  "wordmark": ""
+ }
+}

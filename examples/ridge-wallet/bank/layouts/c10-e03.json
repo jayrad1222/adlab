@@ -1,0 +1,8 @@
+{
+ "template": "templates/text-only-ugly.html",
+ "fields": {
+  "hook": "One ID, [N] cards, [N] bills: one jacket, photographed with a bifold, then with a Ridge, on [date].",
+  "body": "Ridge Wallet 2.0: up to 12 cards and IDs, cash in a strap or clip.",
+  "wordmark": "RIDGE"
+ }
+}

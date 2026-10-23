@@ -1,0 +1,94 @@
+{
+ "steps": {
+  "setup": {
+   "status": "skipped",
+   "updated": "2026-10-23T09:00:50+00:00",
+   "note": "tooling is installed once per machine; the example used the builder's venv (Full mode)",
+   "count": null
+  },
+  "intake": {
+   "status": "done",
+   "updated": "2026-10-23T06:41:13+00:00",
+   "note": "public pages only; answers are defaults, labeled",
+   "count": null
+  },
+  "competitors": {
+   "status": "done",
+   "updated": "2026-10-23T06:41:13+00:00",
+   "note": "7 advertisers in three rings; confirmed by the builder for the example",
+   "count": 7
+  },
+  "pull": {
+   "status": "done",
+   "updated": "2026-10-23T06:57:09+00:00",
+   "note": "Meta, 10 plan items, caps 15 per advertiser and 150 total",
+   "count": 150
+  },
+  "process": {
+   "status": "done",
+   "updated": "2026-10-23T07:04:40+00:00",
+   "note": "frames for every video, no transcripts, 40 landing captures, ad.md for all",
+   "count": null
+  },
+  "analyze": {
+   "status": "done",
+   "updated": "2026-10-23T07:09:50+00:00",
+   "note": "121 rows, 9 roster Pages, market map and 6 competitor notes",
+   "count": 121
+  },
+  "personas": {
+   "status": "done",
+   "updated": "2026-10-23T07:19:56+00:00",
+   "note": "5 buying situations; language banks are market and site language, no customer quotes yet",
+   "count": 5
+  },
+  "interrogate": {
+   "status": "done",
+   "updated": "2026-10-23T08:01:50+00:00",
+   "note": "diagnosis: perception (gadget read, discount habit); 7 recommendations, 3 moonshots, opposite pass on 5 conventions; critic blocked v1 (38 notes), v2 answers all, re-review in the release pass",
+   "count": null
+  },
+  "angles": {
+   "status": "done",
+   "updated": "2026-10-23T08:23:28+00:00",
+   "note": "10 concepts (5 ready-capable, 5 held for an asset, a landing or an owner decision); matrix, opposite pass; critic notes and v2 replies in every brief",
+   "count": 10
+  },
+  "bank": {
+   "status": "done",
+   "updated": "2026-10-23T08:58:26+00:00",
+   "note": "32 entries, 11 ready after the critic (3 rendered), 21 held for a take, a photo, an owner's wallet, a landing or a pricing decision; critic notes on every entry; board and CSV exported",
+   "count": 32
+  },
+  "assets": {
+   "status": "done",
+   "updated": "2026-10-23T07:53:33+00:00",
+   "note": "no files supplied (stand-in member); empty catalog; five planned shoots listed as not yet usable",
+   "count": 0
+  },
+  "render": {
+   "status": "done",
+   "updated": "2026-10-23T08:58:26+00:00",
+   "note": "static: c06-e01, c03-e01, c05-e02 at 1:1, 4:5, 9:16; legibility and 9:16 overlay checks clean; no storyboards (every video is held); no Higgsfield",
+   "count": 3
+  },
+  "plan": {
+   "status": "done",
+   "updated": "2026-10-23T09:00:26+00:00",
+   "note": "target CPA 47.38 per purchase (placeholder inputs); 5 concepts judgeable per month at the 6000 placeholder budget; batch one: 5 ready concepts with run conditions; CPA provisional until returns are read at day 99",
+   "count": null
+  },
+  "readout": {
+   "status": "skipped",
+   "updated": "2026-10-23T09:00:50+00:00",
+   "note": "no ads have run, so there is no Ads Manager export to read; the test plan says what to do after week one",
+   "count": null
+  },
+  "refresh": {
+   "status": "skipped",
+   "updated": "2026-10-23T09:00:50+00:00",
+   "note": "a refresh re-pulls the roster after the first weeks of testing; not run for the example",
+   "count": null
+  }
+ }
+}

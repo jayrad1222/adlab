@@ -1,0 +1,14 @@
+{
+  "_note": "Starting rates from Higgsfield's API launch blog (September 2026). Prices change; update this file from console.higgsfield.ai before relying on it. Images are per image, video per second of output.",
+  "higgsfield-ai/soul/v2/standard": {"unit": "image", "usd": 0.0032},
+  "higgsfield-ai/soul-cinema": {"unit": "image", "usd": 0.0032},
+  "higgsfield-ai/marketing-studio-image": {"unit": "image", "usd": 0.0059},
+  "qwen/image-3": {"unit": "image", "usd": 0.03},
+  "recraft/v4.1": {"unit": "image", "usd": 0.035},
+  "ideogram/v4": {"unit": "image", "usd": 0.06},
+  "kling/v2.5-turbo": {"unit": "second", "usd": 0.042},
+  "kling/v2.6": {"unit": "second", "usd": 0.07},
+  "kling/v3.0": {"unit": "second", "usd": 0.112},
+  "seedance/v2.5": {"unit": "second", "usd": 0.0738},
+  "wan/v3.0": {"unit": "second", "usd": 0.20}
+}

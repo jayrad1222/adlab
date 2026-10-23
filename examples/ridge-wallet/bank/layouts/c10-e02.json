@@ -1,0 +1,9 @@
+{
+ "template": "templates/problem-card.html",
+ "fields": {
+  "kicker": "For the jacket that carries an ID, cards and cash",
+  "hook": "The bulge in the jacket is the bifold: one ID, [N] cards, [N] bills.",
+  "offer_line": "Ridge Wallet 2.0: up to 12 cards and IDs, cash in a strap or clip.",
+  "wordmark": "RIDGE"
+ }
+}

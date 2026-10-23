@@ -1,0 +1,10 @@
+{
+ "template": "templates/photo-hook.html",
+ "fields": {
+  "kicker": "One owner's Ridge wallet, since [year]",
+  "hook": "What does [first name]'s Ridge wallet look like after [N] years in one pocket? This.",
+  "photo_image": "",
+  "offer_line": "[First name]'s own Ridge, photographed [month, year]. Unretouched.",
+  "wordmark": "RIDGE"
+ }
+}

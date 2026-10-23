@@ -1,0 +1,40 @@
+23:47:30 [roster] 'Ekster' (name) -> 23 ads, 23 new, reported=466, cards=18, capped=34, total=23 
+23:47:36    typeahead for 'Ekster' matched ['Ekster']
+23:47:52 [roster] 'Ekster -> page: Ekster (1475181792786801)' (page) -> 15 ads, 0 new, reported=387, cards=0, capped=41, total=23 
+23:48:21 [roster] 'Bellroy' (name) -> 23 ads, 23 new, reported=1082, cards=22, capped=35, total=46 
+23:48:28    typeahead for 'Bellroy' matched ['Bellroy', 'Bellroy', 'Bellroy - momo購物網 ']
+23:48:45 [roster] 'Bellroy -> page: Bellroy (113833593676)' (page) -> 15 ads, 0 new, reported=812, cards=0, capped=43, total=46 
+23:49:05 [roster] 'Bellroy -> page: Bellroy (493192394178353)' (page) -> 0 ads, 0 new, reported=?, cards=0, capped=0, total=46 
+23:49:26 [roster] 'Bellroy -> page: Bellroy - momo購物網  (949937841540407)' (page) -> 1 ads, 1 new, reported=1, cards=1, capped=0, total=47 
+23:49:49 [roster] 'Secrid' (name) -> 8 ads, 8 new, reported=197, cards=8, capped=51, total=55 
+23:49:56    typeahead for 'Secrid' matched ['Secrid', 'Secrid', 'Secrid']
+23:50:16 [roster] 'Secrid -> page: Secrid (250404264977330)' (page) -> 0 ads, 0 new, reported=?, cards=0, capped=0, total=55 
+23:50:35 [roster] 'Secrid -> page: Secrid (1165698229957725)' (page) -> 0 ads, 0 new, reported=?, cards=0, capped=0, total=55 
+23:50:56 [roster] 'Secrid -> page: Secrid (372263169297203)' (page) -> 0 ads, 0 new, reported=?, cards=0, capped=0, total=55 
+23:51:38 [roster] 'Andar' (name) -> 23 ads, 23 new, reported=138, cards=20, capped=37, total=78 
+23:51:45    typeahead for 'Andar Wallets' matched []
+23:52:14 [roster] 'Dango Products' (name) -> 22 ads, 21 new, reported=69, cards=19, capped=37, total=99 
+23:52:21    typeahead for 'Dango Products' matched ['Dango Products']
+23:52:39 [roster] 'Dango Products -> page: Dango Products (116517328707388)' (page) -> 15 ads, 0 new, reported=60, cards=0, capped=45, total=99 
+23:53:14 [roster] 'Thread Wallets' (name) -> 23 ads, 23 new, reported=258, cards=23, capped=37, total=122 
+23:53:21    typeahead for 'Thread Wallets' matched ['Thread Wallets', 'Thread Wallets Aus']
+23:53:39 [roster] 'Thread Wallets -> page: Thread Wallets (1557105941178762)' (page) -> 15 ads, 0 new, reported=170, cards=0, capped=45, total=122 
+23:54:00 [roster] 'Thread Wallets -> page: Thread Wallets Aus (679269105280279)' (page) -> 0 ads, 0 new, reported=?, cards=0, capped=20, total=122 
+23:54:20 [attention] 'Nomad Goods' (name) -> 8 ads, 8 new, reported=52, cards=3, capped=40, total=130 
+23:54:27    typeahead for 'Nomad Goods' matched []
+23:54:52 [self] 'Ridge (the member, for comparison)' (name) -> 20 ads, 20 new, reported=1891, cards=17, capped=20, total=150 
+23:54:59    typeahead for 'Ridge Wallet' matched []
+23:55:17 [discovery] 'category: minimalist wallet' (keyword) -> 2 ads, 0 new, reported=3887, cards=0, capped=57, total=150 
+23:55:26 [discovery] 'category: slim RFID wallet' (keyword) -> 0 ads, 0 new, reported=8052, cards=0, capped=40, total=150 
+23:55:29 EU detail pass on 10 ads
+23:55:35 [EU] 'detail 34511472868451367' (id) -> 1 ads, 0 new, reported=?, cards=0, capped=0, total=150 
+23:55:44 [EU] 'detail 1811485232901887' (id) -> 1 ads, 0 new, reported=1, cards=0, capped=1, total=150 
+23:55:54 [EU] 'detail 1562981438714928' (id) -> 11 ads, 0 new, reported=262, cards=1, capped=19, total=150 
+23:56:03 [EU] 'detail 718837344646222' (id) -> 1 ads, 0 new, reported=1, cards=0, capped=1, total=150 
+23:56:12 [EU] 'detail 1617889383260518' (id) -> 12 ads, 0 new, reported=262, cards=0, capped=19, total=150 
+23:56:23 [EU] 'detail 1850535302597312' (id) -> 12 ads, 0 new, reported=262, cards=1, capped=19, total=150 
+23:56:33 [EU] 'detail 1813645310085521' (id) -> 1 ads, 0 new, reported=123, cards=0, capped=30, total=150 
+23:56:45 [EU] 'detail 1822620345763692' (id) -> 1 ads, 0 new, reported=123, cards=1, capped=30, total=150 
+23:56:54 [EU] 'detail 1552078092865585' (id) -> 1 ads, 0 new, reported=123, cards=1, capped=30, total=150 
+23:57:04 [EU] 'detail 2117113273022536' (id) -> 11 ads, 0 new, reported=262, cards=0, capped=19, total=150 
+23:57:08 done in 603s, unique ads 150

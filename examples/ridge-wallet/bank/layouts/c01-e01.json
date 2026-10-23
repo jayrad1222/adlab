@@ -1,0 +1,9 @@
+{
+ "template": "templates/problem-card.html",
+ "fields": {
+  "kicker": "The day the old wallet gives out",
+  "hook": "The bifold split at the fold. Next: a Ridge, and 99 days from the order to start a return.",
+  "offer_line": "Start a return within 99 days of the order. Not for personalized, warranty-claim or certain limited-edition items. Ridge return terms as of 23 October 2026; they can change.",
+  "wordmark": "RIDGE"
+ }
+}

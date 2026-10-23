@@ -1,0 +1,18 @@
+[
+ {"kind": "name", "q": "Maker School", "label": "Maker School", "group": "roster", "advertiser": "Maker School"},
+ {"kind": "cobrand", "q": "Maker School", "label": "Maker School", "group": "roster", "advertiser": "Maker School"},
+ {"kind": "name", "q": "AI Automation Society", "label": "AI Automation Society", "group": "roster", "advertiser": "AI Automation Society"},
+ {"kind": "cobrand", "q": "AI Automation Society", "label": "AI Automation Society", "group": "roster", "advertiser": "AI Automation Society"},
+ {"kind": "name", "q": "Claude Code Club", "label": "Claude Code Club", "group": "roster", "advertiser": "Claude Code Club"},
+ {"kind": "cobrand", "q": "Claude Code Club", "label": "Claude Code Club", "group": "roster", "advertiser": "Claude Code Club"},
+ {"kind": "name", "q": "AI Operator Academy", "label": "AI Operator Academy", "group": "roster", "advertiser": "AI Operator Academy"},
+ {"kind": "cobrand", "q": "AI Operator Academy", "label": "AI Operator Academy", "group": "roster", "advertiser": "AI Operator Academy"},
+ {"kind": "name", "q": "Disrupter Academy", "label": "Disrupter Academy", "group": "roster", "advertiser": "Disrupter Academy"},
+ {"kind": "cobrand", "q": "Disrupter Academy", "label": "Disrupter Academy", "group": "roster", "advertiser": "Disrupter Academy"},
+ {"kind": "name", "q": "AI Video Bootcamp", "label": "AI Video Bootcamp", "group": "roster", "advertiser": "AI Video Bootcamp"},
+ {"kind": "name", "q": "Hashtag NoCode", "label": "Hashtag NoCode", "group": "attention", "advertiser": "Hashtag NoCode"},
+ {"kind": "name", "q": "Arcads AI", "label": "Arcads AI", "group": "attention", "advertiser": "Arcads AI"},
+ {"kind": "keyword", "q": "AI community skool", "label": "category: AI community skool", "group": "discovery"},
+ {"kind": "keyword", "q": "learn AI for your business", "label": "category: learn AI for your business", "group": "discovery"},
+ {"kind": "keyword", "q": "build with AI course", "label": "category: build with AI course", "group": "discovery"}
+]

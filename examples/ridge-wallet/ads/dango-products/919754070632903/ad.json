@@ -1,0 +1,106 @@
+{
+ "source": "meta",
+ "ad_id": "919754070632903",
+ "advertiser": "Dango Products",
+ "advertiser_id": "116517328707388",
+ "advertiser_slug": "dango-products",
+ "platforms": [
+  "facebook",
+  "instagram",
+  "messenger",
+  "threads"
+ ],
+ "start_date": "2026-08-20",
+ "end_date": "2026-10-05",
+ "is_active": true,
+ "days_active": 63,
+ "variant_count": 2,
+ "collation_id": "2399391100584006",
+ "format": "image",
+ "body_text": "You've been selected for an exclusive SK1 offer. Take an extra $20 off with code SLIDE20X, on top of our current sale price. That brings the SK1 down to $19.",
+ "title": "$19 SK1 — Exclusive offer",
+ "link_description": "Use code SLIDE20X. Limited Time Only.",
+ "caption": "dangoproducts.com",
+ "cta_text": "Shop now",
+ "cta_type": "SHOP_NOW",
+ "link_url": "https://www.dangoproducts.com/collections/sk1-deals",
+ "image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/779957376_1401966175206726_6206093238955987226_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UaC7YkFiiwYQ7kNvwHTZuTl&_nc_oc=AdpOH2zsWp3yDm39Cas_xYOdIbIRXdwRQD7P7YlwtKhJbirt08K_8bNQsZDhceCVQ5f4GJHyJ-2_szg9tgBQr6eT&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=29EZUNpgeF6ykvGG8gNFoA&_nc_ss=7b289&oh=00_AQNYRnzooqyF9a1A5WcCghFCNCzBpXhpO1h2-rulcJVq2Q&oe=6AE0DB3A",
+ "video_preview_image_url": null,
+ "video_hd_url": null,
+ "video_sd_url": null,
+ "cards": [],
+ "page_like_count": 103580,
+ "page_profile_uri": "https://www.facebook.com/dangoproducts/",
+ "page_categories": [
+  "Product/service"
+ ],
+ "byline": null,
+ "term_hits": [],
+ "eu": null,
+ "library_url": "https://www.facebook.com/ads/library/?id=919754070632903",
+ "raw_snapshot": {
+  "branded_content": null,
+  "page_id": "116517328707388",
+  "page_is_deleted": false,
+  "page_profile_uri": "https://www.facebook.com/dangoproducts/",
+  "root_reshared_post": null,
+  "byline": null,
+  "disclaimer_label": null,
+  "page_name": "Dango Products",
+  "page_profile_picture_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/782144938_27741326238843179_1953533809314823254_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=4jtLMjL_DPkQ7kNvwH_rwW3&_nc_oc=AdpNqaMVxnPwwq-qiJEVP0EMSMjJlezPZqEgjLNiYc3Vp27VmZu1q39XIRbBpEiJUt3uaKEYKMy8cPuC8wOn4jTK&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=29EZUNpgeF6ykvGG8gNFoA&_nc_ss=7b289&oh=00_AQOuGEs_QHHOqgyljeELZGfWH6s_Dox3bBbU0nA8rU3Qog&oe=6AE0D001",
+  "event": null,
+  "caption": "dangoproducts.com",
+  "cta_text": "Shop now",
+  "cards": [],
+  "body": {
+   "text": "You've been selected for an exclusive SK1 offer. Take an extra $20 off with code SLIDE20X, on top of our current sale price. That brings the SK1 down to $19."
+  },
+  "cta_type": "SHOP_NOW",
+  "display_format": "IMAGE",
+  "link_description": "Use code SLIDE20X. Limited Time Only.",
+  "link_url": "https://www.dangoproducts.com/collections/sk1-deals",
+  "images": [
+   {
+    "image_crops": [],
+    "original_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/779957376_1401966175206726_6206093238955987226_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UaC7YkFiiwYQ7kNvwHTZuTl&_nc_oc=AdpOH2zsWp3yDm39Cas_xYOdIbIRXdwRQD7P7YlwtKhJbirt08K_8bNQsZDhceCVQ5f4GJHyJ-2_szg9tgBQr6eT&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=29EZUNpgeF6ykvGG8gNFoA&_nc_ss=7b289&oh=00_AQNYRnzooqyF9a1A5WcCghFCNCzBpXhpO1h2-rulcJVq2Q&oe=6AE0DB3A",
+    "resized_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/779357220_1974934233207847_6168855608055208287_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Lr0sfo_mjX8Q7kNvwH3ofUq&_nc_oc=Adr97_K3kwSlv89IDob49xqTuqcvLWhTmplsh0jJUA6ULntmnRpq4U2_eKKLT2t9w7oYvTUlF-0SiM0D8Qq1LTTc&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=29EZUNpgeF6ykvGG8gNFoA&_nc_ss=7b289&oh=00_AQO18hV8nu-_OQG-yNpJCSgwfT4NgbYoYgzX4l-kFyPEpg&oe=6AE0ED24",
+    "watermarked_resized_image_url": ""
+   }
+  ],
+  "page_categories": [
+   "Product/service"
+  ],
+  "page_like_count": 103580,
+  "title": "$19 SK1 — Exclusive offer",
+  "videos": [],
+  "is_reshared": false,
+  "extra_links": [],
+  "extra_texts": [],
+  "extra_images": [],
+  "extra_videos": [],
+  "country_iso_code": null,
+  "brazil_tax_id": null,
+  "additional_info": null,
+  "ec_certificates": []
+ },
+ "link_domain": "dangoproducts.com",
+ "link_path": "/collections/sk1-deals",
+ "dest_type": "product-page",
+ "match": "advertiser-page",
+ "roster_advertiser": "Dango Products",
+ "found_via": [
+  [
+   "roster",
+   "Dango Products"
+  ],
+  [
+   "roster",
+   "Dango Products -> page: Dango Products (116517328707388)"
+  ]
+ ],
+ "first_seen_utc": "2026-10-23T06:52:07+00:00",
+ "files": {
+  "creative": "dango-products/919754070632903/media/creative.jpg",
+  "card": "dango-products/919754070632903/card.png"
+ }
+}

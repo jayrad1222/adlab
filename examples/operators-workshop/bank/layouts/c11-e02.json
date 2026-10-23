@@ -1,0 +1,8 @@
+{
+ "template": "templates/text-only-ugly.html",
+ "fields": {
+  "hook": "Will the founders check my AI build before I use it?",
+  "body": "No. The founders do not review or build members' work.",
+  "wordmark": "OW."
+ }
+}

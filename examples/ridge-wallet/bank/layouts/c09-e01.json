@@ -1,0 +1,12 @@
+{
+ "template": "templates/offer-card.html",
+ "fields": {
+  "kicker": "Ridge Wallet, aluminum",
+  "hook": "$95 for the wallet, no code. If it is lost, today's replacement fee is $17.95, up to twice.",
+  "price": "$95",
+  "per": "one wallet, no code",
+  "terms": "Start a return within 99 days of the order; it must be in usable condition. Not eligible for returns: personalized items, warranty claim orders and certain limited edition items. Defective parts free. Lost: $17.95 replacement fee today, up to twice. Claims are reviewed and can be denied; Ridge may ask for proof of purchase and photos. Terms as of 23 October 2026; they can change.",
+  "offer_line": "",
+  "wordmark": "RIDGE"
+ }
+}

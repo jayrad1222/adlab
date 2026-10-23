@@ -1,0 +1,12 @@
+{
+ "template": "templates/three-reasons.html",
+ "fields": {
+  "kicker": "For a carry that is the same every day",
+  "hook": "Ridge Wallet 2.0, counted: one ID, up to 11 cards, 12 at most.",
+  "reason_1": "The ID: it counts as one of the 12.",
+  "reason_2": "The cards: up to 11 beside it.",
+  "reason_3": "The limit: a 13th card means a different wallet.",
+  "offer_line": "The count is listed on the Ridge Wallet 2.0 product page.",
+  "wordmark": "RIDGE"
+ }
+}

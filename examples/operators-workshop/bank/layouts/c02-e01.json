@@ -1,0 +1,10 @@
+{
+ "template": "templates/photo-hook.html",
+ "fields": {
+  "kicker": "A founder's own screen, [date from the catalog row]. Operators Workshop: AI for business owners.",
+  "hook": "The AI's draft vs the version that went out, side by side, same date.",
+  "offer_line": "7 days free, then $97 a month.",
+  "photo_image": "",
+  "wordmark": "OW."
+ }
+}

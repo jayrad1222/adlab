@@ -1,0 +1,46 @@
+{
+ "1": [
+  {
+   "1": "AR10942234166510485505",
+   "2": "CR14928184037351620609",
+   "3": {
+    "1": {
+     "4": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=8672091476&creativeId=828682530653&uiFeatures=12,54&adGroupId=200762597709&versionId=2&assets=%3DH4sIAAAAAAAAAOPi5uLkaGxu6D_BI8AIAAYOlG0NAAAA&sig=ACiVB_zNaiWERBd_-i0d8gi2YQlU5Pz0LQ&htmlParentId=fletch-render-4215431892196643848&responseCallback=fletchCallback4215431892196643848"
+    }
+   },
+   "4": 3,
+   "6": {
+    "1": "1792554131",
+    "2": 889088000
+   },
+   "7": {
+    "1": "1792735026",
+    "2": 983957000
+   },
+   "12": "BlueVision Interactive Limited",
+   "13": 3
+  },
+  {
+   "1": "AR10942234166510485505",
+   "2": "CR09413704852606812161",
+   "3": {
+    "1": {
+     "4": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5735373528&creativeId=620713673515&uiFeatures=12,54&adGroupId=140286824399&itemIds=9614874730226571943&sig=ACiVB_yHJSu-bEXR8jKB89h_ZSUX4DdRjQ&htmlParentId=fletch-render-16171504267118545110&responseCallback=fletchCallback16171504267118545110"
+    }
+   },
+   "4": 2,
+   "6": {
+    "1": "1686898800"
+   },
+   "7": {
+    "1": "1792735003",
+    "2": 46996000
+   },
+   "12": "BlueVision Interactive Limited",
+   "13": 1102
+  }
+ ],
+ "2": "CgoAP7zmhhGw5x1vEhCcbcb+49m7B5dG0zsAAAAAGgn8+GbB+CYVE8w=",
+ "4": "500000",
+ "5": "600000"
+}

@@ -1,0 +1,102 @@
+{
+ "source": "meta",
+ "ad_id": "1798888447902411",
+ "advertiser": "Inkster Tattoos",
+ "advertiser_id": "2376218095742168",
+ "advertiser_slug": "inkster-tattoos",
+ "platforms": [
+  "facebook",
+  "instagram",
+  "messenger",
+  "threads"
+ ],
+ "start_date": "2026-10-01",
+ "end_date": "2026-10-06",
+ "is_active": true,
+ "days_active": 21,
+ "variant_count": 1,
+ "collation_id": "1075065365521038",
+ "format": "image",
+ "body_text": "🌱 Tatouages naturels de 2 semaines\n🤙 Application en quelques secondes\n⭐️ Développé après 36 heures\n💦 Résistant à la friction et à l'eau.\n❤️ Plus de 100 000 clients tatouès",
+ "title": "Tatouages naturels de 2 semaines",
+ "link_description": null,
+ "caption": "inkster.fr",
+ "cta_text": "Shop now",
+ "cta_type": "SHOP_NOW",
+ "link_url": "https://inkster.fr/collections/maskulin",
+ "image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/830434325_2417790502086106_6176323078643533427_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=U9ebTLsaeSoQ7kNvwG7D6KT&_nc_oc=Adr6i7Za4HqKikF8g_82pLaHPqHArS2iPmGJwZJ3N7cvJL6AzGho9iVKpqNoukakeh8E4GJP4mr4WEgr_QZyAZdn&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPb9Pi-WWBFg0thR3EC0Ez0HIztkAUReNtEnj4sHZCtGA&oe=6AE0C3DC",
+ "video_preview_image_url": null,
+ "video_hd_url": null,
+ "video_sd_url": null,
+ "cards": [],
+ "page_like_count": 18077,
+ "page_profile_uri": "https://www.facebook.com/100064811073700/",
+ "page_categories": [
+  "Website"
+ ],
+ "byline": "",
+ "term_hits": [],
+ "eu": null,
+ "library_url": "https://www.facebook.com/ads/library/?id=1798888447902411",
+ "raw_snapshot": {
+  "branded_content": null,
+  "page_id": "2376218095742168",
+  "page_is_deleted": false,
+  "page_profile_uri": "https://www.facebook.com/100064811073700/",
+  "root_reshared_post": null,
+  "byline": "",
+  "disclaimer_label": null,
+  "page_name": "Inkster Tattoos",
+  "page_profile_picture_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/830934445_1458675016112528_2184414558248917305_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=LOGRsqzRUGIQ7kNvwE-P3CY&_nc_oc=AdqvXVacFBEdsnmJ65voGmQUTto5bIRJ0JuWajsTwOM7eErEbiUB1I0P9puYquGhnYfd8DT2EazbjRkc3YVh8FXq&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPuYUP-R3OjchfPiE3pWQ9hDmyXhYdW5fcYHw5lm_AYhw&oe=6AE0CC65",
+  "event": null,
+  "caption": "inkster.fr",
+  "cta_text": "Shop now",
+  "cards": [],
+  "body": {
+   "text": "🌱 Tatouages naturels de 2 semaines\n🤙 Application en quelques secondes\n⭐️ Développé après 36 heures\n💦 Résistant à la friction et à l'eau.\n❤️ Plus de 100 000 clients tatouès"
+  },
+  "cta_type": "SHOP_NOW",
+  "display_format": "IMAGE",
+  "link_description": null,
+  "link_url": "https://inkster.fr/collections/maskulin",
+  "images": [
+   {
+    "image_crops": [],
+    "original_image_url": "https://scontent.flas1-1.fna.fbcdn.net/v/t39.35426-6/830434325_2417790502086106_6176323078643533427_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=U9ebTLsaeSoQ7kNvwG7D6KT&_nc_oc=Adr6i7Za4HqKikF8g_82pLaHPqHArS2iPmGJwZJ3N7cvJL6AzGho9iVKpqNoukakeh8E4GJP4mr4WEgr_QZyAZdn&_nc_zt=14&_nc_ht=scontent.flas1-1.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPb9Pi-WWBFg0thR3EC0Ez0HIztkAUReNtEnj4sHZCtGA&oe=6AE0C3DC",
+    "resized_image_url": "https://scontent.flas1-2.fna.fbcdn.net/v/t39.35426-6/831279171_1601339725068339_3344805680429807542_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ThQmwvWM2cwQ7kNvwHcXrCO&_nc_oc=Adr-nXoGq0udWOMS8H_krFQIOOBRuSBWK9v4uLuZc8PBGayUInIyuD1d2yBipqSVymZMCVP872Gu82cgTxhW1Z6N&_nc_zt=14&_nc_ht=scontent.flas1-2.fna&_nc_gid=l_ja80JQsPBEzzfHYp3Bxw&_nc_ss=7b289&oh=00_AQPvc5oMfZU7z9CeVZO6vIuAt-DfVUt8jjpoNuZVUA0eOw&oe=6AE0BB76",
+    "watermarked_resized_image_url": ""
+   }
+  ],
+  "page_categories": [
+   "Website"
+  ],
+  "page_like_count": 18077,
+  "title": "Tatouages naturels de 2 semaines",
+  "videos": [],
+  "is_reshared": false,
+  "extra_links": [],
+  "extra_texts": [],
+  "extra_images": [],
+  "extra_videos": [],
+  "country_iso_code": null,
+  "brazil_tax_id": null,
+  "additional_info": null,
+  "ec_certificates": []
+ },
+ "link_domain": "inkster.fr",
+ "link_path": "/collections/maskulin",
+ "dest_type": "product-page",
+ "match": "keyword-neighbor",
+ "candidate_for": "Ekster",
+ "found_via": [
+  [
+   "roster",
+   "Ekster"
+  ]
+ ],
+ "first_seen_utc": "2026-10-23T06:47:25+00:00",
+ "files": {
+  "creative": "inkster-tattoos/1798888447902411/media/creative.jpg",
+  "card": "inkster-tattoos/1798888447902411/card.png"
+ }
+}

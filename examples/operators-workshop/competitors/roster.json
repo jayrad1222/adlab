@@ -1,0 +1,16 @@
+{
+ "confirmed": true,
+ "confirmed_by": "the builder, for the example run (a member would confirm in /adlab:competitors)",
+ "confirmed_at": "2026-10-23",
+ "cobrand_pages": ["Skool"],
+ "advertisers": [
+  {"name": "Maker School", "ring": "direct", "confidence": "high", "why": "Skool community teaching AI automation to beginners and freelancers; among the most-advertised AI groups in the October 21 Ad Library sample (observed)", "site": "https://www.skool.com", "page_names": ["Maker School: AI Automation"]},
+  {"name": "AI Automation Society", "ring": "direct", "confidence": "high", "why": "Skool community (free tier plus Plus tier) for AI automation builders; runs retargeting ads for half-signups (observed in the October 21 sample)", "site": "https://www.skool.com", "page_names": []},
+  {"name": "Claude Code Club", "ring": "direct", "confidence": "high", "why": "Skool community for people building with Claude Code; ads run under Skool's own Page (observed); closest tool overlap with Operators Workshop", "site": "https://www.skool.com", "page_names": []},
+  {"name": "AI Operator Academy", "ring": "direct", "confidence": "medium", "why": "Skool community with an operator framing close to Operators Workshop's name; co-branded ads only in the October 21 sample (observed)", "site": "https://www.skool.com", "page_names": []},
+  {"name": "Disrupter Academy", "ring": "indirect", "confidence": "medium", "why": "Paid community selling AI-and-business skills with a personality-led funnel; a different delivery model for the same job (inferred)", "site": "", "page_names": ["CTtheDisrupter"]},
+  {"name": "AI Video Bootcamp", "ring": "indirect", "confidence": "medium", "why": "Course selling AI video skills; the ad is the demo pattern (observed); same curious-beginner persona, different outcome", "site": "", "page_names": []},
+  {"name": "Hashtag NoCode", "ring": "attention", "confidence": "medium", "why": "No-code tooling educator advertising to the same build-it-yourself owner; competes for the same two seconds (inferred from the discovery pull)", "site": "", "page_names": []},
+  {"name": "Arcads AI", "ring": "attention", "confidence": "low", "why": "AI UGC ad tool advertising to small business owners who run their own ads; adjacent desire, different product (inferred from the discovery pull)", "site": "", "page_names": []}
+ ]
+}

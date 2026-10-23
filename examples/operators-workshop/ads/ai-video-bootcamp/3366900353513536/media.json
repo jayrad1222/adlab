@@ -1,0 +1,27 @@
+{
+ "video": "examples/operators-workshop/ads/ai-video-bootcamp/3366900353513536/media/video.mp4",
+ "duration_s": 15.18,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg",
+  "f-004.jpg",
+  "f-005.jpg",
+  "f-006.jpg",
+  "f-007.jpg",
+  "f-008.jpg"
+ ],
+ "scene_frames": [
+  "s-001.jpg",
+  "s-002.jpg",
+  "s-003.jpg",
+  "s-004.jpg",
+  "s-005.jpg",
+  "s-006.jpg",
+  "s-007.jpg"
+ ],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:51:30+00:00"
+}

@@ -1,0 +1,80 @@
+{
+ "data": {
+  "ad": {
+   "id": "1872062858846226",
+   "name": "Duolingo, Inc.",
+   "audit_status": "1",
+   "type": "2",
+   "first_shown_date": 1785283200000,
+   "last_shown_date": 1792540800000,
+   "videos": [
+    {
+     "video_url": "https://library.tiktok.com/api/v1/cdn/1792736373/video/aHR0cHM6Ly92MTZtLnRpa3Rva2Nkbi5jb20vOWIwYTE1OGNhYzY3MTMwZjQ2MTk5ZWUxMjI2ODBjMjQvNmFkYjUwZWYvdmlkZW8vdG9zL2FsaXNnL3Rvcy1hbGlzZy12ZS0wMDUxYzAwMS1zZy9vMFBHUUFJRzI0ZUdlQk9aUW5JZU0yRUlOaUwyYzJBZkRORjd3QS8=/1ea149a8-0a64-402b-98cc-6adb0754c094?a=475769&bt=235&btag=e000b8000&bti=PDU2NmYwMy86&ft=.NpOcInz7Thb-_FGXq8Zmo&l=202610231419328CB262DA5FCB19282AE6&mime_type=video_mp4&rc=aTloNDs8Ojc4ZzdkZGU7ZUBpanJodm05cnQ3OjMzODYzNEAtXzVhNjI2NjUxNDE1MTFeYSNzM25rMmRjLnNhLS1kMC1zcw%3D%3D&signature=4oO6Qu7K6SqREwrp8dtU3p3ruZuQow9TA1ktOxzo7TI%3D&vvpl=1",
+     "cover_img": "https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0051c001-sg/oUAFf0cA3IDGo4BbCI42MNeGM2GLeQInAIEQe7~tplv-tiktokx-origin.jpeg?dr=14582&refresh_token=6e48f610&x-expires=1792756800&x-signature=cghxhRG%2BzAdqX1uc9g2H4%2Bnp%2FkY%3D&t=4d5b0474&ps=13740610&shp=0c75dd76&shcp=9b759fb9&idc=sg1"
+    }
+   ],
+   "estimated_audience": "-",
+   "spent": "",
+   "impression": 0,
+   "show_mode": 1,
+   "image_urls": [
+    "https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0051c001-sg/oUAFf0cA3IDGo4BbCI42MNeGM2GLeQInAIEQe7~tplv-tiktokx-origin.jpeg?dr=14582&refresh_token=6e48f610&x-expires=1792756800&x-signature=cghxhRG%2BzAdqX1uc9g2H4%2Bnp%2FkY%3D&t=4d5b0474&ps=13740610&shp=0c75dd76&shcp=9b759fb9&idc=sg1"
+   ],
+   "rejection_info": null,
+   "sor_audit_status": "1",
+   "download_url": "https://play.google.com/store/apps/details?id=com.duolingo&hl=en_US",
+   "subject": "Apps"
+  },
+  "advertiser": {
+   "name": "Duolingo, Inc.",
+   "adv_biz_ids": "6876458959876653825",
+   "registry_location": "United States",
+   "tt_user": {
+    "username": "duolingo",
+    "display_name": "Duolingo",
+    "avatar_url": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/2f96ebc0ed08d45f9922204a5281f38e~tplv-tiktokx-cropcenter:168:168.jpeg?dr=9638&refresh_token=5b201029&x-expires=1792908000&x-signature=aU5Xvuk0H7A95iyToT6gq6NWRVk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=8aecc5ac&idc=useast5",
+    "follower_count": "18.3M",
+    "profile_web_link": "https://www.tiktok.com/share/user/6917704832925746181?source=ad_review",
+    "account_type": "BLUEV_BA"
+   },
+   "sponsor": "Duolingo, Inc."
+  },
+  "targeting": {
+   "location": null,
+   "age": [
+    {
+     "region": "TR",
+     "13-17": false,
+     "18-24": true,
+     "25-34": true,
+     "35-44": true,
+     "45-54": true,
+     "55+": true
+    }
+   ],
+   "gender": [
+    {
+     "region": "TR",
+     "female": true,
+     "male": true,
+     "unknown": true
+    }
+   ],
+   "target_audience_size": "103.7M-126.7M",
+   "audience": "No",
+   "interest": "",
+   "video_interactions": "",
+   "creator_interactions": "",
+   "countries": [],
+   "cities": [],
+   "provinces": [],
+   "languages": [],
+   "device_models": [],
+   "operating_systems": [],
+   "high_spending_power": "",
+   "audience_exclude": ""
+  },
+  "display_mode": "standard"
+ },
+ "code": 0
+}

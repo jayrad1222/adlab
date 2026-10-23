@@ -1,0 +1,632 @@
+Toggle navigation
+Search for:
+Home  AI  How not to lose your job to AI
+
+AI agents are breaking containment and the world is trying to control them. Read about what’s happening and what it means →
+
+How not to lose your job to AI
+
+The skills AI will make more valuable (and how to learn them)
+
+By
+Benjamin Todd
+·
+Published June 2025 · 
+(opens in new window)
+(opens in new window)
+(opens in new window)
+
+About half of people are worried they’ll lose their job to AI.1 And they’re right to be concerned: AI can now complete real-world coding tasks on GitHub, generate photorealistic video, drive a taxi more safely than humans, and do accurate medical diagnosis.2 And over the next five years, it’s set to continue to improve rapidly. Eventually, mass automation and falling wages are a real possibility.
+
+But what’s less appreciated is that while AI drives down the value of skills it can do, it drives up the value of skills it can’t. Wages (on average) will increase before they fall, as automation generates a huge amount of wealth, and the remaining tasks become the bottlenecks to further growth. As I’ll explain, ATMs actually increased employment of bank clerks — until online banking automated the job much more.
+
+Your best strategy is to learn the skills that AI will make more valuable, trying to ride the wave of automation. So what are those skills? Here’s a preview:
+
+Skills most likely to increase in value as AI progresses
+SKILL
+	
+WHY IT'S VALUABLE
+	
+HOW TO START
+
+Using AI to solve real problems	As AI gets better, it makes people who can direct it more powerful. The messier parts that AI can't do become bottlenecks.	• Use cutting-edge AI tools in your current job
+• Work at an AI-applications startup, or other organisation using AI to solve a real problem
+Personal effectiveness	Productivity, social skills, and rapid learning are useful in every job and compound the value of your other skills.	• Use AI tutors to rapidly teach you new skills
+• Work with people who have these skills
+• Develop relevant habits
+Leadership skills	Management, strategy, and research taste are messy tasks AI struggles with, but AI gives leaders more influence than before.	• Seek mentorship
+• Work at small, growing organisations, and seek small-scale management positions. Otherwise, start side projects
+• Study and apply best practice (links in full article)
+Communications and taste	Content creation gets automated, but discernment and trusting relationships with your audience become more valuable.	• Focus on personality-driven content
+• Build a real connection with your audience
+• Work with people who have taste
+Getting things done in government	Citizens want real people making decisions, so knowing how to get things done in government remains crucial (even if many civil service positions disappear).	• Follow standard routes into policy: staffer positions, internships, fellowships, government positions, and other positions alongside successful operators
+Complex physical skills	Robotics lags behind knowledge work, especially for specialist work in unpredictable environments.	• Seek apprenticeships in growing fields (e.g. datacentre construction)
+• Get an entry-level job and work your way up
+
+These will be especially valuable when combined with knowledge of fields needed for AI including machine learning, cyber & information security, data centre & power plant construction, robotics development and maintenance, and (lesso) fields that could expand a lot given economic growth.
+
+In contrast, the future for these skills seems a lot more uncertain:
+
+Coding, applied math, and STEM
+Routine white collar skills such as recall and application of established knowledge, routine writing, admin, and translation
+Visual creation such as animation.
+More routine physical skills such as driving
+
+It’s hard to say what effect this will have on the job market overall, or how quickly it will unfold. If I had to speculate, I’d guess that in white-collar jobs like finance, tech, law, government, healthcare and professional services, entry-level positions will struggle, in favour of an expanded class of managers overseeing AI agents. (Though in the short-run, even entry-level wages could increase.) Small teams and individuals will be able to accomplish far more than ever before. Jobs that require a physical presence (e.g. police, construction worker, teacher, surgeon) will be relatively unaffected (income roughly keeping pace with GDP), at least until robotics catches up.
+
+If I had to highlight just one piece of practical advice, it would be to learn to deploy AI to solve real problems. You can likely do this in your existing job, but a career capital option to especially consider is working at a growing AI-applications startup. This not only teaches you about AI, but also lets you gain general productivity and leadership skills relatively quickly.
+
+In the rest of the article, I’ll:
+
+Explain why automation can actually increase wages for the skills that aren’t being automated
+Use the existing research, economic theory, recent data, and an understanding of how AI works to identify the types of skills most likely to increase in value due to AI. In brief, these are skills that (i) are hard for AI, (ii) complementary to its deployment, (iii) produce outputs we could use far more of, and (iv) are hard for others to learn
+Use these categories to identify the concrete work skills most likely to increase in value, and explain how to start learning each one.
+Give some closing thoughts on how to position yourself given the above, including avoiding long training periods and routine white-collar jobs, favouring roles at smaller or growing organisations, doing side projects, learning to apply AI to whatever you’re doing, and making yourself more resilient by saving more money and investing in your mental health
+In The Graduate, a middle-aged business man delivers career advice to the protagonist in a single word — “plastics.” Hopefully, I’ll be more useful.
+Get more updates on career planning given AGI
+
+Join 500,000+ people who receive updates on our research, plus jobs and other opportunities.
+
+1. Why automation often doesn’t decrease wages
+
+In the mid-1990s, ATMs started to show up in banks. At the time, people expected that would put many tellers out of the job.3
+
+And indeed, the number of tellers per branch dropped from 21 to 13.
+
+That, however, also made it far cheaper to run a bank branch. So in response, the banks opened far more locations. Total employment of tellers actually increased for two decades, but the tellers now spent their time talking to customers rather than counting money.
+
+So while it’s commonly assumed that automation decreases wages and employment, this example illustrates two ways that can be wrong:
+
+While it’s true automation decreases wages of the skill being automated (e.g. counting money), it often increases the value of other skills (e.g. talking to customers), because they become the new bottleneck.
+
+Partial automation can often increase employment for people with a certain job title by making them more productive, making employers want to hire more of them. In this case, fewer bank tellers could give better service to the same number of customers.
+
+But here’s a final twist to the story: today, teller employment is in decline.
+
+So while partial automation increased employment, the more dramatic automation made possible by online banking did indeed reduce it. This is also a common pattern.
+
+In effect, there are two competing forces: AI tools make human workers more productive, typically increasing their employment, but if AI starts to replace what they do wholesale, that decreases their employment. When there’s a medium amount of automation, it’s hard to predict which force will win. But when there’s thoroughgoing automation, the second will tend to.
+
+In Britain during the industrial revolution, textile production was significantly automated. But this made the industry so much more productive that employment in textile manufacturing dramatically increased — only to decline again several generations later.
+
+Today, employment of secretaries, admin jobs, call centre workers, cashiers, telemarketers, special effects artists, and animators is already in sharp decline – with AI maybe helping to continue long term trends.
+
+Data science employment, however, was still up 20% during 2023, despite AI being pretty good at quick statistical analysis and visualisation.4 So far, AI has maybe made data scientists more useful, rather than replace them. (It remains to be seen how long that will last.)
+
+One analysis found that AI has reduced demand for translators, however, translator employment is still up on net. This might be because the decline due to AI wasn’t large enough to offset the increase from general economic growth (so far).
+
+The third way automation can actually be good for employment is that automation of one job often creates new kinds of jobs and raises wages in aggregate because society becomes wealthier.
+
+Historically, most people worked in agriculture. But today, in rich countries, it’s only a couple of percent, so we could say that the majority of jobs in the economy have already been automated! However, today, incomes are around 100 times higher than they were back then, showing that in aggregate, people moved into much higher paying jobs. In some countries, like South Korea, much of this transition was accomplished in just one generation.
+
+Something similar could happen if many remote work jobs are automated. Epoch AI is a research group focused on the interaction of AGI and economics. They estimated about a third of work tasks can be done remotely, and that if all of those were automated, it would increase GDP between two and ten times. In the scenario, wages for all the non-remote tasks would probably increase about two to ten times as well. It’s even possible white collar employment would increase, but the role would entirely focus on the remaining human-in-the-loop and non-remote bottlenecks.
+
+This isn’t to deny that automation can be very disruptive for workers in the jobs being automated. It’s just to say that it can also sometimes increase their wages, as well as benefit workers in other jobs.
+
+This is one reason I prefer to focus on the skills that will increase or decrease in value, rather than particular job titles.
+
+But what about if AI, combined with general-purpose robotics, could automate almost every job? Surely, wages would fall then?
+
+What would ‘full automation’ mean for wages?
+
+Just as partial automation of bank tellers increased employment, but more intensive automation decreased it, maybe the same could happen for human workers as a whole?
+
+AI combined with robotics has the potential to be unlike any previous technology in that it might be able to do almost every economically productive task better than humans.
+
+Although many economists dismiss the possibility, the people who are experts in the technology itself believe it’s possible.
+
+And if that does happen, many economic models suggest it could drive wages down, perhaps even below subsistence level – initially as a rapidly expanding pool of ‘digital workers’ massively increase the supply of labour, and eventually because they can convert energy and resources into output far more efficiently than humans.
+
+I’m not saying this is what will happen, but it’s one possible scenario. Epoch has also made an integrated model of how full automation might unfold across the economy. With their default assumptions, wages initially increase about 10x, only to plunge in the late 2030s as the final human bottlenecks are removed.
+
+In Epoch AI’s GATE economic model of AI automation wages initially increase about 10-fold, as AI drives up total output and non-automated jobs become major bottlenecks. However, given their default assumptions, wages eventually crash after the final bottlenecks are automated.
+
+
+If instead humans remain necessary for just a small fraction of tasks, say 1%, then the same model shows that wages increase indefinitely — with every human now doing that remaining 1%.5 The difference between 100% and 99% automation is enormous! (Read more about the ambiguous effects of full automation on wages.)
+
+However, I think full automation and declining wages is a possibility we should take seriously.
+
+If there will eventually be full automation, what should you do?
+
+Well, on the way to full automation, there will be partial automation. And for the reasons given above, that will increase wages and give you more leverage for a time.5
+
+So your next steps should be the same either way: learn the skills most likely to increase in value in the immediate future, so you can maximise your contribution (and wages) in the time between now and full automation.
+
+(There’s also an argument for saving more money, so you don’t need to depend as much on government redistribution. See more on how to personally prepare for AGI.)
+
+2. Four types of skills most likely to increase in value
+
+The coming years could be very disruptive for many people, and it’s likely that wealth gets more concentrated. This article is not about how we should respond as a society but rather how you can best position yourself as an individual, including so that you can better help society navigate these challenges.
+
+Here I aim to give you the tools you need to think about which skills are most likely to increase vs decrease in value given your unique situation and the massive variety of jobs.
+
+This is clearly a moving target, but I break it down into four key categories of skills likely to increase in value:
+
+Hard for AI: data poor, messy, long-horizon tasks where a person-in-the-loop is wanted
+Needed for deploying AI: the skills of organising and auditing AI systems, as well as those used in complementary industries such as data centre construction
+Used to make things the world could use far more of: skills that contribute to improved healthcare, housing, research, luxury goods, etc. – things which people want more of as they get better and cheaper
+Hard for others to learn: rare expertise that matches your unique strengths
+
+(Economics aside: these are basically low substitution; complementarity; high elasticity of demand for output; and inelastic labour supply.)
+
+2.1 Skills AI won’t easily be able to perform
+
+The best way to develop your intuitions about what AI can do is to try to use cutting edge AI tools to do real work (not the inferior free models). But I would like to provide some theoretical grounding to what AI will be able to do and not do, based on understanding how AI is trained.
+
+Tasks not in AI training data (& hard to gather)
+
+LLMs are created by training them to predict internet data (see a quick primer). This makes them very good at tasks that are based on pattern matching and recall of data on the internet.
+
+And that turns out to be a lot. In 2015, Frey and Osbourne assumed social skills would resist automation. Today, therapy chatbots are among the most popular AI applications.
+
+Many skills that are difficult for humans to learn, including much of therapy, medical diagnosis, and coding, can be done pretty well by ‘pattern matching’ systems.
+
+LLMs can also clearly make some novel generalisations. For instance, you can ask GPT-4: “If the Leaning Tower of Pisa was swapped in location with St Paul’s Cathedral, and I stood on London’s Millennium Bridge looking north, what would I be able to see?” and it can answer even for novel combinations of locations.
+
+However, LLMs remain bad at a lot of things, and typically these are tasks missing from their training data.
+
+One example is controlling robotics. While the internet contains a huge amount of linguistic data, there’s no equivalent store of data describing physical movement.
+
+The absence of this movement data is also not a trivial thing to fix because it’s hard to create realistic virtual environments that could be used to cheaply generate it. The only option is to create huge numbers of real robots and have them move around, which is expensive. So AI remains much worse at interacting with the physical world.
+
+In contrast, data on how to perform many white collar jobs already exists on the internet, and it will be easy to gather even better data, because those jobs are mainly carried out on computers, which can track each step.
+
+Frey and Osbourne also predicted AI would be bad at ‘creative’ tasks, but today this also seems too simple. As of 2025, LLMs are good at brainstorming, writing in a huge range of styles (including in novel combinations), creating rhyming verse, and so on. However, they’re still not great at novel conceptual insights. This is probably because the first type of creative task is closer to pattern matching within the training data, but the latter requires a greater leap.
+
+Messy, long-horizon skills
+
+The new generation of AI systems, such as o1, use LLMs as a base model but then they’re taught to reason and pursue goals using reinforcement learning.
+
+This is a bit like learning through trial and error. AI systems try to do a task, then their accuracy is graded, and then they’re adjusted in a way likely to increase their accuracy (see a primer).
+
+Over 2024, this new paradigm unleashed dramatic progress in maths, coding, and answering known scientific questions.
+
+That’s because these domains have objective answers that can be immediately verified purely virtually, making them very suitable for reinforcement learning.
+
+In contrast, consider a skill like building a company. This involves many judgement calls with no obviously correct answers and success is determined over years. So it’s much harder to get reinforcement learning to work for this kind of skill. (There are also no massive datasets showing every step an entrepreneur would take to build a company.)
+
+Other examples might be things like starting a cultural movement, directing a novel research project, or setting organisational or political strategy.
+
+These skills are:
+
+Messy — they lack clearly defined instructions and measurable outcomes
+Long horizon — it takes time to implement and measure success
+
+This is why, in spite of its nearly superhuman abilities at some maths and coding problems, AI is still worse than most seven-year-olds at playing Pokemon.
+
+It’s also still terrible at many comparatively simple tasks such as ‘get a set of shelves installed in the office’ — because they involve planning, visual interpretation, hiring someone, and checking the work is done.
+
+The models can effectively execute short, well-defined tasks, but they lose coherence and get stuck in loops over longer periods.
+
+This helps explain why we’ve seen so little AI automation to date. Even where AI is strongest — software engineering — it can only do approximately one-hour tasks, while most software engineering jobs are made of projects that take at least multiple days, require coordinating with a team, and understanding a huge code base.
+
+It’s also true that AI is improving rapidly even at messy, long-horizon tasks. And if AI progress is rapid enough, or reinforcement learning generalises well, it’s possible AI surpasses most humans even at these types of skills relatively soon. It’s also true that AI might start being able to make novel intellectual contributions via brute force generation of ideas.
+
+However, messy, long-horizon tasks are our best bet at what AI is going to most struggle with, and it’s possible that the ability to do the most messy, long-horizon skills is still decades away.
+
+These remarks could be invalidated if a new AI paradigm is created with very different strengths and weaknesses from current AI systems, or if AI progress accelerates, but I think it’s the best assessment we can make today.
+
+Skills where a person-in-the-loop is wanted
+
+Even if AI can technically do a task, it might not be allowed to do so because people often want a person-in-the-loop. Here are the main categories I’ve seen suggested by economists where this could be the case (e.g. see this interview with Mike Webb):
+
+Situation
+	
+Reasoning
+	
+Example
+
+Legal liability	There needs to be a person held legally responsible for certain kinds of important decisions.	Chartered engineer, court lawyer.
+High reliability required	AI systems hallucinate and make weird mistakes so people will want human experts to check their answers and provide oversight.	Human historian checks AI research for mistakes.
+Unions and professional interest groups are involved	Lobbyists will aim to introduce standards and regulations to protect jobs.	Doctors and lawyers control professional certifications and are a powerful lobby, so they could block AI applications in their industries.
+There’s a strong preference for a human touch	Many people will much prefer humans to provide certain services, perhaps as a luxury.	Nannies, an artist with a compelling story or brand, religious leaders
+Physical presence is needed	Many roles require someone physically present to oversee the situation. Even after robots become effective, people could be reluctant to rely on them.	Police, teachers, nurses.
+Institutional inertia	Many organisations will be slow to apply AI tools, meaning that humans stay in important jobs. (Though a true ‘drop-in remote worker’ AI could slot into existing workflows and get deployed a lot faster than previous tech waves.)	Perhaps many government jobs, large companies with strong moats.
+Intent alignment	Even very powerful and accurate AI systems will still need to know what humans want them to do. It’s possible more and more roles could involve specifying preferences to AI systems.	Government-funded efforts to collect preferences(?)
+
+These factors could remain bottlenecks much longer than the first two, since some could apply even with extremely capable AI systems. On the other hand, we don’t yet know how much they’ll bottleneck the use of AI.
+
+For instance, people often play classical music at wedding ceremonies, and most people would prefer a human musician. However, most people end up using a recording because it’s so much cheaper and more convenient.
+
+Likewise, even if people prefer human-produced goods and AI products remain inferior in some ways, they might be so much better in others that they become overwhelmingly what people use.6
+
+It also remains to be seen whether there will be enough demand for these human-in-the-loop jobs relative to the supply of humans able to do them to keep wages high. Even if people still want human-produced art, not everyone can be an artist.
+
+Skills where automation is bottlenecked by physical infrastructure
+
+Suppose general-purpose robotics started working great tomorrow. How long would it take to automate manual jobs?
+
+Probably a while. Robot production today is in the millions. To build the one billion or so needed to automate all manual jobs would take time (even if it might be faster than many expect).
+
+Relatively slow robot production and the lack of data about physical tasks will create a period where their automation lags behind cognitive tasks.
+
+Even AI’s deployment to cognitive tasks will be somewhat bottlenecked by available computing power, especially if early systems use a lot of test-time compute. That will mean initial AI automation could focus on the most high-value tasks (e.g. in R&D), somewhat delaying automation of lower wage jobs.
+
+2.2 Skills that are needed for AI deployment
+
+In 2025, having access to cutting edge AI is already a bit like having 24/7 access to a team of expert advisors and tutors on any topic, unlimited coding capacity for discrete projects, and unlimited remote workers who can do some short admin tasks.
+
+These tools are giving individual workers much more power to make things happen than ever before. We can already see this happening in the world’s most successful startup accelerator, Y Combinator, which says their current batch is 70% focused on AI and growing several times faster than similar startups ten years ago.
+
+(And ten years ago, startups were themselves growing faster than companies in previous decades. The effect of AI is part of a longer-term trend.)
+
+The effect today is most visible within the virtual and unencumbered world of software startups, but the possibilities are broadening. You don’t need to work in a tech startup to use AI to more rapidly learn new skills, get advice, edit your work, create software, and so on.
+
+And true ‘virtual workers’ would dramatically increase this leverage again. This likely creates a period in which the skill of directing these AI workers becomes incredibly valuable.
+
+These skills could be things like:
+
+Spotting problems and deciding what to focus on
+Understanding the pros and cons of the latest models, and how to design around their weak spots
+Writing clear project specifications
+Understanding what the end users really want, UX
+Designing systems of AI workers, including error checking
+Understanding and coordinating with the people involved
+Bearing responsibility
+
+(Many of these skills are similar to the skills of managing humans. And there is already evidence that competent human managers are better at managing AI teams.)
+
+These kinds of skills are not only messy, long-horizon tasks that AI finds relatively difficult, but they’re also complementary to AI: as AI gets better, they become more needed. The two effects combine to multiply their value.
+
+In contrast, being an artisan maker of Neapolitan bespoke suits (descended from a long line of tailors) is not something AI will easily be able to replicate, but it’s not complementary to it either. That means the market value of this skill likely roughly keeps pace with global income, rather than outpacing it.
+
+Other skills that might be complementary to AI deployment are those involved in other fields needed for AI scale up, such as:
+
+Expertise in AI hardware: if AI continues to improve, there will be a huge build out of chips to run and train the systems.
+AI development: as AI becomes more valuable, the value of making it 1% more effective increases proportionally, so remaining bottlenecks in AI R&D greatly increase in value (though bear in mind working on this also increases the risks from AI).
+Physical tasks necessary for AI deployment: examples include construction of data centres and power plants, as well as robotics development and maintenance.
+Cyber and information security: as AI and robotics get more integrated into everything in the economy, the security of these systems becomes vital (no one wants to get kidnapped by their robot butler).
+2.3 Skills where we could use far more of what they produce
+
+I only need to file a tax return once a year. If AI halves the cost of doing my filing, I will still only file once (and save the money for something else).
+
+In contrast, after Uber made taxis cheaper and more convenient, people started using them a lot more often, in some cases spending more than they did before. The taxi market has grown a lot in the last decade or two.
+
+The same could be true for healthcare, nicer housing, better entertainment, luxury goods, personal development, research, and many other things I consume.
+
+In contrast, jobs that are needed to satisfy legal requirements (e.g. licensing) and sectors where demand is mainly set by the government could have more fixed demand (e.g. healthcare salaries in the UK have fallen in real terms the last decade, despite demand for healthcare generally increasing with GDP).
+
+More broadly, you can think about sectors that are likely to grow faster than the rest of the economy in a world of AI automation.
+
+For example, AI automation would create a huge amount of wealth, probably concentrated in the top 1% who own most capital. Increased income inequality will spike demand for luxury goods. Something like providing bespoke tea tasting events in SF would be both hard for AI to do and would see increasing demand.
+
+2.4. Skills that are difficult for others to learn
+
+Consider a job like being a server at a fancy restaurant. I expect people to eat out more as they get wealthier, and this is a physical, social skills heavy job where people might retain a strong preference for a human touch.
+
+So, I expect many manual and retail service sector jobs to see increasing employment and for their wages to generally grow in line with the rest of the economy.
+
+However, these jobs might not see the unusually large increase in wages because people can enter them with relatively less training. If lots of other people can learn a skill, that limits how much wages for that skill will increase.
+
+The skills that will most increase in value are those where it’ll take a long time for the labour market to respond to increased demand.
+
+For example, if you’re a construction worker, you could learn a more specialised trade, like becoming an electrician, focusing on areas that would likely see increasing demand, like data centres. People with these more specialist skills are more likely to end up as a critical bottleneck during a period of rapid growth.
+
+3. So, which specific work skills will most increase in value in the future? And how can you learn them?
+
+Let’s apply what we’ve covered to make an overall guess at the most valuable work skills. We want skills that satisfy at least two of the above categories, and ideally all four. I’ve focused on relatively broad transferable skills.
+
+3.1 Skills using AI to solve real problems
+
+What: Skills required for AI deployment that are difficult to automate: understanding strengths and weaknesses of AI systems, designing systems of AIs and interfacing them with the rest of the world, specifying instructions to AI systems, UX for people using the systems.
+
+Why: As AI gets more competent, people who direct these systems become force multipliers. The messy coordination work AI can’t do, and oversight required, becomes the bottleneck. Eventually, a lot of the economy could become figuring out what instructions to give AI systems.
+
+How to learn: Anyone can develop this skill by using the latest AI tools to try to achieve real outcomes at work. You can do this in your current job, or in side projects. If you want to switch jobs to somewhere that could turbocharge learning this skill, then try to work at an AI-applications startup or other growing organisation that’s trying to use AI to solve a real world problem (or otherwise anywhere other people already have this skill). In these kinds of roles, you’ll learn this skill as well as entrepreneurship, management, and general productivity. Make sure to use the most cutting edge models, and also think about what might become possible in the next 1-2 generations.
+
+3.2 Personal effectiveness
+Being a generally productive, proactive person
+
+What: Setting goals, having a system to keep track of tasks and hit deadlines, learning to motivate yourself and focus, good professional habits like running meetings, basic emotional management.
+
+Why: These skills are useful in any job, so even if there’s a lot of automation, they’ll probably still be useful, including within deploying AI. They’re also related to agency and the ability to be responsible for things start to finish, which is a weak spot for AI. And they multiply the value of your other skills.
+
+How to learn: There are many practical ways to increase your general productivity, which we list here. Also see how to be more agentic.
+
+Social skills
+
+What: Building relationships, coordinating well with others, understanding other people’s emotions.
+
+Why: Although AI is already often rated more empathetic than humans, there will be cases where people will want a relationship with a real person (at least as a luxury). Moreover, as more routine work gets automated, a greater fraction of what’s left could become coordination among teams of humans (e.g. picture three founders managing a large team of AI agents and needing to rapidly sync up between them, or a software engineer who has to update his boss on the output of 10 AIs). Social skills are also an important input into many of the other skills listed, such as management.
+
+How to learn: This is hard to learn, but try to put yourself in situations where you get to practice a ton. Spend time with people who have good social skills and see these notes for more ideas.
+
+Learning how to learn
+
+What: Quickly getting to grips with new bodies of knowledge and skills.
+
+Why: If the world is changing faster and more unpredictably, the ability to quickly retrain into a new skill becomes more valuable. At the same time, AI means you can get cheap one-on-one tutoring in almost anything, which many say is letting them learn far faster than before. This skill can also help you with all the other skills in this list.
+
+How to learn: AI has made it much faster to learn many skills, because you can get 24/7 personalised coaching on almost any topic. Learning how to take advantage of this is a hugely valuable skill in itself. Also see the relevant section of our older article on how to be more successful.
+
+3.3 Leadership skills
+
+There’s a cluster of skills around management, entrepreneurship, and strategy that seem hard for AI to do, that benefit from the increasing leverage provided by AI, that we could use far more of, and that are in limited supply. They can also be difficult to learn, but I suggest some ways to practice them on a smaller scale, which could help you jump faster in full-time jobs using these skills.
+
+Entrepreneurship
+
+What: Spotting ideas for new projects, creating a strategy, proactively coordinating people and resources around them, and being able to handle risk.
+
+Why: A small team of human founders can already achieve more than before and may soon be able to instantly marshall large teams of AI workers.
+
+How to learn: Anyone can practice entrepreneurial skills by running a side project or new initiative at work (e.g. helping to launch a new product, running a new conference, running an online store). AI is going to mean those kinds of projects can also move a lot faster than before. If you want to focus on having an entrepreneurial career, see our profile on founding organisations. Joining a new and rapidly growing organisation is also a great way to learn these skills.
+
+Management
+
+What: People management, product management, project management.
+
+Why: Some of management is a long-horizon, messy task where people will want a human-in-the-loop to bear responsibility. We will probably see organisations get more top heavy, where a larger number of human managers are overseeing smaller AI-enhanced teams and eventually large teams of AIs. Employment in management is rapidly growing today. (Though certain middle management jobs might get slimmed down by AI tools.) People management skills also help you manage AI systems.
+
+How to learn: Read about management best practice (see this reading list), and then start doing management on a small scale (e.g. managing a contractor or volunteers in a hobby project). See if you can work under someone who is great at management. Then, from there, try to progress to management positions. Continue to apply best practices and seek mentorship, while collecting feedback from the people you manage.
+
+Strategy, prioritisation, and decision making
+
+What: Setting the vision, mission, and metrics of an organisation, identifying priorities, making high-stakes decisions.
+
+Why: As AI makes it easier to get things done, the key question becomes deciding what to do in the first place. This is also a messy, long-horizon task that AI will likely lag on. AI might soon become better than most humans at certain types of forecasting and decision making, but humans will still need to be in the loop reviewing the decisions.
+
+How to learn: Try to work with someone who has this skill. Focus on finding a domain (even if small) where you can practice developing strategy. Then learn to apply best practices to that domain. Here are the most common prioritisation frameworks, a popular book on strategy, and our article on decision making. Practice forecasting as a hobby and track your results. Learn to use AI tools and prediction platforms as decision aids. Writing is getting automated but writing is one of the best thinking aids, so it’s worth learning for that reason.
+
+True expertise
+
+What: Having expert-level understanding of an important field, research taste, the ability to make novel conceptual insights, and do complex problem solving.
+
+Why: Experts will be required to provide oversight of AI systems and key decisions, and so will be complementary to them. Moreover, having good conceptual insights and research taste will be among the hardest things to automate because they’re the ultimate data-poor, messy, long-horizon tasks (even though AI might be good at brute force creativity). These skills are also hard for most people to learn.
+
+Expertise will be most valuable in sectors likely to grow a lot — such as AI deployment, AI development, robotics, computer hardware, cybersecurity, and power generation — and in crucial areas of government policy (e.g. US-China relations, AI regulation, defence).
+
+On the other hand, the ‘bar’ for true expertise will continually rise over time as AI gets better. You should only pursue this option if you can get to the forefront fast enough — and stay there.
+
+How to learn: Find mentorship under a top practitioner, practice intensely, and pursue whatever other training steps are standard in the field.
+
+3.4 Communications and taste
+
+What: Having good judgement about design/beauty/what people will like, having personality, a story, unique branding and personal connection to your audience, messaging strategy/PR/brand strategy.
+
+Why: Although a lot of content creation and marketing seems like it’s going to be automated, people will still want relationships with real, interesting people. As it becomes easier to create large volumes of content or design, the skill of selecting what’s good (taste) becomes more valuable, and so do the strategic aspects of what to create in the first place.
+
+How to learn: ‘Being cool’ is pretty hard to learn, but you can try to develop a deep relationship with a specific audience (e.g. via a YouTube channel). Practice using AI to help with content creation, and tune your taste by seeing what works over time. Focus on more personality-driven content and storytelling (rather than the type of material people can easily get from GPT).
+
+3.5 Getting things done in government
+
+What: The skill of knowing who to talk to and how to frame things correctly in order to get new policies passed or implemented, political strategy, government decision making.
+
+Why: Even if much routine knowledge work in government gets automated, the government sector will likely at least keep pace with the size of the economy. People will want decision makers to be real people. This will mean the nebulous, long-horizon skills of making things happen in government will remain valuable, especially from a social perspective. Indeed, government might even take on increasing importance as more work is automated. Plus, government will be slow to adopt and doesn’t face as much market competition.
+
+How to learn: Work for a figure who has this skill — e.g. become the staffer to a congressperson or consider the other standard entry routes into policy if you think you can make it beyond the entry-level and routine analysis positions.
+
+3.6 Complex physical skills
+
+What: The ability to do precise physical tasks, especially in unpredictable, high-stakes environments with expanding demand — e.g. overseeing surgery, data centre electrician and construction, semiconductor technician.
+
+Why: Robotics deployment is likely to lag, creating major bottlenecks for manual tasks, especially those necessary for AI deployment and that are hardest for robots (or other people) to do.
+
+How to learn: apprentice in the standard pathway for the field.
+
+4. Skills with a more uncertain future
+
+The following are some skills where there’s a stronger case for their value going down. This is very hard to predict — as noted, partial automation often makes demand for a job go up initially, only to fall later.
+
+4.1 Routine knowledge work: writing, admin, analysis, advice
+
+Basically all the research on which jobs are most likely to be affected by the current wave of AI agrees that the largest effect will be on be white collar jobs around the 70–90th percentile of income (approx $100–200k in the US).7
+
+AI is already pretty helpful for these kinds of tasks because a lot of examples exist in the dataset, and they involve pattern matching or recall of information. Going forward, it’ll be easier to collect even more data, and many of the tasks are short and clear enough that reinforcement learning should work. More specifically, this could include skills like:
+
+Many cases of writing and copyediting
+Carrying out straightforward analysis, such as a financial analyst, legal clerk, civil servant, or optician might do
+Recall of established information, such as in medical diagnosis
+Administration
+Translation
+
+In each organisation, many of these jobs could get replaced by a smaller number of people overseeing a large number of AI agents (or AI-assisted humans), making organisations more top heavy. Luke Drago called this ‘pyramid replacement’.
+
+It’s plausible that entry-level white collar jobs will be automated first. Organisations will become more top-heavy, with an expanded class of managers overseeing many AI agents.
+
+That said, as the economy grows, the total number of organisations expands as new niches become profitable. So, even if each organisation needs fewer people doing these kinds of tasks, total employment might not fall for a while.
+
+These roles could also evolve so that more time is spent on AI gaps, such as:
+
+Talking over AI-generated advice with clients
+Checking the results of AI-generated outputs
+Greater investment in training for a smaller but more productive workforce
+Giving instructions to AI systems
+
+If there are a lot of gaps, employment might not change very much. Not to mention, each worker would have the output of several in the past, which could further increase demand.
+
+Many organisations will also be slow to adopt AI tools, so those jobs will stick around longer.
+
+All this means it’s hard to say how these changes will translate into changes in employment among white collar professions on net. But here are some total speculations about the intermediate outlook for some different professions:
+
+Healthcare: I expect workers to spend less time on diagnosis, admin, and monitoring, but more time on physical tasks (e.g. like administering treatments). I expect wages to be steady but maybe to grow more slowly.
+
+Investment management: I expect a continuation of the long-term trend towards greater use of quant systems overseen by a smaller number of often higher-paid workers.
+
+Strategy consulting: Consultancies could be well placed to advise organisations on how to apply AI, and have been growing rapidly recently. Increased demand for advice about AI could potentially offset the automation of jobs currently done by junior employees. And they may still be willing to hire junior employees in order to train them for senior roles.
+
+Professional services: The outlook for professional services (e.g. accounting) seems similar to strategy consulting, but somewhat worse, because they’re doing less of the novel strategic work that’ll be harder for AI. For instance, routine accounting will be more and more automated, leaving a (maybe) smaller number of accountants to focus on more complex cases.
+
+Law: The field will probably become more top heavy. Senior lawyers will use AI to assist with research but will review key decisions and discuss them with clients. Routine legal work and research will be more automated.
+
+Government: Civil service positions focused on providing research briefs and advice, and doing administration, might shrink in favour of a maybe larger class of more senior employees and political positions using AI.
+
+4.2 Coding, maths, data science, and applied STEM
+
+Ten years ago, at 80,000 Hours, we told people to learn to code and enter data science — just before demand exploded.
+
+Data from 2120 Insights
+
+
+However, the prospects for these skills today are a lot more uncertain.
+
+Coding is what AI is best at now — and where it’s improving most rapidly. Since programming is virtual and has quick feedback loops, it’s relatively amenable to reinforcement learning. Employment for software developers was flat in 2024, after many years of growth.8
+
+On the other hand, many people have told us that AI tools have made it far faster to learn to code in the first place, and the scope of what you can do has gone up.
+
+Demand for software could also expand as it becomes cheaper to produce, meaning that projects that weren’t profitable before become worth doing.
+
+It’s plausible that the value of spending one or two months learning to code has even gone up (even if the value of spending years learning might have gone down). You might be able to much more quickly get to a place where you understand coding enough to complement your other skills, such as in entrepreneurship or design.
+
+So as of yet, it’s not clear the value of the skill has declined, but we also need to consider what will happen in the next five years. In this time, it’s likely AI starts to clearly surpass humans at coding, even for longer, more complex projects.
+
+If that happens, software developers might be able to move into roles that are more about management of AI systems, using their knowledge of coding but combining it with other skills. But some might struggle to make that shift.
+
+The situation for data scientists looks similar, though so far data science employment has continued to grow rapidly. If you’re thinking about going into the field now, focus on rapidly gaining a conceptual understanding of how to do data analysis, not on how to implement basic analysis.
+
+We could make similar remarks about skills in maths and applied STEM, especially those that involve applying pre-existing knowledge. AI is already beyond PhD level at answering well-defined scientific or mathematical questions.
+
+4.3 Visual creation
+
+AI is already good at generating imagery, and it’s about to crack photorealistic video. It still struggles to maintain consistency and follow detailed visual instructions, meaning there’s still a major need for human oversight, but this might get fixed in the coming years, as agency and multimodality improves.
+
+As noted, there were huge layoffs of special effects artists and animators in 2024, while graphic designer employment was flat.
+
+On the other hand, some creators will be able to use AI tools to produce dramatically more than they were able to in the past.
+
+4.4 More predictable manual jobs
+
+After many years of predictions, self-driving taxis are getting deployed for real, and growing extremely fast. It’s hard to know how long this will take to roll out across all major cities, but it wouldn’t be surprising if we saw a mass wave of layoffs among drivers in the next five years.
+
+In general, robots will find it easiest to do tasks in predictable, simpler, lower stakes environments. For example, robots are already doing a lot of warehouse jobs. This hasn’t yet decreased warehouse worker employment (perhaps because demand for warehouses has increased even faster with online shopping), but the next couple of generations of robotics could reach a tipping point.
+
+5. Some closing thoughts on career strategy
+
+Given these developments, how should you approach your next couple of career steps?
+
+5.1 Look for ways to leapfrog entry-level white collar jobs
+
+As AI increases the value of leadership skills, it’s decreasing the value of the entry-level jobs that previously served as a training path to them.
+
+So as a college grad entering the job market who hoped to get one of these jobs, what should you do?
+
+The ideal might be to find a role that lets you learn leadership skills right away (for instance, anywhere you can work with a good mentor), but what about if you can’t?
+
+First, you can start to learn AI deployment and personal effectiveness skills in any job, and those are also high on my list.
+
+Second, you might be able to find a way to start practicing leadership or communications skills in your existing role, perhaps just on a small scale (e.g. by managing a contractor, helping to launch a new product).
+
+Otherwise you might be able to start some kind of side project or serious hobby, like running a voluntary community project, having a blog, or having a side business. These let you practice leadership skills, and by using AI tools you can achieve more faster than before.
+
+In terms of full-time jobs, roles at small but growing organisations seem more attractive, because they let you work on these types of skills faster.
+
+In contrast, in large companies, there’s more specialisation, which means the entry-level roles often involve more routine work.
+
+If you have the option, roles at tech startups applying AI to a real problem seem especially attractive, since they let you learn about AI deployment, entrepreneurship, and generally getting shit done all at the same time. Here’s a write up of the case for moonshots.
+
+If you’re not able to leapfrog the white collar path, then another option is to focus on sectors where performance is driven by complex physical skills, physical presence, and social skills (e.g. mediator, events organiser, luxury tourism).
+
+5.2 Be cautious about starting long training periods, like PhDs and medicine
+
+AI automation is already happening faster than previous technological waves,9 could speed up, and has hard-to-predict effects, making long training periods less attractive.
+
+This isn’t to say you shouldn’t spend 1–2 years training, or even that you should never start long training programs. For example, graduate study could still be worth it due to a combination of (i) the value of true expertise going up, (ii) being able to do useful work during your studies, (iii) if you think AI progress will be slower, (iv) you lack other options. But it’s worth thinking harder about alternatives.
+
+What about finishing college? For most people, this is still worth it because it still delivers a large boost in employability. However, the case for dropping out seems better than before (especially if your university doesn’t let you use AI tools). I usually caution against dropping out unless you already have an offer to do paid work. However, you could try to (i) get into a position where you might get such an offer faster (e.g. through summer projects) or (ii) finish college more quickly.
+
+5.3 Make yourself more resilient to change
+
+One way to deal with fast, unpredictable change is to learn the personal effectiveness skills that are useful in every job. But you can also think about ways to set your life up to be flexible and resilient:
+
+Not overly tying yourself to a single country, and living in a large city with many kinds of opportunities
+Saving more money than you would otherwise
+Investing in your general mental health
+5.4 Ride the wave
+
+The goal isn’t to find a single job that will always be resistant to automation, but rather to stay one or two steps ahead of it.
+
+This means keeping on top of what AI is capable of, seeking out people to follow who have insights into what’s going on, and continually adjusting to where the biggest bottlenecks lie.
+
+Take action
+This week: find a small new way to apply AI in your current (or desired) job.
+This month: choose one of the six skills, and think of 1–2 steps you could take to learn it faster.
+This quarter: consider whether to make a larger change to focus more on these skills.
+
+Thank you to Carl Shulman and Mike Webb for conversations that informed this piece, Ethan Heppner for data and comments, and Arden Koehler and Ozy Brennan for comments.
+
+Get more updates on career planning given AGI
+
+Join 500,000+ people who receive updates about our research — plus jobs and other opportunities.
+
+Notes and references
+Different surveys find different results, but all agree a significant fraction of people are concerned, often around 50%. Some examples:
+
+A survey of 31,000 by Microsoft in May 2023 found 49% were worried AI will replace their jobs.
+A survey of 3,000 employees found of those in Gen Z, 52% felt worried about being replaced with someone who’s more comfortable with AI.
+A 2025 survey by Pew found 52% of workers were worried about the future impact of AI use in the workplace (though this might be for other reasons).
+A Gallup Bentley University poll from September 2023 found 75% of workers think AI will decrease the total number of jobs over the 10 years.↩
+SWE-Bench Verified is a benchmark of real-world coding problems taken from GitHub. Leading models, such as Claude 3.7 and o3, can complete 60–70% of these tasks, making them comparable to human software engineers.
+
+Google’s VEO3 can produce video that’s basically indistinguishable from real footage.
+
+Waymo self-driving taxis are deployed for real-world operation in several cities, including San Francisco. As of June 2025, they report over 80% fewer injuries compared to human benchmarks.
+
+A 2025 systematic review in Nature compared generative AI to physicians and found similar accuracy.
+
+Analysis of 83 studies revealed an overall diagnostic accuracy of 52.1%. No significant performance difference was found between AI models and physicians overall (p = 0.10) or non-expert physicians (p = 0.93). However, AI models performed significantly worse than expert physicians (p = 0.007)
+
+Takita, Hirotaka, et al. “Diagnostic performance comparison between generative AI and physicians: a systematic review and meta-analysis.” medRxiv (2024): 2024-01. Link↩
+
+Here are four articles from the time about ATMs reducing teller jobs:
+
+Washington post
+LA times
+BLS
+PBS↩
+SHOW ALL 
+Join our newsletter
+
+Get weekly updates on our research, plus jobs and other opportunities to get involved.
+
+Get 1-1 advice
+
+Want to tackle a pressing global problem with your career?
+
+SPEAK TO AN ADVISOR
+
+Our research
+Career guide
+AI careers
+List of world problems
+List of top skills
+List of careers
+Foundations
+Future generations
+Artificial intelligence
+Anonymous advice
+College advice
+New releases
+All our research
+Translations of our content
+Follow us
+Podcast
+80k After Hours
+Our videos
+Newsletter
+Twitter
+Instagram
+LinkedIn group
+Facebook
+TikTok
+YouTube
+Take action
+Find a job
+Get 1-1 advice
+Make a career plan
+About us
+Why 80,000 Hours?
+Meet the team
+Our impact and credibility
+Our donors
+Contact us
+Support us
+
+80,000 Hours Limited is a not-for-profit company limited by guarantee registered in England and Wales (with registered company number 15746854).
+
+Please contact us to suggest ideas, improvements, or corrections.
+
+We do our best to provide useful information, but how you use the information is up to you. We don’t take responsibility for any loss that results from the use of information on the site. Please consult our full legal disclaimer, website privacy notice, and terms of use. See also our cookie notice and adjust your cookie preferences.
+
+© 2012-2026 – all rights reserved. Please contact us if you wish to redistribute, translate, or adapt this work.
+
+     

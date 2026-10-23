@@ -1,0 +1,20 @@
+{
+ "video": "examples/operators-workshop/ads/arcads-ai-newsletter/1290239729197064/media/video.mp4",
+ "duration_s": 9.77,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg",
+  "f-004.jpg",
+  "f-005.jpg"
+ ],
+ "scene_frames": [
+  "s-001.jpg",
+  "s-002.jpg",
+  "s-003.jpg"
+ ],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:52:28+00:00"
+}

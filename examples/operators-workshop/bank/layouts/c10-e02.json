@@ -1,0 +1,12 @@
+{
+ "template": "templates/three-reasons.html",
+ "fields": {
+  "kicker": "Your first week with AI, from founders who run businesses",
+  "hook": "7 days free, and the three steps for those days are on this card.",
+  "reason_1": "[held: step 1, written by the founders]",
+  "reason_2": "[held: step 2, written by the founders]",
+  "reason_3": "[held: step 3, written by the founders]",
+  "offer_line": "Then $97 a month. Cancel anytime.",
+  "wordmark": "OW."
+ }
+}

@@ -1,0 +1,12 @@
+[
+ {"kind": "name", "q": "Ekster", "label": "Ekster", "group": "roster", "advertiser": "Ekster"},
+ {"kind": "name", "q": "Bellroy", "label": "Bellroy", "group": "roster", "advertiser": "Bellroy"},
+ {"kind": "name", "q": "Secrid", "label": "Secrid", "group": "roster", "advertiser": "Secrid"},
+ {"kind": "name", "q": "Andar Wallets", "label": "Andar", "group": "roster", "advertiser": "Andar"},
+ {"kind": "name", "q": "Dango Products", "label": "Dango Products", "group": "roster", "advertiser": "Dango Products"},
+ {"kind": "name", "q": "Thread Wallets", "label": "Thread Wallets", "group": "roster", "advertiser": "Thread Wallets"},
+ {"kind": "name", "q": "Nomad Goods", "label": "Nomad Goods", "group": "attention", "advertiser": "Nomad Goods"},
+ {"kind": "name", "q": "Ridge Wallet", "label": "Ridge (the member, for comparison)", "group": "self", "advertiser": "Ridge"},
+ {"kind": "keyword", "q": "minimalist wallet", "label": "category: minimalist wallet", "group": "discovery"},
+ {"kind": "keyword", "q": "slim RFID wallet", "label": "category: slim RFID wallet", "group": "discovery"}
+]

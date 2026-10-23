@@ -1,0 +1,19 @@
+{
+ "video": "examples/ridge-wallet/ads/thread-wallets/1265713422174307/media/video.mp4",
+ "duration_s": 9.98,
+ "every_s": 2.0,
+ "frames": [
+  "f-001.jpg",
+  "f-002.jpg",
+  "f-003.jpg",
+  "f-004.jpg",
+  "f-005.jpg"
+ ],
+ "scene_frames": [
+  "s-001.jpg",
+  "s-002.jpg"
+ ],
+ "poster": "frames/poster.jpg",
+ "contact": "frames/contact.jpg",
+ "made": "2026-10-23T06:57:25+00:00"
+}

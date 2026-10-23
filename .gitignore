@@ -1,0 +1,23 @@
+# member data never lives in the plugin repo
+adlab-workspace/
+# example runs keep text, poster frames and contact sheets; full media stays out
+examples/**/media/
+examples/**/frames/
+examples/**/*.mp4
+examples/**/*.mov
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# os
+.DS_Store
+# local scratch
+tmp/
+# competitor media never ships in the repo, even in examples
+examples/**/ads/**/*.png
+examples/**/ads/**/*.jpg
+examples/**/ads/**/*.webp
+examples/**/ads/**/*.mp4
+examples/**/business/site/**/*.png
+examples/**/assets/.work/
