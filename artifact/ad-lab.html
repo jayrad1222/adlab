@@ -220,6 +220,9 @@ input[type="color"] { width: 3rem; height: 2.4rem; border: 1px solid var(--rule)
 }
 .drop:hover, .drop.over { border-color: var(--accent); color: var(--ink); background: var(--accent-soft); }
 .drop strong { color: var(--accent); }
+.drop .pick { cursor: pointer; }
+.drop:focus { border-color: var(--accent); border-style: solid; background: var(--accent-soft); color: var(--ink); outline: none; }
+.drop:focus .paste-hint { color: var(--accent); font-weight: 600; }
 .drop input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .thumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .thumb { position: relative; width: 5.5rem; height: 5.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--rule); background: var(--tint); }
@@ -1381,7 +1384,11 @@ function field(label, inner, hint) { return '<label class="field"><span>' + labe
 function inp(path, attrs) { return '<input type="text" data-bind="' + path + '" value="' + esc(getPath(S, path)) + '" ' + (attrs || "") + ">"; }
 function area(path, attrs) { return '<textarea data-bind="' + path + '" ' + (attrs || "") + ">" + esc(getPath(S, path)) + "</textarea>"; }
 function sel(path, opts, attrs) { var v = getPath(S, path); return '<select data-bind="' + path + '" ' + (attrs || "") + ">" + opts.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (String(v) === String(o[0]) ? " selected" : "") + ">" + esc(o[1]) + "</option>"; }).join("") + "</select>"; }
-function drop(target, text, verb) { return '<label class="drop" data-drop="' + target + '"><input type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple data-files="' + target + '"><span><strong>' + (verb || "Choose screenshots") + '</strong> or drop them here</span><span class="small">' + (text || "PNG or JPG") + "</span></label>"; }
+function drop(target, text, verb) {
+  return '<div class="drop" tabindex="0" role="group" aria-label="' + esc((verb || "Choose screenshots") + ", drop, or paste") + '" data-drop="' + target + '">' +
+    '<span><label class="pick"><input type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple data-files="' + target + '"><strong>' + (verb || "Choose screenshots") + "</strong></label> or drop them here</span>" +
+    '<span class="small">' + (text || "PNG or JPG") + '</span><span class="small paste-hint">Or click this box and paste a screenshot (\u2318V or Ctrl+V)</span></div>';
+}
 function thumbs(ids, target) {
   if (!ids || !ids.length) return "";
   return '<div class="thumbs">' + ids.map(function (id, i) { return '<div class="thumb"><img data-img="' + id + '" alt="Screenshot ' + (i + 1) + '"><span class="n">' + (i + 1) + '</span><button type="button" data-act="rm-img" data-target="' + target + '" data-id="' + id + '" aria-label="Remove screenshot ' + (i + 1) + '">✕</button></div>'; }).join("") + "</div>";
@@ -1791,7 +1798,20 @@ document.addEventListener("drop", function (e) {
   e.preventDefault(); d.classList.remove("over");
   addFiles(d.getAttribute("data-drop"), e.dataTransfer && e.dataTransfer.files);
 });
-function addFiles(target, files) {
+document.addEventListener("paste", function (e) {
+  var files = Array.from((e.clipboardData && e.clipboardData.files) || []).filter(function (f) { return /^image\//.test(f.type); });
+  if (!files.length) return;
+  var a = document.activeElement, zone = a && a.closest ? a.closest("[data-drop]") : null;
+  if (!zone || zone.getAttribute("data-drop") === "csv") { toast("Click the box you want the screenshot in, then paste."); return; }
+  e.preventDefault();
+  addFiles(zone.getAttribute("data-drop"), files, true);
+});
+document.addEventListener("keydown", function (e) {
+  if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".drop[data-drop]")) {
+    e.preventDefault(); var i = e.target.querySelector("input[type=file]"); if (i) i.click();
+  }
+});
+function addFiles(target, files, keepFocus) {
   files = Array.from(files || []);
   if (!files.length) return;
   if (target === "csv") {
@@ -1808,6 +1828,7 @@ function addFiles(target, files) {
     else if (target === "photo") ids.forEach(function (id) { S.photos.push({ id: id, caption: "", people: "none" }); });
     else if (target.indexOf("comp:") === 0) { var c = S.competitors.find(function (x) { return x.id === target.slice(5); }); if (c) c.shots = (c.shots || []).concat(ids); }
     save(); render();
+    if (keepFocus) { var z = document.querySelector('[data-drop="' + target + '"]'); if (z) z.focus(); }
     toast("Added " + ids.length + " image" + (ids.length === 1 ? "" : "s"));
   });
 }
